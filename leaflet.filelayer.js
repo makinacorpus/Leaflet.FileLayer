@@ -47,7 +47,7 @@ var FileLoader = L.Class.extend({
 	}, 
 	
 	_convertToGeoJSON: function (content, format) {
-		if (format == 'gpx' && typeof content == 'string') {
+		if (/gpx|kml/.test(format) && typeof content == 'string') {
 			content = ( new window.DOMParser() ).parseFromString(content, "text/xml");
 		}
 		var geojson = toGeoJSON[format](content);

@@ -22,3 +22,8 @@ Usage
         layerOptions: {style: {color:'red'}}
     }).addTo(map);
 ```
+
+Authors
+-------
+
+[![Makina Corpus](http://depot.makina-corpus.org/public/logo.gif)](http://makinacorpus.com)
