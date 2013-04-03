@@ -4,6 +4,8 @@
 	<title>Leaflet.FileLayer</title>
 
 	<link rel="stylesheet" href="http://leafletjs.com/dist/leaflet.css" />
+	<link rel="stylesheet" href="http://fortawesome.github.com/Font-Awesome/assets/css/font-awesome.css" />
+
 	<script src="http://leafletjs.com/dist/leaflet.js"></script>
 	<script src="leaflet.filelayer.js"></script>
 	<script src="togeojson/togeojson.js"></script>
@@ -28,6 +30,7 @@
 				   .addLayer(osm);
 
 		var style = {color:'red', opacity: 1.0, fillOpacity: 1.0, weight: 2, clickable: false};
+		L.Control.FileLayerLoad.LABEL = '<i class="icon-folder-open"></i>';
 		L.Control.fileLayerLoad({
 			fitBounds: true,
 			layerOptions: {style: style,
