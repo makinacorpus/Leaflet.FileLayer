@@ -13,7 +13,7 @@ Usage
 ```
     var map = L.map('map').fitWorld();
     ...
-    L.Control.FileLayerLoad({
+    L.Control.fileLayerLoad({
         layerOptions: {style: {color:'red'}}
     }).addTo(map);
 ```
