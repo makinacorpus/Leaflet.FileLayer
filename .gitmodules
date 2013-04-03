@@ -1,0 +1,3 @@
+[submodule "togeojson"]
+	path = togeojson
+	url = git://github.com/makinacorpus/togeojson.git
