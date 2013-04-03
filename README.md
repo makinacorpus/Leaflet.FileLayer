@@ -10,6 +10,8 @@ Loads local files (GeoJSON, GPX, KML) into the map using the HTML5 File API, **w
 
 For GPX and KML files, it currently depends on [Tom MacWright's togeojson.js](https://github.com/tmcw/togeojson).
 
+Check out the [demo](http://makinacorpus.github.com/Leaflet.FileLayer/)
+
 Usage
 -----
 
