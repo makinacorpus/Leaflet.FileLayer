@@ -91,6 +91,7 @@ L.Control.FileLayerLoad = L.Control.extend({
 		// Create an invisible file input 
 		var fileInput = L.DomUtil.create('input', 'hidden', container);
 		fileInput.type = 'file';
+		fileInput.accept = '.gpx,.kml,.geojson';
 		fileInput.style.display = 'none';
 		// Load on file change
 		var fileLoader = this._fileLoader;
