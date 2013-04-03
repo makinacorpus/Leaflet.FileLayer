@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Leaflet.FileLayer</title>
+
+	<link rel="stylesheet" href="http://leafletjs.com/dist/leaflet.css" />
+	<script src="http://leafletjs.com/dist/leaflet.js"></script>
+	<script src="leaflet.filelayer.js"></script>
+	<script src="togeojson.js"></script>
+	<style>
+		#map {
+			height: 500px;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="map"></div>
+
+	<script type="text/javascript">
+
+		var osm = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			attribution: 'Map data &copy; 2013 OpenStreetMap contributors',
+		});
+
+		var map = L.map('map')
+				   .fitWorld()
+				   .addLayer(osm);
+
+		var style = {color:'red', opacity: 1.0, fillOpacity: 1.0, weight: 2, clickable: false};
+		L.Control.fileLayerLoad({
+			fitBounds: true,
+			layerOptions: {style: style,
+			               pointToLayer: function (data, latlng) {
+			                  return L.circleMarker(latlng, {style: style});
+			               }},
+		}).addTo(map);
+
+	</script>
+</body>
+</html>
