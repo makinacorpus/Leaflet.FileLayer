@@ -59,6 +59,7 @@ var FileLoader = L.Class.extend({
 L.Control.FileLayerLoad = L.Control.extend({
 	statics: {
 		TITLE: 'Load local file (GPX, KML, GeoJSON)',
+		LABEL: '&#8965;',
 	},
 	options: {
 		position: 'topleft',
@@ -105,7 +106,7 @@ L.Control.FileLayerLoad = L.Control.extend({
 		    partName = barName + '-part',
 		    container = L.DomUtil.create('div', zoomName + ' ' + barName);
 		var link = L.DomUtil.create('a', zoomName + '-in ' + partName, container);
-		link.innerHTML = "&#8965;";
+		link.innerHTML = L.Control.FileLayerLoad.LABEL;
 		link.href = '#';
 		link.title = L.Control.FileLayerLoad.TITLE;
 		
