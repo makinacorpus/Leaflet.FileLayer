@@ -1,7 +1,7 @@
 Leaflet.FileLayer
 =================
 
-Loads local files (GeoJSON, GPX, KML) into the map using the HTML5 File API, **without server call** !
+Loads local files (GeoJSON, GPX, KML) into the map using the [HTML5 FileReader API](http://caniuse.com/filereader), **without server call** !
 
 * A simple map control
 * The user can browse a file locally
