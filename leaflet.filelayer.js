@@ -47,7 +47,8 @@ var FileLoader = L.Class.extend({
 	}, 
 	
 	_convertToGeoJSON: function (content, format) {
-		if (/gpx|kml/.test(format) && typeof content == 'string') {
+		// Format is either 'gpx' or 'kml'
+		if (typeof content == 'string') {
 			content = ( new window.DOMParser() ).parseFromString(content, "text/xml");
 		}
 		var geojson = toGeoJSON[format](content);
@@ -73,8 +74,7 @@ L.Control.FileLayerLoad = L.Control.extend({
 	},
 
 	onAdd: function (map) {
-		this._fileLoader = new FileLoader(map,
-										    {layerOptions: this.options.layerOptions});
+		this._fileLoader = new FileLoader(map, {layerOptions: this.options.layerOptions});
 
 		this._fileLoader.on('data:loaded', function (e) {
 			// Fit bounds after loading
