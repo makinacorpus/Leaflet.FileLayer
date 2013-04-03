@@ -1,5 +1,5 @@
 /*
- * Load local files (GeoJSON, GPX) into the map
+ * Load files *locally* (GeoJSON, KML, GPX) into the map
  * using the HTML5 File API.
  * 
  * Requires Pavel Shramov's GPX.js
@@ -17,7 +17,8 @@ var FileLoader = L.Class.extend({
 		
 		this._parsers = {
 			'geojson': this._loadGeoJSON,
-			'gpx': this._loadGPX,
+			'gpx': this._convertToGeoJSON,
+			'kml': this._convertToGeoJSON,
 		};
 	},
 	
@@ -33,32 +34,31 @@ var FileLoader = L.Class.extend({
 		var reader = new FileReader();
 		reader.onload = L.Util.bind(function (e) {
 			this.fire('data:loading');
-			var layer = parser.call(this, e.target.result);
+			var layer = parser.call(this, e.target.result, ext);
 			this.fire('data:loaded', {layer: layer});
 		}, this);
 		reader.readAsText(file);
 	},
 
 	_loadGeoJSON: function (content) {
-		var layer = L.geoJson(JSON.parse(content),
-		                       this.options.layerOptions);
+		var content = typeof content == 'string' ? JSON.parse(content) : content,
+		    layer = L.geoJson(content, this.options.layerOptions);
 		return layer.addTo(this._map);
-	},
+	}, 
 	
-	_loadGPX: function (content) {
-		var parsed = ( new window.DOMParser() ).parseFromString(content, "text/xml");
-		var layer = new L.GPX();
-		layer._addGPX(parsed, this.options.layerOptions);
-		//TODO: very few layer customization options are available in GPX.js
-		layer.addTo(this._map);
-		return layer;
+	_convertToGeoJSON: function (content, format) {
+		if (format == 'gpx' && typeof content == 'string') {
+			content = ( new window.DOMParser() ).parseFromString(content, "text/xml");
+		}
+		var geojson = toGeoJSON[format](content);
+		return this._loadGeoJSON(geojson);
 	}
 });
 
 
 L.Control.FileLayerLoad = L.Control.extend({
 	statics: {
-		TITLE: 'Load local file (GPX, GeoJSON)',
+		TITLE: 'Load local file (GPX, KML, GeoJSON)',
 	},
 	options: {
 		position: 'topleft',
