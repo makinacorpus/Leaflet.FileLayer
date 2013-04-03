@@ -95,7 +95,7 @@ L.Control.FileLayerLoad = L.Control.extend({
 		// Load on file change
 		var fileLoader = this._fileLoader;
 		fileInput.addEventListener("change", function (e) {
-			localLoader.load(this.files[0]);
+			fileLoader.load(this.files[0]);
 		}, false);
 
 		// Create a button, and bind click on hidden file input
