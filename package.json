@@ -4,6 +4,14 @@
   , "description": "Loads local files (GeoJSON, GPX, KML) into the map using the HTML5 FileReader API"
   , "keywords": ["Leaflet", "GIS", "HTML5"]
   , "main": "leaflet.filelayer.js"
+  , "bugs": {
+    "url": "https://github.com/makinacorpus/Leaflet.FileLayer/issues"
+  }
+  , "repository": {
+    "type": "git",
+    "url": "git://github.com/makinacorpus/Leaflet.FileLayer.git"
+  }
+  , "license": "MIT"
   , "scripts": {
   }
   , "dependencies": {
