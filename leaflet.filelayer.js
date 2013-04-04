@@ -72,13 +72,13 @@ L.Control.FileLayerLoad = L.Control.extend({
 
     initialize: function (options) {
         L.Util.setOptions(this, options);
-        this._fileLoader = null;
+        this.loader = null;
     },
 
     onAdd: function (map) {
-        this._fileLoader = new FileLoader(map, {layerOptions: this.options.layerOptions});
+        this.loader = new FileLoader(map, {layerOptions: this.options.layerOptions});
 
-        this._fileLoader.on('data:loaded', function (e) {
+        this.loader.on('data:loaded', function (e) {
             // Fit bounds after loading
             if (this.options.fitBounds) {
                 window.setTimeout(function () {
@@ -97,7 +97,7 @@ L.Control.FileLayerLoad = L.Control.extend({
         fileInput.accept = '.gpx,.kml,.geojson';
         fileInput.style.display = 'none';
         // Load on file change
-        var fileLoader = this._fileLoader;
+        var fileLoader = this.loader;
         fileInput.addEventListener("change", function (e) {
             fileLoader.load(this.files[0]);
         }, false);
