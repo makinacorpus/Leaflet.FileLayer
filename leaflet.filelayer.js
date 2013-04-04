@@ -101,7 +101,7 @@ L.Control.FileLayerLoad = L.Control.extend({
 		}, false);
 
 		// Create a button, and bind click on hidden file input
-		var zoomName = 'leaflet-control-zoom',
+		var zoomName = 'leaflet-control-filelayer leaflet-control-zoom',
 		    barName = 'leaflet-bar',
 		    partName = barName + '-part',
 		    container = L.DomUtil.create('div', zoomName + ' ' + barName);
