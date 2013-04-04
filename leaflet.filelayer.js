@@ -41,8 +41,10 @@ var FileLoader = L.Class.extend({
     },
 
     _loadGeoJSON: function (content) {
-        var content = typeof content == 'string' ? JSON.parse(content) : content,
-            layer = L.geoJson(content, this.options.layerOptions);
+        var layer = L.geoJson(content, this.options.layerOptions);
+        if (typeof content == 'string') {
+            content = JSON.parse(content);
+        }
         return layer.addTo(this._map);
     },
 
