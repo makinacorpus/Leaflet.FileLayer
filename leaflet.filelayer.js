@@ -87,7 +87,45 @@ L.Control.FileLayerLoad = L.Control.extend({
             }
         }, this);
 
+        // Initialize Drag-and-drop
+        this._initDragAndDrop(map);
+
+        // Initialize map control
         return this._initContainer();
+    },
+
+    _initDragAndDrop: function (map) {
+        var fileLoader = this.loader,
+            dropbox = map._container;
+
+        var callbacks = {
+            dragenter: function () {
+                map.scrollWheelZoom.disable();
+            },
+            dragleave: function () {
+                map.scrollWheelZoom.enable();
+            },
+            dragover: function (e) {
+                e.stopPropagation();
+                e.preventDefault();
+            },
+            drop: function (e) {
+                e.stopPropagation();
+                e.preventDefault();
+
+                var files = Array.prototype.slice.apply(e.dataTransfer.files),
+                    i = files.length;
+                setTimeout(function(){
+                    fileLoader.load(files.shift());
+                    if (files.length > 0) {
+                        setTimeout(arguments.callee, 25);
+                    }
+                }, 25);
+                map.scrollWheelZoom.enable();
+            }
+        };
+        for (var name in callbacks)
+            dropbox.addEventListener(name, callbacks[name], false);
     },
 
     _initContainer: function () {
