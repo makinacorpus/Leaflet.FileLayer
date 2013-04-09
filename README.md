@@ -23,6 +23,17 @@ Usage
     }).addTo(map);
 ```
 
+Events:
+
+```
+    var control = L.Control.fileLayerLoad();
+    control.loader.on('data:loaded', function (e) {
+        // Add to map layer switcher
+        layerswitcher.addOverlay(e.layer, e.filename);
+    });
+```
+
+
 Authors
 -------
 
