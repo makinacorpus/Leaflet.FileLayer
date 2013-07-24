@@ -1,6 +1,6 @@
 [submodule "togeojson"]
 	path = togeojson
-	url = git://github.com/makinacorpus/togeojson.git
+	url = https://github.com/makinacorpus/togeojson.git
 [submodule "Font-Awesome"]
 	path = Font-Awesome
-	url = git@github.com:FortAwesome/Font-Awesome.git
+	url = https://github.com/FortAwesome/Font-Awesome.git
