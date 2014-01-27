@@ -153,6 +153,8 @@ L.Control.FileLayerLoad = L.Control.extend({
         var fileLoader = this.loader;
         fileInput.addEventListener("change", function (e) {
             fileLoader.load(this.files[0]);
+            // reset so that the user can upload the same file again if they want to
+            this.value = ''
         }, false);
 
         var stop = L.DomEvent.stopPropagation;
