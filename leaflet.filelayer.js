@@ -45,7 +45,11 @@ var FileLoader = L.Class.extend({
         if (typeof content == 'string') {
             content = JSON.parse(content);
         }
-        return L.geoJson(content, this.options.layerOptions).addTo(this._map);
+        var layer = L.geoJson(content, this.options.layerOptions);
+        if (this.options.addToMap) {
+            layer.addTo(this._map);
+        }
+        return layer;
     },
 
     _convertToGeoJSON: function (content, format) {
@@ -67,7 +71,8 @@ L.Control.FileLayerLoad = L.Control.extend({
     options: {
         position: 'topleft',
         fitBounds: true,
-        layerOptions: {}
+        layerOptions: {},
+        addToMap: true
     },
 
     initialize: function (options) {
@@ -76,7 +81,7 @@ L.Control.FileLayerLoad = L.Control.extend({
     },
 
     onAdd: function (map) {
-        this.loader = new FileLoader(map, {layerOptions: this.options.layerOptions});
+        this.loader = new FileLoader(map, this.options);
 
         this.loader.on('data:loaded', function (e) {
             // Fit bounds after loading
