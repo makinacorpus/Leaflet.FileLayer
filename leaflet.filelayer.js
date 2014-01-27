@@ -65,6 +65,11 @@ var FileLoader = L.Class.extend({
             content = JSON.parse(content);
         }
         var layer = L.geoJson(content, this.options.layerOptions);
+
+        if (layer.getLayers().length === 0) {
+            throw new Error('GeoJSON has no valid layers.');
+        }
+
         if (this.options.addToMap) {
             layer.addTo(this._map);
         }
