@@ -157,16 +157,11 @@ L.Control.FileLayerLoad = L.Control.extend({
             this.value = ''
         }, false);
 
-        var stop = L.DomEvent.stopPropagation;
-        L.DomEvent
-            .on(link, 'click', stop)
-            .on(link, 'mousedown', stop)
-            .on(link, 'dblclick', stop)
-            .on(link, 'click', L.DomEvent.preventDefault)
-            .on(link, 'click', function (e) {
-                fileInput.click();
-                e.preventDefault();
-            });
+        L.DomEvent.disableClickPropagation(link);
+        L.DomEvent.on(link, 'click', function (e) {
+            fileInput.click();
+            e.preventDefault();
+        });
         return container;
     }
 });
