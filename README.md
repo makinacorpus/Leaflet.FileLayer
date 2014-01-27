@@ -36,6 +36,7 @@ Events:
     });
 ```
 
+* **data:error** (error)
 
 Authors
 -------

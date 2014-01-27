@@ -33,9 +33,16 @@ var FileLoader = L.Class.extend({
         // Read selected file using HTML5 File API
         var reader = new FileReader();
         reader.onload = L.Util.bind(function (e) {
-            this.fire('data:loading', {filename: file.name, format: ext});
-            var layer = parser.call(this, e.target.result, ext);
-            this.fire('data:loaded', {layer: layer, filename: file.name, format: ext});
+
+            try {
+                this.fire('data:loading', {filename: file.name, format: ext});
+                var layer = parser.call(this, e.target.result, ext);
+                this.fire('data:loaded', {layer: layer, filename: file.name, format: ext});
+            }
+            catch (e) {
+                this.fire('data:error', {error: e});
+            }
+
         }, this);
         reader.readAsText(file);
         return reader;
