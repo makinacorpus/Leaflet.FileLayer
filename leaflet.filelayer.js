@@ -87,7 +87,7 @@ L.Control.FileLayerLoad = L.Control.extend({
             // Fit bounds after loading
             if (this.options.fitBounds) {
                 window.setTimeout(function () {
-                    map.fitBounds(e.layer.getBounds()).zoomOut();
+                    map.fitBounds(e.layer.getBounds());
                 }, 500);
             }
         }, this);
