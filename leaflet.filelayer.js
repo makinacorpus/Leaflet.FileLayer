@@ -8,7 +8,8 @@
 var FileLoader = L.Class.extend({
     includes: L.Mixin.Events,
     options: {
-        layerOptions: {}
+        layerOptions: {},
+        fileSizeLimit: 1024
     },
 
     initialize: function (map, options) {
@@ -23,11 +24,22 @@ var FileLoader = L.Class.extend({
     },
 
     load: function (file /* File */) {
+        // Check file size
+        var fileSize = (file.size / 1024).toFixed(4);
+        if (fileSize > this.options.fileSizeLimit) {
+            this.fire('data:error', {
+                error: new Error('File size exceeds limit (' + fileSize + ' > ' + this.options.fileSizeLimit + 'kb)')
+            });
+            return
+        }
+
         // Check file extension
         var ext = file.name.split('.').pop(),
             parser = this._parsers[ext];
         if (!parser) {
-            window.alert("Unsupported file type " + file.type + '(' + ext + ')');
+            this.fire('data:error', {
+                error: new Error('Unsupported file type ' + file.type + '(' + ext + ')')
+            });
             return;
         }
         // Read selected file using HTML5 File API
@@ -79,7 +91,8 @@ L.Control.FileLayerLoad = L.Control.extend({
         position: 'topleft',
         fitBounds: true,
         layerOptions: {},
-        addToMap: true
+        addToMap: true,
+        fileSizeLimit: 1024
     },
 
     initialize: function (options) {
