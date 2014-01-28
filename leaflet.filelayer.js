@@ -1,7 +1,7 @@
 /*
  * Load files *locally* (GeoJSON, KML, GPX) into the map
  * using the HTML5 File API.
- * 
+ *
  * Requires Pavel Shramov's GPX.js
  * https://github.com/shramov/leaflet-plugins/blob/d74d67/layer/vector/GPX.js
  */
@@ -38,6 +38,7 @@ var FileLoader = L.Class.extend({
             this.fire('data:loaded', {layer: layer, filename: file.name, format: ext});
         }, this);
         reader.readAsText(file);
+        return reader;
     },
 
     _loadGeoJSON: function (content) {
@@ -128,17 +129,6 @@ L.Control.FileLayerLoad = L.Control.extend({
     },
 
     _initContainer: function () {
-        // Create an invisible file input 
-        var fileInput = L.DomUtil.create('input', 'hidden', container);
-        fileInput.type = 'file';
-        fileInput.accept = '.gpx,.kml,.geojson';
-        fileInput.style.display = 'none';
-        // Load on file change
-        var fileLoader = this.loader;
-        fileInput.addEventListener("change", function (e) {
-            fileLoader.load(this.files[0]);
-        }, false);
-
         // Create a button, and bind click on hidden file input
         var zoomName = 'leaflet-control-filelayer leaflet-control-zoom',
             barName = 'leaflet-bar',
@@ -148,6 +138,17 @@ L.Control.FileLayerLoad = L.Control.extend({
         link.innerHTML = L.Control.FileLayerLoad.LABEL;
         link.href = '#';
         link.title = L.Control.FileLayerLoad.TITLE;
+
+        // Create an invisible file input
+        var fileInput = L.DomUtil.create('input', 'hidden', container);
+        fileInput.type = 'file';
+        fileInput.accept = '.gpx,.kml,.geojson';
+        fileInput.style.display = 'none';
+        // Load on file change
+        var fileLoader = this.loader;
+        fileInput.addEventListener("change", function (e) {
+            fileLoader.load(this.files[0]);
+        }, false);
 
         var stop = L.DomEvent.stopPropagation;
         L.DomEvent
