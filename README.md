@@ -18,17 +18,22 @@ For GPX and KML files, it currently depends on [Tom MacWright's togeojson.js](ht
 Usage
 -----
 
-```
+```javascript
     var map = L.map('map').fitWorld();
     ...
     L.Control.fileLayerLoad({
-        layerOptions: {style: {color:'red'}}
+        // See http://leafletjs.com/reference.html#geojson-options
+        layerOptions: {style: {color:'red'}},
+        // Add to map after loading (default: true) ?
+        addToMap: true,
+        // File size limit in kb (default: 1024) ?
+        fileSizeLimit: 1024
     }).addTo(map);
 ```
 
 Events:
 
-```
+```javascript
     var control = L.Control.fileLayerLoad();
     control.loader.on('data:loaded', function (e) {
         // Add to map layer switcher
@@ -36,6 +41,7 @@ Events:
     });
 ```
 
+* **data:error** (error)
 
 Authors
 -------
