@@ -8,7 +8,8 @@
 var FileLoader = L.Class.extend({
     includes: L.Mixin.Events,
     options: {
-        layerOptions: {}
+        layerOptions: {},
+        fileSizeLimit: 1024
     },
 
     initialize: function (map, options) {
@@ -23,19 +24,36 @@ var FileLoader = L.Class.extend({
     },
 
     load: function (file /* File */) {
+        // Check file size
+        var fileSize = (file.size / 1024).toFixed(4);
+        if (fileSize > this.options.fileSizeLimit) {
+            this.fire('data:error', {
+                error: new Error('File size exceeds limit (' + fileSize + ' > ' + this.options.fileSizeLimit + 'kb)')
+            });
+            return;
+        }
+
         // Check file extension
         var ext = file.name.split('.').pop(),
             parser = this._parsers[ext];
         if (!parser) {
-            window.alert("Unsupported file type " + file.type + '(' + ext + ')');
+            this.fire('data:error', {
+                error: new Error('Unsupported file type ' + file.type + '(' + ext + ')')
+            });
             return;
         }
         // Read selected file using HTML5 File API
         var reader = new FileReader();
         reader.onload = L.Util.bind(function (e) {
-            this.fire('data:loading', {filename: file.name, format: ext});
-            var layer = parser.call(this, e.target.result, ext);
-            this.fire('data:loaded', {layer: layer, filename: file.name, format: ext});
+            try {
+                this.fire('data:loading', {filename: file.name, format: ext});
+                var layer = parser.call(this, e.target.result, ext);
+                this.fire('data:loaded', {layer: layer, filename: file.name, format: ext});
+            }
+            catch (err) {
+                this.fire('data:error', {error: err});
+            }
+
         }, this);
         reader.readAsText(file);
         return reader;
@@ -45,7 +63,16 @@ var FileLoader = L.Class.extend({
         if (typeof content == 'string') {
             content = JSON.parse(content);
         }
-        return L.geoJson(content, this.options.layerOptions).addTo(this._map);
+        var layer = L.geoJson(content, this.options.layerOptions);
+
+        if (layer.getLayers().length === 0) {
+            throw new Error('GeoJSON has no valid layers.');
+        }
+
+        if (this.options.addToMap) {
+            layer.addTo(this._map);
+        }
+        return layer;
     },
 
     _convertToGeoJSON: function (content, format) {
@@ -67,7 +94,9 @@ L.Control.FileLayerLoad = L.Control.extend({
     options: {
         position: 'topleft',
         fitBounds: true,
-        layerOptions: {}
+        layerOptions: {},
+        addToMap: true,
+        fileSizeLimit: 1024
     },
 
     initialize: function (options) {
@@ -76,13 +105,13 @@ L.Control.FileLayerLoad = L.Control.extend({
     },
 
     onAdd: function (map) {
-        this.loader = new FileLoader(map, {layerOptions: this.options.layerOptions});
+        this.loader = new FileLoader(map, this.options);
 
         this.loader.on('data:loaded', function (e) {
             // Fit bounds after loading
             if (this.options.fitBounds) {
                 window.setTimeout(function () {
-                    map.fitBounds(e.layer.getBounds()).zoomOut();
+                    map.fitBounds(e.layer.getBounds());
                 }, 500);
             }
         }, this);
@@ -148,18 +177,15 @@ L.Control.FileLayerLoad = L.Control.extend({
         var fileLoader = this.loader;
         fileInput.addEventListener("change", function (e) {
             fileLoader.load(this.files[0]);
+            // reset so that the user can upload the same file again if they want to
+            this.value = '';
         }, false);
 
-        var stop = L.DomEvent.stopPropagation;
-        L.DomEvent
-            .on(link, 'click', stop)
-            .on(link, 'mousedown', stop)
-            .on(link, 'dblclick', stop)
-            .on(link, 'click', L.DomEvent.preventDefault)
-            .on(link, 'click', function (e) {
-                fileInput.click();
-                e.preventDefault();
-            });
+        L.DomEvent.disableClickPropagation(link);
+        L.DomEvent.on(link, 'click', function (e) {
+            fileInput.click();
+            e.preventDefault();
+        });
         return container;
     }
 });

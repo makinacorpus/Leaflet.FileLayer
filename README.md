@@ -12,23 +12,27 @@ Check out the [demo](http://makinacorpus.github.com/Leaflet.FileLayer/) !
 
 For GPX and KML files, it currently depends on [Tom MacWright's togeojson.js](https://github.com/tmcw/togeojson).
 
-
-[![Build Status](https://travis-ci.org/makinacorpus/Leaflet.FileLayer.png)](https://travis-ci.org/makinacorpus/Leaflet.FileLayer)
+[![Build Status](https://travis-ci.org/makinacorpus/Leaflet.FileLayer.png?branch=master)](https://travis-ci.org/makinacorpus/Leaflet.FileLayer)
 
 Usage
 -----
 
-```
+```javascript
     var map = L.map('map').fitWorld();
     ...
     L.Control.fileLayerLoad({
-        layerOptions: {style: {color:'red'}}
+        // See http://leafletjs.com/reference.html#geojson-options
+        layerOptions: {style: {color:'red'}},
+        // Add to map after loading (default: true) ?
+        addToMap: true,
+        // File size limit in kb (default: 1024) ?
+        fileSizeLimit: 1024
     }).addTo(map);
 ```
 
 Events:
 
-```
+```javascript
     var control = L.Control.fileLayerLoad();
     control.loader.on('data:loaded', function (e) {
         // Add to map layer switcher
@@ -36,8 +40,13 @@ Events:
     });
 ```
 
+* **data:error** (error)
 
 Authors
 -------
 
 [![Makina Corpus](http://depot.makina-corpus.org/public/logo.gif)](http://makinacorpus.com)
+
+Contributions
+
+* Joey Baker http://byjoeybaker.com
