@@ -1,5 +1,11 @@
 var assert = chai.assert;
 
+const _VALID_GEOJSON = {type: "FeatureCollection", features: [
+    {type: "Point", coordinates: [0, 0]}
+]};
+const _VALID_KML = '<kml><Placemark><Point><coordinates>0,0,0</coordinates></Point></Placemark></kml>';
+
+
 describe('L.Control.FileLayerLoad', function() {
 
     var map;
@@ -19,7 +25,6 @@ describe('L.Control.FileLayerLoad', function() {
 
             var fileinput = document.querySelector('input.hidden');
             var callback = sinon.spy();
-            map.on('mousemovesample', callback);
             L.DomEvent.on(fileinput, 'click', callback);
 
             var button = document.querySelector('a.leaflet-control-filelayer');
@@ -33,9 +38,36 @@ describe('L.Control.FileLayerLoad', function() {
         //     done();
         // });
 
-        // it("should add the layer to the map by default", function(done) {
-        //     done();
-        // });
+    });
+
+
+    describe('Map layers', function() {
+
+        it("should add the layer to the map by default", function(done) {
+            var control = L.Control.fileLayerLoad().addTo(map);
+
+            var callback = sinon.spy();
+            map.on('layeradd', callback);
+            var reader = control.loader.load({name: 'name.geojson'});
+            reader.onload({target: {result: _VALID_GEOJSON}});
+
+            assert.isTrue(callback.called);
+            done();
+        });
+
+        it("should not add the layer if `addToMap` is false", function(done) {
+            var control = L.Control.fileLayerLoad({addToMap: false}).addTo(map);
+
+            var callback = sinon.spy();
+            map.on('layeradd', callback);
+
+            var reader = control.loader.load({name: 'name.geojson'});
+            reader.onload({target: {result: _VALID_GEOJSON}});
+
+            assert.isFalse(callback.called);
+            done();
+        });
+
 
     });
 
@@ -45,11 +77,6 @@ describe('FileLoader', function() {
 
     var map,
         loader;
-
-    const _VALID_GEOJSON = {type: "FeatureCollection", features: [
-        {type: "Point", coordinates: [0, 0]}
-    ]};
-    const _VALID_KML = '<kml><Placemark><Point><coordinates>0,0,0</coordinates></Point></Placemark></kml>'; 
 
     before(function() {
         map = L.map('map').fitWorld();

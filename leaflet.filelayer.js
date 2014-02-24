@@ -30,7 +30,7 @@ var FileLoader = L.Class.extend({
             this.fire('data:error', {
                 error: new Error('File size exceeds limit (' + fileSize + ' > ' + this.options.fileSizeLimit + 'kb)')
             });
-            return
+            return;
         }
 
         // Check file extension
@@ -50,8 +50,8 @@ var FileLoader = L.Class.extend({
                 var layer = parser.call(this, e.target.result, ext);
                 this.fire('data:loaded', {layer: layer, filename: file.name, format: ext});
             }
-            catch (e) {
-                this.fire('data:error', {error: e});
+            catch (err) {
+                this.fire('data:error', {error: err});
             }
 
         }, this);
@@ -178,7 +178,7 @@ L.Control.FileLayerLoad = L.Control.extend({
         fileInput.addEventListener("change", function (e) {
             fileLoader.load(this.files[0]);
             // reset so that the user can upload the same file again if they want to
-            this.value = ''
+            this.value = '';
         }, false);
 
         L.DomEvent.disableClickPropagation(link);
