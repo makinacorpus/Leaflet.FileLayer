@@ -42,6 +42,19 @@ Events:
 
 * **data:error** (error)
 
+Changelog
+---------
+
+### 0.3.0 ###
+
+* Add `data:error` event (thanks @joeybaker)
+* Fix multiple uploads (thanks @joeybaker)
+* Add `addToMap` option (thanks @joeybaker)
+
+### 0.1.0 ###
+
+* Initial working version
+
 Authors
 -------
 

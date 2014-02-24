@@ -1,6 +1,6 @@
 {
     "name": "leaflet-filelayer",
-    "version": "0.1.0",
+    "version": "0.3.0",
     "description": "Loads local files (GeoJSON, GPX, KML) into the map using the HTML5 FileReader API",
     "keywords": ["Leaflet", "GIS", "HTML5"],
     "main": "leaflet.filelayer.js",
