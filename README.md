@@ -51,6 +51,8 @@ Changelog
 * Fix multiple uploads (thanks @joeybaker)
 * Add `addToMap` option (thanks @joeybaker)
 
+(* Did not release version 0.2 to prevent conflicts with Joey's fork. *)
+
 ### 0.1.0 ###
 
 * Initial working version
