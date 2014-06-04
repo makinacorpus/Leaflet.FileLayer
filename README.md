@@ -12,7 +12,7 @@ Check out the [demo](http://makinacorpus.github.com/Leaflet.FileLayer/) !
 
 For GPX and KML files, it currently depends on [Tom MacWright's togeojson.js](https://github.com/tmcw/togeojson).
 
-[![Build Status](https://travis-ci.org/makinacorpus/Leaflet.FileLayer.png?branch=master)](https://travis-ci.org/makinacorpus/Leaflet.FileLayer)
+[![Build Status](https://travis-ci.org/makinacorpus/Leaflet.FileLayer.png?branch=gh-pages)](https://travis-ci.org/makinacorpus/Leaflet.FileLayer)
 
 Usage
 -----
