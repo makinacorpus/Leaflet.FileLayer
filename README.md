@@ -50,6 +50,10 @@ Events:
 Changelog
 ---------
 
+### 0.4.0 ###
+
+* Support whitelist for file formats (thanks CJ Cenizal)
+
 ### 0.3.0 ###
 
 * Add `data:error` event (thanks @joeybaker)
