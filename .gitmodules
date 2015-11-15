@@ -4,3 +4,6 @@
 [submodule "Font-Awesome"]
 	path = Font-Awesome
 	url = https://github.com/FortAwesome/Font-Awesome.git
+[submodule "PapaParser"]
+	path = PapaParser
+	url = https://github.com/mholt/PapaParse.git
