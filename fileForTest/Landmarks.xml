@@ -1,0 +1,4387 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Row>
+		<Longitude>-97.772588</Longitude>
+		<Latitude>30.249405</Latitude>
+		<Building_Name>GOODRICH BAPTIST CHURCH AND CEMETERY</Building_Name>
+		<Address>2107 Goodrich Avenue</Address>
+		<Ownership>NON-PROFIT</Ownership>
+		<Date_Built>1860</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.744671</Longitude>
+		<Latitude>30.266270</Latitude>
+		<Building_Name>DAVIS (NELSON) WAREHOUSE</Building_Name>
+		<Address>107 West 4th  Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1905</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.730837</Longitude>
+		<Latitude>30.267457</Latitude>
+		<Building_Name>STOHL - SALDANA HOUSE</Building_Name>
+		<Address>1005 East 9th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1914</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.736610</Longitude>
+		<Latitude>30.297801</Latitude>
+		<Building_Name>FINCH HOUSE</Building_Name>
+		<Address>109 West 33rd Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1917</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.745299</Longitude>
+		<Latitude>30.272341</Latitude>
+		<Building_Name>WOOLDRIDGE PARK</Building_Name>
+		<Address>900 Guadalupe Street</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1909</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.747093</Longitude>
+		<Latitude>30.274658</Latitude>
+		<Building_Name>HATZFELD HOUSE</Building_Name>
+		<Address>604 West 11th  Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1858</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.756656</Longitude>
+		<Latitude>30.265544</Latitude>
+		<Building_Name>LAMAR BOULEVARD BRIDGE</Building_Name>
+		<Address>101 Lamar Boulevard</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1942</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.748406</Longitude>
+		<Latitude>30.272117</Latitude>
+		<Building_Name>CROW - TENANT HOUSE</Building_Name>
+		<Address>805 Rio Grande Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1905</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.746305</Longitude>
+		<Latitude>30.274013</Latitude>
+		<Building_Name>BRIZENDINE HOUSE</Building_Name>
+		<Address>507 West 11th Street</Address>
+		<Ownership>PUBLIC</Ownership>
+		<Date_Built>1870</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.757218</Longitude>
+		<Latitude>30.291209</Latitude>
+		<Building_Name>KEITH HOUSE</Building_Name>
+		<Address>2400 Harris Boulevard</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1933</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.762914</Longitude>
+		<Latitude>30.282165</Latitude>
+		<Building_Name>LAWSON HOUSE</Building_Name>
+		<Address>1106 Toyath Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1909</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.745367</Longitude>
+		<Latitude>30.282106</Latitude>
+		<Building_Name>POPE - WATSON HOUSE</Building_Name>
+		<Address>1806 Rio Grande Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1912</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.740789</Longitude>
+		<Latitude>30.267223</Latitude>
+		<Building_Name>GINSBURG BUILDING</Building_Name>
+		<Address>219 East 6th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1872</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.730540</Longitude>
+		<Latitude>30.266330</Latitude>
+		<Building_Name>PARSLEY HOUSE</Building_Name>
+		<Address>1009 East 8th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1907</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.730520</Longitude>
+		<Latitude>30.267348</Latitude>
+		<Building_Name>COOK - SIFUENTES HOUSE</Building_Name>
+		<Address>1009 East 9th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1885</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.731202</Longitude>
+		<Latitude>30.304854</Latitude>
+		<Building_Name>BAILEY - NEWGREN HOUSE</Building_Name>
+		<Address>4108 Speedway</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1910</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.730945</Longitude>
+		<Latitude>30.305231</Latitude>
+		<Building_Name>BADGER (WALTER) HOUSE</Building_Name>
+		<Address>4112 Speedway</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1905</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.754565</Longitude>
+		<Latitude>30.277768</Latitude>
+		<Building_Name>ZILLER - WALLACE HOUSE</Building_Name>
+		<Address>1110 Blanco Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1880</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.753290</Longitude>
+		<Latitude>30.245896</Latitude>
+		<Building_Name>STANLEY HOMESTEAD (AKA STONE HOUSE)</Building_Name>
+		<Address>1811 Newton Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1895</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.731995</Longitude>
+		<Latitude>30.296024</Latitude>
+		<Building_Name>FINCH - KRUEGER HOUSE</Building_Name>
+		<Address>3300 Duval Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1913</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.657529</Longitude>
+		<Latitude>30.366838</Latitude>
+		<Building_Name>PIONEER FARMS</Building_Name>
+		<Address>11418 Sprinkle Cut Off Road</Address>
+		<Ownership>NON-PROFIT</Ownership>
+		<Date_Built>various</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.719462</Longitude>
+		<Latitude>30.306569</Latitude>
+		<Building_Name>PEARCE - ANDERSON HOUSE</Building_Name>
+		<Address>809 West 46th  Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1910</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.750206</Longitude>
+		<Latitude>30.249167</Latitude>
+		<Building_Name>CRAWFORD (J. M.) CO. BUILDING</Building_Name>
+		<Address>1412 S Congress Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1887</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.733002</Longitude>
+		<Latitude>30.294230</Latitude>
+		<Building_Name>MORSE HOUSE</Building_Name>
+		<Address>3126 Duval Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1926</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.744951</Longitude>
+		<Latitude>30.288574</Latitude>
+		<Building_Name>PARKER (DAVID C.) PROPERTY</Building_Name>
+		<Address>2404 Rio Grande Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1908</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.744204</Longitude>
+		<Latitude>30.280487</Latitude>
+		<Building_Name>STEUSSEY - SKINNER HOUSE (AKA 1705 NUECES ST.)</Building_Name>
+		<Address>510 West 17th  Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1908</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.729017</Longitude>
+		<Latitude>30.306269</Latitude>
+		<Building_Name>HODNETTE - ROBERTS HOUSE</Building_Name>
+		<Address>4300 Avenue F</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1909</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>1924</Longitude>
+		<Latitude>1108 Chicon Street</Latitude>
+		<Building_Name>BREWER</Building_Name>
+		<Address>NON-PROFIT</Address>
+		<Ownership> JOHN HENRY AND MINNIE TATE</Ownership>
+		<Date_Built> HOUSE</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.773571</Longitude>
+		<Latitude>30.321046</Latitude>
+		<Building_Name>MOUNT BONNELL</Building_Name>
+		<Address>3800 Mount Bonnell Rd</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>BC</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.747323</Longitude>
+		<Latitude>30.267816</Latitude>
+		<Building_Name>REPUBLIC SQUARE - 400 BLOCK (WEST SIDE)</Building_Name>
+		<Address>400 Guadalupe Street</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1885</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.740674</Longitude>
+		<Latitude>30.271419</Latitude>
+		<Building_Name>WOOTEN MEDICAL OFFICES</Building_Name>
+		<Address>109 East 10th  Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1876</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.755449</Longitude>
+		<Latitude>30.276146</Latitude>
+		<Building_Name>HILL HOUSE (WILLIAM GREEN)</Building_Name>
+		<Address>910 Blanco Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1890</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.743758</Longitude>
+		<Latitude>30.266861</Latitude>
+		<Building_Name>KREISLE BUILDING</Building_Name>
+		<Address>412 Congress Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1888</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.735271</Longitude>
+		<Latitude>30.300644</Latitude>
+		<Building_Name>CONFEDERATE WOMAN'S HOME</Building_Name>
+		<Address>3710 Cedar Street</Address>
+		<Ownership>NON-PROFIT</Ownership>
+		<Date_Built>1907</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.743098</Longitude>
+		<Latitude>30.272785</Latitude>
+		<Building_Name>GOVERNOR'S MANSION</Building_Name>
+		<Address>1010 Colorado Street</Address>
+		<Ownership>PUBLIC</Ownership>
+		<Date_Built>1856</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.742088</Longitude>
+		<Latitude>30.275989</Latitude>
+		<Building_Name>HANCOCK HOUSE (CHRISTIANSON-LEBERMAN STUDIO)</Building_Name>
+		<Address>1306 Colorado Street</Address>
+		<Ownership>PUBLIC</Ownership>
+		<Date_Built>1854</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.740298</Longitude>
+		<Latitude>30.278004</Latitude>
+		<Building_Name>CARRINGTON - COVERT HOUSE</Building_Name>
+		<Address>1511 Colorado Street</Address>
+		<Ownership>PUBLIC</Ownership>
+		<Date_Built>1855</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.743600</Longitude>
+		<Latitude>30.265046</Latitude>
+		<Building_Name>PEARL HOUSE BAR</Building_Name>
+		<Address>221 Congress Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1882</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.743377</Longitude>
+		<Latitude>30.265634</Latitude>
+		<Building_Name>SWIFT BUILDING</Building_Name>
+		<Address>315 Congress Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1905</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.744078</Longitude>
+		<Latitude>30.265973</Latitude>
+		<Building_Name>SMITH (W. B.) BUILDING</Building_Name>
+		<Address>316 Congress Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1883</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.765336</Longitude>
+		<Latitude>30.249603</Latitude>
+		<Building_Name>MILLBROOK</Building_Name>
+		<Address>1803 Evergreen Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1850</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.732136</Longitude>
+		<Latitude>30.301309</Latitude>
+		<Building_Name>MANSBENDEL - WILLIAMS HOUSE</Building_Name>
+		<Address>3824 Avenue F</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1912</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.730618</Longitude>
+		<Latitude>30.303662</Latitude>
+		<Building_Name>SAUTER - ALLEY HOUSE</Building_Name>
+		<Address>4012 Avenue F</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1897</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.730459</Longitude>
+		<Latitude>30.304002</Latitude>
+		<Building_Name>HOLLAND - KLIPPLE HOUSE</Building_Name>
+		<Address>4100 Avenue F</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1893</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.730325</Longitude>
+		<Latitude>30.304255</Latitude>
+		<Building_Name>WEISIGER - WHITE HOUSE</Building_Name>
+		<Address>4104 Avenue F</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1892</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.729676</Longitude>
+		<Latitude>30.305136</Latitude>
+		<Building_Name>BELL HOUSE</Building_Name>
+		<Address>4200 Avenue F</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1895</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.744054</Longitude>
+		<Latitude>30.266037</Latitude>
+		<Building_Name>KOPPEL BUILDING</Building_Name>
+		<Address>318 Congress Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1888</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.743809</Longitude>
+		<Latitude>30.266768</Latitude>
+		<Building_Name>SOUTHWESTERN TELEPHONE AND TELEGRAPH BUILDING</Building_Name>
+		<Address>410 Congress Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1886</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.743523</Longitude>
+		<Latitude>30.267515</Latitude>
+		<Building_Name>ROBINSON - ROSNER BUILDING</Building_Name>
+		<Address>504 Congress Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1856</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.743332</Longitude>
+		<Latitude>30.267916</Latitude>
+		<Building_Name>SCARBROUGH BUILDING</Building_Name>
+		<Address>522 Congress Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1909</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.742308</Longitude>
+		<Latitude>30.268160</Latitude>
+		<Building_Name>LITTLEFIELD BUILDING</Building_Name>
+		<Address>106 East 6th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1912</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.742775</Longitude>
+		<Latitude>30.268933</Latitude>
+		<Building_Name>SAMPSON - HENRICKS BUILDING</Building_Name>
+		<Address>620 Congress Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1860</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.742561</Longitude>
+		<Latitude>30.269525</Latitude>
+		<Building_Name>TIPS (WALTER) BUILDING</Building_Name>
+		<Address>710 Congress Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1876</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.741904</Longitude>
+		<Latitude>30.269275</Latitude>
+		<Building_Name>PARAMOUNT THEATRE</Building_Name>
+		<Address>713 Congress Avenue</Address>
+		<Ownership>NON-PROFIT</Ownership>
+		<Date_Built>1915</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.742506</Longitude>
+		<Latitude>30.269661</Latitude>
+		<Building_Name>JOHNS - HAMILTON BUILDING</Building_Name>
+		<Address>716 Congress Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1870</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.729678</Longitude>
+		<Latitude>30.308136</Latitude>
+		<Building_Name>WOODBURN HOUSE</Building_Name>
+		<Address>4401 Avenue D</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1909</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.731799</Longitude>
+		<Latitude>30.294719</Latitude>
+		<Building_Name>BARKER (BEN M.) HOUSE</Building_Name>
+		<Address>3215 Duval Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1921</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.729785</Longitude>
+		<Latitude>30.266667</Latitude>
+		<Building_Name>LINDEMANN HOUSE</Building_Name>
+		<Address>1100 East 8th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1887</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>1802 East 8th Streett</Longitude>
+		<Latitude>-97.722615</Latitude>
+		<Building_Name>EVANS HALL</Building_Name>
+		<Address>1911</Address>
+		<Ownership> HUSTON - TILLOTSON COLLEGE</Ownership>
+		<Date_Built>NON-PROFIT</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.742416</Longitude>
+		<Latitude>30.269841</Latitude>
+		<Building_Name>OPENHEIMER - MONTGOMERY BUILDING</Building_Name>
+		<Address>105 West 8th  Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1894</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.748177</Longitude>
+		<Latitude>30.271371</Latitude>
+		<Building_Name>GILFILLAN HOUSE</Building_Name>
+		<Address>603 West 8th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1905</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.735043</Longitude>
+		<Latitude>30.271566</Latitude>
+		<Building_Name>WEDIG - HARDEMAN HOUSE</Building_Name>
+		<Address>1111 Red River Street</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1860</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.734911</Longitude>
+		<Latitude>30.271225</Latitude>
+		<Building_Name>MCCRAVEN - WILSON HOUSE</Building_Name>
+		<Address>602 East 11th Street</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1870</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.735387</Longitude>
+		<Latitude>30.270699</Latitude>
+		<Building_Name>ORSAY - DOYLE HOUSE</Building_Name>
+		<Address>1017 Red River Street</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1870</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.729205</Longitude>
+		<Latitude>30.268946</Latitude>
+		<Building_Name>HAENEL STORE BUILDING</Building_Name>
+		<Address>1101 East 11th  Street</Address>
+		<Ownership>NON-PROFIT</Ownership>
+		<Date_Built>1875</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.739279</Longitude>
+		<Latitude>30.272613</Latitude>
+		<Building_Name>LAND OFFICE BUILDING</Building_Name>
+		<Address>112 East 11th Street</Address>
+		<Ownership>PUBLIC</Ownership>
+		<Date_Built>1857</Date_Built>
+	</Row>
+	<Row>
+		<Longitude> East</Longitude>
+		<Latitude>-97.723938</Latitude>
+		<Building_Name>GERMAN AMERICAN LADIES COLLEGE</Building_Name>
+		<Address>1604 11 Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1876</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.753836</Longitude>
+		<Latitude>30.276303</Latitude>
+		<Building_Name>TEXAS MILITARY INSTITUTE CASTLE</Building_Name>
+		<Address>1111 West 11 Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1870</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.729219</Longitude>
+		<Latitude>30.305874</Latitude>
+		<Building_Name>KOPPERL HOUSE</Building_Name>
+		<Address>4212 Avenue F</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1896</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.742206</Longitude>
+		<Latitude>30.266581</Latitude>
+		<Building_Name>HEIERMAN BUILDING</Building_Name>
+		<Address>115 East 5th  Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1887</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>1886</Longitude>
+		<Latitude>409 East 5th Street</Latitude>
+		<Building_Name>PORTER</Building_Name>
+		<Address>CITY OF AUSTIN</Address>
+		<Ownership> WILLIAM SIDNEY</Ownership>
+		<Date_Built> HOUSE (O HENRY MUSEUM)</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.738400</Longitude>
+		<Latitude>30.265577</Latitude>
+		<Building_Name>DEPOT HOTEL</Building_Name>
+		<Address>504 East Fifth Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1875</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.737112</Longitude>
+		<Latitude>30.261688</Latitude>
+		<Building_Name>PALM SCHOOL</Building_Name>
+		<Address>700 East Cesar Chavez Street</Address>
+		<Ownership>PUBLIC</Ownership>
+		<Date_Built>1892</Date_Built>
+	</Row>
+	<Row>
+		<Longitude> West</Longitude>
+		<Latitude>-97.771397</Latitude>
+		<Building_Name>JOHNSON (CHARLES) HOMESTEAD</Building_Name>
+		<Address>2201 Cesar Chavez Street</Address>
+		<Ownership>NON-PROFIT</Ownership>
+		<Date_Built>1860</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.726255</Longitude>
+		<Latitude>30.306653</Latitude>
+		<Building_Name>NEY (ELIZABET) MUSEUM</Building_Name>
+		<Address>304 East 44th  Street</Address>
+		<Ownership>PUBLIC</Ownership>
+		<Date_Built>1892</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.722791</Longitude>
+		<Latitude>30.304576</Latitude>
+		<Building_Name>DEMPSEY HOUSE</Building_Name>
+		<Address>700 East 44th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1914</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.723768</Longitude>
+		<Latitude>30.305100</Latitude>
+		<Building_Name>INSHALLAH</Building_Name>
+		<Address>602 East 43rd  Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1872</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.729308</Longitude>
+		<Latitude>30.274638</Latitude>
+		<Building_Name>BLOMQUIST HOUSE</Building_Name>
+		<Address>1000 East 14th  Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1884</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.744097</Longitude>
+		<Latitude>30.277496</Latitude>
+		<Building_Name>MAUTHE - MYRICK HOUSE</Building_Name>
+		<Address>408 West 14th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1877</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.744689</Longitude>
+		<Latitude>30.277553</Latitude>
+		<Building_Name>SMITH-PHILLIPS  HOUSES</Building_Name>
+		<Address>502 West 14th  Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1886</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>1892</Longitude>
+		<Latitude>3816 Avenue G</Latitude>
+		<Building_Name>SHIPE</Building_Name>
+		<Address>PRIVATE</Address>
+		<Ownership> COL. MONROE M.</Ownership>
+		<Date_Built> HOUSE</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>1898</Longitude>
+		<Latitude>3912 Avenue G</Latitude>
+		<Building_Name>COVERT</Building_Name>
+		<Address>PRIVATE</Address>
+		<Ownership> FRANK M. AND ANNIE G.</Ownership>
+		<Date_Built> HOUSE</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.729928</Longitude>
+		<Latitude>30.301917</Latitude>
+		<Building_Name>PAGE - GILBERT HOUSE</Building_Name>
+		<Address>3913 Avenue G</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1893</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.733302</Longitude>
+		<Latitude>30.257669</Latitude>
+		<Building_Name>MCGOWN - GRIFFIN HOUSE</Building_Name>
+		<Address>1202 Garden Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1880</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.742340</Longitude>
+		<Latitude>30.279037</Latitude>
+		<Building_Name>BERTRAM STORE BUILDING</Building_Name>
+		<Address>1601 Guadalupe Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1860</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.743805</Longitude>
+		<Latitude>30.283377</Latitude>
+		<Building_Name>THORNTON HOUSE</Building_Name>
+		<Address>1909 Nueces Street</Address>
+		<Ownership>NON-PROFIT</Ownership>
+		<Date_Built>1892</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.741209</Longitude>
+		<Latitude>30.267904</Latitude>
+		<Building_Name>JACOBY - POPE BUILDING</Building_Name>
+		<Address>200 East 6th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1874</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.741209</Longitude>
+		<Latitude>30.267904</Latitude>
+		<Building_Name>NICHOLS - GELLMAN HOME</Building_Name>
+		<Address>201 East 6th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1873</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.740937</Longitude>
+		<Latitude>30.267799</Latitude>
+		<Building_Name>HANNIG BUILDING</Building_Name>
+		<Address>206 East 6th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1870</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.740805</Longitude>
+		<Latitude>30.267771</Latitude>
+		<Building_Name>PADGITT - WARMOTH</Building_Name>
+		<Address>208 East 6th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1885</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.741136</Longitude>
+		<Latitude>30.267327</Latitude>
+		<Building_Name>MORLEY BROTHERS DRUG</Building_Name>
+		<Address>209 East 6th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1871</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.740689</Longitude>
+		<Latitude>30.267749</Latitude>
+		<Building_Name>WEBB - SHAW BUILDING</Building_Name>
+		<Address>212 East 6th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1885</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.739586</Longitude>
+		<Latitude>30.266901</Latitude>
+		<Building_Name>SMITH - HAGE BUILDING</Building_Name>
+		<Address>325 East 6th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1873</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.739087</Longitude>
+		<Latitude>30.267354</Latitude>
+		<Building_Name>KREISLE (MATHIAS) BUILDING</Building_Name>
+		<Address>400 East 6th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1860</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.742025</Longitude>
+		<Latitude>30.297060</Latitude>
+		<Building_Name>NORTH AUSTIN FIRE STATION</Building_Name>
+		<Address>3002 Guadalupe Street</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1906</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.746272</Longitude>
+		<Latitude>30.269879</Latitude>
+		<Building_Name>SMITH (B. J.) HOUSE</Building_Name>
+		<Address>610 Guadalupe Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1854</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.740066</Longitude>
+		<Latitude>30.267752</Latitude>
+		<Building_Name>MCDONALD BUILDING</Building_Name>
+		<Address>607 San Jacinto Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1875</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.740157</Longitude>
+		<Latitude>30.267605</Latitude>
+		<Building_Name>MONROE BUILDING</Building_Name>
+		<Address>300 East 6th  Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1875</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.736449</Longitude>
+		<Latitude>30.293819</Latitude>
+		<Building_Name>BRUEGGMANN HOUSE</Building_Name>
+		<Address>200 East 30th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1906</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.748289</Longitude>
+		<Latitude>30.270867</Latitude>
+		<Building_Name>MARTIN HOUSE</Building_Name>
+		<Address>600 West 7th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1902</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.747400</Longitude>
+		<Latitude>30.279766</Latitude>
+		<Building_Name>DIGNAN - MICKEY HOUSE</Building_Name>
+		<Address>1504 West Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1889</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.738854</Longitude>
+		<Latitude>30.267297</Latitude>
+		<Building_Name>RHAMBO BUILDING</Building_Name>
+		<Address>406 East 6th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1875</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.739071</Longitude>
+		<Latitude>30.266761</Latitude>
+		<Building_Name>BUASS (J. L.) BUILDING</Building_Name>
+		<Address>407 East 6th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1875</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.738965</Longitude>
+		<Latitude>30.266735</Latitude>
+		<Building_Name>NALLE (JOSEPH) BUILDING</Building_Name>
+		<Address>409 East 6th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1875</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.738696</Longitude>
+		<Latitude>30.266647</Latitude>
+		<Building_Name>HAMILTON BUILDING</Building_Name>
+		<Address>419 East 6th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1885</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.738604</Longitude>
+		<Latitude>30.266626</Latitude>
+		<Building_Name>PAGGI CARRIAGE SHOP</Building_Name>
+		<Address>421 East 6th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1875</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.738111</Longitude>
+		<Latitude>30.266482</Latitude>
+		<Building_Name>COMMISSIONERS GENERAL PROVISION (PART 2 OF 2)</Building_Name>
+		<Address>503 East 6th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1837</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.737941</Longitude>
+		<Latitude>30.266435</Latitude>
+		<Building_Name>RISHER - ROACH BUILDING (PART 1 OF 2)</Building_Name>
+		<Address>509 East 6h Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1870</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.737359</Longitude>
+		<Latitude>30.266849</Latitude>
+		<Building_Name>CARRINGTON (E. H.) STORE</Building_Name>
+		<Address>520 East 6th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1872</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.735996</Longitude>
+		<Latitude>30.265900</Latitude>
+		<Building_Name>RANDERSON - LUNDELL BUILDING</Building_Name>
+		<Address>701 East 6th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1896</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.760682</Longitude>
+		<Latitude>30.275315</Latitude>
+		<Building_Name>JOHNSON (JAMES R.) HOUSE</Building_Name>
+		<Address>1412 West 6th half Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1877</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.731099</Longitude>
+		<Latitude>30.305012</Latitude>
+		<Building_Name>BAILEY - HOUSTON HOUSE</Building_Name>
+		<Address>4110 Speedway</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1910</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.777859</Longitude>
+		<Latitude>30.303544</Latitude>
+		<Building_Name>SWISHER - SCOTT HOUSE (SWEETBRUSH)</Building_Name>
+		<Address>2408 Sweetbrush Drive</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1853</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.728441</Longitude>
+		<Latitude>30.268268</Latitude>
+		<Building_Name>DILL - WHITE HOUSE</Building_Name>
+		<Address>1110 East 10th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1893</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.723497</Longitude>
+		<Latitude>30.272954</Latitude>
+		<Building_Name>SOUTHGATE - LEWIS HOUSE</Building_Name>
+		<Address>1501 East 12th  Street</Address>
+		<Ownership>NON-PROFIT</Ownership>
+		<Date_Built>1888</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.739974</Longitude>
+		<Latitude>30.271110</Latitude>
+		<Building_Name>ST. MARY'S CATHEDRAL</Building_Name>
+		<Address>201 East 10th  Street</Address>
+		<Ownership>NON-PROFIT</Ownership>
+		<Date_Built>1884</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.745169</Longitude>
+		<Latitude>30.275985</Latitude>
+		<Building_Name>ALLEN - WILLIAMS HOUSE</Building_Name>
+		<Address>1206 San Antonio Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1907</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.754160</Longitude>
+		<Latitude>30.275246</Latitude>
+		<Building_Name>MCBRIDE - KNUDSEN HOUSE</Building_Name>
+		<Address>1109 West 10th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1896</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.750099</Longitude>
+		<Latitude>30.274543</Latitude>
+		<Building_Name>MAYER - HOWSE HOUSE</Building_Name>
+		<Address>810 West 10th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1885</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.745541</Longitude>
+		<Latitude>30.274912</Latitude>
+		<Building_Name>KLEBERG HOUSE</Building_Name>
+		<Address>501 West 12th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1917</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.747562</Longitude>
+		<Latitude>30.276506</Latitude>
+		<Building_Name>ALLAN JR. HIGH SCHOOL</Building_Name>
+		<Address>1212 Rio Grande Street</Address>
+		<Ownership>PUBLIC</Ownership>
+		<Date_Built>1916</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.753323</Longitude>
+		<Latitude>30.288667</Latitude>
+		<Building_Name>WEST 24TH STREET BRIDGE</Building_Name>
+		<Address>2402 N Lamar Blvd</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1928</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.740447</Longitude>
+		<Latitude>30.294635</Latitude>
+		<Building_Name>KIRBY HALL</Building_Name>
+		<Address>306 West 29th Street</Address>
+		<Ownership>NON-PROFIT</Ownership>
+		<Date_Built>1924</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.744693</Longitude>
+		<Latitude>30.284982</Latitude>
+		<Building_Name>KENNEY HOUSE</Building_Name>
+		<Address>611 West 22nd Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1897</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.737833</Longitude>
+		<Latitude>30.263952</Latitude>
+		<Building_Name>HOFHEINTZ-REISSIG STORE</Building_Name>
+		<Address>600 East 3rd Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1855</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.747791</Longitude>
+		<Latitude>30.300806</Latitude>
+		<Building_Name>SEEKATZ - GARDNER HOUSE</Building_Name>
+		<Address>1101 West 31st Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1879</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.721726</Longitude>
+		<Latitude>30.289402</Latitude>
+		<Building_Name>DAMON - BROWN - PIERCE HOUSE</Building_Name>
+		<Address>1110 East 32nd Street</Address>
+		<Ownership>NON-PROFIT</Ownership>
+		<Date_Built>1875</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.732420</Longitude>
+		<Latitude>30.293899</Latitude>
+		<Building_Name>KUEHNE (HUGO) HOUSE</Building_Name>
+		<Address>500 East 32nd  Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1925</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.741451</Longitude>
+		<Latitude>30.299229</Latitude>
+		<Building_Name>MCCALEB HOUSE</Building_Name>
+		<Address>609 West 32nd Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1920</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>1908</Longitude>
+		<Latitude>613 West 32nd Street</Latitude>
+		<Building_Name>MCCALLUM</Building_Name>
+		<Address>PRIVATE</Address>
+		<Ownership> ARTHUR N. AND JANE Y.</Ownership>
+		<Date_Built> HOUSE</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.738894</Longitude>
+		<Latitude>30.267629</Latitude>
+		<Building_Name>CHICAGO (MCANGUS) HOUSE</Building_Name>
+		<Address>607 Trinity Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1885</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.735910</Longitude>
+		<Latitude>30.275656</Latitude>
+		<Building_Name>HAUKE HOUSE</Building_Name>
+		<Address>1409 Trinity Street</Address>
+		<Ownership>PUBLIC</Ownership>
+		<Date_Built>1860</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.741423</Longitude>
+		<Latitude>30.271110</Latitude>
+		<Building_Name>GRANDBERRY BUILDING</Building_Name>
+		<Address>907 Congress Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1881</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.757352</Longitude>
+		<Latitude>30.297805</Latitude>
+		<Building_Name>FIRST UNITED METHODIST (POPE HOUSE)</Building_Name>
+		<Address>1612 Gaston</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1948</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>1925</Longitude>
+		<Latitude>3215 Churchill Dr</Latitude>
+		<Building_Name>NAGEL</Building_Name>
+		<Address> </Address>
+		<Ownership> CHESTER AND LORINE</Ownership>
+		<Date_Built> HOUSE</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.739959</Longitude>
+		<Latitude>30.287726</Latitude>
+		<Building_Name>LITTLEFIELD HOUSE</Building_Name>
+		<Address>210 West 24th Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1875</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.742194</Longitude>
+		<Latitude>30.284918</Latitude>
+		<Building_Name>UNIVERSITY BAPTIST CHURCH</Building_Name>
+		<Address>2130 Guadalupe Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1900</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.730743</Longitude>
+		<Latitude>30.271847</Latitude>
+		<Building_Name>CHAPMAN HOUSE</Building_Name>
+		<Address>901 901 East 12th Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1885</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.733139</Longitude>
+		<Latitude>30.310249</Latitude>
+		<Building_Name>BLUEBONNET TOURIST CAMP</Building_Name>
+		<Address>4407  Guadaleup Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1925</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.739370</Longitude>
+		<Latitude>30.265801</Latitude>
+		<Building_Name>AUSTIN CENTRAL FIRE STATION #1</Building_Name>
+		<Address>411 Trinity Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1925</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>1925</Longitude>
+		<Latitude>2402 Windsor Rd.</Latitude>
+		<Building_Name>HORTON-PORTER</Building_Name>
+		<Address> </Address>
+		<Ownership> GOLDIE</Ownership>
+		<Date_Built> HOUSE</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.736917</Longitude>
+		<Latitude>30.307581</Latitude>
+		<Building_Name>STATE LUNATIC ASYLUM</Building_Name>
+		<Address>4110 Guadalupe</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1850</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.732646</Longitude>
+		<Latitude>30.258296</Latitude>
+		<Building_Name>SHOTGUN AT 1206 CANTERBURY STREET</Building_Name>
+		<Address>1206 Canterbury Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1900</Date_Built>
+	</Row>
+	<Row>
+		<Longitude> West</Longitude>
+		<Latitude>-97.756387</Latitude>
+		<Building_Name>HOPKINS HOUSE</Building_Name>
+		<Address>1300 09-1/2 Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1850-1865</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>1925</Longitude>
+		<Latitude>4415 Avenue A</Latitude>
+		<Building_Name>MCCAULEY</Building_Name>
+		<Address> </Address>
+		<Ownership> ROBERT H. AND EDITH ETHEL</Ownership>
+		<Date_Built> HOUSE</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>1875</Longitude>
+		<Latitude>1008 East 9th Street</Latitude>
+		<Building_Name>IRVIN</Building_Name>
+		<Address> </Address>
+		<Ownership> ROBERT</Ownership>
+		<Date_Built> HOUSE</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.730916</Longitude>
+		<Latitude>30.257722</Latitude>
+		<Building_Name>HOUSE AT 1400 CANTERBURY STREET</Building_Name>
+		<Address>1402 Canterbury St</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1875</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.740278</Longitude>
+		<Latitude>30.272249</Latitude>
+		<Building_Name>1933 STATE HIGHWAY BUILDING</Building_Name>
+		<Address>1010 Brazos Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1933</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>1925</Longitude>
+		<Latitude>1505 Windsor Rd</Latitude>
+		<Building_Name>BATTS</Building_Name>
+		<Address> </Address>
+		<Ownership> JUDGE ROBERT LYNN</Ownership>
+		<Date_Built> HOUSE (OKEWELL)</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.744739</Longitude>
+		<Latitude>30.285397</Latitude>
+		<Building_Name>BURT HOUSE</Building_Name>
+		<Address>612 West 22nd Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1909</Date_Built>
+	</Row>
+	<Row>
+		<Longitude> East</Longitude>
+		<Latitude>-97.729461</Latitude>
+		<Building_Name>METROPOLITAN AME CHURCH</Building_Name>
+		<Address>1101 10 Street</Address>
+		<Ownership>NON-PROFIT</Ownership>
+		<Date_Built>1923</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.734694</Longitude>
+		<Latitude>30.303972</Latitude>
+		<Building_Name>HYDE PARK PRESBYTERIAN CHURCH</Building_Name>
+		<Address>3913 Avenue B</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1875</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.726583</Longitude>
+		<Latitude>30.265199</Latitude>
+		<Building_Name>STATE CEMETERY OF TEXAS</Building_Name>
+		<Address>700 Comal Street</Address>
+		<Ownership>PUBLIC</Ownership>
+		<Date_Built>1850</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.743366</Longitude>
+		<Latitude>30.269448</Latitude>
+		<Building_Name>NORWOOD TOWER</Building_Name>
+		<Address>114 West 7th Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1929</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.743870</Longitude>
+		<Latitude>30.270705</Latitude>
+		<Building_Name>AUSTIN US COURTHOUSE</Building_Name>
+		<Address>200 West 8th Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1925</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.745080</Longitude>
+		<Latitude>30.291204</Latitude>
+		<Building_Name>GRAHAM (BERIAH) HOUSE</Building_Name>
+		<Address>2605 Salado Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1870</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.729596</Longitude>
+		<Latitude>30.269012</Latitude>
+		<Building_Name>BAILETTI HOUSE</Building_Name>
+		<Address>1006 Waller Street</Address>
+		<Ownership>NON-PROFIT</Ownership>
+		<Date_Built>1886</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.749165</Longitude>
+		<Latitude>30.274735</Latitude>
+		<Building_Name>BURLAGE - FISCHER HOUSE</Building_Name>
+		<Address>1008 West Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1874</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.742995</Longitude>
+		<Latitude>30.271963</Latitude>
+		<Building_Name>AUSTIN DAILY TRIBUNE BUILDING (EARNEST O. THOMPSON BUILDING)</Building_Name>
+		<Address>201 West 10th Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1925</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.747867</Longitude>
+		<Latitude>30.278637</Latitude>
+		<Building_Name>COON - GILBERT - DOGGETT HOUSE</Building_Name>
+		<Address>1402 West Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1889</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.746973</Longitude>
+		<Latitude>30.280891</Latitude>
+		<Building_Name>MILLICAN HOUSE</Building_Name>
+		<Address>1610 West Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1908</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.723367</Longitude>
+		<Latitude>30.301147</Latitude>
+		<Building_Name>PERRY ESTATE-ST. MARY'S ACADEMY</Building_Name>
+		<Address>701 East 41st Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1900</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.746274</Longitude>
+		<Latitude>30.281178</Latitude>
+		<Building_Name>WEST HILL</Building_Name>
+		<Address>1703 West Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1855</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.746072</Longitude>
+		<Latitude>30.281479</Latitude>
+		<Building_Name>HANCOCK (H. B.) HOUSE</Building_Name>
+		<Address>1717 West Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1886</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.745900</Longitude>
+		<Latitude>30.282159</Latitude>
+		<Building_Name>DENNY - HOLLIDAY HOUSE</Building_Name>
+		<Address>1803 West Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1880</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.739417</Longitude>
+		<Latitude>30.292444</Latitude>
+		<Building_Name>SCOTTISH RITE DORMITORY</Building_Name>
+		<Address>210 West 27th Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1900</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.744091</Longitude>
+		<Latitude>30.300448</Latitude>
+		<Building_Name>HERITAGE HOUSE</Building_Name>
+		<Address>3112 West Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1872</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.739725</Longitude>
+		<Latitude>30.291628</Latitude>
+		<Building_Name>ALL SAINTS CHAPEL</Building_Name>
+		<Address>209 West 27th Street</Address>
+		<Ownership>NON-PROFIT</Ownership>
+		<Date_Built>1899-1900</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.742179</Longitude>
+		<Latitude>30.275763</Latitude>
+		<Building_Name>GOODMAN BUILDING</Building_Name>
+		<Address>202 West 13th  Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1887</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>1900</Longitude>
+		<Latitude>3904 Avenue C</Latitude>
+		<Building_Name>LEDBETTER</Building_Name>
+		<Address> </Address>
+		<Ownership> CHARLES P.</Ownership>
+		<Date_Built> HOUSE</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.737892</Longitude>
+		<Latitude>30.266421</Latitude>
+		<Building_Name>RISHER - ROACH BUILDING (PART 2 OF 2)</Building_Name>
+		<Address>511 East 6h Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1870</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.738187</Longitude>
+		<Latitude>30.266506</Latitude>
+		<Building_Name>COMMISSIONERS GENERAL PROVISION (PART 1 OF 2)</Building_Name>
+		<Address>501 East 6th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1873</Date_Built>
+	</Row>
+	<Row>
+		<Longitude> West</Longitude>
+		<Latitude>-97.736105</Latitude>
+		<Building_Name>PARLIN HOUSE</Building_Name>
+		<Address>105 33 Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1922</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.741718</Longitude>
+		<Latitude>30.268136</Latitude>
+		<Building_Name>DRISKILL HOTEL - DAY - FORD BUILDING</Building_Name>
+		<Address>604 Brazos Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1886</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.742379</Longitude>
+		<Latitude>30.266633</Latitude>
+		<Building_Name>PHILLIPS BUILDING</Building_Name>
+		<Address>105 East 5th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1897</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.739471</Longitude>
+		<Latitude>30.271889</Latitude>
+		<Building_Name>STATE OFFICE BUILDING (STATE LAND OFFICE BUILDING)</Building_Name>
+		<Address>1019 Brazos Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1918</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.730407</Longitude>
+		<Latitude>30.259413</Latitude>
+		<Building_Name>STAVELY-KUNZ-JOHNSON HOUSE</Building_Name>
+		<Address>1402 East Cesaer Chavez St</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1875</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>3908  Avenue C</Longitude>
+		<Latitude>-97.734289</Latitude>
+		<Building_Name>MISSOURI</Building_Name>
+		<Address>1900</Address>
+		<Ownership> KANSAS AND TEXAS LAND CO. HOUSE</Ownership>
+		<Date_Built> </Date_Built>
+	</Row>
+	<Row>
+		<Longitude>1875</Longitude>
+		<Latitude>1115 East 3rd Street</Latitude>
+		<Building_Name>MADDOX</Building_Name>
+		<Address> </Address>
+		<Ownership> JOHN W.</Ownership>
+		<Date_Built> HOUSE</Date_Built>
+	</Row>
+	<Row>
+		<Longitude> East</Longitude>
+		<Latitude>-97.740839</Latitude>
+		<Building_Name>MILLETT OPERA HOUSE</Building_Name>
+		<Address>110 09 Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1878</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>1875</Longitude>
+		<Latitude>10463 Sprinkle RD</Latitude>
+		<Building_Name>BARR</Building_Name>
+		<Address> </Address>
+		<Ownership> WILLIAM BRAXTON</Ownership>
+		<Date_Built> HOUSE</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.733398</Longitude>
+		<Latitude>30.291806</Latitude>
+		<Building_Name>ADKINS - THARP HOUSE</Building_Name>
+		<Address>506 506 Bellevue Place</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1918</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.744417</Longitude>
+		<Latitude>30.274638</Latitude>
+		<Building_Name>CENTRAL CHRISTIAN CHURCH</Building_Name>
+		<Address>405 West 12th Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1925</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.735581</Longitude>
+		<Latitude>30.266188</Latitude>
+		<Building_Name>WALTON - JOSEPH BUILDING</Building_Name>
+		<Address>708 East 6th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1884</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.742680</Longitude>
+		<Latitude>30.269459</Latitude>
+		<Building_Name>TIPS (EDWARD) BUILDING</Building_Name>
+		<Address>708 Congress Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1876</Date_Built>
+	</Row>
+	<Row>
+		<Longitude> West</Longitude>
+		<Latitude>-97.859000</Latitude>
+		<Building_Name>PATTON STORE BUILDING</Building_Name>
+		<Address>6266 U.S. Hwy 290</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1898</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.759712</Longitude>
+		<Latitude>30.274369</Latitude>
+		<Building_Name>SMOOT HOUSE (FLOWER HILL)</Building_Name>
+		<Address>615 Pressler Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1877</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.743548</Longitude>
+		<Latitude>30.286383</Latitude>
+		<Building_Name>DABNEY - HORNE HOUSE</Building_Name>
+		<Address>507 West 23rd  Street</Address>
+		<Ownership>NON-PROFIT</Ownership>
+		<Date_Built>1883</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.756766</Longitude>
+		<Latitude>30.286408</Latitude>
+		<Building_Name>ADAMS HOUSE</Building_Name>
+		<Address>2200 Windsor Rd</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1930</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.755671</Longitude>
+		<Latitude>30.291734</Latitude>
+		<Building_Name>FISHER (LUCILLE) HOUSE</Building_Name>
+		<Address>1505 Wooldridge Drive</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1928</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.745894</Longitude>
+		<Latitude>30.418012</Latitude>
+		<Building_Name>AYNESWORTH-WRIGHT HOUSE</Building_Name>
+		<Address>11679 Research Blvd</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1850</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.728255</Longitude>
+		<Latitude>30.272225</Latitude>
+		<Building_Name>CONNELLY - YERWOOD HOUSE</Building_Name>
+		<Address>1115 East 12th Street</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1905</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.743038</Longitude>
+		<Latitude>30.270485</Latitude>
+		<Building_Name>AUSTIN MUNICIPAL BUILDING (CITY HALL)</Building_Name>
+		<Address>124 West Eighth Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1938</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.764954</Longitude>
+		<Latitude>30.306982</Latitude>
+		<Building_Name>GATEWOOD HOUSE</Building_Name>
+		<Address>2900 Tarry Trail</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1938</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.730730</Longitude>
+		<Latitude>30.270678</Latitude>
+		<Building_Name>CLEM LINDSAY HOUSE</Building_Name>
+		<Address>904 Juniper Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1900</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.754447</Longitude>
+		<Latitude>30.281496</Latitude>
+		<Building_Name>WHITE (R.L.) HOUSEW</Building_Name>
+		<Address>1503 Lorrain Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1922</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.739394</Longitude>
+		<Latitude>30.246817</Latitude>
+		<Building_Name>TRAVIS HEIGHTS HOUSE</Building_Name>
+		<Address>1007 Milam Place</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1914</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.744252</Longitude>
+		<Latitude>30.284373</Latitude>
+		<Building_Name>RUTHERFORD HOUSE</Building_Name>
+		<Address>2102  Nueces Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1884</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.730650</Longitude>
+		<Latitude>30.271159</Latitude>
+		<Building_Name>FANNIE WLAKER HOUSE</Building_Name>
+		<Address>902 Olive Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1900</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.758136</Longitude>
+		<Latitude>30.287097</Latitude>
+		<Building_Name>WOODLAWN (PEASE MANSION)</Building_Name>
+		<Address>1606 Niles Road</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1854</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.782246</Longitude>
+		<Latitude>30.296145</Latitude>
+		<Building_Name>WALSH (JAMES MARTIN AND LEANA) RESIDENCE</Building_Name>
+		<Address>3701 Bonnie Road</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1925-1926</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.734665</Longitude>
+		<Latitude>30.302496</Latitude>
+		<Building_Name>SEARS - KING RESIDENCE</Building_Name>
+		<Address>209 West 39th  Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1887</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.753964</Longitude>
+		<Latitude>30.277026</Latitude>
+		<Building_Name>JOHN GARLAND JAMES HOUSE</Building_Name>
+		<Address>1114 East 11th Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1871</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.739049</Longitude>
+		<Latitude>30.248462</Latitude>
+		<Building_Name>STACY HOUSE</Building_Name>
+		<Address>1201 Travis Heights Boulevard</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1919</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.758578</Longitude>
+		<Latitude>30.254264</Latitude>
+		<Building_Name>DAWSON - CROW HOUSE</Building_Name>
+		<Address>1200 South Fifth Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1892 - 1900</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.758018</Longitude>
+		<Latitude>30.283483</Latitude>
+		<Building_Name>THE VIOLET CROWN</Building_Name>
+		<Address>1504 West Lynn Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1925</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.729483</Longitude>
+		<Latitude>30.302613</Latitude>
+		<Building_Name>PHILQUIST - WOOD HOUSE</Building_Name>
+		<Address>4007 Avenue G</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1912</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.733014</Longitude>
+		<Latitude>30.291663</Latitude>
+		<Building_Name>SUECHS HOUSE</Building_Name>
+		<Address>600 Bellevue Place</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1916</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.729840</Longitude>
+		<Latitude>30.296173</Latitude>
+		<Building_Name>HARRIS-CARTER HOUSE</Building_Name>
+		<Address>603 Carolyn Avenue</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1921</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.741353</Longitude>
+		<Latitude>30.271198</Latitude>
+		<Building_Name>MITCHELL-ROBERTSON BUILDING</Building_Name>
+		<Address>909 909 Congress</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1882</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.724129</Longitude>
+		<Latitude>30.273311</Latitude>
+		<Building_Name>I.Q. HURDLE HOUSE</Building_Name>
+		<Address>1416  East 12th Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1908</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.733132</Longitude>
+		<Latitude>30.297210</Latitude>
+		<Building_Name>STECK HOUSE</Building_Name>
+		<Address>305 East 34th Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1921</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.727597</Longitude>
+		<Latitude>30.300219</Latitude>
+		<Building_Name>OLD GOLF CLUB HOUSE</Building_Name>
+		<Address>512 East 39th Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1901</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>1902</Longitude>
+		<Latitude>1012 East 8th Street</Latitude>
+		<Building_Name>PETERSON</Building_Name>
+		<Address> </Address>
+		<Ownership> GEORGE A.</Ownership>
+		<Date_Built> HOUSE</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.755244</Longitude>
+		<Latitude>30.290506</Latitude>
+		<Building_Name>GRAVES HOUSE</Building_Name>
+		<Address>2 Green Lanes</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1936</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.753552</Longitude>
+		<Latitude>30.293194</Latitude>
+		<Building_Name>STARCKE (MAX)  HOUSE</Building_Name>
+		<Address>1400 Hardouin Avenue</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1938</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.730652</Longitude>
+		<Latitude>30.295911</Latitude>
+		<Building_Name>WALKER-STILES HOUSE</Building_Name>
+		<Address>508 508 Harris Avenue</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1926</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.757741</Longitude>
+		<Latitude>30.273910</Latitude>
+		<Building_Name>NIXON-HARPER HOUSE</Building_Name>
+		<Address>604 Harthan Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1913</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.731010</Longitude>
+		<Latitude>30.270730</Latitude>
+		<Building_Name>MINNIE HUGHES HOUSE</Building_Name>
+		<Address>900 Juniper Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1890</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.730879</Longitude>
+		<Latitude>30.270710</Latitude>
+		<Building_Name>HENRY STRINGFELLOW HOUSE</Building_Name>
+		<Address>902 Juniper Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1900</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.721785</Longitude>
+		<Latitude>30.270993</Latitude>
+		<Building_Name>OLD ANDERSON HIGH SCHOOL</Building_Name>
+		<Address>1602  Pennsylvania</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1913</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.748589</Longitude>
+		<Latitude>30.271554</Latitude>
+		<Building_Name>SAYERS HOUSE</Building_Name>
+		<Address>709  Rio Grande Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1906</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.725512</Longitude>
+		<Latitude>30.269268</Latitude>
+		<Building_Name>COSTLEY-GOINS HOUSE</Building_Name>
+		<Address>1157 San Bernard Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1897</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.726372</Longitude>
+		<Latitude>30.270798</Latitude>
+		<Building_Name>ROBERTS CLINIC</Building_Name>
+		<Address>1174 San Bernard Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1938</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.726437</Longitude>
+		<Latitude>30.273532</Latitude>
+		<Building_Name>GIESE-STARK STORE</Building_Name>
+		<Address>1211 San Bernard Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1900</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.734459</Longitude>
+		<Latitude>30.299609</Latitude>
+		<Building_Name>FRUTH HOUSE</Building_Name>
+		<Address>3500 Speedway</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1928</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.748092</Longitude>
+		<Latitude>30.250050</Latitude>
+		<Building_Name>BRUNSON HOUSE</Building_Name>
+		<Address>200 The Circle</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1917</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.736639</Longitude>
+		<Latitude>30.296787</Latitude>
+		<Building_Name>PADGETT-PAINTER HOUSE</Building_Name>
+		<Address>105 West 32nd Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1925</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.718520</Longitude>
+		<Latitude>30.280488</Latitude>
+		<Building_Name>FIEGEL HOUSE</Building_Name>
+		<Address>2106 East MLK jr Blvd</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1905</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.745510</Longitude>
+		<Latitude>30.283097</Latitude>
+		<Building_Name>GOODALL - WOOTEN HOUSE</Building_Name>
+		<Address>1900 Rio Grande Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1898</Date_Built>
+	</Row>
+	<Row>
+		<Longitude> East</Longitude>
+		<Latitude>-97.746737</Latitude>
+		<Building_Name>HILL - SEARIGHT HOUSE</Building_Name>
+		<Address>410 Monroe Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1890</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.736075</Longitude>
+		<Latitude>30.298238</Latitude>
+		<Building_Name>OCIE SPEER HOUSE</Building_Name>
+		<Address>108  West 33rd Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1926</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.736318</Longitude>
+		<Latitude>30.298354</Latitude>
+		<Building_Name>ROBERTSON-TRICE HOUSE</Building_Name>
+		<Address>609  West 33rd Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1915</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.740925</Longitude>
+		<Latitude>30.300143</Latitude>
+		<Building_Name>EBY-POTTS HOUSE</Building_Name>
+		<Address>609 West 33rd Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1910</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.739216</Longitude>
+		<Latitude>30.300276</Latitude>
+		<Building_Name>BUDDINGTON-BENEDICT-SHEFIELD COMPOUND</Building_Name>
+		<Address>506 West 34th Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1860</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.732944</Longitude>
+		<Latitude>30.304751</Latitude>
+		<Building_Name>CURL-CROCKETT HOUSE</Building_Name>
+		<Address>213  West 41st</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1894</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.758293</Longitude>
+		<Latitude>30.272888</Latitude>
+		<Building_Name>BECKER-WILDE HOUSE</Building_Name>
+		<Address>1207 West 6th Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1900</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.754982</Longitude>
+		<Latitude>30.275023</Latitude>
+		<Building_Name>SHELBY HOUSE</Building_Name>
+		<Address>1114 West 9th Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1910</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.740327</Longitude>
+		<Latitude>30.298449</Latitude>
+		<Building_Name>PENN AND NELLIE WOOLDRIDGE HOUSE</Building_Name>
+		<Address>3124  Wheeler Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1913</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.746603</Longitude>
+		<Latitude>30.280168</Latitude>
+		<Building_Name>HERBLIN - SHOE HOUSE</Building_Name>
+		<Address>712 West 16th Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1897</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.731895</Longitude>
+		<Latitude>30.303759</Latitude>
+		<Building_Name>BADGER (ROBERT T.) HOUSE</Building_Name>
+		<Address>4006 Speedway</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1909</Date_Built>
+	</Row>
+	<Row>
+		<Longitude> West</Longitude>
+		<Latitude>-97.737922</Latitude>
+		<Building_Name>SIMMS HOUSE</Building_Name>
+		<Address>212 33 Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1925</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.768008</Longitude>
+		<Latitude>30.260930</Latitude>
+		<Building_Name>ROCKY CLIFF HOUSE</Building_Name>
+		<Address>802 Barton  Boulevard</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1871</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.741819</Longitude>
+		<Latitude>30.277300</Latitude>
+		<Building_Name>BARTHOLOMEW - ROBINSON BUILDING</Building_Name>
+		<Address>1415 Lavaca Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1880</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.743286</Longitude>
+		<Latitude>30.265882</Latitude>
+		<Building_Name>MCKEAN - EILERS BUILDING</Building_Name>
+		<Address>323 Congress Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1897</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.762363</Longitude>
+		<Latitude>30.244874</Latitude>
+		<Building_Name>GREEN PASTURES</Building_Name>
+		<Address>811 West Live Oak Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1895</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.762237</Longitude>
+		<Latitude>30.276203</Latitude>
+		<Building_Name>SHEEKS - ROBERTSON HOUSE</Building_Name>
+		<Address>610 West Lynn Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1876</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.701142</Longitude>
+		<Latitude>30.262438</Latitude>
+		<Building_Name>SMITH (JAMES) PLACE</Building_Name>
+		<Address>3414 Lyons Road</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1850</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.773843</Longitude>
+		<Latitude>30.315419</Latitude>
+		<Building_Name>HUCKS SLOUGH BRIDGE</Building_Name>
+		<Address>3336 Mount Bonnell Rd</Address>
+		<Ownership>PUBLIC</Ownership>
+		<Date_Built>1922</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.738261</Longitude>
+		<Latitude>30.266034</Latitude>
+		<Building_Name>PAGGI BLACKSMITH SHOP</Building_Name>
+		<Address>503 Neches Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1885</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.738515</Longitude>
+		<Latitude>30.266591</Latitude>
+		<Building_Name>SCHUWIRTH HOUSE  (AKA 423 E. 6TH ST.)</Building_Name>
+		<Address>512 Neches Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1885</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.764787</Longitude>
+		<Latitude>30.192252</Latitude>
+		<Building_Name>SNEED (SEBRON) HOME</Building_Name>
+		<Address>1801 Nelms Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1857</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.743975</Longitude>
+		<Latitude>30.250767</Latitude>
+		<Building_Name>WILKINS - HEATH HOUSE</Building_Name>
+		<Address>1208 Newning Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1899</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.743742</Longitude>
+		<Latitude>30.250525</Latitude>
+		<Building_Name>PRESTON - GARCIA HOUSE</Building_Name>
+		<Address>1214 Newning Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1886</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.745437</Longitude>
+		<Latitude>30.248022</Latitude>
+		<Building_Name>DUMBLE - BOATRIGHT HOUSE</Building_Name>
+		<Address>1419 Newning Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1891</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.746562</Longitude>
+		<Latitude>30.247485</Latitude>
+		<Building_Name>LEWIS - THOMAS HOUSE</Building_Name>
+		<Address>1508 Newning Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1891</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.752821</Longitude>
+		<Latitude>30.247192</Latitude>
+		<Building_Name>WELLS (WILLIE) HOUSE</Building_Name>
+		<Address>1705 Newton Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1876</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.754410</Longitude>
+		<Latitude>30.274855</Latitude>
+		<Building_Name>BRASS - GODDARD HOUSE</Building_Name>
+		<Address>1108 West 9th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1897</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.758536</Longitude>
+		<Latitude>30.276217</Latitude>
+		<Building_Name>PILLOW (BEN) HOUSE</Building_Name>
+		<Address>1403 West 9th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1878</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.758858</Longitude>
+		<Latitude>30.276345</Latitude>
+		<Building_Name>PILLOW (WILLIAM) HOUSE</Building_Name>
+		<Address>1407 West 9th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1877</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.745237</Longitude>
+		<Latitude>30.269545</Latitude>
+		<Building_Name>ROYAL ARCH MASONIC LODGE</Building_Name>
+		<Address>311 West 7th Street</Address>
+		<Ownership>NON-PROFIT</Ownership>
+		<Date_Built>1926</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.728760</Longitude>
+		<Latitude>30.302795</Latitude>
+		<Building_Name>ZIMMERLI - ROSENQUIST HOUSE</Building_Name>
+		<Address>4014 Avenue H</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1903-1904</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.757814</Longitude>
+		<Latitude>30.273669</Latitude>
+		<Building_Name>LAS VENTANAS (JERNIGAN A.J.  HOUSE)</Building_Name>
+		<Address>602 Harthan Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1875</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.727848</Longitude>
+		<Latitude>30.266179</Latitude>
+		<Building_Name>STUART HOUSE</Building_Name>
+		<Address>1208 Inks Ave</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1872</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.750999</Longitude>
+		<Latitude>30.308996</Latitude>
+		<Building_Name>RADKEY HOUSE</Building_Name>
+		<Address>3720 Jefferson Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1872</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.741009</Longitude>
+		<Latitude>30.280783</Latitude>
+		<Building_Name>MCDONALD - MCGOWAN HOUSE</Building_Name>
+		<Address>1802 Lavaca Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1876</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.742579</Longitude>
+		<Latitude>30.269768</Latitude>
+		<Building_Name>TOWNSEND - THOMSON BUILDING</Building_Name>
+		<Address>718 Congress Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1875</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.741695</Longitude>
+		<Latitude>30.269981</Latitude>
+		<Building_Name>BREMOND (EUGENE) BUILDING</Building_Name>
+		<Address>801 Congress Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1886</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.747793</Longitude>
+		<Latitude>30.273831</Latitude>
+		<Building_Name>SAMPSON (GEORGE W.) HOUSE</Building_Name>
+		<Address>1003 Rio Grande Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1876</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.745889</Longitude>
+		<Latitude>30.281508</Latitude>
+		<Building_Name>WEST HILL CARRIAGE</Building_Name>
+		<Address>707 West 18th  Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1855</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.753696</Longitude>
+		<Latitude>30.275689</Latitude>
+		<Building_Name>NICOLDS HOUSE</Building_Name>
+		<Address>1106 West 10th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1898</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.747991</Longitude>
+		<Latitude>30.288430</Latitude>
+		<Building_Name>FRANZETTI STORE BUILDING</Building_Name>
+		<Address>2402 San Gabriel Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1870</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.736323</Longitude>
+		<Latitude>30.277703</Latitude>
+		<Building_Name>SCHOLZ GARTEN</Building_Name>
+		<Address>1607 San Jacinto Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1866</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.749979</Longitude>
+		<Latitude>30.272989</Latitude>
+		<Building_Name>MONTGOMERY HOUSE</Building_Name>
+		<Address>808 West Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1886</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.741980</Longitude>
+		<Latitude>30.271333</Latitude>
+		<Building_Name>LARMOUR (JACOB) BLOCK (B)</Building_Name>
+		<Address>908 Congress Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1877</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.733453</Longitude>
+		<Latitude>30.304034</Latitude>
+		<Building_Name>LOWRY (MARY) HOUSE</Building_Name>
+		<Address>4001 Avenue C</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1903</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.740350</Longitude>
+		<Latitude>30.274638</Latitude>
+		<Building_Name>CAPITOL OF TEXAS</Building_Name>
+		<Address>100 East 11th Street</Address>
+		<Ownership>PUBLIC</Ownership>
+		<Date_Built>1888</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.747198</Longitude>
+		<Latitude>30.270473</Latitude>
+		<Building_Name>HOWSON HOUSE</Building_Name>
+		<Address>700 San Antonio Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1877</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>1855</Longitude>
+		<Latitude>200 Lee Barton Drive</Latitude>
+		<Building_Name>PAGGI</Building_Name>
+		<Address>PRIVATE</Address>
+		<Ownership> MICHAEL</Ownership>
+		<Date_Built> HOUSE</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.741486</Longitude>
+		<Latitude>30.320980</Latitude>
+		<Building_Name>MOORE - HANCOCK CABINS</Building_Name>
+		<Address>4811 Sinclair Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1850</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.763283</Longitude>
+		<Latitude>30.261880</Latitude>
+		<Building_Name>DAVIS (I. V.) HOMESTEAD</Building_Name>
+		<Address>1610 Virginia Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1875</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.745145</Longitude>
+		<Latitude>30.276627</Latitude>
+		<Building_Name>SMITH HOUSE</Building_Name>
+		<Address>502 West 13th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1885</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.746164</Longitude>
+		<Latitude>30.270384</Latitude>
+		<Building_Name>BREMOND (JOHN) HOUSE</Building_Name>
+		<Address>700 Guadalupe Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1886</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.746034</Longitude>
+		<Latitude>30.270746</Latitude>
+		<Building_Name>PHILLIPS - KNUDSEN HOUSE (AKA HOUSTON HALE)</Building_Name>
+		<Address>706 Guadalupe Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1855</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.742466</Longitude>
+		<Latitude>30.270343</Latitude>
+		<Building_Name>BOSCHE BUILDING</Building_Name>
+		<Address>804 Congress Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1897</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.741640</Longitude>
+		<Latitude>30.270136</Latitude>
+		<Building_Name>STEINER BUILDING</Building_Name>
+		<Address>807 Congress Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1860</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.742116</Longitude>
+		<Latitude>30.271295</Latitude>
+		<Building_Name>LARMOUR (JACOB) BLOCK (A)</Building_Name>
+		<Address>906 Congress Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1877</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.732824</Longitude>
+		<Latitude>30.280500</Latitude>
+		<Building_Name>UNIVERSITY JUNIOR HIGH SCHOOL</Building_Name>
+		<Address>1925  San Jacinto Blvd</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1925</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.741855</Longitude>
+		<Latitude>30.271356</Latitude>
+		<Building_Name>LARMOUR (JACOB) BLOCK (C)</Building_Name>
+		<Address>910 Congress Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1877</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.741717</Longitude>
+		<Latitude>30.271738</Latitude>
+		<Building_Name>LARMOUR (JACOB) BLOCK (I)</Building_Name>
+		<Address>922 Congress Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1877</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.742013</Longitude>
+		<Latitude>30.271455</Latitude>
+		<Building_Name>LARMOUR (JACOB) BLOCK (D)</Building_Name>
+		<Address>912 Congress Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1877</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.741799</Longitude>
+		<Latitude>30.271487</Latitude>
+		<Building_Name>LARMOUR (JACOB) BLOCK (E)</Building_Name>
+		<Address>914 Congress Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1877</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.741972</Longitude>
+		<Latitude>30.271586</Latitude>
+		<Building_Name>LARMOUR (JACOB) BLOCK (F)</Building_Name>
+		<Address>916 Congress Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1877</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.741966</Longitude>
+		<Latitude>30.271727</Latitude>
+		<Building_Name>LARMOUR (JACOB) BLOCK (H)</Building_Name>
+		<Address>920 Congress Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1877</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.749381</Longitude>
+		<Latitude>30.249338</Latitude>
+		<Building_Name>BERGEN - TODD HOUSE</Building_Name>
+		<Address>1413 S Congress Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1877</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.753630</Longitude>
+		<Latitude>30.239193</Latitude>
+		<Building_Name>TIPS (WALTER) HOUSE</Building_Name>
+		<Address>2336 Congress Avenue S</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1877</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.755032</Longitude>
+		<Latitude>30.229655</Latitude>
+		<Building_Name>ST. EDWARDS MAIN BUILDING AND HOLLY CROSS HALL</Building_Name>
+		<Address>3001 Congress Avenue S</Address>
+		<Ownership>NON-PROFIT</Ownership>
+		<Date_Built>1889</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.730833</Longitude>
+		<Latitude>30.307157</Latitude>
+		<Building_Name>CLARK - EMMERT HOUSE</Building_Name>
+		<Address>4300 Avenue D</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1895</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.742953</Longitude>
+		<Latitude>30.294025</Latitude>
+		<Building_Name>PENDEXTER (GEORGE) HOUSE</Building_Name>
+		<Address>2806 Nueces Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1890</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.743275</Longitude>
+		<Latitude>30.285250</Latitude>
+		<Building_Name>POMPEE - CLARKE - COOK HOUSE</Building_Name>
+		<Address>506 West 22nd  Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1880</Date_Built>
+	</Row>
+	<Row>
+		<Longitude> East</Longitude>
+		<Latitude>-97.734333</Latitude>
+		<Building_Name>EVANS - MORRIS - HIESLER HOUSE</Building_Name>
+		<Address>1000 Cesar Chavez Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1899</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.707367</Longitude>
+		<Latitude>30.365055</Latitude>
+		<Building_Name>ZIMMERMAN CABIN</Building_Name>
+		<Address>9019 Parkfield</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1854</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.765804</Longitude>
+		<Latitude>30.278372</Latitude>
+		<Building_Name>BUASS HOUSE</Building_Name>
+		<Address>708 Patterson Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1872</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.738044</Longitude>
+		<Latitude>30.263407</Latitude>
+		<Building_Name>TRASK HOUSE</Building_Name>
+		<Address>211 Red River Street</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1850</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.746108</Longitude>
+		<Latitude>30.280047</Latitude>
+		<Building_Name>RUGGLES - SMITH HOUSE</Building_Name>
+		<Address>1600 Rio Grande Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1895</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.745091</Longitude>
+		<Latitude>30.281287</Latitude>
+		<Building_Name>LARMOUR (JACOB) HOUSE</Building_Name>
+		<Address>1711 Rio Grande Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1875</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.745353</Longitude>
+		<Latitude>30.285035</Latitude>
+		<Building_Name>WHITE - SPRINGFIELD HOUSE</Building_Name>
+		<Address>2112 Rio Grande Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1909</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.749358</Longitude>
+		<Latitude>30.271397</Latitude>
+		<Building_Name>ROBINSON - MACKEN HOUSE</Building_Name>
+		<Address>702 Rio Grande Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1885</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.746950</Longitude>
+		<Latitude>30.291547</Latitude>
+		<Building_Name>MAVERICK - MILLER HOUSE</Building_Name>
+		<Address>910 Poplar Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1923</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.727827</Longitude>
+		<Latitude>30.303299</Latitude>
+		<Building_Name>WILLIAMS - WEIGL HOUSE</Building_Name>
+		<Address>4107 Avenue H</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1911</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.741832</Longitude>
+		<Latitude>30.271629</Latitude>
+		<Building_Name>LARMOUR (JACOB) BLOCK (G)</Building_Name>
+		<Address>918 Congress Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1877</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.744030</Longitude>
+		<Latitude>30.286419</Latitude>
+		<Building_Name>GERHARD - SCHOCH HOUSE</Building_Name>
+		<Address>2212 Nueces Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1887</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.738337</Longitude>
+		<Latitude>30.267153</Latitude>
+		<Building_Name>RISHER - NICHOLAS BUILDING</Building_Name>
+		<Address>422 East 6h Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1873</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.754815</Longitude>
+		<Latitude>30.291805</Latitude>
+		<Building_Name>PEMBERTON CASTLE</Building_Name>
+		<Address>1415 Wooldridge Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1925</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.742701</Longitude>
+		<Latitude>30.303086</Latitude>
+		<Building_Name>LESER HOUSE</Building_Name>
+		<Address>3506 West Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1864</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.739996</Longitude>
+		<Latitude>30.267604</Latitude>
+		<Building_Name>PLATT BUILDING</Building_Name>
+		<Address>304 East 6th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1875</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.740069</Longitude>
+		<Latitude>30.267617</Latitude>
+		<Building_Name>DITTLINGER BUILDING</Building_Name>
+		<Address>302 East  6th  Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1875</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.744670</Longitude>
+		<Latitude>30.271405</Latitude>
+		<Building_Name>HIRSHFELD HOUSE AND COTTAGE</Building_Name>
+		<Address>303 West 9th  Street</Address>
+		<Ownership>PUBLIC</Ownership>
+		<Date_Built>1886</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.747758</Longitude>
+		<Latitude>30.272756</Latitude>
+		<Building_Name>BOARDMAN - WEBB HOUSE</Building_Name>
+		<Address>602 West 9th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1880</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.743761</Longitude>
+		<Latitude>30.284095</Latitude>
+		<Building_Name>MORGAN HOUSE</Building_Name>
+		<Address>2101 Nueces Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1885</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.744199</Longitude>
+		<Latitude>30.284524</Latitude>
+		<Building_Name>HILL HOUSE</Building_Name>
+		<Address>2104 Nueces Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1888</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.641693</Longitude>
+		<Latitude>30.402918</Latitude>
+		<Building_Name>EVANGELICAL LUTHERAN CHURCH</Building_Name>
+		<Address>13300 Dessau Road</Address>
+		<Ownership>NON-PROFIT</Ownership>
+		<Date_Built>1876</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.729428</Longitude>
+		<Latitude>30.269417</Latitude>
+		<Building_Name>ARNOLD'S BAKERY</Building_Name>
+		<Address>1010 East 11th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1890</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>1900</Longitude>
+		<Latitude>912 East 2nd Street</Latitude>
+		<Building_Name>POLHEMUS</Building_Name>
+		<Address> </Address>
+		<Ownership> JOSEPH O.</Ownership>
+		<Date_Built> HOUSE</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.738899</Longitude>
+		<Latitude>30.265671</Latitude>
+		<Building_Name>DICKINSON - HANNIG HOUSE</Building_Name>
+		<Address>411 East 5th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1869</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.725527</Longitude>
+		<Latitude>30.272638</Latitude>
+		<Building_Name>COMMUNITY CENTER</Building_Name>
+		<Address>1319 East 12th Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1925</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.753127</Longitude>
+		<Latitude>30.246012</Latitude>
+		<Building_Name>STANLEY HOMESTEAD - OUTBUILDING</Building_Name>
+		<Address>1809 Newton Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1894</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.735344</Longitude>
+		<Latitude>30.306779</Latitude>
+		<Building_Name>COMMERCIAL BUILDING AT 4113 GUADALUPE STREET</Building_Name>
+		<Address>4113 Guadalupe Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1900</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.747763</Longitude>
+		<Latitude>30.265567</Latitude>
+		<Building_Name>SCHNEIDER VAULTS</Building_Name>
+		<Address>400 West 2nd Street</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1894</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.741955</Longitude>
+		<Latitude>30.269143</Latitude>
+		<Building_Name>BRUSH - TURNER - HIRSHFELD BUILDING</Building_Name>
+		<Address>709 Congress Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1871</Date_Built>
+	</Row>
+	<Row>
+		<Longitude> West</Longitude>
+		<Latitude>-97.858021</Latitude>
+		<Building_Name>OAK HILL SCHOOL</Building_Name>
+		<Address>6240 U.S. Hwy 290</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1924</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>1875</Longitude>
+		<Latitude>1113 East 9th Street</Latitude>
+		<Building_Name>JOBE</Building_Name>
+		<Address> </Address>
+		<Ownership> PHILLIP W.</Ownership>
+		<Date_Built> HOUSE</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.732657</Longitude>
+		<Latitude>30.293112</Latitude>
+		<Building_Name>RATHER HOUSE</Building_Name>
+		<Address>3105 Duval Street</Address>
+		<Ownership>NON-PROFIT</Ownership>
+		<Date_Built>1900</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.747926</Longitude>
+		<Latitude>30.278289</Latitude>
+		<Building_Name>MUELLER - DANFORTH HOUSE</Building_Name>
+		<Address>1400 West Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1930</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.745749</Longitude>
+		<Latitude>30.271692</Latitude>
+		<Building_Name>AUSTIN HISTORY CENTER</Building_Name>
+		<Address>810 Guadalupe Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1925</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.747984</Longitude>
+		<Latitude>30.278105</Latitude>
+		<Building_Name>MUELLER HOUSE</Building_Name>
+		<Address>1308 West Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1927</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.735230</Longitude>
+		<Latitude>30.271266</Latitude>
+		<Building_Name>HAMILTON (JEREMIAH) BUILDING</Building_Name>
+		<Address>1101 Red River Street</Address>
+		<Ownership>PUBLIC</Ownership>
+		<Date_Built>1870</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.726636</Longitude>
+		<Latitude>30.275693</Latitude>
+		<Building_Name>OAKWOOD CEMETERY</Building_Name>
+		<Address>1601 Navasota Street</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1839</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.723585</Longitude>
+		<Latitude>30.277010</Latitude>
+		<Building_Name>OAKWOOD CEMETERY ANNEX</Building_Name>
+		<Address>1601 Comal Street</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1915</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.731991</Longitude>
+		<Latitude>30.278441</Latitude>
+		<Building_Name>LITTLE CAMPUS (ASYLUM FOR THE BLIND)</Building_Name>
+		<Address>1811 Red River Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1850</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>1953 or 1946</Longitude>
+		<Latitude>1204 East 7th Street</Latitude>
+		<Building_Name>BRIONES</Building_Name>
+		<Address>PRIVATE</Address>
+		<Ownership> GENARO P. AND CAROLINA</Ownership>
+		<Date_Built> HOUSE</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.796328</Longitude>
+		<Latitude>30.154163</Latitude>
+		<Building_Name>BROWN (MATTHEW) HOMESTEAD</Building_Name>
+		<Address>10140 Old San Antonio Road</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1866</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.772733</Longitude>
+		<Latitude>30.276777</Latitude>
+		<Building_Name>DEEP EDDY</Building_Name>
+		<Address>301 Deep Eddy Avenue</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1936</Date_Built>
+	</Row>
+	<Row>
+		<Longitude> West</Longitude>
+		<Latitude>-97.754696</Latitude>
+		<Building_Name>TADLOCK - BROWNLEE - HARRIS HOUSE</Building_Name>
+		<Address>1901 35 Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1913</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.742595</Longitude>
+		<Latitude>30.269382</Latitude>
+		<Building_Name>METZ BUILDING</Building_Name>
+		<Address>706 Congress Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1873</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.741491</Longitude>
+		<Latitude>30.270237</Latitude>
+		<Building_Name>ALLEN - VON BOECKMANN BUILDING</Building_Name>
+		<Address>811 Congress Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1874</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.729075</Longitude>
+		<Latitude>30.293113</Latitude>
+		<Building_Name>STARK (W. L.) HOUSE</Building_Name>
+		<Address>3215 Fairfax Walk</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1928</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.744025</Longitude>
+		<Latitude>30.279087</Latitude>
+		<Building_Name>THOMAS (ROY) HOUSE</Building_Name>
+		<Address>1510 San Antonio Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1922</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.744452</Longitude>
+		<Latitude>30.286997</Latitude>
+		<Building_Name>KUEHNE - MOORE HOUSE</Building_Name>
+		<Address>2303 Rio Grande Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1902</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.733772</Longitude>
+		<Latitude>30.297530</Latitude>
+		<Building_Name>ECKHARDT-POTTS HOUSE</Building_Name>
+		<Address>209 209 East 34th Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1926</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>1925</Longitude>
+		<Latitude>3906 Avenue D</Latitude>
+		<Building_Name>PARKER</Building_Name>
+		<Address> </Address>
+		<Ownership> JAMES F. AND SUSIE R.</Ownership>
+		<Date_Built> HOUSE</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.741846</Longitude>
+		<Latitude>30.276791</Latitude>
+		<Building_Name>WAHRENBERGER HOUSE</Building_Name>
+		<Address>208 West 14th Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1850</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>1925</Longitude>
+		<Latitude>4311 Avenue A</Latitude>
+		<Building_Name>ROBBINS</Building_Name>
+		<Address> </Address>
+		<Ownership> ALICE H.</Ownership>
+		<Date_Built> HOUSE</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>1875</Longitude>
+		<Latitude>4412 Avenue B</Latitude>
+		<Building_Name>RAMSEY</Building_Name>
+		<Address> </Address>
+		<Ownership> F. T. AND BELLE</Ownership>
+		<Date_Built> HOUSE</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.759044</Longitude>
+		<Latitude>30.277224</Latitude>
+		<Building_Name>HOPKINS HOMESTEAD</Building_Name>
+		<Address>1500 West 9 Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1857-1894</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>1925</Longitude>
+		<Latitude>3115 East 13th Street</Latitude>
+		<Building_Name>CONNER</Building_Name>
+		<Address> </Address>
+		<Ownership> DR. BEADIE E. AND WILLIE R.</Ownership>
+		<Date_Built> HOUSE AND PAR</Date_Built>
+	</Row>
+	<Row>
+		<Longitude> East</Longitude>
+		<Latitude>-97.738925</Latitude>
+		<Building_Name>MERONEY - ISAACS BUILDING</Building_Name>
+		<Address>404 6th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1875</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.740413</Longitude>
+		<Latitude>30.285465</Latitude>
+		<Building_Name>BATTLE HALL</Building_Name>
+		<Address>1 Mall UT</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1900</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.748150</Longitude>
+		<Latitude>30.272840</Latitude>
+		<Building_Name>MOORE - FLACK HOUSE</Building_Name>
+		<Address>606 West 9th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1887</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>1934</Longitude>
+		<Latitude>806 Rosedale Terrace</Latitude>
+		<Building_Name>REUTER</Building_Name>
+		<Address>PRIVATE</Address>
+		<Ownership> LOUIS AND MATHILDE</Ownership>
+		<Date_Built> HOUSE</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.726317</Longitude>
+		<Latitude>30.268361</Latitude>
+		<Building_Name>HAYNES - DELASHWAH HOUSE</Building_Name>
+		<Address>1209 Rosewood Avenue</Address>
+		<Ownership>NON-PROFIT</Ownership>
+		<Date_Built>1890</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.714330</Longitude>
+		<Latitude>30.271300</Latitude>
+		<Building_Name>MADISON LOG CABIN</Building_Name>
+		<Address>2300 Rosewood Ave</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1863</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.739513</Longitude>
+		<Latitude>30.277819</Latitude>
+		<Building_Name>GETHSEMANE LUTHERAN CHURCH AND LUTHER HALL</Building_Name>
+		<Address>1510 Congress Avenue</Address>
+		<Ownership>NON-PROFIT</Ownership>
+		<Date_Built>1883</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.774304</Longitude>
+		<Latitude>30.244062</Latitude>
+		<Building_Name>FOGEL (SEYMOUR) HOUSE (SOUTHWIND)</Building_Name>
+		<Address>2411 Kinney Road</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1953</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.747147</Longitude>
+		<Latitude>30.270576</Latitude>
+		<Building_Name>SAN ANTONIAN</Building_Name>
+		<Address>702 San Antonio Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1910</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.746533</Longitude>
+		<Latitude>30.270799</Latitude>
+		<Building_Name>ROBINSON (CATHERINE) HOUSE</Building_Name>
+		<Address>705 San Antonio Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1872</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.747072</Longitude>
+		<Latitude>30.270867</Latitude>
+		<Building_Name>NORTH COTTAGE</Building_Name>
+		<Address>706 San Antonio Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1879</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.747176</Longitude>
+		<Latitude>30.271060</Latitude>
+		<Building_Name>NORTH - EVANS CHATEAU</Building_Name>
+		<Address>708 San Antonio Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1874</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.746403</Longitude>
+		<Latitude>30.270934</Latitude>
+		<Building_Name>BREMOND (WALTER) HOUSE</Building_Name>
+		<Address>711 San Antonio Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1872</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.746848</Longitude>
+		<Latitude>30.271452</Latitude>
+		<Building_Name>MCLAUGHLIN (J. W.) HOUSE</Building_Name>
+		<Address>800 San Antonio Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1876</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.726223</Longitude>
+		<Latitude>30.269489</Latitude>
+		<Building_Name>SPINOLA - SMITH HOUSE</Building_Name>
+		<Address>1160 San Bernard Street</Address>
+		<Ownership>NON-PROFIT</Ownership>
+		<Date_Built>1909</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.725558</Longitude>
+		<Latitude>30.270289</Latitude>
+		<Building_Name>THOMPSON HOUSE</Building_Name>
+		<Address>1171 San Bernard Street</Address>
+		<Ownership>NON-PROFIT</Ownership>
+		<Date_Built>1877</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.725947</Longitude>
+		<Latitude>30.271700</Latitude>
+		<Building_Name>SCOTT - HAMMOND HOUSE</Building_Name>
+		<Address>1191 San Bernard Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1886</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.741038</Longitude>
+		<Latitude>30.298901</Latitude>
+		<Building_Name>KEELING (WALTER) HOUSE</Building_Name>
+		<Address>3120 Wheeler Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1912</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.748304</Longitude>
+		<Latitude>30.281172</Latitude>
+		<Building_Name>MCCLENDON - PRICE HOUSE</Building_Name>
+		<Address>1606 Pearl Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1906</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.726530</Longitude>
+		<Latitude>30.269686</Latitude>
+		<Building_Name>WESLEY UNITED METHODIST CHURCH</Building_Name>
+		<Address>1164 San Bernard Street</Address>
+		<Ownership>NON-PROFIT</Ownership>
+		<Date_Built>1929</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.748318</Longitude>
+		<Latitude>30.286349</Latitude>
+		<Building_Name>HURT HOUSE</Building_Name>
+		<Address>2210 San Gabriel Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1891</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.747499</Longitude>
+		<Latitude>30.279519</Latitude>
+		<Building_Name>CASWELL (WILLIAM T.) HOUSE</Building_Name>
+		<Address>1502 West Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1905</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.733620</Longitude>
+		<Latitude>30.306585</Latitude>
+		<Building_Name>DAVIS (ELVIRA T.) RESIDENCE</Building_Name>
+		<Address>4112 Avenue B</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1904</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>507 Baylor Street</Longitude>
+		<Latitude>-97.755506</Latitude>
+		<Building_Name>TREATY OAK</Building_Name>
+		<Address>1500</Address>
+		<Ownership> 500 BLOCK OF BAYLOR (EAST SIDE)</Ownership>
+		<Date_Built>PUBLIC</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.755048</Longitude>
+		<Latitude>30.272884</Latitude>
+		<Building_Name>TAYLOR HOUSE</Building_Name>
+		<Address>608 Baylor Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1904</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.754939</Longitude>
+		<Latitude>30.276630</Latitude>
+		<Building_Name>WEST AUSTIN FIRE STATION</Building_Name>
+		<Address>1004 Blanco Street</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1908</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.754971</Longitude>
+		<Latitude>30.277331</Latitude>
+		<Building_Name>CULVER - GUINN HOUSE</Building_Name>
+		<Address>1102 Blanco Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1900</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.755435</Longitude>
+		<Latitude>30.275827</Latitude>
+		<Building_Name>FINKS - COFFEY HOUSE</Building_Name>
+		<Address>908 Blanco Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1898</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.747138</Longitude>
+		<Latitude>30.246666</Latitude>
+		<Building_Name>ROSS - MOORE HOUSE</Building_Name>
+		<Address>405 East Monroe Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1907</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.725122</Longitude>
+		<Latitude>30.257056</Latitude>
+		<Building_Name>BERNER-CLARK-MERCADO HOUSE</Building_Name>
+		<Address>1807 East Cesar Chavez Street</Address>
+		<Ownership>PUBLIC</Ownership>
+		<Date_Built>1807</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.744900</Longitude>
+		<Latitude>30.248609</Latitude>
+		<Building_Name>BRASS - MILAM HOUSE</Building_Name>
+		<Address>1409 Newning Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1903</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.730460</Longitude>
+		<Latitude>30.265738</Latitude>
+		<Building_Name>JOHNSON (ALFRIDA) HOUSE</Building_Name>
+		<Address>1022 East 7th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1905-1906</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.756908</Longitude>
+		<Latitude>30.273983</Latitude>
+		<Building_Name>ARMSTRONG - ODEM HOUSE (BURNED DOWN)</Building_Name>
+		<Address>614 Blanco Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1895 (burned down)</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.722186</Longitude>
+		<Latitude>30.263686</Latitude>
+		<Building_Name>HUSTON - TILLOTSON COLLEGE (ADMINISTRATION BUILDING)</Building_Name>
+		<Address>900 Chicon Street</Address>
+		<Ownership>NON-PROFIT</Ownership>
+		<Date_Built>1913</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.720814</Longitude>
+		<Latitude>30.309061</Latitude>
+		<Building_Name>PATTERSON (JOHN M.) RESIDENCE</Building_Name>
+		<Address>604 East 47th  Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1908</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.762689</Longitude>
+		<Latitude>30.281186</Latitude>
+		<Building_Name>SWEET HOME MISSIONARY BAPTIST CHURCH</Building_Name>
+		<Address>1725 West 11th Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1935</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.738699</Longitude>
+		<Latitude>30.267089</Latitude>
+		<Building_Name>QUAST BUILDING</Building_Name>
+		<Address>412 East 6th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1872</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.732396</Longitude>
+		<Latitude>30.264932</Latitude>
+		<Building_Name>BURATTI BROTHERS (GUERRO PRODUCE COMPANY)</Building_Name>
+		<Address>1001 East 6th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1900</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.754638</Longitude>
+		<Latitude>30.293200</Latitude>
+		<Building_Name>SPIRES HOUSE</Building_Name>
+		<Address>1500 Hardouin Ave</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1936</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.732270</Longitude>
+		<Latitude>30.299143</Latitude>
+		<Building_Name>NORTH AUSTIN SUB-STATION</Building_Name>
+		<Address>3701 Grooms Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1913</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.733670</Longitude>
+		<Latitude>30.305164</Latitude>
+		<Building_Name>SCHENKEN-OATMAN HOUSE</Building_Name>
+		<Address>311 West 41st Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1912</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.744795</Longitude>
+		<Latitude>30.268920</Latitude>
+		<Building_Name>U.S. POST OFFICE AND FEDERAL BUILDING</Building_Name>
+		<Address>220  West 6th Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1875</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.735378</Longitude>
+		<Latitude>30.296123</Latitude>
+		<Building_Name>WHITLEY-KELTNER HOUSE</Building_Name>
+		<Address>200 East 23nd Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1900</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.756066</Longitude>
+		<Latitude>30.282599</Latitude>
+		<Building_Name>ROBINSON-WATT HOUSE</Building_Name>
+		<Address>1502 Marshall Lane</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1921</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.731986</Longitude>
+		<Latitude>30.305378</Latitude>
+		<Building_Name>JOHN AND LELA GAY HOUSE</Building_Name>
+		<Address>4108 Avenue D</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1910</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.728174</Longitude>
+		<Latitude>30.258716</Latitude>
+		<Building_Name>WOLF HOUSE</Building_Name>
+		<Address>1602 East Cesar Chavez Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1900</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.726238</Longitude>
+		<Latitude>30.270172</Latitude>
+		<Building_Name>ARNOLD HOUSE</Building_Name>
+		<Address>1170 San Bernard Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1884</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.754567</Longitude>
+		<Latitude>30.293693</Latitude>
+		<Building_Name>HARDWICKE HOUSE</Building_Name>
+		<Address>1409 Wathen Ave</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1939</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.729231</Longitude>
+		<Latitude>30.265279</Latitude>
+		<Building_Name>DUNCAN WASHINGTON HOUSE</Building_Name>
+		<Address>1214 East 7th Street</Address>
+		<Ownership>CORPORATE</Ownership>
+		<Date_Built>1931</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.743769</Longitude>
+		<Latitude>30.241252</Latitude>
+		<Building_Name>WALTER AND MAE SIMMS HOUSE</Building_Name>
+		<Address>906 Mariposa Dr</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1925</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.726415</Longitude>
+		<Latitude>30.271158</Latitude>
+		<Building_Name>BENJAMIN LEE HOUSE</Building_Name>
+		<Address>1178 San Bernard Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1902</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.726833</Longitude>
+		<Latitude>30.309741</Latitude>
+		<Building_Name>WELLS - LARUE HOUSE</Building_Name>
+		<Address>4524 Avenue F</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1850</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.748265</Longitude>
+		<Latitude>30.287473</Latitude>
+		<Building_Name>NEILL-COCHRAN  HOUSE</Building_Name>
+		<Address>2310 San Gabriel Street</Address>
+		<Ownership>NON-PROFIT</Ownership>
+		<Date_Built>1853</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.748226</Longitude>
+		<Latitude>30.287847</Latitude>
+		<Building_Name>TEXAS FEDERATION OF WOMAN'S CLUBS</Building_Name>
+		<Address>2312 San Gabriel Street</Address>
+		<Ownership>NON-PROFIT</Ownership>
+		<Date_Built>1932</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.732214</Longitude>
+		<Latitude>30.266997</Latitude>
+		<Building_Name>FRENCH LEGATION</Building_Name>
+		<Address>801 Embassy Drive</Address>
+		<Ownership>PUBLIC</Ownership>
+		<Date_Built>1841</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.747937</Longitude>
+		<Latitude>30.265209</Latitude>
+		<Building_Name>SCHNEIDER (J. P.) STORE</Building_Name>
+		<Address>402 West 2nd Street</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1894</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.728137</Longitude>
+		<Latitude>30.265008</Latitude>
+		<Building_Name>SPARKS - LEDESMA HOUSE</Building_Name>
+		<Address>1306 East 7th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1896</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.739766</Longitude>
+		<Latitude>30.268502</Latitude>
+		<Building_Name>ST. DAVID'S  EPISCOPAL CHURCH</Building_Name>
+		<Address>300 East 7th Street</Address>
+		<Ownership>NON-PROFIT</Ownership>
+		<Date_Built>1854</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.746463</Longitude>
+		<Latitude>30.270455</Latitude>
+		<Building_Name>BREMOND (PIERRE) HOUSE</Building_Name>
+		<Address>402 West 7th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1898</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.746666</Longitude>
+		<Latitude>30.270520</Latitude>
+		<Building_Name>BREMOND (EUGENE) HOUSE</Building_Name>
+		<Address>404 West 7th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1877</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.741486</Longitude>
+		<Latitude>30.320980</Latitude>
+		<Building_Name>MOORE - HANCOCK CABINS</Building_Name>
+		<Address>4811 Sinclair Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1850</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.729208</Longitude>
+		<Latitude>30.275998</Latitude>
+		<Building_Name>MACKEN - ANDERSON HOUSE</Building_Name>
+		<Address>1007 East 16th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1906</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.737709</Longitude>
+		<Latitude>30.263761</Latitude>
+		<Building_Name>WATERLOO COMPOUND (B)-WEDDING HOUSE</Building_Name>
+		<Address>604 East 3rd Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1855</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.747709</Longitude>
+		<Latitude>30.278960</Latitude>
+		<Building_Name>CASWELL (DANIEL) HOUSE</Building_Name>
+		<Address>1404 West Avenue</Address>
+		<Ownership>NON-PROFIT</Ownership>
+		<Date_Built>1900</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.760873</Longitude>
+		<Latitude>30.278236</Latitude>
+		<Building_Name>MATHEWS ELEMENTARY SCHOOL</Building_Name>
+		<Address>906 West Lynn Street</Address>
+		<Ownership>PUBLIC</Ownership>
+		<Date_Built>1916</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.723050</Longitude>
+		<Latitude>30.301864</Latitude>
+		<Building_Name>PERRY (EDGAR) JR. HOUSE</Building_Name>
+		<Address>801 Park Boulevard</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1929</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.747352</Longitude>
+		<Latitude>30.252123</Latitude>
+		<Building_Name>MILLER - CROCKETT HOUSE</Building_Name>
+		<Address>112 Academy Drive</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1888</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.761613</Longitude>
+		<Latitude>30.281896</Latitude>
+		<Building_Name>TUCKER - HASKELL RESIDENCE</Building_Name>
+		<Address>1703 Waterston Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1875</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.744847</Longitude>
+		<Latitude>30.249696</Latitude>
+		<Building_Name>MOORE - WILLIAMS HOUSE</Building_Name>
+		<Address>1312 Newning Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1890</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.772800</Longitude>
+		<Latitude>30.270679</Latitude>
+		<Building_Name>DINOSAUR TRACKS</Building_Name>
+		<Address>2220 Zilker Park</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>100 million BC</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.769718</Longitude>
+		<Latitude>30.264098</Latitude>
+		<Building_Name>BARTON SPRINGS</Building_Name>
+		<Address>2131 William Barton Dr</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1917</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.755796</Longitude>
+		<Latitude>30.294885</Latitude>
+		<Building_Name>CATTERALL-MILLS HOUSE</Building_Name>
+		<Address>2524 Harris Blvd</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1937</Date_Built>
+	</Row>
+	<Row>
+		<Longitude> Northbound</Longitude>
+		<Latitude>-97.734052</Latitude>
+		<Building_Name>ROBINSON BROTHERS WAREHOUSE</Building_Name>
+		<Address>501 IH-35  Frontage Road</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1872</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.755600</Longitude>
+		<Latitude>30.280805</Latitude>
+		<Building_Name>WELLER-MEYERS-MORRISON HOUSE</Building_Name>
+		<Address>1400 Lorrain Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1927</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.774371</Longitude>
+		<Latitude>30.312180</Latitude>
+		<Building_Name>LAGUNA GLORIA</Building_Name>
+		<Address>3809 West 35th  Street</Address>
+		<Ownership>PUBLIC</Ownership>
+		<Date_Built>1916</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.748581</Longitude>
+		<Latitude>30.273018</Latitude>
+		<Building_Name>CAMBELL-MILLER HOUSE</Building_Name>
+		<Address>900 Rio Grande Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1872/1898</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.732523</Longitude>
+		<Latitude>30.289424</Latitude>
+		<Building_Name>DOBIE (J. FRANK) HOUSE</Building_Name>
+		<Address>702 East Dean Keaton</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1925</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.774171</Longitude>
+		<Latitude>30.265218</Latitude>
+		<Building_Name>SWEDISH LOG CABIN</Building_Name>
+		<Address>2220 Andrew Zilker Rd</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1838</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.755066</Longitude>
+		<Latitude>30.281609</Latitude>
+		<Building_Name>KING-VON ROSENBERG HOUSE</Building_Name>
+		<Address>1500 Lorrain Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1922</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.773223</Longitude>
+		<Latitude>30.269157</Latitude>
+		<Building_Name>ESPERANZA SCHOOL</Building_Name>
+		<Address>2220 Andrew Zilker RD</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1866</Date_Built>
+	</Row>
+	<Row>
+		<Longitude> NB</Longitude>
+		<Latitude>-97.728978</Latitude>
+		<Building_Name>ROGERS HOMESTEAD</Building_Name>
+		<Address>10801 Mo-Pac Expressway</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1861</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.755293</Longitude>
+		<Latitude>30.249399</Latitude>
+		<Building_Name>MOONLIGHT TOWERS</Building_Name>
+		<Address>1606 South 1st Street</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1894</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.749313</Longitude>
+		<Latitude>30.267646</Latitude>
+		<Building_Name>MOONLIGHT TOWERS</Building_Name>
+		<Address>360 Nueces St</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1894</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.745152</Longitude>
+		<Latitude>30.271730</Latitude>
+		<Building_Name>MOONLIGHT TOWERS</Building_Name>
+		<Address>307 W 9th Street</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1894</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.754124</Longitude>
+		<Latitude>30.277725</Latitude>
+		<Building_Name>MOONLIGHT TOWERS</Building_Name>
+		<Address>115 West 12th Street</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1894</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.747422</Longitude>
+		<Latitude>30.275908</Latitude>
+		<Building_Name>MOONLIGHT TOWERS</Building_Name>
+		<Address>1200 Rio Grande St</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1894</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.744213</Longitude>
+		<Latitude>30.278112</Latitude>
+		<Building_Name>MOONLIGHT TOWERS</Building_Name>
+		<Address>501 West 15th Street</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1894</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.744001</Longitude>
+		<Latitude>30.285083</Latitude>
+		<Building_Name>MOONLIGHT TOWERS</Building_Name>
+		<Address>2110 Nueces St</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1894</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.731380</Longitude>
+		<Latitude>30.304163</Latitude>
+		<Building_Name>MOONLIGHT TOWERS</Building_Name>
+		<Address>4012  Speedway</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1894</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.728472</Longitude>
+		<Latitude>30.269084</Latitude>
+		<Building_Name>VICTORY GRILL</Building_Name>
+		<Address>1104 East 11th Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1950</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.770799</Longitude>
+		<Latitude>30.312994</Latitude>
+		<Building_Name>MAYFIELD-GUTSCH ESTATE</Building_Name>
+		<Address>3505 35th Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1909</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.736313</Longitude>
+		<Latitude>30.270109</Latitude>
+		<Building_Name>GERMAN FREE SCHOOL</Building_Name>
+		<Address>507 East 10th Street</Address>
+		<Ownership>NON PROFIT</Ownership>
+		<Date_Built>1857</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.721468</Longitude>
+		<Latitude>30.273730</Latitude>
+		<Building_Name>E.F. DENNIS HOUSE</Building_Name>
+		<Address>1706 East 12th Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1908</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.749717</Longitude>
+		<Latitude>30.299168</Latitude>
+		<Building_Name>HERBERT AND ALICE BOHN</Building_Name>
+		<Address>1301 West 29th Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1939</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.738712</Longitude>
+		<Latitude>30.249434</Latitude>
+		<Building_Name>CLOUD - KINGSBERY HOUSE</Building_Name>
+		<Address>1001 East Riverside Dr</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1919</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.733199</Longitude>
+		<Latitude>30.291763</Latitude>
+		<Building_Name>GERHARDT - STREET HOUSE</Building_Name>
+		<Address>508 Bellevue Place</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1908</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.729346</Longitude>
+		<Latitude>30.292457</Latitude>
+		<Building_Name>COX-CRADDOCK HOUSE</Building_Name>
+		<Address>720 East 32nd Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1920</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.755601</Longitude>
+		<Latitude>30.275594</Latitude>
+		<Building_Name>HEARN HOUSE</Building_Name>
+		<Address>902 Blanco Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1900</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.755929</Longitude>
+		<Latitude>30.291079</Latitude>
+		<Building_Name>REED ESTATE</Building_Name>
+		<Address>2407 Harris Blvd</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1929</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.731634</Longitude>
+		<Latitude>30.296551</Latitude>
+		<Building_Name>STANLEY AND EMILY FINCH</Building_Name>
+		<Address>3312 Duval Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1928</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.743485</Longitude>
+		<Latitude>30.297590</Latitude>
+		<Building_Name>JAMES - MATHEWS HOUSE</Building_Name>
+		<Address>3001 Washington Square</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1912</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.755958</Longitude>
+		<Latitude>30.288791</Latitude>
+		<Building_Name>A.D. AND MAE BOLM HOUSE</Building_Name>
+		<Address>2309 Windsor Road</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1930</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.748361</Longitude>
+		<Latitude>30.280158</Latitude>
+		<Building_Name>BICKLER (MAX) HOUSE</Building_Name>
+		<Address>901 West 16th  Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1911</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.729197</Longitude>
+		<Latitude>30.302159</Latitude>
+		<Building_Name>RAMSDELL - WOLFF HOUSE</Building_Name>
+		<Address>4002 Avenue H</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1907</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.745568</Longitude>
+		<Latitude>30.252176</Latitude>
+		<Building_Name>RED - PURCELL HOUSE</Building_Name>
+		<Address>210 Academy Drive</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1885</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.730112</Longitude>
+		<Latitude>30.267206</Latitude>
+		<Building_Name>NEWTON HOUSE</Building_Name>
+		<Address>1013 East 9th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1884</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.744779</Longitude>
+		<Latitude>30.251700</Latitude>
+		<Building_Name>WARNER - LUCAS HOUSE</Building_Name>
+		<Address>303 Academy Drive</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1886</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.731358</Longitude>
+		<Latitude>30.266601</Latitude>
+		<Building_Name>ROGERS - LYONS HOUSE</Building_Name>
+		<Address>1001 East 8th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1891</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.768400</Longitude>
+		<Latitude>30.187735</Latitude>
+		<Building_Name>HORTON - DUVAL HOUSE</Building_Name>
+		<Address>6707 Bluff Springs Road</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1850</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.734644</Longitude>
+		<Latitude>30.303074</Latitude>
+		<Building_Name>OLIPHANT HOUSE</Building_Name>
+		<Address>3900 Avenue C</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1894</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.733683</Longitude>
+		<Latitude>30.303600</Latitude>
+		<Building_Name>SMITH - MARCUSE - LOWRY HOUSE</Building_Name>
+		<Address>3913 Avenue C</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1894</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.730340</Longitude>
+		<Latitude>30.266250</Latitude>
+		<Building_Name>BOOTHE - SANTA ANA HOUSE</Building_Name>
+		<Address>1011 East 8th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1895</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.744387</Longitude>
+		<Latitude>30.250102</Latitude>
+		<Building_Name>GULLETT HOUSE</Building_Name>
+		<Address>1304 Newning Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1914</Date_Built>
+	</Row>
+	<Row>
+		<Longitude> East</Longitude>
+		<Latitude>-97.732409</Latitude>
+		<Building_Name>MILLER - ROBERDEAU HOUSE</Building_Name>
+		<Address>310 34 Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1923</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.741972</Longitude>
+		<Latitude>30.269047</Latitude>
+		<Building_Name>STEPHEN F. AUSTIN HOTEL</Building_Name>
+		<Address>701 Congress Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1924</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.754342</Longitude>
+		<Latitude>30.278274</Latitude>
+		<Building_Name>CRUCHON - CABANESS - SPILLER HOUSE</Building_Name>
+		<Address>1200 Windsor Road</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1881</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.746921</Longitude>
+		<Latitude>30.279415</Latitude>
+		<Building_Name>DOZIER - BEAL HOUSE</Building_Name>
+		<Address>1503 West Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1925</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.743599</Longitude>
+		<Latitude>30.251480</Latitude>
+		<Building_Name>DAVIS (W. H.) HOUSE</Building_Name>
+		<Address>1203 Newning Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1907</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.721103</Longitude>
+		<Latitude>30.279720</Latitude>
+		<Building_Name>MOONLIGHT TOWERS</Building_Name>
+		<Address>1901 East MLK JR Blvd</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1894</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.717134</Longitude>
+		<Latitude>30.275309</Latitude>
+		<Building_Name>MOONLIGHT TOWERS</Building_Name>
+		<Address>2200 East 13th Street</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1894</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.721388</Longitude>
+		<Latitude>30.271522</Latitude>
+		<Building_Name>MOONLIGHT TOWERS</Building_Name>
+		<Address>1183 Leona St</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1894</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.737515</Longitude>
+		<Latitude>30.271624</Latitude>
+		<Building_Name>MOONLIGHT TOWERS</Building_Name>
+		<Address>1001  Trinity St</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1894</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.727895</Longitude>
+		<Latitude>30.268614</Latitude>
+		<Building_Name>MOONLIGHT TOWERS</Building_Name>
+		<Address>1133 East 11th Street</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1894</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.724066</Longitude>
+		<Latitude>30.254888</Latitude>
+		<Building_Name>MOONLIGHT TOWERS</Building_Name>
+		<Address>2000 Canterbury st</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1894</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.741214</Longitude>
+		<Latitude>30.262359</Latitude>
+		<Building_Name>MOONLIGHT TOWERS</Building_Name>
+		<Address>94 Trinity St</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1894</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.771177</Longitude>
+		<Latitude>30.266380</Latitude>
+		<Building_Name>MOONLIGHT TOWERS</Building_Name>
+		<Address>2206 Andrew Zilker Rd</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1894</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.747378</Longitude>
+		<Latitude>30.241369</Latitude>
+		<Building_Name>MOONLIGHT TOWERS</Building_Name>
+		<Address>2009 Side Dr</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1894</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.743822</Longitude>
+		<Latitude>30.270113</Latitude>
+		<Building_Name>BROWN BUILDING</Building_Name>
+		<Address>714 Colorado Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1938</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.756056</Longitude>
+		<Latitude>30.271605</Latitude>
+		<Building_Name>WROE - BUSTIN HOUSE</Building_Name>
+		<Address>506 Baylor Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1893</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.731180</Longitude>
+		<Latitude>30.267025</Latitude>
+		<Building_Name>HERNANDEZ - JOHNSON HOUSE</Building_Name>
+		<Address>1000 East 8th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1887</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.743935</Longitude>
+		<Latitude>30.252166</Latitude>
+		<Building_Name>MATHER - KIRKLAND HOUSE (THE ACADEMY)</Building_Name>
+		<Address>404 Academy Drive</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1890</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.725374</Longitude>
+		<Latitude>30.272022</Latitude>
+		<Building_Name>HOWSON COMMUNITY CENTER</Building_Name>
+		<Address>1192 Angelina Street</Address>
+		<Ownership>NON-PROFIT</Ownership>
+		<Date_Built>1929</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.744470</Longitude>
+		<Latitude>30.275319</Latitude>
+		<Building_Name>WATSON (A.O.) HOUSE</Building_Name>
+		<Address>402 West 12th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1898</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.818361</Longitude>
+		<Latitude>30.274380</Latitude>
+		<Building_Name>JOHNSON SMOKEHOUSE</Building_Name>
+		<Address>4306 Heights Dr</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1868</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.732121</Longitude>
+		<Latitude>30.293850</Latitude>
+		<Building_Name>FITZGERALD-SHORT HOUSE</Building_Name>
+		<Address>502 East 32nd Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1939</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.731368</Longitude>
+		<Latitude>30.292752</Latitude>
+		<Building_Name>ETTLINGER- WORRELL HOUSE</Building_Name>
+		<Address>3110 Harris Park Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1912</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.725960</Longitude>
+		<Latitude>30.306241</Latitude>
+		<Building_Name>EDGAR VON BOECKMANN HOUSE</Building_Name>
+		<Address>4401 Avenue H</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1909</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.751997</Longitude>
+		<Latitude>30.285133</Latitude>
+		<Building_Name>PATTERSON HOUSE</Building_Name>
+		<Address>1908 Cliff Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1923</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.779306</Longitude>
+		<Latitude>30.301085</Latitude>
+		<Building_Name>JOSEPH RENFRO HOUSE</Building_Name>
+		<Address>3707 Gilbert Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1941</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.741705</Longitude>
+		<Latitude>30.272177</Latitude>
+		<Building_Name>LUNDBERG BAKERY</Building_Name>
+		<Address>1006 Congress Avenue</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1876</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.733771</Longitude>
+		<Latitude>30.304367</Latitude>
+		<Building_Name>HUME-ROWE HOUSE</Building_Name>
+		<Address>4002 Avenue C</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1902</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.751668</Longitude>
+		<Latitude>30.297572</Latitude>
+		<Building_Name>SHELBY-MATTHEWS-BERGQUIST HOUSE</Building_Name>
+		<Address>2705 Oakhurst Ave</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1933</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.727389</Longitude>
+		<Latitude>30.271672</Latitude>
+		<Building_Name>TEACHERS STATE ASSOCIATION OF TEXAS BLBG (HOUSE OF ELEGANCE)</Building_Name>
+		<Address>1191 Navasota</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1950</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.768247</Longitude>
+		<Latitude>30.291979</Latitude>
+		<Building_Name>HART HOUSE</Building_Name>
+		<Address>1800 Forest Trail</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1930</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.739648</Longitude>
+		<Latitude>30.267497</Latitude>
+		<Building_Name>ST. CHARLES HOUSE</Building_Name>
+		<Address>316 East 6th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1871</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.770468</Longitude>
+		<Latitude>30.194191</Latitude>
+		<Building_Name>ONION CREEK (MASONIC) LODGE</Building_Name>
+		<Address>706 North Bluff DR</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1860</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>1925</Longitude>
+		<Latitude>3820 Avenue F</Latitude>
+		<Building_Name>WILLIAMS</Building_Name>
+		<Address> </Address>
+		<Ownership> W. T. AND CLOTILDE V.</Ownership>
+		<Date_Built> HOUSE</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.691360</Longitude>
+		<Latitude>30.245416</Latitude>
+		<Building_Name>MONTOPOLIS BRIDGE</Building_Name>
+		<Address>108  Bastrop HWY SVRD SB</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1925</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.754075</Longitude>
+		<Latitude>30.280893</Latitude>
+		<Building_Name>GOVERNORS JAMES AND MIRIAM FERGUSON HOUSE</Building_Name>
+		<Address>1200 1200 Enfield Road</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1927</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.718844</Longitude>
+		<Latitude>30.308085</Latitude>
+		<Building_Name>WORLEY HOUSE</Building_Name>
+		<Address>802 East 47th Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1938</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.724245</Longitude>
+		<Latitude>30.269936</Latitude>
+		<Building_Name>CARVER MUSEUM</Building_Name>
+		<Address>1165 Angelina Street</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1930</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>1925</Longitude>
+		<Latitude>104 East 38th Street</Latitude>
+		<Building_Name>LINDAMOOD</Building_Name>
+		<Address>PRIVATE</Address>
+		<Ownership> WILL C. AND MAE</Ownership>
+		<Date_Built> DUPLES</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.739556</Longitude>
+		<Latitude>30.248596</Latitude>
+		<Building_Name>MURCHESON - DOUGLAS HOUSE</Building_Name>
+		<Address>1200 Travis Heights Blvd</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1917</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.762420</Longitude>
+		<Latitude>30.248197</Latitude>
+		<Building_Name>DAWSON - BLAYLOCK HOUSE</Building_Name>
+		<Address>1001  West Mary Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1894</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.771329</Longitude>
+		<Latitude>30.305373</Latitude>
+		<Building_Name>TAYLOR LIME KILN</Building_Name>
+		<Address>2614 Pecos Street</Address>
+		<Ownership>PUBLIC</Ownership>
+		<Date_Built>1876</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.752783</Longitude>
+		<Latitude>30.298823</Latitude>
+		<Building_Name>PARRISH - FLEMING HOUSE</Building_Name>
+		<Address>1410 Northwood Rd</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1937</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.745403</Longitude>
+		<Latitude>30.299651</Latitude>
+		<Building_Name>MANNING-UDDEN-BAILEY HOUSE</Building_Name>
+		<Address>901 West 31st Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1939</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>1901 Cliff Street</Longitude>
+		<Latitude>-97.751581</Latitude>
+		<Building_Name>CRANFILL</Building_Name>
+		<Address>1955</Address>
+		<Ownership> THOMAS HOUSE</Ownership>
+		<Date_Built>PRIVATE</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.740320</Longitude>
+		<Latitude>30.247918</Latitude>
+		<Building_Name>WHEELER-HOLCOMB TRIPLEX</Building_Name>
+		<Address>905 Avondale Rd</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1938</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.762673</Longitude>
+		<Latitude>30.247728</Latitude>
+		<Building_Name>DAWSON - ROBBINS HOUSE</Building_Name>
+		<Address>1912 South Fifth Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1899</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.747816</Longitude>
+		<Latitude>30.280062</Latitude>
+		<Building_Name>GRANGER HOUSE AND THE PERCH</Building_Name>
+		<Address>805 West 16th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1945</Date_Built>
+	</Row>
+	<Row>
+		<Longitude> East</Longitude>
+		<Latitude>-97.731565</Latitude>
+		<Building_Name>MORELAND - MELENDEZ RESIDENCE</Building_Name>
+		<Address>1301 Cesar Chavez</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1900</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.730072</Longitude>
+		<Latitude>30.301593</Latitude>
+		<Building_Name>HILDRETH-FLANAGAN-HEIERMAN HOUSE</Building_Name>
+		<Address>3909 Avenue G</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1900</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.757230</Longitude>
+		<Latitude>30.199383</Latitude>
+		<Building_Name>MILLER - SEARIGHT HOUSE</Building_Name>
+		<Address>5400 Freidrich Lane</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1883</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.730314</Longitude>
+		<Latitude>30.299399</Latitude>
+		<Building_Name>BENGSTON HOUSE</Building_Name>
+		<Address>3803 H Avenue</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1941</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.713634</Longitude>
+		<Latitude>30.363990</Latitude>
+		<Building_Name>EDWARD E. ZIMMERMAN STONE HOUSE</Building_Name>
+		<Address>1500 Payton Gin Rd</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1860</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.736555</Longitude>
+		<Latitude>30.297351</Latitude>
+		<Building_Name>SPURGEON BELL HOUSE (BELL-FALVEY HOUSE)</Building_Name>
+		<Address>106 West 32nd Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1937</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.731390</Longitude>
+		<Latitude>30.296847</Latitude>
+		<Building_Name>GORDON-DAMON HOUSE</Building_Name>
+		<Address>3400 Duval Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1918</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.726988</Longitude>
+		<Latitude>30.303745</Latitude>
+		<Building_Name>PROCTOR-EVANS-RICHARD HOUSE</Building_Name>
+		<Address>4200 Duval Street</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1912</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.743109</Longitude>
+		<Latitude>30.308448</Latitude>
+		<Building_Name>SEIDERS - PETERSON HOUSE</Building_Name>
+		<Address>1105 West 40th  Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1885</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.739264</Longitude>
+		<Latitude>30.266815</Latitude>
+		<Building_Name>COTTON EXCHANGE</Building_Name>
+		<Address>401 East 6th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1874</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.773032</Longitude>
+		<Latitude>30.303820</Latitude>
+		<Building_Name>DONNAN - HILL HOUSE</Building_Name>
+		<Address>2528 Tanglewood Trail</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1876</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.755811</Longitude>
+		<Latitude>30.271995</Latitude>
+		<Building_Name>RAYMOND - MORLEY HOUSE</Building_Name>
+		<Address>510 Baylor Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1900</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.750524</Longitude>
+		<Latitude>30.298873</Latitude>
+		<Building_Name>BURNS - KLEIN HOUSE (SPLITROCK)</Building_Name>
+		<Address>2815 WOOLDRIDGE DR.</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1909</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.752157</Longitude>
+		<Latitude>30.285527</Latitude>
+		<Building_Name>GOFF - RADKEY HOUSE</Building_Name>
+		<Address>1305 West 22nd Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1913</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.736647</Longitude>
+		<Latitude>30.296363</Latitude>
+		<Building_Name>DEL CURTO-NOWOTNY HOUSE</Building_Name>
+		<Address>102 Laurel Lane</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1929</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.746235</Longitude>
+		<Latitude>30.246926</Latitude>
+		<Building_Name>CARUTHERS-PIERCE-RICHARD HOUSE</Building_Name>
+		<Address>500 East Monroe St</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1926</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.707244</Longitude>
+		<Latitude>30.296576</Latitude>
+		<Building_Name>MUNICIPAL AIRPORT HANGAR (ROBERT MUELLER AIRPORT)</Building_Name>
+		<Address>4209 Airport Boulevard</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1887</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.745905</Longitude>
+		<Latitude>30.271304</Latitude>
+		<Building_Name>CENTRAL LIBRARY</Building_Name>
+		<Address>810 Guadalupe Street</Address>
+		<Ownership>CITY OF AUSTIN</Ownership>
+		<Date_Built>1932</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.743342</Longitude>
+		<Latitude>30.265748</Latitude>
+		<Building_Name>DAY BUILDING</Building_Name>
+		<Address>319 Congress Avenue</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1888</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.742755</Longitude>
+		<Latitude>30.241384</Latitude>
+		<Building_Name>WILEY-MCKOWN HOUSE</Building_Name>
+		<Address>1815 Travis Heights Blvd</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1935</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.744489</Longitude>
+		<Latitude>30.299286</Latitude>
+		<Building_Name>BROGAN HOUSE</Building_Name>
+		<Address>3018 West Avenue</Address>
+		<Ownership> </Ownership>
+		<Date_Built>1897</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.730666</Longitude>
+		<Latitude>30.273518</Latitude>
+		<Building_Name>LIMERICK - FRAZIER HOUSE</Building_Name>
+		<Address>810 East 13th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1876</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.738712</Longitude>
+		<Latitude>30.267256</Latitude>
+		<Building_Name>DOS BANDEROS</Building_Name>
+		<Address>410 East 6th Street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1881</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.749042</Longitude>
+		<Latitude>30.250498</Latitude>
+		<Building_Name>CONTINENTAL CLUB</Building_Name>
+		<Address>1315 S CONGRESS AVE</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1935</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.754432</Longitude>
+		<Latitude>30.256837</Latitude>
+		<Building_Name>WOODY HOUSE</Building_Name>
+		<Address>709 BOULDIN AVE</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1935</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.755364</Longitude>
+		<Latitude>30.282728</Latitude>
+		<Building_Name>CRUSMANN-CLARK-MARSH-BELL HOUSE</Building_Name>
+		<Address>1509 MARSHALL STREET</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1917</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.756234</Longitude>
+		<Latitude>30.281084</Latitude>
+		<Building_Name>JUDGE JOHN D. AND ETTA HARVEY HOUSE</Building_Name>
+		<Address>1309 MARSHALL LANE</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1920</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.756492</Longitude>
+		<Latitude>30.293339</Latitude>
+		<Building_Name>DUNBAR-EILERS HOUSE</Building_Name>
+		<Address>2502 harris blvd</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1938</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.760024</Longitude>
+		<Latitude>30.276426</Latitude>
+		<Building_Name>BLONDIE PHARR HOUSE</Building_Name>
+		<Address>801 highland ave</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1923</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.756769</Longitude>
+		<Latitude>30.287278</Latitude>
+		<Building_Name>DAVIS - SIBLEY BELL HOUSE</Building_Name>
+		<Address>2210 windsor rd</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>193</Date_Built>
+	</Row>
+	<Row>
+		<Longitude>-97.736749</Longitude>
+		<Latitude>30.297409</Latitude>
+		<Building_Name>WEBB - SIMMS- ALDRIDGE HOUSE</Building_Name>
+		<Address>108 west 32nd street</Address>
+		<Ownership>PRIVATE</Ownership>
+		<Date_Built>1923</Date_Built>
+	</Row>
+</Root>
