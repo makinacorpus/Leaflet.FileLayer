@@ -1,0 +1,1 @@
+module.exports = require("npm:minimist@0.0.8/index.js");

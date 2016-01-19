@@ -4,3 +4,12 @@
 [submodule "Font-Awesome"]
 	path = Font-Awesome
 	url = https://github.com/FortAwesome/Font-Awesome.git
+[submodule "PapaParser"]
+	path = PapaParser
+	url = https://github.com/mholt/PapaParse.git
+[submodule "zip"]
+	path = zip
+	url = https://github.com/gildas-lormeau/zip.js.git
+[submodule "GPX"]
+	path = zip
+	url = https://github.com/shramov/leaflet-plugins/blob/d74d67/layer/vector/GPX.js

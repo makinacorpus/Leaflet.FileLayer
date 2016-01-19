@@ -1,27 +1,24 @@
 {
-    "name": "leaflet-filelayer",
-    "version": "0.4.0",
-    "description": "Loads local files (GeoJSON, GPX, KML) into the map using the HTML5 FileReader API",
-    "keywords": ["Leaflet", "GIS", "HTML5"],
-    "main": "leaflet.filelayer.js",
-    "bugs": {
-        "url": "https://github.com/makinacorpus/Leaflet.FileLayer/issues"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/makinacorpus/Leaflet.FileLayer.git"
-    },
-    "license": "MIT",
-    "scripts": {},
+  "jspm": {
     "dependencies": {
-        "leaflet": "*",
-        "togeojson": "*"
+      "adm-zip": "npm:adm-zip@^0.4.7",
+      "css": "github:systemjs/plugin-css@^0.1.20",
+      "font-awesome": "npm:font-awesome@^4.5.0",
+      "gildas-lormeau/zip.js": "github:gildas-lormeau/zip.js@master",
+      "leaflet": "npm:leaflet@^0.7.7",
+      "mapbox/togeojson": "github:mapbox/togeojson@^0.13.0",
+      "mholt/PapaParse": "github:mholt/PapaParse@^4.1.2",
+      "shramov/leaflet-plugins": "github:shramov/leaflet-plugins@^1.4.2",
+      "togeojson": "npm:togeojson@0.13.0"
     },
     "devDependencies": {
-        "mocha": "1.9.x",
-        "chai": "1.6.x",
-        "sinon": "1.7.x",
-        "mocha-phantomjs": "2.0.x",
-        "happen": "0.1.x"
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "clean-css": "npm:clean-css@^3.4.9",
+      "core-js": "npm:core-js@^1.1.4"
     }
+  },
+  "devDependencies": {
+    "jspm": "^0.16.0-beta.7"
+  }
 }

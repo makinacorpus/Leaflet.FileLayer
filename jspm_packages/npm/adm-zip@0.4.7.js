@@ -1,0 +1,1 @@
+module.exports = require("npm:adm-zip@0.4.7/adm-zip.js");

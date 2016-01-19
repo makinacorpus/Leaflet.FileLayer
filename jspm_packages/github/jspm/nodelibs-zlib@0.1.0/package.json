@@ -1,0 +1,6 @@
+{
+  "registry": "npm",
+  "dependencies": {
+    "browserify-zlib": "^0.1.4"
+  }
+}

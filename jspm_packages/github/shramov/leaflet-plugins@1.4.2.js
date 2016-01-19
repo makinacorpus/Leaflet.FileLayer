@@ -1,0 +1,1 @@
+module.exports = require("github:shramov/leaflet-plugins@1.4.2/control/Distance.js");
