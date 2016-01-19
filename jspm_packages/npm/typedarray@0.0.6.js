@@ -1,0 +1,1 @@
+module.exports = require("npm:typedarray@0.0.6/index.js");
