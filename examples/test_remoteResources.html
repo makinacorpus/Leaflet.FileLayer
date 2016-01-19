@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leaflet.FileLayer</title>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style>
+        #map {
+            position: absolute;
+            top:0;
+            left: 0;
+            right: 0;
+            bottom:0;
+            height: 100vh; /* https://github.com/jspm/jspm-cli/issues/1382 */
+        }
+        .help {
+            font-size: 1.5em;
+            position: absolute;
+            top:0;
+            left: 0;
+            right: 0;
+            height: 30px;
+            z-index: 10;
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            padding: 10px;
+            margin: 0;
+            text-align: center;
+        }
+        .help a.sources {
+            float: left;
+            margin-left: 50px;
+            color: white;
+        }
+        .help a.logo {
+            float: right;
+        }
+        .help a.logo img {
+            height: 30px;
+        }
+    </style>
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+    <!-- OPTIONAL LIBRARY -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- SUPPORT LIBRARY-->
+    <script  type="text/javascript" src="../lib/filelayer/ajaxUtil.js"></script>
+    <script  type="text/javascript" src="https://cdn.rawgit.com/mholt/PapaParse/master/papaparse.js"></script>
+    <script  type="text/javascript" src="https://cdn.rawgit.com/mbostock/d3/master/d3.js"></script>
+    <script  type="text/javascript" src="https://cdn.rawgit.com/mapbox/togeojson/master/togeojson.js"></script>
+    <script  type="text/javascript" src="https://cdn.rawgit.com/shramov/leaflet-plugins/d74d67/layer/vector/GPX.js"></script>
+
+    <!-- FREE LIBRARY FOR WORK WITH ZIP FILE -->
+    <script  type="text/javascript" src="../lib/zip/zip.js"></script>
+    <script  type="text/javascript" src="../lib/filelayer/leaflet.filelayer.js"></script>
+
+</head>
+<body>
+<p class="help">Use the <i class="fa fa-folder-open"></i> icon to browse and load local files on the map.
+    <a class="sources" href="http://github.com/makinacorpus/Leaflet.FileLayer/">Sources</a>
+    <a class="logo" href="http://makina-corpus.com"><img src="http://depot.makina-corpus.org/public/logo.gif"/></a>
+</p>
+<div id="map"></div>
+
+<script>
+    alert(window.location);
+    zip.workerScriptsPath ="../lib/zip/";
+    var osm = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: 'Map data &copy; 2013 OpenStreetMap contributors'
+    });
+    var map = L.map('map').fitWorld().addLayer(osm);
+    /* var map = new L.Map("map", {center: [35.78, -78.68], zoom: 13});
+     map.addLayer(osm);*/
+    L.Control.FileLayerLoad.LABEL = '<i class="fa fa-folder-open"></i>';
+    L.Control.fileLayerLoad({
+        fileSizeLimit: 6144,
+        //TRY OUT CSV //test file: http://adf.ly/1RnWZd
+        /* latitudeColumn: 'lat',
+         longitudeColumn: 'lng',*/
+
+        //TRY OUT XML   //test file: http://adf.ly/1Rqxub
+        latitudeColumn: 'Latitude',
+        longitudeColumn: 'Longitude',
+        rootTag: ["Root","Row"],
+
+        //TRY OUT RDF/XML  //test file: http://adf.ly/1RnWFd
+        /* latitudeColumn: 'geo:lat',
+         longitudeColumn: 'geo:long',
+         rdfLink: ['gr:hasPOS'],
+         rdfAboutLink: 'rdf:about',
+         rootTag: {root:"rdf:RDF",subRoot:"rdf:Description"},*/
+
+        validateGeoJson: true,
+        popupTable:true,
+        layerOptions: {
+            pointToLayer: function (feature, latlng) {
+                return new L.marker(latlng);
+            },
+            onEachFeature:function(feature, layer){
+                try {
+                    var popupContent = '';
+                    if (feature.properties && feature.properties.popupContent) {
+                        popupContent = feature.properties.popupContent;
+                    }
+                    layer.bindPopup(popupContent);
+                }catch(e){
+                    alert(e.message);
+                }
+            }
+        }
+    }).addTo(map);
+
+
+</script>
+
+<!-- PROJECT LIBRARY TO INVOKE AFTER SETTED THE MAP LEAFLET AND THE D3 JAVASCRIPT LIBRARY -->
+<!--<script  type="text/javascript" src='../lib/oldFile/gtfsParser.js'></script>-->
+<script  type="text/javascript" src='../lib/oldFile/gtfsExtractor.js'></script>
+
+
+
+</body>
+</html>

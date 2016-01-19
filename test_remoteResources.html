@@ -11,6 +11,7 @@
             left: 0;
             right: 0;
             bottom:0;
+            height: 100vh; /* https://github.com/jspm/jspm-cli/issues/1382 */
         }
         .help {
             font-size: 1.5em;
@@ -23,7 +24,7 @@
             background-color: rgba(0,0,0,0.5);
             color: white;
             padding: 10px;
-            margin: 0px;
+            margin: 0;
             text-align: center;
         }
         .help a.sources {
@@ -47,17 +48,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <!-- SUPPORT LIBRARY-->
-    <script src="filelayer/ajaxUtil.js"></script>
+    <script src="./lib/filelayer/ajaxUtil.js"></script>
     <script src="https://cdn.rawgit.com/mholt/PapaParse/master/papaparse.js"></script>
     <script src="https://cdn.rawgit.com/mbostock/d3/master/d3.js"></script>
     <script src="https://cdn.rawgit.com/mapbox/togeojson/master/togeojson.js"></script>
     <script src="https://cdn.rawgit.com/shramov/leaflet-plugins/d74d67/layer/vector/GPX.js"></script>
 
     <!-- FREE LIBRARY FOR WORK WITH ZIP FILE -->
-    <script src="zip/zip.js"></script>
+    <script src="./lib/zip/zip.js"></script>
 
     <!-- PROJECT LIBRARY -->
-    <script src="leaflet.filelayer.js"></script>
+    <script src="./lib/filelayer/leaflet.filelayer.js"></script>
 
 </head>
 <body>
@@ -68,7 +69,7 @@
     <div id="map"></div>
     <script>
 
-    zip.workerScriptsPath ="./zip/";
+    zip.workerScriptsPath ="./lib/zip/";
 
     var osm = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: 'Map data &copy; 2013 OpenStreetMap contributors'
@@ -119,8 +120,8 @@
     </script>
 
     <!-- PROJECT LIBRARY TO INVOKE AFTER SETTED THE MAP LEAFLET AND THE D3 JAVASCRIPT LIBRARY -->
-    <script src='filelayer/gtfsParser.js'></script>
-    <script src='filelayer/gtfsExtractor.js'></script>
+    <script src='./lib/oldFile/gtfsParser.js'></script>
+    <script src='./lib/oldFile/gtfsExtractor.js'></script>
 
 
 </body>

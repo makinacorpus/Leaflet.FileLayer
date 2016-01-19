@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="jspm_packages/npm/leaflet@0.7.7/dist/leaflet.css">
+    <!-- <script src="lib/filelayer/leaflet.filelayer.js"></script>-->
+    <!-- FREE LIBRARY FOR WORK WITH ZIP FILE -->
+    <script src="lib/zip/zip.js"></script>
+    <script  type="text/javascript" src="https://cdn.rawgit.com/mbostock/d3/master/d3.js"></script>
+
+
+    <style>
+        #map {
+            position: absolute;
+            top:0;
+            left: 0;
+            right: 0;
+            bottom:0;
+            height: 100vh; /* https://github.com/jspm/jspm-cli/issues/1382 */
+        }
+        .help {
+            font-size: 1.5em;
+            position: absolute;
+            top:0;
+            left: 0;
+            right: 0;
+            height: 30px;
+            z-index: 10;
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            padding: 10px;
+            margin: 0;
+            text-align: center;
+        }
+        .help a.sources {
+            float: left;
+            margin-left: 50px;
+            color: white;
+        }
+        .help a.logo {
+            float: right;
+        }
+        .help a.logo img {
+            height: 30px;
+        }
+    </style>
+
+    <title></title>
+</head>
+<body>
+<script src="jspm_packages/system.js"></script>
+<script src="config.js"></script>
+<script>
+    console.log(1);
+    zip.workerScriptsPath ="./lib/zip/";
+    try {
+        System.import('./lib/main.js').then(function(){
+            console.log(2.5);
+        }).catch(function(err) {
+            console.log('Error: ', err.stack);
+        });
+    }catch(e){
+        console.error(e.message);
+    }
+    console.log(2);
+</script>
+<p class="help">Use the <i class="fa fa-folder-open"></i> icon to browse and load local files on the map.
+    <a class="sources" href="http://github.com/makinacorpus/Leaflet.FileLayer/">Sources</a>
+    <a class="logo" href="http://makina-corpus.com"><img src="http://depot.makina-corpus.org/public/logo.gif"/></a>
+</p>
+<div id="map"></div>
+</body>
+<script src='./lib/oldFile/gtfsExtractor.js'></script>
+<!--<script src='./lib/oldFile/gtfsParser.js'></script>
+<script src='./lib/oldFile/gtfsExtractor.js'></script>-->
+</html>
