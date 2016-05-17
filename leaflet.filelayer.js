@@ -141,16 +141,17 @@ L.Control.FileLayerLoad = L.Control.extend({
             drop: function (e) {
                 e.stopPropagation();
                 e.preventDefault();
-
-                var files = Array.prototype.slice.apply(e.dataTransfer.files),
-                    i = files.length;
-                setTimeout(function(){
-                    fileLoader.load(files.shift());
-                    if (i > 0) {
-                        setTimeout(arguments.callee, 25);
-                    }
-                }, 25);
                 map.scrollWheelZoom.enable();
+
+
+                var files = e.dataTransfer.files,
+                    i = 0,
+                    len = files.length;
+
+                while (len && i < len) {
+                    fileLoader.load(files[i]);
+                    i++;
+                }
             }
         };
         for (var name in callbacks)
