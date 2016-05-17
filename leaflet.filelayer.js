@@ -146,7 +146,7 @@ L.Control.FileLayerLoad = L.Control.extend({
                     i = files.length;
                 setTimeout(function(){
                     fileLoader.load(files.shift());
-                    if (files.length > 0) {
+                    if (i > 0) {
                         setTimeout(arguments.callee, 25);
                     }
                 }, 25);
