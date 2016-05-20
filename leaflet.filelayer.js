@@ -5,7 +5,7 @@
  * Requires Pavel Shramov's GPX.js
  * https://github.com/shramov/leaflet-plugins/blob/d74d67/layer/vector/GPX.js
  */
-var FileLoader = L.Class.extend({
+L.Util.FileLoader = L.Class.extend({
     includes: L.Mixin.Events,
     options: {
         layerOptions: {},
@@ -85,6 +85,10 @@ var FileLoader = L.Class.extend({
     }
 });
 
+L.Util.fileLoader = function(map, options) {
+  return new L.Util.FileLoader(map, options);  
+};
+
 
 L.Control.FileLayerLoad = L.Control.extend({
     statics: {
@@ -105,7 +109,7 @@ L.Control.FileLayerLoad = L.Control.extend({
     },
 
     onAdd: function (map) {
-        this.loader = new FileLoader(map, this.options);
+        this.loader = L.Util.fileLoader(map, this.options);
 
         this.loader.on('data:loaded', function (e) {
             // Fit bounds after loading
