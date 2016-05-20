@@ -21,6 +21,8 @@ Usage
     var map = L.map('map').fitWorld();
     ...
     L.Control.fileLayerLoad({
+        // Allows you to use a customized version of the L.geoJson.
+        layer: L.geoJson,
         // See http://leafletjs.com/reference.html#geojson-options
         layerOptions: {style: {color:'red'}},
         // Add to map after loading (default: true) ?
