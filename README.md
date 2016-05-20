@@ -50,6 +50,10 @@ Events:
 Changelog
 ---------
 
+### 0.5.0 ###
+
+* Load multiple files (thanks @jens-duttke)
+
 ### 0.4.0 ###
 
 * Support whitelist for file formats (thanks CJ Cenizal)
