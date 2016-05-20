@@ -124,7 +124,7 @@ L.Control.FileLayerLoad = L.Control.extend({
     },
 
     _initDragAndDrop: function (map) {
-        var fileLoader = this.loader,
+        var thisFileLayerLoad = this,
             dropbox = map._container;
 
         var callbacks = {
@@ -142,14 +142,7 @@ L.Control.FileLayerLoad = L.Control.extend({
                 e.stopPropagation();
                 e.preventDefault();
 
-                var files = Array.prototype.slice.apply(e.dataTransfer.files),
-                    i = files.length;
-                setTimeout(function(){
-                    fileLoader.load(files.shift());
-                    if (files.length > 0) {
-                        setTimeout(arguments.callee, 25);
-                    }
-                }, 25);
+                thisFileLayerLoad._loadFiles(e.dataTransfer.files);
                 map.scrollWheelZoom.enable();
             }
         };
@@ -158,6 +151,8 @@ L.Control.FileLayerLoad = L.Control.extend({
     },
 
     _initContainer: function () {
+        var thisFileLayerLoad = this;
+
         // Create a button, and bind click on hidden file input
         var zoomName = 'leaflet-control-filelayer leaflet-control-zoom',
             barName = 'leaflet-bar',
@@ -171,6 +166,7 @@ L.Control.FileLayerLoad = L.Control.extend({
         // Create an invisible file input
         var fileInput = L.DomUtil.create('input', 'hidden', container);
         fileInput.type = 'file';
+        fileInput.multiple = 'multiple';
         if (!this.options.formats) {
             fileInput.accept = '.gpx,.kml,.geojson';
         } else {
@@ -178,9 +174,8 @@ L.Control.FileLayerLoad = L.Control.extend({
         }
         fileInput.style.display = 'none';
         // Load on file change
-        var fileLoader = this.loader;
         fileInput.addEventListener("change", function (e) {
-            fileLoader.load(this.files[0]);
+            thisFileLayerLoad._loadFiles(this.files);
             // reset so that the user can upload the same file again if they want to
             this.value = '';
         }, false);
@@ -191,6 +186,19 @@ L.Control.FileLayerLoad = L.Control.extend({
             e.preventDefault();
         });
         return container;
+    },
+
+    _loadFiles: function (files) {
+        files = Array.prototype.slice.apply(files);
+
+        var fileLoader = this.loader,
+            i = files.length;
+        setTimeout(function(){
+            fileLoader.load(files.shift());
+            if (files.length > 0) {
+                setTimeout(arguments.callee, 25);
+            }
+        }, 25);
     }
 });
 

@@ -34,9 +34,14 @@ describe('L.Control.FileLayerLoad', function() {
             done();
         });
 
-        // it("should be able to load several files", function(done) {
-        //     done();
-        // });
+        it("should be able to load several files", function(done) {
+            var control = L.Control.fileLayerLoad().addTo(map);
+
+            var fileinput = document.querySelector('input.hidden');
+            assert.isTrue(fileinput.multiple);
+
+            done();
+        });
 
     });
 
