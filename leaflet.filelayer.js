@@ -8,6 +8,7 @@
 var FileLoader = L.Class.extend({
     includes: L.Mixin.Events,
     options: {
+        layer: L.geoJson,
         layerOptions: {},
         fileSizeLimit: 1024
     },
@@ -63,7 +64,7 @@ var FileLoader = L.Class.extend({
         if (typeof content == 'string') {
             content = JSON.parse(content);
         }
-        var layer = L.geoJson(content, this.options.layerOptions);
+        var layer = this.options.layer(content, this.options.layerOptions);
 
         if (layer.getLayers().length === 0) {
             throw new Error('GeoJSON has no valid layers.');
