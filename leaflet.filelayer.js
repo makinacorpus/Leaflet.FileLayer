@@ -19,6 +19,7 @@ var FileLoader = L.Class.extend({
 
         this._parsers = {
             'geojson': this._loadGeoJSON,
+            'json': this._loadGeoJSON,
             'gpx': this._convertToGeoJSON,
             'kml': this._convertToGeoJSON
         };
