@@ -85,7 +85,7 @@ describe('FileLoader', function() {
 
     before(function() {
         map = L.map('map').fitWorld();
-        loader = new FileLoader(map);
+        loader = new L.Util.FileLoader(map);
     });
 
     after(function() {
