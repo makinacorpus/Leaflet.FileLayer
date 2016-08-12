@@ -55,6 +55,13 @@ Events:
 Changelog
 ---------
 
+### 0.6.0 ###
+
+* Better plugin packaging and dependencies
+* Adding bower support (thanks @george-silva)
+* Adding support for custom geoJson layers (thanks @MuellerMatthew)
+* Treating json files as geoJson (thanks @Jmuccigr)
+
 ### 0.5.0 ###
 
 * Load multiple files (thanks @jens-duttke)
@@ -82,4 +89,11 @@ Authors
 
 Contributions
 
+* Mathieu Leplatre
 * Joey Baker http://byjoeybaker.com
+* CJ Cenizal
+* Jens-duttke
+* Jmuccigr
+* Matthew Mueller
+* George Silva
+* Simon Bats
