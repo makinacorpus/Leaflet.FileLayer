@@ -12,7 +12,7 @@ Check out the [demo](http://makinacorpus.github.com/Leaflet.FileLayer/) !
 
 For GPX and KML files, it currently depends on [Tom MacWright's togeojson.js](https://github.com/tmcw/togeojson).
 
-[![Build Status](https://travis-ci.org/makinacorpus/Leaflet.FileLayer.png?branch=gh-pages)](https://travis-ci.org/makinacorpus/Leaflet.FileLayer)
+[![Build Status](https://travis-ci.org/makinacorpus/Leaflet.FileLayer.png?branch=master)](https://travis-ci.org/makinacorpus/Leaflet.FileLayer)
 
 Usage
 -----
@@ -21,10 +21,10 @@ Usage
     var map = L.map('map').fitWorld();
     ...
     L.Control.fileLayerLoad({
-        // Allows you to use a customized version of L.geoJson.  
-        // For example if you are using the Proj4Leaflet leaflet plugin, 
+        // Allows you to use a customized version of L.geoJson.
+        // For example if you are using the Proj4Leaflet leaflet plugin,
         // you can pass L.Proj.geoJson and load the files into the
-        // L.Proj.GeoJson instead of the L.geoJson.  
+        // L.Proj.GeoJson instead of the L.geoJson.
         layer: L.geoJson,
         // See http://leafletjs.com/reference.html#geojson-options
         layerOptions: {style: {color:'red'}},

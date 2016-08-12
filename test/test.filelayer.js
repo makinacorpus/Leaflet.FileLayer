@@ -1,10 +1,12 @@
 var assert = chai.assert;
-
-const _VALID_GEOJSON = {type: "FeatureCollection", features: [
-    {type: "Point", coordinates: [0, 0]}
-]};
-const _VALID_KML = '<kml><Placemark><Point><coordinates>0,0,0</coordinates></Point></Placemark></kml>';
-
+var _VALID_GEOJSON = {
+    type: "FeatureCollection",
+    features: [
+        { type: "Point", coordinates: [0, 0] }
+    ]
+};
+var _VALID_KML = '<kml><Placemark><Point><coordinates>0,0,0</coordinates></Point></Placemark></kml>';
+console.log(sinon);
 
 describe('L.Control.FileLayerLoad', function() {
 

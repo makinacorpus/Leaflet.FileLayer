@@ -1,6 +1,0 @@
-[submodule "togeojson"]
-	path = togeojson
-	url = https://github.com/mapbox/togeojson.git
-[submodule "Font-Awesome"]
-	path = Font-Awesome
-	url = https://github.com/FortAwesome/Font-Awesome.git
