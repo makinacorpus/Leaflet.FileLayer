@@ -14,6 +14,14 @@ For GPX and KML files, it currently depends on [Tom MacWright's togeojson.js](ht
 
 [![Build Status](https://travis-ci.org/makinacorpus/Leaflet.FileLayer.png?branch=master)](https://travis-ci.org/makinacorpus/Leaflet.FileLayer)
 
+Install
+-----
+In order to use this plugin in your app you can either:
+* install it via your favorite package manager:
+    * `npm i leaflet-filelayer`
+    * `bower install git://github.com:makinacorpus/Leaflet.FileLayer.git`
+* download the repository and import the `leaflet.filelayer.js` file in your app.
+
 Usage
 -----
 
