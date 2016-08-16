@@ -154,6 +154,12 @@ L.Control.FileLayerLoad = L.Control.extend({
         };
         for (var name in callbacks)
             dropbox.addEventListener(name, callbacks[name], false);
+            
+        // For maps which are not fullscreen this will prevent dragging and
+        // dropping a file outside of map container from loading the file as a new webpage.
+        L.DomEvent.on(L.DomUtil.get(window), "dragover drop", function(e) {
+            L.DomEvent.preventDefault(e);
+        });
     },
 
     _initContainer: function () {
