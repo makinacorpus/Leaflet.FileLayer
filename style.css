@@ -1,0 +1,100 @@
+html {
+  box-sizing: border-box;
+  font-family: "Helvetica", arial, sans-serif;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+* {
+  box-sizing: inherit;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+header, footer {
+  padding: 0.5rem 1rem;
+  background: #20273c;
+  color: white;
+  flex: none;
+  display: flex;
+  justify-content: space-between;
+}
+header a, footer a {
+  color: white;
+}
+main {
+  flex: 1 1 100%;
+  position: relative;
+}
+header, main, footer {
+  width: 100%;
+}
+header > * {
+  vertical-align: middle;
+}
+footer {
+  justify-content: flex-end;
+}
+h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  height: 3rem;
+  padding: 0.7rem;
+}
+.infos {
+  float: right;
+}
+.infos a {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 700;
+  text-decoration: none;
+  margin: 0 0.4rem;
+  text-align: right;
+}
+.infos a:first-child:hover,
+.infos a:first-child:focus {
+  text-decoration: underline;
+}
+.infos img {
+  max-height: 3rem;
+}
+.icon {
+  max-width: 70%;
+  max-height: 70%;
+  margin: 4px;
+}
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+.help {
+  font-size: 1rem;
+  position: absolute;
+  top: 7.5rem;
+  left: 20px;
+  right: 0;
+  height: auto;
+  max-width: 170px;
+  z-index: 10;
+  background-color: rgba(32, 39, 60, 0.7);
+  color: white;
+  padding: 1rem;
+  margin: 0px;
+  border-radius: 0 4px 4px 4px;
+}
+
+.help::before {
+  content: "";
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  width: 0;
+	height: 0;
+	border-right: 1rem solid transparent;
+	border-bottom: 1rem solid rgba(32, 39, 60, 0.7);
+}

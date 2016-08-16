@@ -2,55 +2,30 @@
 <html>
 <head>
     <title>Leaflet.FileLayer</title>
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css" />
+    <link rel="stylesheet" href="node_modules/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css"/>
 
-    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css" />
-    <link rel="stylesheet" href="Font-Awesome/css/font-awesome.min.css" />
-
-    <script src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js"></script>
-    <script src="leaflet.filelayer.js"></script>
-    <script src="togeojson/togeojson.js"></script>
-    <style>
-        #map {
-            position: absolute;
-            top:0;
-            left: 0;
-            right: 0;
-            bottom:0;
-        }
-        .help {
-            font-size: 1.5em;
-            position: absolute;
-            top:0;
-            left: 0;
-            right: 0;
-            height: 30px;
-            z-index: 10;
-            background-color: rgba(0,0,0,0.5);
-            color: white;
-            padding: 10px;
-            margin: 0px;
-            text-align: center;
-        }
-        .help a.sources {
-            float: left;
-            margin-left: 50px;
-            color: white;
-        }
-        .help a.logo {
-            float: right;
-        }
-        .help a.logo img {
-            height: 30px;
-        }
-    </style>
+    <script src="node_modules/leaflet/dist/leaflet.js"></script>
+    <script src="node_modules/leaflet-filelayer/leaflet.filelayer.js"></script>
+    <script src="node_modules/togeojson/togeojson.js"></script>
 </head>
 <body>
-
-    <p class="help">Use the <i class="fa fa-folder-open"></i> icon to browse and load local files on the map.
-      <a class="sources" href="http://github.com/makinacorpus/Leaflet.FileLayer/">Sources</a>
-      <a class="logo" href="http://makina-corpus.com"><img src="http://depot.makina-corpus.org/public/logo.gif"/></a>
-    </p>
-    <div id="map"></div>
+    <header>
+        <h1>Leaflet Filelayer plugin</h1>
+        <div class="infos">
+            <a class="sources" href="http://github.com/makinacorpus/Leaflet.FileLayer/">Sources</a>
+            <a class="logo" href="http://makina-corpus.com"><img class="icon" src="http://depot.makina-corpus.org/public/logo.gif" alt="Makina Corpus logo"/></a>
+        </div>
+    </header>
+    <main>
+        <p class="help">Click on the icon to browse and load local files on the map.
+        </p>
+        <div id="map"></div>
+    </main>
+    <footer>
+        <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a></div>
+    </footer>
 
     <script type="text/javascript">
 
@@ -58,12 +33,13 @@
             attribution: 'Map data &copy; 2013 OpenStreetMap contributors',
         });
 
-        var map = L.map('map')
-                   .fitWorld()
-                   .addLayer(osm);
+        var map = L.map('map', {
+            center: [0, 0],
+            zoom: 2
+        }).addLayer(osm);
 
         var style = {color:'red', opacity: 1.0, fillOpacity: 1.0, weight: 2, clickable: false};
-        L.Control.FileLayerLoad.LABEL = '<i class="fa fa-folder-open"></i>';
+        L.Control.FileLayerLoad.LABEL = '<img class="icon" src="folder.svg" alt="file icon"/>';
         L.Control.fileLayerLoad({
             fitBounds: true,
             layerOptions: {style: style,

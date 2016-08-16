@@ -1,27 +1,25 @@
 {
-    "name": "leaflet-filelayer",
-    "version": "0.5.0",
-    "description": "Loads local files (GeoJSON, GPX, KML) into the map using the HTML5 FileReader API",
-    "keywords": ["Leaflet", "GIS", "HTML5"],
-    "main": "leaflet.filelayer.js",
-    "bugs": {
-        "url": "https://github.com/makinacorpus/Leaflet.FileLayer/issues"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/makinacorpus/Leaflet.FileLayer.git"
-    },
-    "license": "MIT",
-    "scripts": {},
-    "dependencies": {
-        "leaflet": "*",
-        "togeojson": "*"
-    },
-    "devDependencies": {
-        "mocha": "1.9.x",
-        "chai": "1.6.x",
-        "sinon": "1.7.x",
-        "mocha-phantomjs": "2.0.x",
-        "happen": "0.1.x"
-    }
+  "name": "leaflet-filelayer-demo",
+  "version": "0.6.0",
+  "description": "Demo of the Leaflet-filelayer plugin",
+  "keywords": [
+    "Leaflet",
+    "GIS",
+    "HTML5"
+  ],
+  "main": "index.html",
+  "bugs": {
+    "url": "https://github.com/makinacorpus/Leaflet.FileLayer/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/makinacorpus/Leaflet.FileLayer.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "leaflet": "0.7.7",
+    "leaflet-filelayer": "^0.6.0",
+    "normalize.css": "^4.2.0",
+    "togeojson": "0.14.0"
+  }
 }

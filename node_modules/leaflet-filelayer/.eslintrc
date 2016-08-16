@@ -1,0 +1,9 @@
+{
+  "extends": "airbnb-base/legacy",
+  "rules": {
+    "no-console": 1,
+    "no-param-reassign": 0,
+    "no-underscore-dangle": 0,
+    "indent": [2, 4, { "SwitchCase": 1, "VariableDeclarator": 1, "outerIIFEBody": 1 }]
+  }
+}
