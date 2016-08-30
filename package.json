@@ -19,11 +19,9 @@
   "scripts": {
     "test": "mocha-phantomjs test/index.html"
   },
-  "dependencies": {
-    "togeojson": "^0.14.0"
-  },
   "peerDependencies": {
-    "leaflet": "^0.7.7"
+    "leaflet": "^0.7.7",
+    "togeojson": "^0.14.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
