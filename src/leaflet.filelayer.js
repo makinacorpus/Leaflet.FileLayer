@@ -2,22 +2,22 @@
  * Load files *locally* (GeoJSON, KML, GPX) into the map
  * using the HTML5 File API.
  *
- * Requires Pavel Shramov's GPX.js
- * https://github.com/shramov/leaflet-plugins/blob/d74d67/layer/vector/GPX.js
+ * Requires Mapbox's togeojson.js to be in global scope
+ * https://github.com/mapbox/togeojson
  */
 
 (function (fileLoaderFactory, fileLoaderController, window) {
     // define an AMD module that relies on 'leaflet'
-    if (typeof define === 'function' && define.amd) {
+    if (typeof define === 'function' && define.amd && window.toGeoJSON) {
         define(
             ['leaflet'],
             function (L) {
-                L.Util.FileLoader = fileLoaderFactory(L);
+                L.Util.FileLoader = fileLoaderFactory(L, window.toGeoJSON);
                 L.Util.fileLoader = function (map, options) {
                     return new L.Util.FileLoader(map, options);
                 };
 
-                L.Control.FileLayerLoad = fileLoaderController(L);
+                L.Control.FileLayerLoad = fileLoaderController(L, window.toGeoJSON);
                 L.Control.fileLayerLoad = function (options) {
                     return new L.Control.FileLayerLoad(options);
                 };
@@ -25,23 +25,23 @@
         );
     } else if (typeof exports === 'object') {
         module.exports = {
-            fileLoaderFactory: fileLoaderFactory(require('leaflet')),
-            fileLoaderController: fileLoaderController(require('leaflet'))
+            fileLoader: fileLoaderFactory(require('leaflet'), require('togeojson')),
+            fileLoaderController: fileLoaderController(require('leaflet'), require('togeojson'))
         };
     }
 
-    if (typeof window !== 'undefined' && window.L) {
-        window.L.Util.FileLoader = fileLoaderFactory(window.L);
+    if (typeof window !== 'undefined' && window.L && window.toGeoJSON) {
+        window.L.Util.FileLoader = fileLoaderFactory(window.L, window.toGeoJSON);
         window.L.Util.fileLoader = function (map, options) {
             return new window.L.Util.FileLoader(map, options);
         };
 
-        window.L.Control.FileLayerLoad = fileLoaderController(window.L);
+        window.L.Control.FileLayerLoad = fileLoaderController(window.L, window.toGeoJSON);
         window.L.Control.fileLayerLoad = function (options) {
             return new window.L.Control.FileLayerLoad(options);
         };
     }
-}(function (L) {
+}(function (L, toGeoJSON) {
     var FileLoader = L.Class.extend({
         includes: L.Mixin.Events,
         options: {
@@ -118,7 +118,7 @@
             if (typeof content === 'string') {
                 content = (new window.DOMParser()).parseFromString(content, 'text/xml');
             }
-            var geojson = window.toGeoJSON[format](content);
+            var geojson = toGeoJSON[format](content);
             return this._loadGeoJSON(geojson);
         }
     });
