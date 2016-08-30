@@ -27,12 +27,13 @@ html, body {
   float: right;
   background: #282c34;
   color: #eee;
+  display: flex;
+  flex-direction: column;
 }
 pre {
   margin: 0;
 }
 pre, code {
-  height: 100%;
   width: 100%;
   overflow: auto;
 }
