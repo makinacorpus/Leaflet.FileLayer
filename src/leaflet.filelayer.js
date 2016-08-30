@@ -6,21 +6,37 @@
  * https://github.com/shramov/leaflet-plugins/blob/d74d67/layer/vector/GPX.js
  */
 
-(function (factory, controler, window) {
+(function (fileLoaderFactory, fileLoaderController, window) {
     // define an AMD module that relies on 'leaflet'
     if (typeof define === 'function' && define.amd) {
-        define(['leaflet'], factory);
+        define(
+            ['leaflet'],
+            function (L) {
+                L.Util.FileLoader = fileLoaderFactory(L);
+                L.Util.fileLoader = function (map, options) {
+                    return new L.Util.FileLoader(map, options);
+                };
+
+                L.Control.FileLayerLoad = fileLoaderController(L);
+                L.Control.fileLayerLoad = function (options) {
+                    return new L.Control.FileLayerLoad(options);
+                };
+            }
+        );
     } else if (typeof exports === 'object') {
-        module.exports = factory(require('leaflet'));
+        module.exports = {
+            fileLoaderFactory: fileLoaderFactory(require('leaflet')),
+            fileLoaderController: fileLoaderController(require('leaflet'))
+        };
     }
 
     if (typeof window !== 'undefined' && window.L) {
-        window.L.Util.FileLoader = factory(window.L);
+        window.L.Util.FileLoader = fileLoaderFactory(window.L);
         window.L.Util.fileLoader = function (map, options) {
             return new window.L.Util.FileLoader(map, options);
         };
 
-        window.L.Control.FileLayerLoad = controler(window.L);
+        window.L.Control.FileLayerLoad = fileLoaderController(window.L);
         window.L.Control.fileLayerLoad = function (options) {
             return new window.L.Control.FileLayerLoad(options);
         };

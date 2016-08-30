@@ -7,7 +7,7 @@
     "GIS",
     "HTML5"
   ],
-  "main": "leaflet.filelayer.js",
+  "main": "src/leaflet.filelayer.js",
   "bugs": {
     "url": "https://github.com/makinacorpus/Leaflet.FileLayer/issues"
   },
