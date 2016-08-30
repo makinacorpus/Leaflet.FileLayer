@@ -1,0 +1,38 @@
+html {
+  box-sizing: border-box;
+  font-family: "Helvetica", arial, sans-serif;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+* {
+  box-sizing: inherit;
+}
+.icon {
+  max-width: 70%;
+  max-height: 70%;
+  margin: 4px;
+}
+#map {
+  height: 100vh;
+  width: 50vw;
+  float: left;
+}
+#code {
+  height: 100vh;
+  width: 50vw;
+  padding: 2rem;
+  float: right;
+  background: #282c34;
+  color: #eee;
+}
+pre {
+  margin: 0;
+}
+pre, code {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}

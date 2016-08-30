@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Leaflet Filelayer </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/atom-one-dark.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div id="code">
+      <h1>Use Leaflet.FileLayer in global scope</h1>
+      <pre><code class="javascript">
+var osm = L.tileLayer('TILES_URL', {
+    attribution: 'MY_ATTRIBUTION'
+});
+var map = L.map('map', {
+    center: [0, 0],
+    zoom: 2
+}).addLayer(osm);
+var style = {
+    color: 'red',
+    opacity: 1.0,
+    fillOpacity: 1.0,
+    weight: 2,
+    clickable: false
+};
+L.Control.FileLayerLoad.LABEL = 'MY_LABEL';
+L.Control.fileLayerLoad({
+    fitBounds: true,
+    layerOptions: {
+        style: style,
+        pointToLayer: function (data, latlng) {
+            return L.circleMarker(
+                latlng,
+                { style: style }
+            );
+        }
+    }
+}).addTo(map);
+      </code></pre>
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
+  <script src="../togeojson.js"></script>
+  <script src="../../src/leaflet.filelayer.js"></script>
+  <script src="index.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</html>
