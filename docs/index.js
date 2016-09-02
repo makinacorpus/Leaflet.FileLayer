@@ -17,7 +17,7 @@
             weight: 2,
             clickable: false
         };
-        L.Control.FileLayerLoad.LABEL = '<img class="icon" src="../folder.svg" alt="file icon"/>';
+        L.Control.FileLayerLoad.LABEL = '<img class="icon" src="folder.svg" alt="file icon"/>';
         L.Control.fileLayerLoad({
             fitBounds: true,
             layerOptions: {

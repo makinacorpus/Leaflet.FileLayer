@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <title>Leaflet Filelayer </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,12 +9,35 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/atom-one-dark.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
-  </head>
-  <body>
-    <div id="map"></div>
-    <div id="code">
-      <h1>Use Leaflet.FileLayer with AMD</h1>
-      <pre><code class="javascript">
+</head>
+<body>
+      <header>
+        <h1>Leaflet Filelayer plugin</h1>
+        <button class="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <div class="menu closed">
+            <a class="sources" href="http://github.com/makinacorpus/Leaflet.FileLayer/">Sources</a>
+            <div class="dropdown" tabindex="0">
+                <span class="dropdown-toggle">Implémentations</span>
+                <div class="dropdown-menu">
+                    <a href="../global/index.html">Global</a>
+                    <a href="../amd/index.html">AMD</a>
+                    <a href="../commonjs/index.html">Common JS</a>
+                </div>
+            </div>
+            <a class="logo" href="http://makina-corpus.com"><img class="icon" src="http://depot.makina-corpus.org/public/logo.gif" alt="Makina Corpus logo"/></a>
+        </div>
+    </header>
+    <main>
+        <p class="help">Click on the icon to browse and load local files on the map.
+        </p>
+        <div id="map"></div>
+        <div id="code">
+            <h1>Use Leaflet.FileLayer with AMD</h1>
+            <pre><code class="javascript">
 requirejs.config({
     baseUrl: '/',
     paths: {
@@ -55,10 +78,15 @@ function (L) {
         }
     }).addTo(map);
 });
-      </code></pre>
-    </div>
-  </body>
-  <script src="../togeojson.js"></script>
-  <script data-main="index.js" src="../../node_modules/requirejs/require.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
+            </code></pre>
+        </div>
+    </main>
+    <footer>
+        <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a></div>
+    </footer>
+</body>
+<script src="../togeojson.js"></script>
+<script src="../menu.js"></script>
+<script data-main="index.js" src="../../node_modules/requirejs/require.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 </html>
