@@ -5,10 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@0.7.7/dist/leaflet.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/atom-one-dark.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
 </head>
 <body>
     <header>
@@ -20,18 +18,10 @@
         </button>
         <div class="menu closed">
             <a class="sources" href="http://github.com/makinacorpus/Leaflet.FileLayer/">Sources</a>
-            <div class="dropdown" tabindex="0">
-                <span class="dropdown-toggle">Implémentations</span>
-                <div class="dropdown-menu">
-                    <a href="./global/index.html">Global</a>
-                    <a href="./amd/index.html">AMD</a>
-                    <a href="./commonjs/index.html">Common JS</a>
-                </div>
-            </div>
             <a class="logo" href="http://makina-corpus.com"><img class="icon" src="http://depot.makina-corpus.org/public/logo.gif" alt="Makina Corpus logo"/></a>
         </div>
     </header>
-        <main>
+    <main>
         <p class="help">Click on the icon to browse and load local files on the map.
         </p>
         <div id="map" style="width: 100%; height: 100%; display: block;"></div>
@@ -40,9 +30,9 @@
         <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a></div>
     </footer>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
-<script src="togeojson.js"></script>
-<script src="../src/leaflet.filelayer.js"></script>
+<script src="https://unpkg.com/leaflet@0.7.7/dist/leaflet.js"></script>
+<script src="https://unpkg.com/togeojson@0.14.2"></script>
+<script src="https://unpkg.com/leaflet-filelayer@0.6.0"></script>
 <script src="menu.js"></script>
 <script src="index.js"></script>
 </html>
