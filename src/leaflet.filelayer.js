@@ -60,18 +60,25 @@
         },
 
         load: function (file /* File */) {
+            var ext;
+            var reader;
+            var parser;
             // Check file size
             var fileSize = (file.size / 1024).toFixed(4);
             if (fileSize > this.options.fileSizeLimit) {
                 this.fire('data:error', {
-                    error: new Error('File size exceeds limit (' + fileSize + ' > ' + this.options.fileSizeLimit + 'kb)')
+                    error: new Error(
+                        'File size exceeds limit (' +
+                        fileSize + ' > ' +
+                        this.options.fileSizeLimit + 'kb)'
+                    )
                 });
                 return;
             }
 
             // Check file extension
-            var ext = file.name.split('.').pop(),
-                parser = this._parsers[ext];
+            ext = file.name.split('.').pop();
+            parser = this._parsers[ext];
             if (!parser) {
                 this.fire('data:error', {
                     error: new Error('Unsupported file type ' + file.type + '(' + ext + ')')
@@ -79,25 +86,29 @@
                 return;
             }
             // Read selected file using HTML5 File API
-            var reader = new FileReader();
+            reader = new FileReader();
             reader.onload = L.Util.bind(function (e) {
+                var layer;
                 try {
                     this.fire('data:loading', { filename: file.name, format: ext });
-                    var layer = parser.call(this, e.target.result, ext);
+                    layer = parser.call(this, e.target.result, ext);
                     this.fire('data:loaded', { layer: layer, filename: file.name, format: ext });
                 } catch (err) {
                     this.fire('data:error', { error: err });
                 }
             }, this);
             reader.readAsText(file);
+
+            // We return this to ease testing
             return reader;
         },
 
-        _loadGeoJSON: function (content) {
+        _loadGeoJSON: function _loadGeoJSON(content) {
+            var layer;
             if (typeof content === 'string') {
                 content = JSON.parse(content);
             }
-            var layer = this.options.layer(content, this.options.layerOptions);
+            layer = this.options.layer(content, this.options.layerOptions);
 
             if (layer.getLayers().length === 0) {
                 throw new Error('GeoJSON has no valid layers.');
@@ -109,12 +120,13 @@
             return layer;
         },
 
-        _convertToGeoJSON: function (content, format) {
+        _convertToGeoJSON: function _convertToGeoJSON(content, format) {
+            var geojson;
             // Format is either 'gpx' or 'kml'
             if (typeof content === 'string') {
                 content = (new window.DOMParser()).parseFromString(content, 'text/xml');
             }
-            var geojson = toGeoJSON[format](content);
+            geojson = toGeoJSON[format](content);
             return this._loadGeoJSON(geojson);
         }
     });
@@ -157,6 +169,7 @@
         },
 
         _initDragAndDrop: function (map) {
+            var callbackName;
             var thisFileLayerLoad = this;
             var dropbox = map._container;
 
@@ -179,8 +192,10 @@
                     map.scrollWheelZoom.enable();
                 }
             };
-            for (var name in callbacks) {
-                dropbox.addEventListener(name, callbacks[name], false);
+            for (callbackName in callbacks) {
+                if (callbacks.hasOwnProperty(callbackName)) {
+                    dropbox.addEventListener(callbackName, callbacks[callbackName], false);
+                }
             }
         },
 
@@ -188,17 +203,18 @@
             var thisFileLayerLoad = this;
 
             // Create a button, and bind click on hidden file input
-            var zoomName = 'leaflet-control-filelayer leaflet-control-zoom',
-                barName = 'leaflet-bar',
-                partName = barName + '-part',
-                container = L.DomUtil.create('div', zoomName + ' ' + barName);
+            var fileInput;
+            var zoomName = 'leaflet-control-filelayer leaflet-control-zoom';
+            var barName = 'leaflet-bar';
+            var partName = barName + '-part';
+            var container = L.DomUtil.create('div', zoomName + ' ' + barName);
             var link = L.DomUtil.create('a', zoomName + '-in ' + partName, container);
             link.innerHTML = L.Control.FileLayerLoad.LABEL;
             link.href = '#';
             link.title = L.Control.FileLayerLoad.TITLE;
 
             // Create an invisible file input
-            var fileInput = L.DomUtil.create('input', 'hidden', container);
+            fileInput = L.DomUtil.create('input', 'hidden', container);
             fileInput.type = 'file';
             fileInput.multiple = 'multiple';
             if (!this.options.formats) {
@@ -223,10 +239,9 @@
         },
 
         _loadFiles: function (files) {
+            var fileLoader = this.loader;
             files = Array.prototype.slice.apply(files);
 
-            var fileLoader = this.loader;
-            var i = files.length;
             setTimeout(function () {
                 fileLoader.load(files.shift());
                 if (files.length > 0) {
