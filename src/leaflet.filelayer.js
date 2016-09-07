@@ -92,7 +92,12 @@
                 try {
                     this.fire('data:loading', { filename: file.name, format: ext });
                     layer = parser.call(this, e.target.result, ext);
-                    this.fire('data:loaded', { layer: layer, filename: file.name, format: ext });
+                    this.fire('data:loaded', {
+                        layer: layer,
+                        filename: file.name,
+                        format: ext,
+                        result: e.target.result
+                    });
                 } catch (err) {
                     this.fire('data:error', { error: err });
                 }
