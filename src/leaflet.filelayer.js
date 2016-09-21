@@ -60,24 +60,23 @@
         },
 
         load: function (file /* File */) {
-            var ext;
             var reader;
             var parser;
 
             // Check file is defined
             if (this._isParameterMissing(file, 'file')) {
-                return;
+                return false;
             }
 
             // Check file size
             if (!this._isFileSizeOk(file.size)) {
-                return;
+                return false;
             }
 
             // Get parser for this data type
             parser = this._getParser(file.name);
             if (!parser) {
-                return;
+                return false;
             }
 
             // Read selected file using HTML5 File API
@@ -87,12 +86,17 @@
                 try {
                     this.fire('data:loading', { filename: file.name, format: parser.ext });
                     layer = parser.processor.call(this, e.target.result, parser.ext);
-                    this.fire('data:loaded', { layer: layer, filename: file.name, format: parser.ext });
+                    this.fire('data:loaded', {
+                        layer: layer,
+                        filename: file.name,
+                        format: parser.ext
+                    });
                 } catch (err) {
                     this.fire('data:error', { error: err });
                 }
             }, this);
-            // Testing trick: tests don't pass a real file, but an object with file.testing set to true. 
+            // Testing trick: tests don't pass a real file,
+            // but an object with file.testing set to true.
             // This object cannot be read by reader, just skip it.
             if (!file.testing) {
                 reader.readAsText(file);
@@ -103,10 +107,11 @@
 
         loadData: function (data, name, ext) {
             var parser;
+            var layer;
 
             // Check required parameters
-            if ((this._isParameterMissing(data, "data"))
-              || (this._isParameterMissing(name, "name"))) {
+            if ((this._isParameterMissing(data, 'data'))
+              || (this._isParameterMissing(name, 'name'))) {
                 return;
             }
 
@@ -122,19 +127,21 @@
             }
 
             // Process data
-            var layer;
             try {
                 this.fire('data:loading', { filename: name, format: parser.ext });
                 layer = parser.processor.call(this, data, parser.ext);
-                this.fire('data:loaded', { layer: layer, filename: name, format: parser.ext });
+                this.fire('data:loaded', {
+                    layer: layer,
+                    filename: name,
+                    format: parser.ext
+                });
             } catch (err) {
                 this.fire('data:error', { error: err });
             }
-
         },
 
-        _isParameterMissing: function (v, vname, vtype) {
-            if (typeof v === "undefined") {
+        _isParameterMissing: function (v, vname) {
+            if (typeof v === 'undefined') {
                 this.fire('data:error', {
                     error: new Error('Missing parameter: ' + vname)
                 });
@@ -145,7 +152,7 @@
 
         _getParser: function (name, ext) {
             var parser;
-            ext = ext ? ext : name.split('.').pop();
+            ext = ext || name.split('.').pop();
             parser = this._parsers[ext];
             if (!parser) {
                 this.fire('data:error', {
@@ -154,8 +161,8 @@
                 return undefined;
             }
             return {
-                "processor": parser,
-                "ext": ext
+                processor: parser,
+                ext: ext
             };
         },
 
