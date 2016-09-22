@@ -55,7 +55,7 @@ describe('L.Control.FileLayerLoad', function() {
 
             var callback = sinon.spy();
             map.on('layeradd', callback);
-            var reader = control.loader.load({name: 'name.geojson'});
+            var reader = control.loader.load({name: 'name.geojson', testing: true});
             reader.onload({target: {result: _VALID_GEOJSON}});
 
             assert.isTrue(callback.called);
@@ -68,7 +68,7 @@ describe('L.Control.FileLayerLoad', function() {
             var callback = sinon.spy();
             map.on('layeradd', callback);
 
-            var reader = control.loader.load({name: 'name.geojson'});
+            var reader = control.loader.load({name: 'name.geojson', testing: true});
             reader.onload({target: {result: _VALID_GEOJSON}});
 
             assert.isFalse(callback.called);
@@ -97,7 +97,7 @@ describe('FileLoader', function() {
     describe('Load file', function() {
 
         it("should warn if format is not supported.", function(done) {
-            var file = {name: 'name.csv'},
+            var file = {name: 'name.csv', testing: true},
                 callback = sinon.spy();
             loader.on('data:error', callback);
             loader.load(file);
@@ -106,7 +106,7 @@ describe('FileLoader', function() {
         });
 
         it("should fire data:loading and data:loaded", function(done) {
-            var file = {name: 'name.geojson'};
+            var file = {name: 'name.geojson', testing: true};
             var loadingcb = sinon.spy(),
                 loadedcb = sinon.spy();
             loader.on('data:loading', loadingcb);
@@ -119,7 +119,7 @@ describe('FileLoader', function() {
         });
 
         it("should be able to load KML", function(done) {
-            var file = {name: 'name.kml'};
+            var file = {name: 'name.kml', testing: true};
             loader.on('data:loaded', function (e) {
                 assert.equal(e.format, 'kml');
                 assert.equal(e.filename, 'name.kml');
@@ -131,7 +131,7 @@ describe('FileLoader', function() {
         });
 
         it("should warn if size exceeds limit from option", function(done) {
-            var file = {name: 'name.kml', size: 9999999},
+            var file = {name: 'name.kml', size: 9999999, testing: true},
                 callback = sinon.spy();
             loader.on('data:error', callback);
             loader.load(file);
@@ -140,7 +140,7 @@ describe('FileLoader', function() {
         });
 
         it("should warn if imported layer has no feature", function(done) {
-            var file = {name: 'name.geojson'},
+            var file = {name: 'name.geojson', testing: true},
                 callback = sinon.spy();
             loader.on('data:error', callback);
             var reader = loader.load(file);
@@ -149,5 +149,73 @@ describe('FileLoader', function() {
             done();
         });
     });
+
+    describe('Load data', function() {
+        
+        before(function() {
+            loader.removeEventListener('data:loading');
+            loader.removeEventListener('data:loaded');
+        });
+        
+        it("should warn if format is not supported.", function(done) {
+            var name = 'name.csv',
+                data = '';
+                callback = sinon.spy();
+            loader.on('data:error', callback);
+            loader.loadData(data, name);
+            assert.isTrue(callback.calledOnce);
+            done();
+        });
+
+        it("should fire data:loading and data:loaded", function(done) {
+            var name = 'name.geojson',
+                data = _VALID_GEOJSON;
+            var loadingcb = sinon.spy(),
+                loadedcb = sinon.spy();
+            loader.on('data:loading', loadingcb);
+            loader.on('data:loaded', loadedcb);
+            var reader = loader.loadData(data, name);
+            assert.isTrue(loadingcb.called);
+            assert.isTrue(loadedcb.called);
+            done();
+        });
+
+        it("should be able to load KML", function(done) {
+            var name = 'name.kml',
+                data = _VALID_KML;
+            loader.on('data:loaded', function (e) {
+                assert.equal(e.format, 'kml');
+                assert.equal(e.filename, 'name.kml');
+                assert.isTrue(e.layer instanceof L.GeoJSON);
+                done();
+            });
+            loader.loadData(data, name);
+        });
+
+        it("should warn if size exceeds limit from option", function(done) {
+            var name = 'name.kml',
+                data  = '',
+                callback = sinon.spy();
+            for (var i = 0 ; i < 1030 ; i++) {
+              data += '0';
+            }
+            loader.on('data:error', callback);
+            loader.loadData(data, name);
+            assert.isTrue(callback.calledOnce);
+            done();
+        });
+
+        it("should warn if imported layer has no feature", function(done) {
+            var name = 'name.geojson',
+                data = {},
+                callback = sinon.spy();
+            loader.on('data:error', callback);
+            loader.loadData(data, name);
+            assert.isTrue(callback.called);
+            done();
+        });
+
+    });
+
 
 });

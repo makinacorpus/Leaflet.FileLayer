@@ -60,11 +60,114 @@
         },
 
         load: function (file /* File */) {
-            var ext;
             var reader;
             var parser;
+
+            // Check file is defined
+            if (this._isParameterMissing(file, 'file')) {
+                return false;
+            }
+
             // Check file size
-            var fileSize = (file.size / 1024).toFixed(4);
+            if (!this._isFileSizeOk(file.size)) {
+                return false;
+            }
+
+            // Get parser for this data type
+            parser = this._getParser(file.name);
+            if (!parser) {
+                return false;
+            }
+
+            // Read selected file using HTML5 File API
+            reader = new FileReader();
+            reader.onload = L.Util.bind(function (e) {
+                var layer;
+                try {
+                    this.fire('data:loading', { filename: file.name, format: parser.ext });
+                    layer = parser.processor.call(this, e.target.result, parser.ext);
+                    this.fire('data:loaded', {
+                        layer: layer,
+                        filename: file.name,
+                        format: parser.ext
+                    });
+                } catch (err) {
+                    this.fire('data:error', { error: err });
+                }
+            }, this);
+            // Testing trick: tests don't pass a real file,
+            // but an object with file.testing set to true.
+            // This object cannot be read by reader, just skip it.
+            if (!file.testing) {
+                reader.readAsText(file);
+            }
+            // We return this to ease testing
+            return reader;
+        },
+
+        loadData: function (data, name, ext) {
+            var parser;
+            var layer;
+
+            // Check required parameters
+            if ((this._isParameterMissing(data, 'data'))
+              || (this._isParameterMissing(name, 'name'))) {
+                return;
+            }
+
+            // Check file size
+            if (!this._isFileSizeOk(data.length)) {
+                return;
+            }
+
+            // Get parser for this data type
+            parser = this._getParser(name, ext);
+            if (!parser) {
+                return;
+            }
+
+            // Process data
+            try {
+                this.fire('data:loading', { filename: name, format: parser.ext });
+                layer = parser.processor.call(this, data, parser.ext);
+                this.fire('data:loaded', {
+                    layer: layer,
+                    filename: name,
+                    format: parser.ext
+                });
+            } catch (err) {
+                this.fire('data:error', { error: err });
+            }
+        },
+
+        _isParameterMissing: function (v, vname) {
+            if (typeof v === 'undefined') {
+                this.fire('data:error', {
+                    error: new Error('Missing parameter: ' + vname)
+                });
+                return true;
+            }
+            return false;
+        },
+
+        _getParser: function (name, ext) {
+            var parser;
+            ext = ext || name.split('.').pop();
+            parser = this._parsers[ext];
+            if (!parser) {
+                this.fire('data:error', {
+                    error: new Error('Unsupported file type (' + ext + ')')
+                });
+                return undefined;
+            }
+            return {
+                processor: parser,
+                ext: ext
+            };
+        },
+
+        _isFileSizeOk: function (size) {
+            var fileSize = (size / 1024).toFixed(4);
             if (fileSize > this.options.fileSizeLimit) {
                 this.fire('data:error', {
                     error: new Error(
@@ -73,34 +176,9 @@
                         this.options.fileSizeLimit + 'kb)'
                     )
                 });
-                return;
+                return false;
             }
-
-            // Check file extension
-            ext = file.name.split('.').pop();
-            parser = this._parsers[ext];
-            if (!parser) {
-                this.fire('data:error', {
-                    error: new Error('Unsupported file type ' + file.type + '(' + ext + ')')
-                });
-                return;
-            }
-            // Read selected file using HTML5 File API
-            reader = new FileReader();
-            reader.onload = L.Util.bind(function (e) {
-                var layer;
-                try {
-                    this.fire('data:loading', { filename: file.name, format: ext });
-                    layer = parser.call(this, e.target.result, ext);
-                    this.fire('data:loaded', { layer: layer, filename: file.name, format: ext });
-                } catch (err) {
-                    this.fire('data:error', { error: err });
-                }
-            }, this);
-            reader.readAsText(file);
-
-            // We return this to ease testing
-            return reader;
+            return true;
         },
 
         _loadGeoJSON: function _loadGeoJSON(content) {
