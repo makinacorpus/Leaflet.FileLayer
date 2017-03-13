@@ -13,8 +13,7 @@ cache:
 
 install:
   - npm install
-  - npm install leaflet
-  - npm install mapbox/togeojson
+  - npm-install-peers
 
 script:
   - "npm test"

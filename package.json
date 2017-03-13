@@ -34,6 +34,7 @@
     "mocha": "^3.0.2",
     "mocha-phantomjs": "^4.1.0",
     "requirejs": "^2.2.0",
-    "sinon": "^1.17.5"
+    "sinon": "^1.17.5",
+    "npm-install-peers": "^1.1.0"
   }
 }
