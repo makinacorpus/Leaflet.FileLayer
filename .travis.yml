@@ -1,5 +1,6 @@
 language: node_js
 node_js:
+  - "6"
   - "5.5.0"
   - "4.2.1"
   - "0.10"
@@ -12,6 +13,7 @@ cache:
 
 install:
   - npm install
+  - npm-install-peers
 
 script:
   - "npm test"
