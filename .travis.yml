@@ -13,6 +13,8 @@ cache:
 
 install:
   - npm install
+  - npm install togeojson
+  - npm install leaflet
 
 script:
   - "npm test"
