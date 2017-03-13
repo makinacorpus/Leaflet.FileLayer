@@ -59,7 +59,7 @@
             };
         },
 
-        load: function (file /* File */) {
+        load: function (file, ext) {
             var reader;
             var parser;
 
@@ -74,7 +74,7 @@
             }
 
             // Get parser for this data type
-            parser = this._getParser(file.name);
+            parser = this._getParser(file.name, ext);
             if (!parser) {
                 return false;
             }

@@ -130,6 +130,20 @@ describe('FileLoader', function() {
             reader.onload({target: {result: _VALID_KML}});
         });
 
+        it("should reject KML if GPX expected", function(done) {
+            var file = {name: 'name.kml', testing: true},
+                ext = "gpx",
+                cberr = sinon.spy(),
+                cbok = sinon.spy();
+            loader.on('data:error', cberr);
+            loader.on('data:loaded', cbok);
+            var reader = loader.load(file, ext);
+            reader.onload({target: {result: {}}});
+            assert.isTrue(cberr.called);
+            assert.isFalse(cbok.called);
+            done();
+        });
+
         it("should warn if size exceeds limit from option", function(done) {
             var file = {name: 'name.kml', size: 9999999, testing: true},
                 callback = sinon.spy();
@@ -151,12 +165,12 @@ describe('FileLoader', function() {
     });
 
     describe('Load data', function() {
-        
+
         before(function() {
             loader.removeEventListener('data:loading');
             loader.removeEventListener('data:loaded');
         });
-        
+
         it("should warn if format is not supported.", function(done) {
             var name = 'name.csv',
                 data = '';
@@ -190,6 +204,20 @@ describe('FileLoader', function() {
                 done();
             });
             loader.loadData(data, name);
+        });
+
+        it("should reject KML if GPX expected", function(done) {
+            var name = 'name.kml',
+                data = _VALID_KML,
+                ext = "gpx",
+                cberr = sinon.spy(),
+                cbok = sinon.spy();
+            loader.on('data:error', cberr);
+            loader.on('data:loaded', cbok);
+            loader.loadData(data, name, ext);
+            assert.isTrue(cberr.calledOnce);
+            assert.isFalse(cbok.calledOnce);
+            done();
         });
 
         it("should warn if size exceeds limit from option", function(done) {
