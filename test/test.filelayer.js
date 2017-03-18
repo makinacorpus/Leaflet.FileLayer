@@ -96,6 +96,12 @@ describe('FileLoader', function() {
 
     describe('Load file', function() {
 
+        beforeEach(function() {
+            loader.removeEventListener('data:loading');
+            loader.removeEventListener('data:loaded');
+            loader.removeEventListener('data:error');
+        });
+
         it("should warn if format is not supported.", function(done) {
             var file = {name: 'name.csv', testing: true},
                 callback = sinon.spy();
@@ -138,10 +144,26 @@ describe('FileLoader', function() {
             loader.on('data:error', cberr);
             loader.on('data:loaded', cbok);
             var reader = loader.load(file, ext);
-            reader.onload({target: {result: {}}});
+            reader.onload({target: {result: {result: _VALID_KML}}});
             assert.isTrue(cberr.called);
             assert.isFalse(cbok.called);
             done();
+        });
+
+        it("should be able to load KML with gpx extension", function(done) {
+            var file = {name: 'name.gpx', testing: true},
+                ext = "kml",
+                cberr = sinon.spy();
+            loader.on('data:error', cberr);;
+            loader.on('data:loaded', function (e) {
+                assert.equal(e.format, 'kml');
+                assert.equal(e.filename, 'name.gpx');
+                assert.isTrue(e.layer instanceof L.GeoJSON);
+                done();
+            });
+            var reader = loader.load(file, ext);
+            reader.onload({target: {result: _VALID_KML}});
+            assert.isFalse(cberr.called);
         });
 
         it("should warn if size exceeds limit from option", function(done) {
@@ -166,9 +188,10 @@ describe('FileLoader', function() {
 
     describe('Load data', function() {
 
-        before(function() {
+        beforeEach(function() {
             loader.removeEventListener('data:loading');
             loader.removeEventListener('data:loaded');
+            loader.removeEventListener('data:error');
         });
 
         it("should warn if format is not supported.", function(done) {
@@ -218,6 +241,22 @@ describe('FileLoader', function() {
             assert.isTrue(cberr.calledOnce);
             assert.isFalse(cbok.calledOnce);
             done();
+        });
+
+        it("should be able to load KML with gpx extension", function(done) {
+            var name = 'name.gpx',
+                data = _VALID_KML,
+                ext = "kml",
+                cberr = sinon.spy();
+            loader.on('data:error', cberr);
+            loader.on('data:loaded', function (e) {
+                assert.equal(e.format, 'kml');
+                assert.equal(e.filename, 'name.gpx');
+                assert.isTrue(e.layer instanceof L.GeoJSON);
+                done();
+            });
+            loader.loadData(data, name, ext);
+            assert.isFalse(cberr.called);
         });
 
         it("should warn if size exceeds limit from option", function(done) {
