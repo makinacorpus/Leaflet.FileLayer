@@ -59,8 +59,7 @@
             };
         },
 
-        load: function (file, ext) {
-            var reader;
+        load: function (file, ext, reader /* for loadMultiple tests */) {
             var parser;
 
             // Check file is defined
@@ -80,7 +79,8 @@
             }
 
             // Read selected file using HTML5 File API
-            reader = new FileReader();
+            // for testing loadMultiple, reuse reader passed as method argument
+            if (!file.testing || !reader) reader = new FileReader();
             reader.onload = L.Util.bind(function (e) {
                 var layer;
                 try {
@@ -102,6 +102,24 @@
                 reader.readAsText(file);
             }
             // We return this to ease testing
+            return reader;
+        },
+
+        loadMultiple: function (files, ext) {
+            var reader = false;
+            if (files[0]) {
+              files = Array.prototype.slice.apply(files);
+              var loadOne = L.Util.bind(function () {
+                reader = this.load(files.shift(), ext, reader);
+                if (files.length > 0) {
+                    setTimeout(loadOne, 25);
+                }
+                return reader;
+              }, this);
+              loadOne();
+            }
+            // return first reader (or false if no file),
+            // which is also used for subsequent loadings
             return reader;
         },
 
@@ -248,7 +266,7 @@
 
         _initDragAndDrop: function (map) {
             var callbackName;
-            var thisFileLayerLoad = this;
+            var thisLoader = this.loader;
             var dropbox = map._container;
 
             var callbacks = {
@@ -266,7 +284,7 @@
                     e.stopPropagation();
                     e.preventDefault();
 
-                    thisFileLayerLoad._loadFiles(e.dataTransfer.files);
+                    thisLoader.loadMultiple(e.dataTransfer.files);
                     map.scrollWheelZoom.enable();
                 }
             };
@@ -278,7 +296,7 @@
         },
 
         _initContainer: function () {
-            var thisFileLayerLoad = this;
+            var thisLoader = this.loader;
 
             // Create a button, and bind click on hidden file input
             var fileInput;
@@ -303,7 +321,7 @@
             fileInput.style.display = 'none';
             // Load on file change
             fileInput.addEventListener('change', function () {
-                thisFileLayerLoad._loadFiles(this.files);
+                thisLoader.loadMultiple(this.files);
                 // reset so that the user can upload the same file again if they want to
                 this.value = '';
             }, false);
