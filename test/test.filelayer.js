@@ -202,10 +202,8 @@ describe('FileLoader', function() {
                 callback = sinon.spy();
             loader.on('data:error', callback);
             loader.loadMultiple(files);
-            setTimeout(function(){
-              assert.isTrue(callback.calledTwice);
-              done();
-            }, 50);
+            assert.isTrue(callback.calledTwice);
+            done();
         });
 
         it("should fire data:loading and data:loaded", function(done) {
@@ -217,9 +215,9 @@ describe('FileLoader', function() {
               loadedcb = sinon.spy();
             loader.on('data:loading', loadingcb);
             loader.on('data:loaded', loadedcb);
-            var reader = loader.loadMultiple(files);
-            reader.onload({target: {result: _VALID_GEOJSON}});
-            reader.onload({target: {result: _VALID_GEOJSON}});
+            var readers = loader.loadMultiple(files);
+            readers[0].onload({target: {result: _VALID_GEOJSON}});
+            readers[1].onload({target: {result: _VALID_GEOJSON}});
             assert.isTrue(loadingcb.calledTwice);
             assert.isTrue(loadedcb.calledTwice);
             done();
@@ -235,8 +233,8 @@ describe('FileLoader', function() {
                 assert.isTrue(e.layer instanceof L.GeoJSON);
                 done();
             });
-            var reader = loader.loadMultiple(files);
-            reader.onload({target: {result: _VALID_KML}});
+            var readers = loader.loadMultiple(files);
+            readers[0].onload({target: {result: _VALID_KML}});
         });
 
         it("should reject KML if GPX expected", function(done) {
@@ -249,8 +247,8 @@ describe('FileLoader', function() {
                 cbok = sinon.spy();
             loader.on('data:error', cberr);
             loader.on('data:loaded', cbok);
-            var reader = loader.loadMultiple(files, ext);
-            reader.onload({target: {result: {result: _VALID_KML}}});
+            var readers = loader.loadMultiple(files, ext);
+            readers[0].onload({target: {result: {result: _VALID_KML}}});
             assert.isTrue(cberr.called);
             assert.isFalse(cbok.called);
             done();
@@ -267,18 +265,16 @@ describe('FileLoader', function() {
             loader.on('data:error', cberr);;
             loader.on('data:loaded', function (e) {
                 assert.equal(e.format, 'kml');
-                assert.isTrue(/name[12]\.gpx/.test(e.filename));
+                assert.isTrue(/name[12]\.(gpx|txt)/.test(e.filename));
                 assert.isTrue(e.layer instanceof L.GeoJSON);
                 cbloaded();
             });
-            var reader = loader.loadMultiple(files, ext);
-            reader.onload({target: {result: _VALID_KML}});
-            reader.onload({target: {result: _VALID_KML}});
-            setTimeout(function(){
-              assert.isFalse(cberr.called);
-              assert.isTrue(cbloaded.calledTwice);
-              done();
-            },50);
+            var readers = loader.loadMultiple(files, ext);
+            readers[0].onload({target: {result: _VALID_KML}});
+            readers[1].onload({target: {result: _VALID_KML}});
+            assert.isFalse(cberr.called);
+            assert.isTrue(cbloaded.calledTwice);
+            done();
         });
 
         it("should warn if size exceeds limit from option", function(done) {
@@ -302,9 +298,9 @@ describe('FileLoader', function() {
                 cbloaded = sinon.spy();
             loader.on('data:error', cberr);
             loader.on('data:loaded', cbloaded);
-            var reader = loader.loadMultiple(files);
-            reader.onload({target: {result: _VALID_GEOJSON}});
-            reader.onload({target: {result: {}}});
+            var readers = loader.loadMultiple(files);
+            readers[0].onload({target: {result: _VALID_GEOJSON}});
+            readers[1].onload({target: {result: {}}});
             assert.isTrue(cberr.calledOnce);
             assert.isTrue(cbloaded.calledOnce);
             done();
@@ -315,8 +311,8 @@ describe('FileLoader', function() {
                 callback = sinon.spy();
             loader.on('data:error', callback);
             loader.on('data:loaded', callback);
-            var reader = loader.loadMultiple(files);
-            assert.isFalse(reader);
+            var readers = loader.loadMultiple(files);
+            assert.isTrue(readers.length == 0);
             assert.isFalse(callback.called);
             done();
         });
