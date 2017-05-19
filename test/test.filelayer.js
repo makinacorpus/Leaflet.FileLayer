@@ -186,6 +186,138 @@ describe('FileLoader', function() {
         });
     });
 
+    describe('Load multiple files', function() {
+
+        beforeEach(function() {
+            loader.removeEventListener('data:loading');
+            loader.removeEventListener('data:loaded');
+            loader.removeEventListener('data:error');
+        });
+
+        it("should warn if format is not supported.", function(done) {
+            var files = [
+                  {name: 'name1.csv', testing: true},
+                  {name: 'name2.csv', testing: true}
+                ],
+                callback = sinon.spy();
+            loader.on('data:error', callback);
+            loader.loadMultiple(files);
+            assert.isTrue(callback.calledTwice);
+            done();
+        });
+
+        it("should fire data:loading and data:loaded", function(done) {
+            var files = [
+                {name: 'name1.geojson', testing: true},
+                {name: 'name2.geojson', testing: true}
+              ],
+              loadingcb = sinon.spy(),
+              loadedcb = sinon.spy();
+            loader.on('data:loading', loadingcb);
+            loader.on('data:loaded', loadedcb);
+            var readers = loader.loadMultiple(files);
+            readers[0].onload({target: {result: _VALID_GEOJSON}});
+            readers[1].onload({target: {result: _VALID_GEOJSON}});
+            assert.isTrue(loadingcb.calledTwice);
+            assert.isTrue(loadedcb.calledTwice);
+            done();
+        });
+
+        it("should be able to load a single KML file", function(done) {
+            var files = [
+                {name: 'name2.kml', testing: true}
+              ];
+            loader.on('data:loaded', function (e) {
+                assert.equal(e.format, 'kml');
+                assert.isTrue(/name[12]\.kml/.test(e.filename));
+                assert.isTrue(e.layer instanceof L.GeoJSON);
+                done();
+            });
+            var readers = loader.loadMultiple(files);
+            readers[0].onload({target: {result: _VALID_KML}});
+        });
+
+        it("should reject KML if GPX expected", function(done) {
+            var files = [
+                  {name: 'name1.kml', testing: true},
+                  {name: 'name2.gpx', testing: true}
+                ],
+                ext = "gpx",
+                cberr = sinon.spy(),
+                cbok = sinon.spy();
+            loader.on('data:error', cberr);
+            loader.on('data:loaded', cbok);
+            var readers = loader.loadMultiple(files, ext);
+            readers[0].onload({target: {result: {result: _VALID_KML}}});
+            assert.isTrue(cberr.called);
+            assert.isFalse(cbok.called);
+            done();
+        });
+
+        it("should be able to load KML with invalid extension", function(done) {
+            var files = [
+                  {name: 'name1.gpx', testing: true},
+                  {name: 'name2.txt', testing: true}
+                ],
+                ext = "kml",
+                cberr = sinon.spy(),
+                cbloaded = sinon.spy();
+            loader.on('data:error', cberr);;
+            loader.on('data:loaded', function (e) {
+                assert.equal(e.format, 'kml');
+                assert.isTrue(/name[12]\.(gpx|txt)/.test(e.filename));
+                assert.isTrue(e.layer instanceof L.GeoJSON);
+                cbloaded();
+            });
+            var readers = loader.loadMultiple(files, ext);
+            readers[0].onload({target: {result: _VALID_KML}});
+            readers[1].onload({target: {result: _VALID_KML}});
+            assert.isFalse(cberr.called);
+            assert.isTrue(cbloaded.calledTwice);
+            done();
+        });
+
+        it("should warn if size exceeds limit from option", function(done) {
+            var files = [
+                  {name: 'name1.kml', size: 9999999, testing: true},
+                  {name: 'name2.kml', testing: true}
+                ],
+                callback = sinon.spy();
+            loader.on('data:error', callback);
+            loader.loadMultiple(files);
+            assert.isTrue(callback.calledOnce);
+            done();
+        });
+
+        it("should warn if imported layer has no feature", function(done) {
+            var files = [
+                  {name: 'name1.geojson', testing: true},
+                  {name: 'name2.geojson', testing: true}
+                ],
+                cberr = sinon.spy(),
+                cbloaded = sinon.spy();
+            loader.on('data:error', cberr);
+            loader.on('data:loaded', cbloaded);
+            var readers = loader.loadMultiple(files);
+            readers[0].onload({target: {result: _VALID_GEOJSON}});
+            readers[1].onload({target: {result: {}}});
+            assert.isTrue(cberr.calledOnce);
+            assert.isTrue(cbloaded.calledOnce);
+            done();
+        });
+
+        it("should silently ignore empty files list", function(done) {
+            var files = [],
+                callback = sinon.spy();
+            loader.on('data:error', callback);
+            loader.on('data:loaded', callback);
+            var readers = loader.loadMultiple(files);
+            assert.isTrue(readers.length == 0);
+            assert.isFalse(callback.called);
+            done();
+        });
+    });
+
     describe('Load data', function() {
 
         beforeEach(function() {

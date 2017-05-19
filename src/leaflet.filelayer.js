@@ -60,8 +60,8 @@
         },
 
         load: function (file, ext) {
-            var reader;
-            var parser;
+            var parser,
+                reader;
 
             // Check file is defined
             if (this._isParameterMissing(file, 'file')) {
@@ -103,6 +103,19 @@
             }
             // We return this to ease testing
             return reader;
+        },
+
+        loadMultiple: function (files, ext) {
+            var readers = [];
+            if (files[0]) {
+              files = Array.prototype.slice.apply(files);
+              while (files.length > 0) {
+                readers.push(this.load(files.shift(), ext));
+              }
+            }
+            // return first reader (or false if no file),
+            // which is also used for subsequent loadings
+            return readers;
         },
 
         loadData: function (data, name, ext) {
@@ -248,7 +261,7 @@
 
         _initDragAndDrop: function (map) {
             var callbackName;
-            var thisFileLayerLoad = this;
+            var thisLoader = this.loader;
             var dropbox = map._container;
 
             var callbacks = {
@@ -266,7 +279,7 @@
                     e.stopPropagation();
                     e.preventDefault();
 
-                    thisFileLayerLoad._loadFiles(e.dataTransfer.files);
+                    thisLoader.loadMultiple(e.dataTransfer.files);
                     map.scrollWheelZoom.enable();
                 }
             };
@@ -278,7 +291,7 @@
         },
 
         _initContainer: function () {
-            var thisFileLayerLoad = this;
+            var thisLoader = this.loader;
 
             // Create a button, and bind click on hidden file input
             var fileInput;
@@ -303,7 +316,7 @@
             fileInput.style.display = 'none';
             // Load on file change
             fileInput.addEventListener('change', function () {
-                thisFileLayerLoad._loadFiles(this.files);
+                thisLoader.loadMultiple(this.files);
                 // reset so that the user can upload the same file again if they want to
                 this.value = '';
             }, false);
@@ -314,18 +327,6 @@
                 e.preventDefault();
             });
             return container;
-        },
-
-        _loadFiles: function (files) {
-            var fileLoader = this.loader;
-            files = Array.prototype.slice.apply(files);
-
-            setTimeout(function () {
-                fileLoader.load(files.shift());
-                if (files.length > 0) {
-                    setTimeout(arguments.callee, 25);
-                }
-            }, 25);
         }
     });
 
