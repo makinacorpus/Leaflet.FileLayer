@@ -332,18 +332,6 @@
                 e.preventDefault();
             });
             return container;
-        },
-
-        _loadFiles: function (files) {
-            var fileLoader = this.loader;
-            files = Array.prototype.slice.apply(files);
-
-            setTimeout(function () {
-                fileLoader.load(files.shift());
-                if (files.length > 0) {
-                    setTimeout(arguments.callee, 25);
-                }
-            }, 25);
         }
     });
 
