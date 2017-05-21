@@ -144,7 +144,7 @@ describe('FileLoader', function() {
             loader.on('data:error', cberr);
             loader.on('data:loaded', cbok);
             var reader = loader.load(file, ext);
-            reader.onload({target: {result: {result: _VALID_KML}}});
+            reader.onload({target: {result: _VALID_KML}});
             assert.isTrue(cberr.called);
             assert.isFalse(cbok.called);
             done();
@@ -223,6 +223,26 @@ describe('FileLoader', function() {
             done();
         });
 
+        it("can load different types of files together", function(done) {
+            var files = [
+                {name: 'name1.geojson', testing: true},
+                {name: 'name2.kml', testing: true}
+              ],
+              count = 0;
+            loader.on('data:loaded', function(e){
+              var json, kml;
+              json = (e.filename == 'name1.geojson') && (e.format == 'geojson')
+              kml = (e.filename == 'name2.kml') && (e.format == 'kml')
+              assert.isTrue(json || kml);
+              if (++count == 2) {
+                done();
+              };
+            });
+            var readers = loader.loadMultiple(files);
+            readers[0].onload({target: {result: _VALID_GEOJSON}});
+            readers[1].onload({target: {result: _VALID_KML}});
+        });
+
         it("should be able to load a single KML file", function(done) {
             var files = [
                 {name: 'name2.kml', testing: true}
@@ -237,20 +257,21 @@ describe('FileLoader', function() {
             readers[0].onload({target: {result: _VALID_KML}});
         });
 
-        it("should reject KML if GPX expected", function(done) {
+        it("should reject KML if geojson expected", function(done) {
             var files = [
                   {name: 'name1.kml', testing: true},
-                  {name: 'name2.gpx', testing: true}
+                  {name: 'name2.geojson', testing: true}
                 ],
-                ext = "gpx",
+                ext = "geojson",
                 cberr = sinon.spy(),
                 cbok = sinon.spy();
             loader.on('data:error', cberr);
             loader.on('data:loaded', cbok);
             var readers = loader.loadMultiple(files, ext);
-            readers[0].onload({target: {result: {result: _VALID_KML}}});
-            assert.isTrue(cberr.called);
-            assert.isFalse(cbok.called);
+            readers[0].onload({target: {result: _VALID_KML}});
+            readers[1].onload({target: {result: _VALID_GEOJSON}});
+            assert.isTrue(cberr.calledOnce);
+            assert.isTrue(cbok.calledOnce);
             done();
         });
 
