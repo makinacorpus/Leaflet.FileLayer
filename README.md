@@ -63,6 +63,10 @@ Events:
 Changelog
 ---------
 
+### 1.0.0 ###
+
+* Leaflet 1.1.0 compatibility (thanks @thorinii)
+
 ### 0.6.0 ###
 
 * Better plugin packaging and dependencies
@@ -106,3 +110,4 @@ Contributions
 * George Silva
 * Simon Bats
 * Opoto
+* Lachlan Phillips

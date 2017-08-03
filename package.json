@@ -1,6 +1,6 @@
 {
   "name": "leaflet-filelayer",
-  "version": "0.6.0",
+  "version": "1.0.0",
   "description": "Loads local files (GeoJSON, GPX, KML) into the map using the HTML5 FileReader API",
   "keywords": [
     "Leaflet",
@@ -21,7 +21,7 @@
     "start": "live-server --open=./dev"
   },
   "peerDependencies": {
-    "leaflet": "^0.7.7",
+    "leaflet": ">= 0.7.7 < 2",
     "togeojson": "^0.14.0"
   },
   "devDependencies": {
