@@ -1,10 +1,9 @@
 language: node_js
 node_js:
+  - "9"
   - "8"
   - "6"
-  - "5.5.0"
-  - "4.2.1"
-  - "0.10"
+  - "4"
 
 sudo: false
 
@@ -13,8 +12,8 @@ cache:
     - node_modules
 
 install:
-  - npm install leaflet@^1.1.0 togeojson@^0.14.0
   - npm install
+  - npm install leaflet@^1.2.0 togeojson@^0.16.0 --no-save
 
 script:
   - "npm test"
