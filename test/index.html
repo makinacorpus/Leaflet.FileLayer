@@ -17,8 +17,8 @@
   <script src="../node_modules/togeojson/togeojson.js"></script>
   <script src="../src/leaflet.filelayer.js"></script>
 
-  <script>mocha.setup('bdd')</script>
+  <script>window.mocha.setup('bdd')</script>
   <script src="test.filelayer.js"></script>
-  <script>(window.mochaPhantomJS || window.mocha).run();</script>
+  <script>window.mocha.run();</script>
 </body>
 </html>

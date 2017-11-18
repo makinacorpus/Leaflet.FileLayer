@@ -17,12 +17,12 @@
   },
   "license": "MIT",
   "scripts": {
-    "test": "mocha-phantomjs test/index.html",
+    "test": "mocha-phantomjs -p ./node_modules/.bin/phantomjs test/index.html",
     "start": "live-server --open=./dev"
   },
   "peerDependencies": {
     "leaflet": ">= 0.7.7 < 2",
-    "togeojson": "^0.14.0"
+    "togeojson": "^0.16.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
@@ -31,8 +31,9 @@
     "eslint-plugin-import": "^1.12.0",
     "happen": "^0.3.1",
     "live-server": "^1.1.0",
-    "mocha": "^3.0.2",
+    "mocha": "^4.0.1",
     "mocha-phantomjs": "^4.1.0",
+    "phantomjs-prebuilt": "^2.1.16",
     "requirejs": "^2.2.0",
     "sinon": "^1.17.5"
   }
