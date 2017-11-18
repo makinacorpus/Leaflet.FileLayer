@@ -39,8 +39,7 @@
         factory(window.L, window.toGeoJSON);
     }
 }(function fileLoaderFactory(L, toGeoJSON) {
-    var FileLoader = L.Class.extend({
-        includes: L.Mixin.Events,
+    var FileLoader = L.Layer.extend({
         options: {
             layer: L.geoJson,
             layerOptions: {},

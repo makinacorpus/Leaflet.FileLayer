@@ -1,7 +1,7 @@
 Leaflet.FileLayer
 =================
 
-Loads local files (GeoJSON, GPX, KML) into the map using the [HTML5 FileReader API](http://caniuse.com/filereader), **without server call** !
+Loads local files (GeoJSON, JSON, GPX, KML) into the map using the [HTML5 FileReader API](http://caniuse.com/filereader), **without server call** !
 
 * A simple map control
 * The user can browse a file locally
@@ -22,6 +22,11 @@ In order to use this plugin in your app you can either:
     * `bower install git://github.com:makinacorpus/Leaflet.FileLayer.git`
 * download the repository and import the `leaflet.filelayer.js` file in your app.
 
+Dependencies and compatibilities
+-----
+In order to use this plugin, you need to have both `leaflet` and `togeojson` installed.
+If you're using Leaflet < 1, you need to use the version `0.6.0` of this plugin. After that, Leaflet > 1 is required.
+
 Usage
 -----
 
@@ -40,7 +45,7 @@ Usage
         addToMap: true,
         // File size limit in kb (default: 1024) ?
         fileSizeLimit: 1024,
-        // Restrict accepted file formats (default: .geojson, .kml, and .gpx) ?
+        // Restrict accepted file formats (default: .geojson, .json, .kml, and .gpx) ?
         formats: [
             '.geojson',
             '.kml'
@@ -50,20 +55,36 @@ Usage
 
 Events:
 
+* **data:loaded** (event)
+
 ```javascript
     var control = L.Control.fileLayerLoad();
-    control.loader.on('data:loaded', function (e) {
+    control.loader.on('data:loaded', function (event) {
+        // event.layer gives you access to the layers you just uploaded!
+
         // Add to map layer switcher
-        layerswitcher.addOverlay(e.layer, e.filename);
+        layerswitcher.addOverlay(event.layer, event.filename);
     });
 ```
 
 * **data:error** (error)
+```javascript
+    var control = L.Control.fileLayerLoad();
+    control.loader.on('data:error', function (error) {
+        // Do something usefull with the error!
+        console,error(error);
+    });
+```
 
 Changelog
 ---------
 
-### 1.0.0 ###
+### 1.2.0 ###
+
+* Leaflet 1.2.0 compatibility
+* Accept `json` file as input (thanks kkdd)
+
+### 1.1.0 ###
 
 * Leaflet 1.1.0 compatibility (thanks @thorinii)
 
@@ -111,3 +132,4 @@ Contributions
 * Simon Bats
 * Opoto
 * Lachlan Phillips
+* kkdd
