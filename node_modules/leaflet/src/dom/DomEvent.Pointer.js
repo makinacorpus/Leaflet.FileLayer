@@ -1,156 +1,134 @@
+import * as DomEvent from './DomEvent';
+import * as Util from '../core/Util';
+import * as Browser from '../core/Browser';
+
 /*
  * Extends L.DomEvent to provide touch support for Internet Explorer and Windows-based devices.
  */
 
-L.extend(L.DomEvent, {
 
-	//static
-	POINTER_DOWN: L.Browser.msPointer ? 'MSPointerDown' : 'pointerdown',
-	POINTER_MOVE: L.Browser.msPointer ? 'MSPointerMove' : 'pointermove',
-	POINTER_UP: L.Browser.msPointer ? 'MSPointerUp' : 'pointerup',
-	POINTER_CANCEL: L.Browser.msPointer ? 'MSPointerCancel' : 'pointercancel',
+var POINTER_DOWN =   Browser.msPointer ? 'MSPointerDown'   : 'pointerdown',
+    POINTER_MOVE =   Browser.msPointer ? 'MSPointerMove'   : 'pointermove',
+    POINTER_UP =     Browser.msPointer ? 'MSPointerUp'     : 'pointerup',
+    POINTER_CANCEL = Browser.msPointer ? 'MSPointerCancel' : 'pointercancel',
+    TAG_WHITE_LIST = ['INPUT', 'SELECT', 'OPTION'],
 
-	_pointers: [],
-	_pointerDocumentListener: false,
+    _pointers = {},
+    _pointerDocListener = false;
 
-	// Provides a touch events wrapper for (ms)pointer events.
-	// Based on changes by veproza https://github.com/CloudMade/Leaflet/pull/1019
-	//ref http://www.w3.org/TR/pointerevents/ https://www.w3.org/Bugs/Public/show_bug.cgi?id=22890
+// DomEvent.DoubleTap needs to know about this
+export var _pointersCount = 0;
 
-	addPointerListener: function (obj, type, handler, id) {
+// Provides a touch events wrapper for (ms)pointer events.
+// ref http://www.w3.org/TR/pointerevents/ https://www.w3.org/Bugs/Public/show_bug.cgi?id=22890
 
-		switch (type) {
-		case 'touchstart':
-			return this.addPointerListenerStart(obj, type, handler, id);
-		case 'touchend':
-			return this.addPointerListenerEnd(obj, type, handler, id);
-		case 'touchmove':
-			return this.addPointerListenerMove(obj, type, handler, id);
-		default:
-			throw 'Unknown touch event type';
-		}
-	},
+export function addPointerListener(obj, type, handler, id) {
+	if (type === 'touchstart') {
+		_addPointerStart(obj, handler, id);
 
-	addPointerListenerStart: function (obj, type, handler, id) {
-		var pre = '_leaflet_',
-		    pointers = this._pointers;
+	} else if (type === 'touchmove') {
+		_addPointerMove(obj, handler, id);
 
-		var cb = function (e) {
-			if (e.pointerType !== 'mouse' && e.pointerType !== e.MSPOINTER_TYPE_MOUSE) {
-				L.DomEvent.preventDefault(e);
-			}
-
-			var alreadyInArray = false;
-			for (var i = 0; i < pointers.length; i++) {
-				if (pointers[i].pointerId === e.pointerId) {
-					alreadyInArray = true;
-					break;
-				}
-			}
-			if (!alreadyInArray) {
-				pointers.push(e);
-			}
-
-			e.touches = pointers.slice();
-			e.changedTouches = [e];
-
-			handler(e);
-		};
-
-		obj[pre + 'touchstart' + id] = cb;
-		obj.addEventListener(this.POINTER_DOWN, cb, false);
-
-		// need to also listen for end events to keep the _pointers list accurate
-		// this needs to be on the body and never go away
-		if (!this._pointerDocumentListener) {
-			var internalCb = function (e) {
-				for (var i = 0; i < pointers.length; i++) {
-					if (pointers[i].pointerId === e.pointerId) {
-						pointers.splice(i, 1);
-						break;
-					}
-				}
-			};
-			//We listen on the documentElement as any drags that end by moving the touch off the screen get fired there
-			document.documentElement.addEventListener(this.POINTER_UP, internalCb, false);
-			document.documentElement.addEventListener(this.POINTER_CANCEL, internalCb, false);
-
-			this._pointerDocumentListener = true;
-		}
-
-		return this;
-	},
-
-	addPointerListenerMove: function (obj, type, handler, id) {
-		var pre = '_leaflet_',
-		    touches = this._pointers;
-
-		function cb(e) {
-
-			// don't fire touch moves when mouse isn't down
-			if ((e.pointerType === e.MSPOINTER_TYPE_MOUSE || e.pointerType === 'mouse') && e.buttons === 0) { return; }
-
-			for (var i = 0; i < touches.length; i++) {
-				if (touches[i].pointerId === e.pointerId) {
-					touches[i] = e;
-					break;
-				}
-			}
-
-			e.touches = touches.slice();
-			e.changedTouches = [e];
-
-			handler(e);
-		}
-
-		obj[pre + 'touchmove' + id] = cb;
-		obj.addEventListener(this.POINTER_MOVE, cb, false);
-
-		return this;
-	},
-
-	addPointerListenerEnd: function (obj, type, handler, id) {
-		var pre = '_leaflet_',
-		    touches = this._pointers;
-
-		var cb = function (e) {
-			for (var i = 0; i < touches.length; i++) {
-				if (touches[i].pointerId === e.pointerId) {
-					touches.splice(i, 1);
-					break;
-				}
-			}
-
-			e.touches = touches.slice();
-			e.changedTouches = [e];
-
-			handler(e);
-		};
-
-		obj[pre + 'touchend' + id] = cb;
-		obj.addEventListener(this.POINTER_UP, cb, false);
-		obj.addEventListener(this.POINTER_CANCEL, cb, false);
-
-		return this;
-	},
-
-	removePointerListener: function (obj, type, id) {
-		var pre = '_leaflet_',
-		    cb = obj[pre + type + id];
-
-		switch (type) {
-		case 'touchstart':
-			obj.removeEventListener(this.POINTER_DOWN, cb, false);
-			break;
-		case 'touchmove':
-			obj.removeEventListener(this.POINTER_MOVE, cb, false);
-			break;
-		case 'touchend':
-			obj.removeEventListener(this.POINTER_UP, cb, false);
-			obj.removeEventListener(this.POINTER_CANCEL, cb, false);
-			break;
-		}
-
-		return this;
+	} else if (type === 'touchend') {
+		_addPointerEnd(obj, handler, id);
 	}
-});
+
+	return this;
+}
+
+export function removePointerListener(obj, type, id) {
+	var handler = obj['_leaflet_' + type + id];
+
+	if (type === 'touchstart') {
+		obj.removeEventListener(POINTER_DOWN, handler, false);
+
+	} else if (type === 'touchmove') {
+		obj.removeEventListener(POINTER_MOVE, handler, false);
+
+	} else if (type === 'touchend') {
+		obj.removeEventListener(POINTER_UP, handler, false);
+		obj.removeEventListener(POINTER_CANCEL, handler, false);
+	}
+
+	return this;
+}
+
+function _addPointerStart(obj, handler, id) {
+	var onDown = Util.bind(function (e) {
+		if (e.pointerType !== 'mouse' && e.pointerType !== e.MSPOINTER_TYPE_MOUSE && e.pointerType !== e.MSPOINTER_TYPE_MOUSE) {
+			// In IE11, some touch events needs to fire for form controls, or
+			// the controls will stop working. We keep a whitelist of tag names that
+			// need these events. For other target tags, we prevent default on the event.
+			if (TAG_WHITE_LIST.indexOf(e.target.tagName) < 0) {
+				DomEvent.preventDefault(e);
+			} else {
+				return;
+			}
+		}
+
+		_handlePointer(e, handler);
+	});
+
+	obj['_leaflet_touchstart' + id] = onDown;
+	obj.addEventListener(POINTER_DOWN, onDown, false);
+
+	// need to keep track of what pointers and how many are active to provide e.touches emulation
+	if (!_pointerDocListener) {
+		// we listen documentElement as any drags that end by moving the touch off the screen get fired there
+		document.documentElement.addEventListener(POINTER_DOWN, _globalPointerDown, true);
+		document.documentElement.addEventListener(POINTER_MOVE, _globalPointerMove, true);
+		document.documentElement.addEventListener(POINTER_UP, _globalPointerUp, true);
+		document.documentElement.addEventListener(POINTER_CANCEL, _globalPointerUp, true);
+
+		_pointerDocListener = true;
+	}
+}
+
+function _globalPointerDown(e) {
+	_pointers[e.pointerId] = e;
+	_pointersCount++;
+}
+
+function _globalPointerMove(e) {
+	if (_pointers[e.pointerId]) {
+		_pointers[e.pointerId] = e;
+	}
+}
+
+function _globalPointerUp(e) {
+	delete _pointers[e.pointerId];
+	_pointersCount--;
+}
+
+function _handlePointer(e, handler) {
+	e.touches = [];
+	for (var i in _pointers) {
+		e.touches.push(_pointers[i]);
+	}
+	e.changedTouches = [e];
+
+	handler(e);
+}
+
+function _addPointerMove(obj, handler, id) {
+	var onMove = function (e) {
+		// don't fire touch moves when mouse isn't down
+		if ((e.pointerType === e.MSPOINTER_TYPE_MOUSE || e.pointerType === 'mouse') && e.buttons === 0) { return; }
+
+		_handlePointer(e, handler);
+	};
+
+	obj['_leaflet_touchmove' + id] = onMove;
+	obj.addEventListener(POINTER_MOVE, onMove, false);
+}
+
+function _addPointerEnd(obj, handler, id) {
+	var onUp = function (e) {
+		_handlePointer(e, handler);
+	};
+
+	obj['_leaflet_touchend' + id] = onUp;
+	obj.addEventListener(POINTER_UP, onUp, false);
+	obj.addEventListener(POINTER_CANCEL, onUp, false);
+}
+

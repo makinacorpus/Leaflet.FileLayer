@@ -1,13 +1,20 @@
-/*
- * L.Class powers the OOP facilities of the library.
- * Thanks to John Resig and Dean Edwards for inspiration!
- */
+import * as Util from './Util';
 
-L.Class = function () {};
+// @class Class
+// @aka L.Class
 
-L.Class.extend = function (props) {
+// @section
+// @uninheritable
 
-	// extended class with the new prototype
+// Thanks to John Resig and Dean Edwards for inspiration!
+
+export function Class() {}
+
+Class.extend = function (props) {
+
+	// @function extend(props: Object): Function
+	// [Extends the current class](#class-inheritance) given the properties to be included.
+	// Returns a Javascript function that is a class constructor (to be called with `new`).
 	var NewClass = function () {
 
 		// call the constructor
@@ -16,60 +23,53 @@ L.Class.extend = function (props) {
 		}
 
 		// call all constructor hooks
-		if (this._initHooks) {
-			this.callInitHooks();
-		}
+		this.callInitHooks();
 	};
 
-	// instantiate class without calling constructor
-	var F = function () {};
-	F.prototype = this.prototype;
+	var parentProto = NewClass.__super__ = this.prototype;
 
-	var proto = new F();
+	var proto = Util.create(parentProto);
 	proto.constructor = NewClass;
 
 	NewClass.prototype = proto;
 
-	//inherit parent's statics
+	// inherit parent's statics
 	for (var i in this) {
-		if (this.hasOwnProperty(i) && i !== 'prototype') {
+		if (this.hasOwnProperty(i) && i !== 'prototype' && i !== '__super__') {
 			NewClass[i] = this[i];
 		}
 	}
 
 	// mix static properties into the class
 	if (props.statics) {
-		L.extend(NewClass, props.statics);
+		Util.extend(NewClass, props.statics);
 		delete props.statics;
 	}
 
 	// mix includes into the prototype
 	if (props.includes) {
-		L.Util.extend.apply(null, [proto].concat(props.includes));
+		checkDeprecatedMixinEvents(props.includes);
+		Util.extend.apply(null, [proto].concat(props.includes));
 		delete props.includes;
 	}
 
 	// merge options
-	if (props.options && proto.options) {
-		props.options = L.extend({}, proto.options, props.options);
+	if (proto.options) {
+		props.options = Util.extend(Util.create(proto.options), props.options);
 	}
 
 	// mix given properties into the prototype
-	L.extend(proto, props);
+	Util.extend(proto, props);
 
 	proto._initHooks = [];
-
-	var parent = this;
-	// jshint camelcase: false
-	NewClass.__super__ = parent.prototype;
 
 	// add method for calling all hooks
 	proto.callInitHooks = function () {
 
 		if (this._initHooksCalled) { return; }
 
-		if (parent.prototype.callInitHooks) {
-			parent.prototype.callInitHooks.call(this);
+		if (parentProto.callInitHooks) {
+			parentProto.callInitHooks.call(this);
 		}
 
 		this._initHooksCalled = true;
@@ -83,18 +83,23 @@ L.Class.extend = function (props) {
 };
 
 
-// method for adding properties to prototype
-L.Class.include = function (props) {
-	L.extend(this.prototype, props);
+// @function include(properties: Object): this
+// [Includes a mixin](#class-includes) into the current class.
+Class.include = function (props) {
+	Util.extend(this.prototype, props);
+	return this;
 };
 
-// merge new default options to the Class
-L.Class.mergeOptions = function (options) {
-	L.extend(this.prototype.options, options);
+// @function mergeOptions(options: Object): this
+// [Merges `options`](#class-options) into the defaults of the class.
+Class.mergeOptions = function (options) {
+	Util.extend(this.prototype.options, options);
+	return this;
 };
 
-// add a constructor hook
-L.Class.addInitHook = function (fn) { // (Function) || (String, args...)
+// @function addInitHook(fn: Function): this
+// Adds a [constructor hook](#class-constructor-hooks) to the class.
+Class.addInitHook = function (fn) { // (Function) || (String, args...)
 	var args = Array.prototype.slice.call(arguments, 1);
 
 	var init = typeof fn === 'function' ? fn : function () {
@@ -103,4 +108,19 @@ L.Class.addInitHook = function (fn) { // (Function) || (String, args...)
 
 	this.prototype._initHooks = this.prototype._initHooks || [];
 	this.prototype._initHooks.push(init);
+	return this;
 };
+
+function checkDeprecatedMixinEvents(includes) {
+	if (!L || !L.Mixin) { return; }
+
+	includes = Util.isArray(includes) ? includes : [includes];
+
+	for (var i = 0; i < includes.length; i++) {
+		if (includes[i] === L.Mixin.Events) {
+			console.warn('Deprecated include of L.Mixin.Events: ' +
+				'this property will be removed in future releases, ' +
+				'please inherit from L.Evented instead.', new Error().stack);
+		}
+	}
+}

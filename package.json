@@ -17,9 +17,9 @@
   },
   "license": "MIT",
   "dependencies": {
-    "leaflet": "0.7.7",
-    "leaflet-filelayer": "^0.6.0",
+    "leaflet": "1.2.0",
+    "leaflet-filelayer": "1.2.0",
     "normalize.css": "^4.2.0",
-    "togeojson": "0.14.0"
+    "togeojson": "0.16.0"
   }
 }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Leaflet Filelayer </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.1.0/dist/leaflet.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Leaflet Filelayer plugin</h1>
+        <button class="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <div class="menu closed">
+            <a class="sources" href="http://github.com/makinacorpus/Leaflet.FileLayer/">Sources</a>
+            <a class="logo" href="http://makina-corpus.com"><img class="icon" src="http://depot.makina-corpus.org/public/logo.gif" alt="Makina Corpus logo"/></a>
+        </div>
+    </header>
+    <main>
+        <p class="help">Click on the icon to browse and load local files on the map.
+        </p>
+        <div id="map" style="width: 100%; height: 100%; display: block;"></div>
+    </main>
+    <footer>
+        <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a></div>
+    </footer>
+</body>
+<script src="https://unpkg.com/leaflet@1.1.0/dist/leaflet.js"></script>
+<script src="https://unpkg.com/togeojson@0.14.2"></script>
+<script src="https://unpkg.com/leaflet-filelayer@1.0.0"></script>
+<script src="menu.js"></script>
+<script src="index.js"></script>
+</html>

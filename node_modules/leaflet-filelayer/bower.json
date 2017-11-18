@@ -18,7 +18,7 @@
     "globals"
   ],
   "dependencies": {
-    "leaflet": "^0.7.7",
+    "leaflet": ">= 0.7.7 < 2",
     "togeojson": "^0.14.0"
   },
   "ignore": [

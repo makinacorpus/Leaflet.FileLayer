@@ -1,53 +1,64 @@
+
+import {Control} from './Control';
+import {Map} from '../map/Map';
+import * as Util from '../core/Util';
+import * as DomEvent from '../dom/DomEvent';
+import * as DomUtil from '../dom/DomUtil';
+
 /*
- * L.Control.Attribution is used for displaying attribution on the map (added by default).
+ * @class Control.Attribution
+ * @aka L.Control.Attribution
+ * @inherits Control
+ *
+ * The attribution control allows you to display attribution data in a small text box on a map. It is put on the map by default unless you set its [`attributionControl` option](#map-attributioncontrol) to `false`, and it fetches attribution texts from layers with the [`getAttribution` method](#layer-getattribution) automatically. Extends Control.
  */
 
-L.Control.Attribution = L.Control.extend({
+export var Attribution = Control.extend({
+	// @section
+	// @aka Control.Attribution options
 	options: {
 		position: 'bottomright',
+
+		// @option prefix: String = 'Leaflet'
+		// The HTML text shown before the attributions. Pass `false` to disable.
 		prefix: '<a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>'
 	},
 
 	initialize: function (options) {
-		L.setOptions(this, options);
+		Util.setOptions(this, options);
 
 		this._attributions = {};
 	},
 
 	onAdd: function (map) {
-		this._container = L.DomUtil.create('div', 'leaflet-control-attribution');
-		L.DomEvent.disableClickPropagation(this._container);
+		map.attributionControl = this;
+		this._container = DomUtil.create('div', 'leaflet-control-attribution');
+		DomEvent.disableClickPropagation(this._container);
 
+		// TODO ugly, refactor
 		for (var i in map._layers) {
 			if (map._layers[i].getAttribution) {
 				this.addAttribution(map._layers[i].getAttribution());
 			}
 		}
-		
-		map
-		    .on('layeradd', this._onLayerAdd, this)
-		    .on('layerremove', this._onLayerRemove, this);
 
 		this._update();
 
 		return this._container;
 	},
 
-	onRemove: function (map) {
-		map
-		    .off('layeradd', this._onLayerAdd)
-		    .off('layerremove', this._onLayerRemove);
-
-	},
-
+	// @method setPrefix(prefix: String): this
+	// Sets the text before the attributions.
 	setPrefix: function (prefix) {
 		this.options.prefix = prefix;
 		this._update();
 		return this;
 	},
 
+	// @method addAttribution(text: String): this
+	// Adds an attribution text (e.g. `'Vector data &copy; Mapbox'`).
 	addAttribution: function (text) {
-		if (!text) { return; }
+		if (!text) { return this; }
 
 		if (!this._attributions[text]) {
 			this._attributions[text] = 0;
@@ -59,8 +70,10 @@ L.Control.Attribution = L.Control.extend({
 		return this;
 	},
 
+	// @method removeAttribution(text: String): this
+	// Removes an attribution text.
 	removeAttribution: function (text) {
-		if (!text) { return; }
+		if (!text) { return this; }
 
 		if (this._attributions[text]) {
 			this._attributions[text]--;
@@ -91,31 +104,26 @@ L.Control.Attribution = L.Control.extend({
 		}
 
 		this._container.innerHTML = prefixAndAttribs.join(' | ');
-	},
-
-	_onLayerAdd: function (e) {
-		if (e.layer.getAttribution) {
-			this.addAttribution(e.layer.getAttribution());
-		}
-	},
-
-	_onLayerRemove: function (e) {
-		if (e.layer.getAttribution) {
-			this.removeAttribution(e.layer.getAttribution());
-		}
 	}
 });
 
-L.Map.mergeOptions({
+// @namespace Map
+// @section Control options
+// @option attributionControl: Boolean = true
+// Whether a [attribution control](#control-attribution) is added to the map by default.
+Map.mergeOptions({
 	attributionControl: true
 });
 
-L.Map.addInitHook(function () {
+Map.addInitHook(function () {
 	if (this.options.attributionControl) {
-		this.attributionControl = (new L.Control.Attribution()).addTo(this);
+		new Attribution().addTo(this);
 	}
 });
 
-L.control.attribution = function (options) {
-	return new L.Control.Attribution(options);
+// @namespace Control.Attribution
+// @factory L.control.attribution(options: Control.Attribution options)
+// Creates an attribution control.
+export var attribution = function (options) {
+	return new Attribution(options);
 };

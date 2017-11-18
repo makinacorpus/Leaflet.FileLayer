@@ -1,119 +1,145 @@
+import {Layer} from '../Layer';
+import * as Util from '../../core/Util';
+import {touch} from '../../core/Browser';
+
 /*
- * L.Path is a base class for rendering vector paths on a map. Inherited by Polyline, Circle, etc.
+ * @class Path
+ * @aka L.Path
+ * @inherits Interactive layer
+ *
+ * An abstract class that contains options and constants shared between vector
+ * overlays (Polygon, Polyline, Circle). Do not use it directly. Extends `Layer`.
  */
 
-L.Path = L.Class.extend({
-	includes: [L.Mixin.Events],
+export var Path = Layer.extend({
 
-	statics: {
-		// how much to extend the clip area around the map view
-		// (relative to its size, e.g. 0.5 is half the screen in each direction)
-		// set it so that SVG element doesn't exceed 1280px (vectors flicker on dragend if it is)
-		CLIP_PADDING: (function () {
-			var max = L.Browser.mobile ? 1280 : 2000,
-			    target = (max / Math.max(window.outerWidth, window.outerHeight) - 1) / 2;
-			return Math.max(0, Math.min(0.5, target));
-		})()
-	},
-
+	// @section
+	// @aka Path options
 	options: {
+		// @option stroke: Boolean = true
+		// Whether to draw stroke along the path. Set it to `false` to disable borders on polygons or circles.
 		stroke: true,
-		color: '#0033ff',
-		dashArray: null,
-		lineCap: null,
-		lineJoin: null,
-		weight: 5,
-		opacity: 0.5,
 
+		// @option color: String = '#3388ff'
+		// Stroke color
+		color: '#3388ff',
+
+		// @option weight: Number = 3
+		// Stroke width in pixels
+		weight: 3,
+
+		// @option opacity: Number = 1.0
+		// Stroke opacity
+		opacity: 1,
+
+		// @option lineCap: String= 'round'
+		// A string that defines [shape to be used at the end](https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-linecap) of the stroke.
+		lineCap: 'round',
+
+		// @option lineJoin: String = 'round'
+		// A string that defines [shape to be used at the corners](https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-linejoin) of the stroke.
+		lineJoin: 'round',
+
+		// @option dashArray: String = null
+		// A string that defines the stroke [dash pattern](https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-dasharray). Doesn't work on `Canvas`-powered layers in [some old browsers](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/setLineDash#Browser_compatibility).
+		dashArray: null,
+
+		// @option dashOffset: String = null
+		// A string that defines the [distance into the dash pattern to start the dash](https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-dashoffset). Doesn't work on `Canvas`-powered layers in [some old browsers](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/setLineDash#Browser_compatibility).
+		dashOffset: null,
+
+		// @option fill: Boolean = depends
+		// Whether to fill the path with color. Set it to `false` to disable filling on polygons or circles.
 		fill: false,
-		fillColor: null, //same as color by default
+
+		// @option fillColor: String = *
+		// Fill color. Defaults to the value of the [`color`](#path-color) option
+		fillColor: null,
+
+		// @option fillOpacity: Number = 0.2
+		// Fill opacity.
 		fillOpacity: 0.2,
 
-		clickable: true
+		// @option fillRule: String = 'evenodd'
+		// A string that defines [how the inside of a shape](https://developer.mozilla.org/docs/Web/SVG/Attribute/fill-rule) is determined.
+		fillRule: 'evenodd',
+
+		// className: '',
+
+		// Option inherited from "Interactive layer" abstract class
+		interactive: true,
+
+		// @option bubblingMouseEvents: Boolean = true
+		// When `true`, a mouse event on this path will trigger the same event on the map
+		// (unless [`L.DomEvent.stopPropagation`](#domevent-stoppropagation) is used).
+		bubblingMouseEvents: true
 	},
 
-	initialize: function (options) {
-		L.setOptions(this, options);
+	beforeAdd: function (map) {
+		// Renderer is set here because we need to call renderer.getEvents
+		// before this.getEvents.
+		this._renderer = map.getRenderer(this);
 	},
 
-	onAdd: function (map) {
-		this._map = map;
-
-		if (!this._container) {
-			this._initElements();
-			this._initEvents();
-		}
-
-		this.projectLatlngs();
-		this._updatePath();
-
-		if (this._container) {
-			this._map._pathRoot.appendChild(this._container);
-		}
-
-		this.fire('add');
-
-		map.on({
-			'viewreset': this.projectLatlngs,
-			'moveend': this._updatePath
-		}, this);
+	onAdd: function () {
+		this._renderer._initPath(this);
+		this._reset();
+		this._renderer._addPath(this);
 	},
 
-	addTo: function (map) {
-		map.addLayer(this);
-		return this;
+	onRemove: function () {
+		this._renderer._removePath(this);
 	},
 
-	onRemove: function (map) {
-		map._pathRoot.removeChild(this._container);
-
-		// Need to fire remove event before we set _map to null as the event hooks might need the object
-		this.fire('remove');
-		this._map = null;
-
-		if (L.Browser.vml) {
-			this._container = null;
-			this._stroke = null;
-			this._fill = null;
-		}
-
-		map.off({
-			'viewreset': this.projectLatlngs,
-			'moveend': this._updatePath
-		}, this);
-	},
-
-	projectLatlngs: function () {
-		// do all projection stuff here
-	},
-
-	setStyle: function (style) {
-		L.setOptions(this, style);
-
-		if (this._container) {
-			this._updateStyle();
-		}
-
-		return this;
-	},
-
+	// @method redraw(): this
+	// Redraws the layer. Sometimes useful after you changed the coordinates that the path uses.
 	redraw: function () {
 		if (this._map) {
-			this.projectLatlngs();
-			this._updatePath();
+			this._renderer._updatePath(this);
 		}
 		return this;
-	}
-});
+	},
 
-L.Map.include({
-	_updatePathViewport: function () {
-		var p = L.Path.CLIP_PADDING,
-		    size = this.getSize(),
-		    panePos = L.DomUtil.getPosition(this._mapPane),
-		    min = panePos.multiplyBy(-1)._subtract(size.multiplyBy(p)._round()),
-		    max = min.add(size.multiplyBy(1 + p * 2)._round());
+	// @method setStyle(style: Path options): this
+	// Changes the appearance of a Path based on the options in the `Path options` object.
+	setStyle: function (style) {
+		Util.setOptions(this, style);
+		if (this._renderer) {
+			this._renderer._updateStyle(this);
+		}
+		return this;
+	},
 
-		this._pathViewport = new L.Bounds(min, max);
+	// @method bringToFront(): this
+	// Brings the layer to the top of all path layers.
+	bringToFront: function () {
+		if (this._renderer) {
+			this._renderer._bringToFront(this);
+		}
+		return this;
+	},
+
+	// @method bringToBack(): this
+	// Brings the layer to the bottom of all path layers.
+	bringToBack: function () {
+		if (this._renderer) {
+			this._renderer._bringToBack(this);
+		}
+		return this;
+	},
+
+	getElement: function () {
+		return this._path;
+	},
+
+	_reset: function () {
+		// defined in child classes
+		this._project();
+		this._update();
+	},
+
+	_clickTolerance: function () {
+		// used when doing hit detection for Canvas layers
+		return (this.options.stroke ? this.options.weight / 2 : 0) + (touch ? 10 : 0);
 	}
 });

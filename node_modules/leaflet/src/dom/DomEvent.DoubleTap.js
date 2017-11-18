@@ -1,104 +1,86 @@
+import * as Browser from '../core/Browser';
+import {_pointersCount} from './DomEvent.Pointer';
+
 /*
  * Extends the event handling code with double tap support for mobile browsers.
  */
 
-L.extend(L.DomEvent, {
+var _touchstart = Browser.msPointer ? 'MSPointerDown' : Browser.pointer ? 'pointerdown' : 'touchstart',
+    _touchend = Browser.msPointer ? 'MSPointerUp' : Browser.pointer ? 'pointerup' : 'touchend',
+    _pre = '_leaflet_';
 
-	_touchstart: L.Browser.msPointer ? 'MSPointerDown' : L.Browser.pointer ? 'pointerdown' : 'touchstart',
-	_touchend: L.Browser.msPointer ? 'MSPointerUp' : L.Browser.pointer ? 'pointerup' : 'touchend',
+// inspired by Zepto touch code by Thomas Fuchs
+export function addDoubleTapListener(obj, handler, id) {
+	var last, touch,
+	    doubleTap = false,
+	    delay = 250;
 
-	// inspired by Zepto touch code by Thomas Fuchs
-	addDoubleTapListener: function (obj, handler, id) {
-		var last,
-		    doubleTap = false,
-		    delay = 250,
-		    touch,
-		    pre = '_leaflet_',
-		    touchstart = this._touchstart,
-		    touchend = this._touchend,
-		    trackedTouches = [];
+	function onTouchStart(e) {
+		var count;
 
-		function onTouchStart(e) {
-			var count;
-
-			if (L.Browser.pointer) {
-				trackedTouches.push(e.pointerId);
-				count = trackedTouches.length;
-			} else {
-				count = e.touches.length;
-			}
-			if (count > 1) {
-				return;
-			}
-
-			var now = Date.now(),
-				delta = now - (last || now);
-
-			touch = e.touches ? e.touches[0] : e;
-			doubleTap = (delta > 0 && delta <= delay);
-			last = now;
+		if (Browser.pointer) {
+			if ((!Browser.edge) || e.pointerType === 'mouse') { return; }
+			count = _pointersCount;
+		} else {
+			count = e.touches.length;
 		}
 
-		function onTouchEnd(e) {
-			if (L.Browser.pointer) {
-				var idx = trackedTouches.indexOf(e.pointerId);
-				if (idx === -1) {
-					return;
-				}
-				trackedTouches.splice(idx, 1);
-			}
+		if (count > 1) { return; }
 
-			if (doubleTap) {
-				if (L.Browser.pointer) {
-					// work around .type being readonly with MSPointer* events
-					var newTouch = { },
-						prop;
+		var now = Date.now(),
+		    delta = now - (last || now);
 
-					// jshint forin:false
-					for (var i in touch) {
-						prop = touch[i];
-						if (typeof prop === 'function') {
-							newTouch[i] = prop.bind(touch);
-						} else {
-							newTouch[i] = prop;
-						}
-					}
-					touch = newTouch;
-				}
-				touch.type = 'dblclick';
-				handler(touch);
-				last = null;
-			}
-		}
-		obj[pre + touchstart + id] = onTouchStart;
-		obj[pre + touchend + id] = onTouchEnd;
-
-		// on pointer we need to listen on the document, otherwise a drag starting on the map and moving off screen
-		// will not come through to us, so we will lose track of how many touches are ongoing
-		var endElement = L.Browser.pointer ? document.documentElement : obj;
-
-		obj.addEventListener(touchstart, onTouchStart, false);
-		endElement.addEventListener(touchend, onTouchEnd, false);
-
-		if (L.Browser.pointer) {
-			endElement.addEventListener(L.DomEvent.POINTER_CANCEL, onTouchEnd, false);
-		}
-
-		return this;
-	},
-
-	removeDoubleTapListener: function (obj, id) {
-		var pre = '_leaflet_';
-
-		obj.removeEventListener(this._touchstart, obj[pre + this._touchstart + id], false);
-		(L.Browser.pointer ? document.documentElement : obj).removeEventListener(
-		        this._touchend, obj[pre + this._touchend + id], false);
-
-		if (L.Browser.pointer) {
-			document.documentElement.removeEventListener(L.DomEvent.POINTER_CANCEL, obj[pre + this._touchend + id],
-				false);
-		}
-
-		return this;
+		touch = e.touches ? e.touches[0] : e;
+		doubleTap = (delta > 0 && delta <= delay);
+		last = now;
 	}
-});
+
+	function onTouchEnd(e) {
+		if (doubleTap && !touch.cancelBubble) {
+			if (Browser.pointer) {
+				if ((!Browser.edge) || e.pointerType === 'mouse') { return; }
+				// work around .type being readonly with MSPointer* events
+				var newTouch = {},
+				    prop, i;
+
+				for (i in touch) {
+					prop = touch[i];
+					newTouch[i] = prop && prop.bind ? prop.bind(touch) : prop;
+				}
+				touch = newTouch;
+			}
+			touch.type = 'dblclick';
+			handler(touch);
+			last = null;
+		}
+	}
+
+	obj[_pre + _touchstart + id] = onTouchStart;
+	obj[_pre + _touchend + id] = onTouchEnd;
+	obj[_pre + 'dblclick' + id] = handler;
+
+	obj.addEventListener(_touchstart, onTouchStart, false);
+	obj.addEventListener(_touchend, onTouchEnd, false);
+
+	// On some platforms (notably, chrome<55 on win10 + touchscreen + mouse),
+	// the browser doesn't fire touchend/pointerup events but does fire
+	// native dblclicks. See #4127.
+	// Edge 14 also fires native dblclicks, but only for pointerType mouse, see #5180.
+	obj.addEventListener('dblclick', handler, false);
+
+	return this;
+}
+
+export function removeDoubleTapListener(obj, id) {
+	var touchstart = obj[_pre + _touchstart + id],
+	    touchend = obj[_pre + _touchend + id],
+	    dblclick = obj[_pre + 'dblclick' + id];
+
+	obj.removeEventListener(_touchstart, touchstart, false);
+	obj.removeEventListener(_touchend, touchend, false);
+	if (!Browser.edge) {
+		obj.removeEventListener('dblclick', dblclick, false);
+	}
+
+	return this;
+}
