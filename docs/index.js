@@ -2,6 +2,7 @@
     'use strict';
 
     function initMap() {
+        var control;
         var L = window.L;
         var osm = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: 'Map data &copy; 2013 OpenStreetMap contributors'
