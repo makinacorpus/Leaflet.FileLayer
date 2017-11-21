@@ -4,7 +4,11 @@
  *
  * Requires Mapbox's togeojson.js to be in global scope
  * https://github.com/mapbox/togeojson
- */
+ *
+ * Requires ukyo's jsziptools.js to be in global scope when decompressing gzipped files
+ * https://github.com/ukyo/jsziptools
+ * http://ukyo.github.io/jsziptools/jsziptools.js
+*/
 
 (function (factory, window) {
     // define an AMD module that relies on 'leaflet'
@@ -56,6 +60,10 @@
                 gpx: this._convertToGeoJSON,
                 kml: this._convertToGeoJSON
             };
+
+            this._decompressors = {
+                gz: function (x) {return gzip.decompress(x);}
+            };
         },
 
         load: function (file, ext) {
@@ -84,7 +92,11 @@
                 var layer;
                 try {
                     this.fire('data:loading', { filename: file.name, format: parser.ext });
-                    layer = parser.processor.call(this, e.target.result, parser.ext);
+                    var result = e.target.result;
+                    if (parser.decompressor) {
+                        result = parser.decompressor(result);
+                    }
+                    layer = parser.processor.call(this, result, parser.ext);
                     this.fire('data:loaded', {
                         layer: layer,
                         filename: file.name,
@@ -98,7 +110,11 @@
             // but an object with file.testing set to true.
             // This object cannot be read by reader, just skip it.
             if (!file.testing) {
-                reader.readAsText(file);
+                if (parser.decompressor) {
+                    reader.readAsArrayBuffer(file);
+                } else {
+                    reader.readAsText(file, 'utf-8');
+                }
             }
             // We return this to ease testing
             return reader;
@@ -163,8 +179,15 @@
         },
 
         _getParser: function (name, ext) {
-            var parser;
-            ext = ext || name.split('.').pop();
+            var parser, decompressor;
+            if (!ext) {
+                name = name.split('.');
+                ext = name.pop();
+                decompressor = this._decompressors[ext];
+                if (decompressor) {
+                    ext = name.pop();
+                }
+            }
             parser = this._parsers[ext];
             if (!parser) {
                 this.fire('data:error', {
@@ -174,6 +197,7 @@
             }
             return {
                 processor: parser,
+                decompressor: decompressor,
                 ext: ext
             };
         },
@@ -340,3 +364,19 @@
         return new L.Control.FileLayerLoad(options);
     };
 }, window));
+
+// decompression of gzipped files using ukyo's jsziptools.js (jz)
+var gzip = (function () {
+    return {
+        decompress: function(arrayBuffer) {
+            var hexarr = jz.gz.decompress(arrayBuffer);
+            return _hextostring(hexarr);
+        },
+    };
+    function _hextostring(hexarr){
+        for (var w = '', i = 0, l = hexarr.length; i < l; i++) {
+            w += String.fromCharCode(hexarr[i])
+        }
+        return decodeURIComponent(escape(w));
+    }
+})();
