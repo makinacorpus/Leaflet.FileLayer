@@ -57,7 +57,7 @@
                 kml: this._convertToGeoJSON
             };
 
-			this._decompressors = typeof(DECOMPRESSORS)==='undefined'?{}:DECOMPRESSORS;
+            this._decompressors = typeof(DECOMPRESSORS)==='undefined'?{}:DECOMPRESSORS;
         },
 
 
