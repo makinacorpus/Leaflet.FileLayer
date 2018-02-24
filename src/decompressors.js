@@ -1,5 +1,3 @@
-
-
 /*
 * Decompression of gzipped files using ukyo's jsziptools.js (jz)
 * Requires ukyo's jsziptools.js to be in global scope when decompressing gzipped files
