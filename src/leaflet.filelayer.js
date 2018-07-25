@@ -88,7 +88,8 @@
                     this.fire('data:loaded', {
                         layer: layer,
                         filename: file.name,
-                        format: parser.ext
+                        format: parser.ext,
+                        data: e.target.result
                     });
                 } catch (err) {
                     this.fire('data:error', { error: err });
@@ -145,7 +146,8 @@
                 this.fire('data:loaded', {
                     layer: layer,
                     filename: name,
-                    format: parser.ext
+                    format: parser.ext,
+                    data: data
                 });
             } catch (err) {
                 this.fire('data:error', { error: err });
