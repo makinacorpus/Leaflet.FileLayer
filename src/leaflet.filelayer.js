@@ -107,10 +107,10 @@
         loadMultiple: function (files, ext) {
             var readers = [];
             if (files[0]) {
-              files = Array.prototype.slice.apply(files);
-              while (files.length > 0) {
-                readers.push(this.load(files.shift(), ext));
-              }
+                files = Array.prototype.slice.apply(files);
+                while (files.length > 0) {
+                    readers.push(this.load(files.shift(), ext));
+                }
             }
             // return first reader (or false if no file),
             // which is also used for subsequent loadings
@@ -123,7 +123,7 @@
 
             // Check required parameters
             if ((this._isParameterMissing(data, 'data'))
-              || (this._isParameterMissing(name, 'name'))) {
+                || (this._isParameterMissing(name, 'name'))) {
                 return;
             }
 
@@ -231,7 +231,8 @@
             fitBounds: true,
             layerOptions: {},
             addToMap: true,
-            fileSizeLimit: 1024
+            fileSizeLimit: 1024,
+            title: 'Load local file (GPX, KML, GeoJSON)',
         },
 
         initialize: function (options) {
@@ -301,7 +302,7 @@
             var link = L.DomUtil.create('a', zoomName + '-in ' + partName, container);
             link.innerHTML = L.Control.FileLayerLoad.LABEL;
             link.href = '#';
-            link.title = L.Control.FileLayerLoad.TITLE;
+            link.title = this.options.title || L.Control.FileLayerLoad.TITLE;
 
             // Create an invisible file input
             fileInput = L.DomUtil.create('input', 'hidden', container);
