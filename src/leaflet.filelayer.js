@@ -1,5 +1,5 @@
 /*
- * Load files *locally* (GeoJSON, KML, GPX) into the map
+ * Load files *locally* (GeoJSON, KML, GPX, POLY) into the map
  * using the HTML5 File API.
  *
  * Requires Mapbox's togeojson.js to be in global scope
@@ -54,7 +54,8 @@
                 geojson: this._loadGeoJSON,
                 json: this._loadGeoJSON,
                 gpx: this._convertToGeoJSON,
-                kml: this._convertToGeoJSON
+                kml: this._convertToGeoJSON,
+				poly: this._loadPoly
             };
         },
 
@@ -209,6 +210,48 @@
             }
             return layer;
         },
+		
+		/* Convert .poly into geojson and load it
+		 * The Osmosis polygon filter file format is supported by Osmosis, mapsplit, 
+		 * osmconvert, osmchange and pbftoosm as a way of defining extraction polygons.
+		 * https://wiki.openstreetmap.org/wiki/Osmosis/Polygon_Filter_File_Format
+		 */
+        _loadPoly: function _loadPoly(content) {
+			var lines = content.split("\n");
+			var json = {
+				"type": "Feature",
+				"name": $.trim(lines[0]),
+				"geometry": {
+					"type": "MultiPolygon",
+					"coordinates": [],
+					"crs":{"type":"name","properties":{"name":"EPSG:4326"}}
+				}
+			};
+			lines.splice(0, 1);
+			lines.splice(lines.length-1, 1);
+			
+			var begin = true;
+			var current = [];
+			lines.forEach(function (elt) {
+				var line =$.trim(elt);
+				line = line.replace(/\s+/g, ' ');
+				if (begin === true) {
+					begin = false;
+					return;
+				} else {
+					var coords = line.split(' ');
+					if (coords.length >= 2)	{
+						current.push([Number(coords[0]), Number(coords[1])]);
+					}
+				}
+				if (line === 'END') {
+					json.geometry.coordinates.push([current]);
+					current = [];
+					begin = true;
+				}
+			});
+            return this._loadGeoJSON(json);
+        },
 
         _convertToGeoJSON: function _convertToGeoJSON(content, format) {
             var geojson;
@@ -223,7 +266,7 @@
 
     var FileLayerLoad = L.Control.extend({
         statics: {
-            TITLE: 'Load local file (GPX, KML, GeoJSON)',
+            TITLE: 'Load local file (GPX, KML, GeoJSON, POLY)',
             LABEL: '&#8965;'
         },
         options: {
@@ -308,7 +351,7 @@
             fileInput.type = 'file';
             fileInput.multiple = 'multiple';
             if (!this.options.formats) {
-                fileInput.accept = '.gpx,.kml,.json,.geojson';
+                fileInput.accept = '.gpx,.kml,.json,.geojson,.poly';
             } else {
                 fileInput.accept = this.options.formats.join(',');
             }
