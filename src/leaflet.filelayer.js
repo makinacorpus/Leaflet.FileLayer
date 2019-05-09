@@ -320,7 +320,7 @@
                 this.value = '';
             }, false);
 
-            L.DomEvent.disableClickPropagation(link);
+            L.DomEvent.disableClickPropagation(container);
             L.DomEvent.on(link, 'click', function (e) {
                 fileInput.click();
                 e.preventDefault();
