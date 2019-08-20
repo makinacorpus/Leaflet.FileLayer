@@ -56,7 +56,10 @@
                 gpx: this._convertToGeoJSON,
                 kml: this._convertToGeoJSON
             };
+
+            this._decompressors = typeof(DECOMPRESSORS)==='undefined'?{}:DECOMPRESSORS;
         },
+
 
         load: function (file, ext) {
             var parser,
@@ -84,7 +87,11 @@
                 var layer;
                 try {
                     this.fire('data:loading', { filename: file.name, format: parser.ext });
-                    layer = parser.processor.call(this, e.target.result, parser.ext);
+                    var result = e.target.result;
+                    if (parser.decompressor) {
+                        result = parser.decompressor(result);
+                    }
+                    layer = parser.processor.call(this, result, parser.ext);
                     this.fire('data:loaded', {
                         layer: layer,
                         filename: file.name,
@@ -98,7 +105,11 @@
             // but an object with file.testing set to true.
             // This object cannot be read by reader, just skip it.
             if (!file.testing) {
-                reader.readAsText(file);
+                if (parser.decompressor) {
+                    reader.readAsArrayBuffer(file);
+                } else {
+                    reader.readAsText(file, 'utf-8');
+                }
             }
             // We return this to ease testing
             return reader;
@@ -163,8 +174,15 @@
         },
 
         _getParser: function (name, ext) {
-            var parser;
-            ext = ext || name.split('.').pop();
+            var parser, decompressor;
+            if (!ext) {
+                name = name.split('.');
+                ext = name.pop();
+                decompressor = this._decompressors[ext];
+                if (decompressor) {
+                    ext = name.pop();
+                }
+            }
             parser = this._parsers[ext];
             if (!parser) {
                 this.fire('data:error', {
@@ -174,6 +192,7 @@
             }
             return {
                 processor: parser,
+                decompressor: decompressor,
                 ext: ext
             };
         },
