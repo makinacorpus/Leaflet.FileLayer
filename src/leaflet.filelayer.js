@@ -198,7 +198,7 @@
             if (typeof content === 'string') {
                 content = JSON.parse(content);
             }
-            layer = this.options.layer(content, this.options.layerOptions);
+            layer = this.options.layer.addData(content, this.options.layerOptions);
 
             if (layer.getLayers().length === 0) {
                 throw new Error('GeoJSON has no valid layers.');
