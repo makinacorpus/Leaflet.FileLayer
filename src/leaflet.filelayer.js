@@ -41,7 +41,7 @@
 }(function fileLoaderFactory(L, toGeoJSON) {
     var FileLoader = L.Layer.extend({
         options: {
-            layer: L.geoJson,
+            layer: L.geoJSON,
             layerOptions: {},
             fileSizeLimit: 1024
         },
