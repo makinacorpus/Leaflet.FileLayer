@@ -34,12 +34,12 @@ Usage
     var map = L.map('map').fitWorld();
     ...
     L.Control.fileLayerLoad({
-        // Allows you to use a customized version of L.geoJson.
+        // Allows you to use a customized version of L.GeoJSON.
         // For example if you are using the Proj4Leaflet leaflet plugin,
-        // you can pass L.Proj.geoJson and load the files into the
-        // L.Proj.GeoJson instead of the L.geoJson.
-        layer: L.geoJson,
-        // See http://leafletjs.com/reference.html#geojson-options
+        // you can pass L.Proj.GeoJSON and load the files into the
+        // L.Proj.GeoJSON instead of the L.geoJSON.
+        layer: L.geoJSON,
+        // See https://leafletjs.com/reference.html#geojson
         layerOptions: {style: {color:'red'}},
         // Add to map after loading (default: true) ?
         addToMap: true,

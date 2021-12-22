@@ -41,7 +41,7 @@
 }(function fileLoaderFactory(L, toGeoJSON) {
     var FileLoader = L.Layer.extend({
         options: {
-            layer: L.geoJson,
+            layer: L.geoJSON,
             layerOptions: {},
             fileSizeLimit: 1024
         },
@@ -198,7 +198,7 @@
             if (typeof content === 'string') {
                 content = JSON.parse(content);
             }
-            layer = this.options.layer(content, this.options.layerOptions);
+            layer = this.options.layer.addData(content, this.options.layerOptions);
 
             if (layer.getLayers().length === 0) {
                 throw new Error('GeoJSON has no valid layers.');
