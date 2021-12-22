@@ -25,4 +25,5 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
       - run: npm install
+      - run: npm install leaflet@^1.2.0 togeojson@^0.16.0 --no-save
       - run: npm test
