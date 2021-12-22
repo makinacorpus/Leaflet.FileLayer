@@ -8,7 +8,7 @@ Loads local files (GeoJSON, JSON, GPX, KML) into the map using the [HTML5 FileRe
 * It is read locally (``FileReader``) and converted to GeoJSON
 * And loaded as a layer eventually!
 
-Check out the [demo](http://makinacorpus.github.com/Leaflet.FileLayer/) !
+Check out the [demo](http://makinacorpus.github.io/Leaflet.FileLayer/) !
 
 For GPX and KML files, it currently depends on [Tom MacWright's togeojson.js](https://github.com/tmcw/togeojson).
 
