@@ -12,14 +12,18 @@ Check out the [demo](http://makinacorpus.github.io/Leaflet.FileLayer/) !
 
 For GPX and KML files, it currently depends on [Tom MacWright's togeojson.js](https://github.com/tmcw/togeojson).
 
-[![Build Status](https://travis-ci.org/makinacorpus/Leaflet.FileLayer.png?branch=master)](https://travis-ci.org/makinacorpus/Leaflet.FileLayer)
+![Build Status](https://github.com/makinacorpus/Leaflet.FileLayer/actions/workflows/ci.yml/badge.svg)
 
 Install
 -----
 In order to use this plugin in your app you can either:
 * install it via your favorite package manager:
-    * `npm i leaflet-filelayer`
-    * `bower install git://github.com:makinacorpus/Leaflet.FileLayer.git`
+
+```shell
+npm i leaflet-filelayer
+bower install git://github.com:makinacorpus/Leaflet.FileLayer.git
+```
+
 * download the repository and import the `leaflet.filelayer.js` file in your app.
 
 Dependencies and compatibilities
@@ -118,7 +122,7 @@ Changelog
 Authors
 -------
 
-[![Makina Corpus](http://depot.makina-corpus.org/public/logo.gif)](http://makinacorpus.com)
+[![Makina Corpus](https://github.com/makinacorpus.png)](https://www.makina-corpus.com)
 
 Contributions
 
