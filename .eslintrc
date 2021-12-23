@@ -8,5 +8,15 @@
     "no-prototype-builtins": 1,
     "no-caller": 1,
     "indent": [2, 4, { "SwitchCase": 1, "VariableDeclarator": 1, "outerIIFEBody": 1 }]
+  },
+  "env": {
+    "commonjs": true,
+    "node": true,
+    "mocha": true,
+    "amd": true,
+    "chai": true,
+    "sinon": true,
+    "happen": true,
+    "L": true
   }
 }
