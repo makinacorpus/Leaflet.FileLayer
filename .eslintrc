@@ -10,13 +10,14 @@
     "indent": [2, 4, { "SwitchCase": 1, "VariableDeclarator": 1, "outerIIFEBody": 1 }]
   },
   "env": {
-    "commonjs": true,
     "node": true,
     "mocha": true,
-    "amd": true,
-    "chai": true,
+    "amd": true
+  },
+  "globals": {
+    "L": true,
     "sinon": true,
-    "happen": true,
-    "L": true
+    "chai": true,
+    "happen": true
   }
 }
