@@ -38,7 +38,7 @@ jobs:
           node-version: ${{ matrix.node }}
           cache: 'npm'
       - run: npm ci
-      - run: npm install leaflet@^1.2.0 togeojson@^0.16.0 --no-save
+      - run: npm install leaflet@^1.2.0 @mapbox/togeojson@^0.16.0 --no-save
       - run: npm test
 
   publish:
