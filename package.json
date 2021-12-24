@@ -18,8 +18,9 @@
   "license": "MIT",
   "scripts": {
     "test": "mocha-phantomjs -p ./node_modules/.bin/phantomjs test/index.html",
+    "e2e": "cypress run",
     "start": "live-server --open=./dev",
-    "lint": "eslint ."
+    "lint": "eslint src"
   },
   "peerDependencies": {
     "leaflet": ">= 0.7.7 < 2",
@@ -27,6 +28,8 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "cypress": "^9.2.0",
+    "cypress-file-upload": "^5.0.8",
     "eslint": "^3.2.2",
     "eslint-config-airbnb-base": "^5.0.1",
     "eslint-plugin-import": "^1.12.0",
