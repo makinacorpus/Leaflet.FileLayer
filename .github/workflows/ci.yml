@@ -39,21 +39,18 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - run: npm install leaflet@^1.2.0 @mapbox/togeojson@^0.16.0 --no-save
-
-      - name: Cypress run
-        uses: cypress-io/github-action@v2
-
+      - uses: cypress-io/github-action@v2
       - uses: actions/upload-artifact@v2
-        #if: failure()
+        if: failure()
         with:
             name: cypress-screenshots
             path: cypress/screenshots
-        # Test run video was always captured, so this action uses "always()" condition
-        - uses: actions/upload-artifact@v2
-          #if: always()
-          with:
-            name: cypress-videos
-            path: cypress/videos
+      # Test run video was always captured, so this action uses "always()" condition
+      - uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: cypress-videos
+          path: cypress/videos
 
   publish:
     needs: [lint, test]
