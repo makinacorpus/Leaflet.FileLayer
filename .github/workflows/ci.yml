@@ -41,7 +41,8 @@ jobs:
       - run: npm install leaflet@^1.2.0 @mapbox/togeojson@^0.16.0 --no-save
       - name: Cypress run
         uses: cypress-io/github-action@v2
-      - uses: actions/upload-artifact@v2
+      - name: Artifacts
+        uses: actions/upload-artifact@v2
         if: failure()
         with:
             name: cypress-screenshots
