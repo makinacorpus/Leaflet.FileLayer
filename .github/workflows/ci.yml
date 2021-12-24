@@ -39,7 +39,7 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - run: npm install leaflet@^1.2.0 @mapbox/togeojson@^0.16.0 --no-save
-      - uses: cypress-io/github-action@v2
+      - run: npm run e2e
       - uses: actions/upload-artifact@v2
         if: failure()
         with:
