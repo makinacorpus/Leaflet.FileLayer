@@ -1,5 +1,5 @@
 /*
- * Load files *locally* (GeoJSON, KML, GPX) into the map
+ * Load files *locally* (GeoJSON, KML, GPX, POLY) into the map
  * using the HTML5 File API.
  *
  * Requires Mapbox's togeojson.js to be in global scope
@@ -54,7 +54,8 @@
                 geojson: this._loadGeoJSON,
                 json: this._loadGeoJSON,
                 gpx: this._convertToGeoJSON,
-                kml: this._convertToGeoJSON
+                kml: this._convertToGeoJSON,
+                poly: this._convertToGeoJSON
             };
         },
 
@@ -209,21 +210,80 @@
             }
             return layer;
         },
+		
+        /* Convert .poly into geojson and load it
+         * The Osmosis polygon filter file format is supported by Osmosis, mapsplit, 
+         * osmconvert, osmchange and pbftoosm as a way of defining extraction polygons.
+         * https://wiki.openstreetmap.org/wiki/Osmosis/Polygon_Filter_File_Format
+         */
+        _convertPolyToGeoJSON: function _convertPolyToGeoJSON(content) {
+            
+            // Split each line of content in an array
+            var lines = content.split("\n");
+            
+            // Define a basic geojson structure
+            var json = {
+                "type": "Feature",
+                "name": lines[0].trim(),
+                "geometry": {
+                    "type": "MultiPolygon",
+                    "coordinates": [],
+                    "crs":{"type":"name","properties":{"name":"EPSG:4326"}}
+                }
+            };
+
+            // No need to handle the first envelope "name of the file"/END
+            // since we have assigned the "name of the file" to json.name previously
+            lines.splice(0, 1);
+            lines.splice(lines.length - 1, 1);
+
+            // Parsing to build the geojson
+            var begin = true;
+            var current = [];
+            lines.forEach(function (elt) {
+                var line = elt.trim();
+                line = line.replace(/\s+/g, ' ');
+                if (begin) {
+                    begin = false;
+                    return;
+                } else {
+                    var coords = line.split(' ');
+                    if (coords.length >= 2)	{
+                        // coordinates can be in scientific notation
+                        // so we use Number to convert the string to a number
+                        current.push([Number(coords[0]), Number(coords[1])]);
+                    }
+                }
+                if (line === 'END') {
+                    json.geometry.coordinates.push([current]);
+                    current = [];
+                    begin = true;
+                }
+            });
+
+            return json;
+        },
 
         _convertToGeoJSON: function _convertToGeoJSON(content, format) {
             var geojson;
-            // Format is either 'gpx' or 'kml'
-            if (typeof content === 'string') {
-                content = (new window.DOMParser()).parseFromString(content, 'text/xml');
+            
+            if (format === 'poly') {
+                geojson = this._convertPolyToGeoJSON(content);
+            } else {
+                // Format is either 'gpx' or 'kml'
+                if (typeof content === 'string') {
+                    content = (new window.DOMParser()).parseFromString(content, 'text/xml');
+                }
+                geojson = toGeoJSON[format](content);
             }
-            geojson = toGeoJSON[format](content);
+            
             return this._loadGeoJSON(geojson);
         }
     });
 
     var FileLayerLoad = L.Control.extend({
         statics: {
-            TITLE: 'Load local file (GPX, KML, GeoJSON)',
+            TITLE: 'Load local file (GPX, KML, GeoJSON, POLY)',
             LABEL: '&#8965;'
         },
         options: {
@@ -308,7 +368,7 @@
             fileInput.type = 'file';
             fileInput.multiple = 'multiple';
             if (!this.options.formats) {
-                fileInput.accept = '.gpx,.kml,.json,.geojson';
+                fileInput.accept = '.gpx,.kml,.json,.geojson,.poly';
             } else {
                 fileInput.accept = this.options.formats.join(',');
             }
