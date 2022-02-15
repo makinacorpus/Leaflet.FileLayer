@@ -23,7 +23,7 @@
   },
   "peerDependencies": {
     "leaflet": ">= 0.7.7 < 2",
-    "@mapbox/togeojson": "^0.16.0"
+    "togeojson": "^0.16.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",

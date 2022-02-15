@@ -10,7 +10,7 @@ Loads local files (GeoJSON, JSON, GPX, KML) into the map using the [HTML5 FileRe
 
 Check out the [demo](http://makinacorpus.github.io/Leaflet.FileLayer/) !
 
-For GPX and KML files, it currently depends on [Tom MacWright's togeojson.js](https://github.com/mapbox/togeojson).
+For GPX and KML files, it currently depends on [Tom MacWright's togeojson.js](https://github.com/tmcw/togeojson).
 
 ![Build Status](https://github.com/makinacorpus/Leaflet.FileLayer/actions/workflows/ci.yml/badge.svg)
 
@@ -28,7 +28,7 @@ bower install git://github.com:makinacorpus/Leaflet.FileLayer.git
 
 Dependencies and compatibilities
 -----
-In order to use this plugin, you need to have both `leaflet` and `@mapbox/togeojson` installed.
+In order to use this plugin, you need to have both `leaflet` and `togeojson` installed.
 If you're using Leaflet < 1, you need to use the version `0.6.0` of this plugin. After that, Leaflet > 1 is required.
 
 Usage
