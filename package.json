@@ -18,7 +18,8 @@
   "license": "MIT",
   "scripts": {
     "test": "mocha-phantomjs -p ./node_modules/.bin/phantomjs test/index.html",
-    "start": "live-server --open=./dev"
+    "start": "live-server --open=./dev",
+    "lint": "eslint ."
   },
   "peerDependencies": {
     "leaflet": ">= 0.7.7 < 2",

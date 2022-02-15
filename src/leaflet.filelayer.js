@@ -20,15 +20,19 @@
         module.exports = function (root, L, toGeoJSON) {
             if (L === undefined) {
                 if (typeof window !== 'undefined') {
+                    // eslint-disable-next-line global-require
                     L = require('leaflet');
                 } else {
+                    // eslint-disable-next-line global-require
                     L = require('leaflet')(root);
                 }
             }
             if (toGeoJSON === undefined) {
                 if (typeof window !== 'undefined') {
+                    // eslint-disable-next-line global-require
                     toGeoJSON = require('togeojson');
                 } else {
+                    // eslint-disable-next-line global-require
                     toGeoJSON = require('togeojson')(root);
                 }
             }
@@ -59,8 +63,8 @@
         },
 
         load: function (file, ext) {
-            var parser,
-                reader;
+            var parser;
+            var reader;
 
             // Check file is defined
             if (this._isParameterMissing(file, 'file')) {
@@ -107,10 +111,10 @@
         loadMultiple: function (files, ext) {
             var readers = [];
             if (files[0]) {
-              files = Array.prototype.slice.apply(files);
-              while (files.length > 0) {
-                readers.push(this.load(files.shift(), ext));
-              }
+                files = Array.prototype.slice.apply(files);
+                while (files.length > 0) {
+                    readers.push(this.load(files.shift(), ext));
+                }
             }
             // return first reader (or false if no file),
             // which is also used for subsequent loadings
