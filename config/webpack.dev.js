@@ -27,7 +27,7 @@ module.exports = [
 
             }),
             htmlIndexPlugin,
-            htmlHelpPlugin,
+            
             new MiniCssExtractPlugin({//将css打包成为一个单独文件
                 filename: "css/[name].css"
             }),
@@ -39,14 +39,7 @@ module.exports = [
             { test: /\.less$/, use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader'] },
             { test: / \.css$/, use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'] },
             { test: /\.(scss)$/, use: ['style-loader', MiniCssExtractPlugin.loader,] },
-            {
-                mimetype: 'image/svg+xml',
-                scheme: 'data',
-                type: 'asset/resource',
-                generator: {
-                    filename: 'icons/[hash].svg'
-                }
-            },
+           
             /* {
                 test: /\.html$/,//打包html中的图片
                 loader: 'html-withimg-loader'
