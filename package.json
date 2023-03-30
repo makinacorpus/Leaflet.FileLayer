@@ -1,40 +1,28 @@
 {
-  "name": "leaflet-filelayer",
-  "version": "1.2.0",
-  "description": "Loads local files (GeoJSON, GPX, KML) into the map using the HTML5 FileReader API",
-  "keywords": [
-    "Leaflet",
-    "GIS",
-    "HTML5"
-  ],
-  "main": "src/leaflet.filelayer.js",
-  "bugs": {
-    "url": "https://github.com/makinacorpus/Leaflet.FileLayer/issues"
+  "name": "leaflet.filelayer",
+  "version": "1.0.0",
+  "description": "Leaflet.FileLayer\r =================",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/makinacorpus/Leaflet.FileLayer.git"
+    "url": "git+https://github.com/jackchenzlp/Leaflet.FileLayer.git"
   },
-  "license": "MIT",
-  "scripts": {
-    "test": "mocha-phantomjs -p ./node_modules/.bin/phantomjs test/index.html",
-    "start": "live-server --open=./dev"
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jackchenzlp/Leaflet.FileLayer/issues"
   },
-  "peerDependencies": {
-    "leaflet": ">= 0.7.7 < 2",
-    "togeojson": "^0.16.0"
-  },
+  "homepage": "https://github.com/jackchenzlp/Leaflet.FileLayer#readme",
   "devDependencies": {
-    "chai": "^3.5.0",
-    "eslint": "^3.2.2",
-    "eslint-config-airbnb-base": "^5.0.1",
-    "eslint-plugin-import": "^1.12.0",
-    "happen": "^0.3.1",
-    "live-server": "^1.1.0",
-    "mocha": "^4.0.1",
-    "mocha-phantomjs": "^4.1.0",
-    "phantomjs-prebuilt": "^2.1.16",
-    "requirejs": "^2.2.0",
-    "sinon": "^1.17.5"
+    "webpack": "^5.77.0",
+    "webpack-cli": "^5.0.1"
   }
 }
