@@ -14,20 +14,22 @@ module.exports = [
     {
         entry: {
             index: path.join(__dirname, '../src/index.js'),
-            
+            leafletFile: path.join(__dirname, '../src/leaflet.filelayer.js'),
+
         },
         output: {
             path: path.join(__dirname, '../dist'),//输出文件路径
             filename: 'js/[name].js'//输入出文件的名称
         },
         plugins: [
+            new CleanWebpackPlugin(),//清除旧的文件
             new webpack.ProvidePlugin({
                 $: "jquery",
                 jQuery: "jquery"
 
             }),
             htmlIndexPlugin,
-            
+
             new MiniCssExtractPlugin({//将css打包成为一个单独文件
                 filename: "css/[name].css"
             }),
@@ -36,14 +38,9 @@ module.exports = [
         mode: 'development',//development production
         module: {
             rules: [{ test: /\.css$/, use: [MiniCssExtractPlugin.loader, 'css-loader'] },
-            { test: /\.less$/, use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader'] },
             { test: / \.css$/, use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'] },
+            { test: /\.less$/, use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader'] },
             { test: /\.(scss)$/, use: ['style-loader', MiniCssExtractPlugin.loader,] },
-           
-            /* {
-                test: /\.html$/,//打包html中的图片
-                loader: 'html-withimg-loader'
-            }, */
             {
                 test: /\.html$/,//打包html中的图片
                 loader: 'html-loader',
@@ -52,38 +49,39 @@ module.exports = [
                 }
             },
             {
-                test: /\.(png|jpg|gif|svg)$/,
-                use: [{
-                    loader: 'url-loader',
-                    options: {
-                        // 超过指定大小的图片参与打包，否则转为base64编码，单位是字节
-                        limit: 1024 * 4, // 超过6kb大小的图片参与打包
-                        // 将打包的图片统一放到img目录下，名称为：图片名称+8位hash码+图片后缀
-                        name: '[name].[hash:4].[ext]',
-                        // url-loader默认使用的是es6模块化，html-loader采用的是commonjs模块化
-                        esModule: false,// 这边关闭es6模块化，统一使用commonjs模块化
-                        outputPath: 'img/'
-                    }
-                }]
-
-            },
-
-            { test: /\.(eot|svg|ttf|woff|woff2)$/, use: ['file-loader'] },//bootstrap字体
-            {
-                /* test: require.resolve("jquery"),
-                loader: "expose-loader",
+                test: /\.svg$/,
+                loader: 'svg-sprite-loader',
                 options: {
-                    exposes: ["$", "jQuery"],
-                }, */
-
+                    runtimeCompat: true
+                }
             },
+            {
+                test: /\.(png|jpg|jpeg|gif)$/,
+                use: [
+                    {
+                        loader: "url-loader",
+                        options: {
+                            name: "[name].[hash:6].[ext]",
+                            outputPath: "img",
+                            limit: 1 * 1024,
+                            esModule: false,
+                        }
+                    }
+                ],
+                type: 'javascript/auto'
+            },
+            {
+                test: /\.(eot|svglwoff|woff2|ttf|mp3|mp4|avi)$/,//处理其他资源
+                loader: 'file-loader',
+                options: {
+                    outputPath: 'media', name: '[hash:8]. [ext]'
+                },
+                type: 'javascript/auto'
+            }
+
 
                 //{ test: /\.js$/, use: 'babe-loader ', exclude: /node_modules/ }
             ]
         }
     }
 ];
-
-
-
-
