@@ -9,10 +9,11 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run dev",
     "dev": "webpack-dev-server --config ./config/webpack.dev.js --open",
     "build": "webpack  --config ./config/webpack.prod.js",
-    "show": "webpack -v"
+    "show": "webpack -v",
+    "browser": "browser-sync start --server --files **/*.js",
+    "none": "webpack  --config ./config/webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -33,20 +34,33 @@
     "@babel/runtime": "^7.21.0",
     "autoprefixer": "^10.4.14",
     "babel-loader": "^9.1.2",
+    "browser-sync": "^2.29.1",
+    "chai": "^4.3.7",
     "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.3",
-    "file-loader": "^6.2.0",
+    "eslint": "^8.38.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-webpack-plugin": "^4.0.0",
+    "happen": "^0.3.2",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
     "less": "^4.1.3",
     "less-loader": "^11.1.0",
+    "merge": "^2.1.1",
     "mini-css-extract-plugin": "^2.7.5",
+    "mini-svg-data-uri": "^1.4.4",
+    "mocha": "^10.2.0",
     "node-sass": "^8.0.0",
     "postcss-loader": "^7.1.0",
     "sass-loader": "^13.2.2",
+    "sinon": "^15.0.3",
     "style-loader": "^3.3.2",
     "svg-sprite-loader": "^6.0.11",
-    "url-loader": "^4.1.1",
+    "terser-webpack-plugin": "^5.3.7",
     "webpack": "^5.77.0",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.13.1"
@@ -54,7 +68,6 @@
   "dependencies": {
     "jquery": "^3.6.0",
     "leaflet": "^1.9.3",
-    "mocha": "^10.2.0",
     "read-excel-file": "^5.6.1",
     "togeojson": "^0.16.0"
   }
