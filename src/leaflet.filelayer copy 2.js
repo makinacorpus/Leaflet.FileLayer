@@ -59,7 +59,8 @@
     },
 
     load: function (file, ext) {
-      var parser, reader;
+      var parser;
+      var reader;
 
       // Check file is defined
       if (this._isParameterMissing(file, 'file')) {
@@ -153,7 +154,7 @@
     _isParameterMissing: function (v, vname) {
       if (typeof v === 'undefined') {
         this.fire('data:error', {
-          error: new Error('Missing parameter: ' + vname),
+          error: new Error(`Missing parameter:${vname}`),
         });
         return true;
       }
@@ -166,7 +167,7 @@
       parser = this._parsers[ext];
       if (!parser) {
         this.fire('data:error', {
-          error: new Error('Unsupported file type (' + ext + ')'),
+          error: new Error(`Unsupported file type (${ext})`),
         });
         return undefined;
       }
@@ -180,7 +181,7 @@
       var fileSize = (size / 1024).toFixed(4);
       if (fileSize > this.options.fileSizeLimit) {
         this.fire('data:error', {
-          error: new Error('File size exceeds limit (' + fileSize + ' > ' + this.options.fileSizeLimit + 'kb)'),
+          error: new Error(`File size exceeds limit (${fileSize} > ${this.options.fileSizeLimit}kb)`),
         });
         return false;
       }
@@ -294,9 +295,9 @@
       var fileInput;
       var zoomName = 'leaflet-control-filelayer leaflet-control-zoom';
       var barName = 'leaflet-bar';
-      var partName = barName + '-part';
-      var container = L.DomUtil.create('div', zoomName + ' ' + barName);
-      var link = L.DomUtil.create('a', zoomName + '-in ' + partName, container);
+      var partName = `${barName}-part`;
+      var container = L.DomUtil.create(`div${zoomName}  ${barName}`);
+      var link = L.DomUtil.create(`a ${zoomName}-in ${partName},${container}`);
       link.innerHTML = L.Control.FileLayerLoad.LABEL;
       link.href = '#';
       link.title = L.Control.FileLayerLoad.TITLE;
