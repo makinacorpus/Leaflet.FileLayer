@@ -2,7 +2,7 @@
 var path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-//const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const svgToMiniDataURI = require('mini-svg-data-uri');
 //const webpack = require('webpack');
@@ -18,6 +18,7 @@ module.exports = [
       assetModuleFilename: 'assets/images/[hash:8][ext][query]', //assetModuleFilename仅适用于asset和asset/resource模块类型。
     },
     plugins: [
+      new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
         template: path.join(__dirname, '../src/index.html'),
         //hash: true, //是否每次为文件中引入的静态资源如js,css等路径后面加上唯一的hash值
@@ -38,7 +39,7 @@ module.exports = [
       }),
       new MiniCssExtractPlugin({
         //将css打包成为一个单独文件
-        filename: 'css/[name].css',
+        filename: 'css/[name][hash:8].css',
       }),
     ],
 

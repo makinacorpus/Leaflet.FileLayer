@@ -13,7 +13,9 @@
     "build": "webpack  --config ./config/webpack.prod.js",
     "show": "webpack -v",
     "browser": "browser-sync start --server --files **/*.js",
-    "none": "webpack  --config ./config/webpack.config.js"
+    "none": "webpack  --config ./config/webpack.config.js",
+    "esfilelayer": " npx eslint ./src/leaflet.filelayer.js",
+    "esindex": " npx eslint ./src/index.js"
   },
   "repository": {
     "type": "git",
