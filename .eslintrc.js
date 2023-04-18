@@ -17,6 +17,9 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2015,
   },
+  globals: {
+    L: true,
+  },
   rules: {
     'no-var': 0,
     'no-console': 1, // 文件中有console.log发出警告

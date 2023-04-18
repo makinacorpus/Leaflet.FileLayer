@@ -41,7 +41,9 @@ module.exports = [
         filename: 'css/[name].css',
       }),
     ],
-
+    externals: {
+      kml: '@tmcw/togeojson', // 输出包中排除依赖项的方法
+    },
     mode: 'production', //development production none
     module: {
       rules: [

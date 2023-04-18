@@ -11,7 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --config ./config/webpack.dev.js --open",
     "build": "webpack  --config ./config/webpack.prod.js",
-    "show": "webpack -v",
+    "dll": "webpack  --config ./config/webpack.dll.config.js",
     "browser": "browser-sync start --server --files **/*.js",
     "none": "webpack  --config ./config/webpack.config.js",
     "esfilelayer": " npx eslint ./src/leaflet.filelayer.js",
@@ -34,6 +34,7 @@
     "@babel/plugin-transform-runtime": "^7.21.0",
     "@babel/preset-env": "^7.20.2",
     "@babel/runtime": "^7.21.0",
+    "add-asset-html-webpack-plugin": "^5.0.2",
     "autoprefixer": "^10.4.14",
     "babel-loader": "^9.1.2",
     "browser-sync": "^2.29.1",
@@ -68,6 +69,7 @@
     "webpack-dev-server": "^4.13.1"
   },
   "dependencies": {
+    "@tmcw/togeojson": "^5.6.0",
     "jquery": "^3.6.0",
     "leaflet": "^1.9.3",
     "read-excel-file": "^5.6.1",

@@ -23,7 +23,7 @@ var style = {
   weight: 2,
   clickable: false,
 };
-//var browserPrint = L.browserPrint(map, { debug: false, cancelWithEsc: true });
+
 //L.Control.FileLayerLoad.LABEL = '<img class="icon" src="./assets/images/folder.svg" alt="file icon"/>';
 var control = L.Control.fileLayerLoad({
   fitBounds: true,

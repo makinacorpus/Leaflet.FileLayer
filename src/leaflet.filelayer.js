@@ -5,6 +5,9 @@
  * Requires Mapbox's togeojson.js to be in global scope
  * https://github.com/mapbox/togeojson
  */
+
+import { kml } from '@tmcw/togeojson';
+
 var FileLoader = L.Layer.extend({
   options: {
     layer: L.geoJson,
@@ -177,7 +180,7 @@ var FileLoader = L.Layer.extend({
     if (typeof content === 'string') {
       content = new window.DOMParser().parseFromString(content, 'text/xml');
     }
-    geojson = toGeoJSON[format](content);
+    geojson = kml[format](content);
     return this._loadGeoJSON(geojson);
   },
 });

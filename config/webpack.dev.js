@@ -5,7 +5,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const svgToMiniDataURI = require('mini-svg-data-uri');
-//const webpack = require('webpack');
+const AddSssetHtmlWebpackPlugin = require('add-asset-html-webpack-plugin');
+const webpack = require('webpack');
 module.exports = [
   {
     entry: {
@@ -19,15 +20,22 @@ module.exports = [
     },
     plugins: [
       new CleanWebpackPlugin(),
+      new webpack.DllReferencePlugin({
+        //告诉webpack哪些库不参与打包，同时使用时的名称也得变~
+        manifest: path.join(__dirname, '../dll/manifest.json'),
+      }),
+      new AddSssetHtmlWebpackPlugin({
+        //Html自动引入第三方js插件此处引入的是webpack.dll.config.js中打包的文件
+        filepath: path.join(__dirname, '../dll/togeojson.js '),
+      }),
       new HtmlWebpackPlugin({
         template: path.join(__dirname, '../src/index.html'),
-        //hash: true, //是否每次为文件中引入的静态资源如js,css等路径后面加上唯一的hash值
         inject: 'body', //将打包的javaScript打包到body底部
         filename: 'index.html',
         chunks: ['leafletFile', 'index'], //将打包好的js文件加入html-body-javaSript
         chunksSortMode: 'none',
-        //js: ["https://unpkg.com/react@17.0.1/umd/react.production.min.js"], //从外部导入js
       }),
+
       new CopyPlugin({
         patterns: [
           {
@@ -37,13 +45,14 @@ module.exports = [
           },
         ],
       }),
+
       new MiniCssExtractPlugin({
         //将css打包成为一个单独文件
         filename: 'css/[name][hash:8].css',
       }),
     ],
 
-    mode: 'development', //development production none
+    mode: 'development', // development production none
     module: {
       rules: [
         {
