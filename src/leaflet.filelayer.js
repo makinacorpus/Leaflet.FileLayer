@@ -6,8 +6,8 @@
  * https://github.com/mapbox/togeojson
  */
 
-import { kml } from '@tmcw/togeojson';
-
+import { togeojson } from 'togeojson';
+//const toGeoJSON = require('togeojson');
 var FileLoader = L.Layer.extend({
   options: {
     layer: L.geoJson,
@@ -23,7 +23,7 @@ var FileLoader = L.Layer.extend({
       geojson: this._loadGeoJSON,
       json: this._loadGeoJSON,
       gpx: this._convertToGeoJSON,
-      kml: this._convertToGeoJSON,
+      togeojson: this._convertToGeoJSON,
     };
   },
 
@@ -176,11 +176,11 @@ var FileLoader = L.Layer.extend({
 
   _convertToGeoJSON: function _convertToGeoJSON(content, format) {
     var geojson;
-    // Format is either 'gpx' or 'kml'
+    // Format is either 'gpx' or 'togeojson'
     if (typeof content === 'string') {
       content = new window.DOMParser().parseFromString(content, 'text/xml');
     }
-    geojson = kml[format](content);
+    geojson = togeojson[format](content);
     return this._loadGeoJSON(geojson);
   },
 });
@@ -247,7 +247,7 @@ var FileLayerLoad = L.Control.extend({
     fileInput.type = 'file';
     fileInput.multiple = 'multiple';
     if (!this.options.formats) {
-      fileInput.accept = '.gpx,.kml,.json,.geojson';
+      fileInput.accept = '.gpx,.togeojson,.json,.geojson';
     } else {
       fileInput.accept = this.options.formats.join(',');
     }

@@ -2,10 +2,11 @@
 var path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-//const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const svgToMiniDataURI = require('mini-svg-data-uri');
-//const webpack = require('webpack');
+const AddSssetHtmlWebpackPlugin = require('add-asset-html-webpack-plugin');
+const webpack = require('webpack');
 module.exports = [
   {
     entry: {
@@ -18,6 +19,19 @@ module.exports = [
       assetModuleFilename: 'assets/images/[hash:8][ext][query]', //assetModuleFilename仅适用于asset和asset/resource模块类型。
     },
     plugins: [
+      new CleanWebpackPlugin(),
+      new webpack.DllReferencePlugin({
+        //告诉webpack哪些库不参与打包，同时使用时的名称也得变~
+        manifest: path.join(__dirname, '../dll/manifest.json'),
+      }),
+      new AddSssetHtmlWebpackPlugin({
+        //Html自动引入第三方js插件此处引入的是webpack.dll.config.js中打包的文件
+        filepath: path.join(__dirname, '../dll/togeojson.js '),
+        // dll 引用路径
+        publicPath: './vendor',
+        // dll最终输出的目录
+        outputPath: './vendor',
+      }),
       new HtmlWebpackPlugin({
         template: path.join(__dirname, '../src/index.html'),
         //hash: true, //是否每次为文件中引入的静态资源如js,css等路径后面加上唯一的hash值
@@ -41,9 +55,7 @@ module.exports = [
         filename: 'css/[name].css',
       }),
     ],
-    externals: {
-      kml: '@tmcw/togeojson', // 输出包中排除依赖项的方法
-    },
+
     mode: 'production', //development production none
     module: {
       rules: [
@@ -99,7 +111,19 @@ module.exports = [
             filename: 'assets/font/[hash:8][ext][query]',
           },
         },
-
+        {
+          test: /\.js$/,
+          //排除node_modules下的js文件
+          exclude: /node_modules/,
+          //只检查src 下的js文件
+          include: path.join(__dirname, '../src'),
+          // 优先执行
+          // enforce: 'pre ',
+          //延后执行
+          // enforce: 'post', 
+          //单个loader用
+          //loader: 'eslint-loader'
+        },
         //{ test: /\.js$/, use: 'babe-loader ', exclude: /node_modules/ }
       ],
     },

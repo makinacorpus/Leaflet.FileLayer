@@ -6,7 +6,7 @@ const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
   entry: {
-    togeojson: ['@tmcw/togeojson'],
+    togeojson: ['togeojson'],
   },
   output: {
     filename: '[name].js ',

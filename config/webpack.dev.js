@@ -27,6 +27,10 @@ module.exports = [
       new AddSssetHtmlWebpackPlugin({
         //Html自动引入第三方js插件此处引入的是webpack.dll.config.js中打包的文件
         filepath: path.join(__dirname, '../dll/togeojson.js '),
+        // dll 引用路径
+        publicPath: './vendor',
+        // dll最终输出的目录
+        outputPath: './vendor',
       }),
       new HtmlWebpackPlugin({
         template: path.join(__dirname, '../src/index.html'),
@@ -106,6 +110,19 @@ module.exports = [
           generator: {
             filename: 'assets/font/[hash:8][ext][query]',
           },
+        },
+        {
+          test: /\.js$/,
+          //排除node_modules下的js文件
+          exclude: /node_modules/,
+          //只检查src 下的js文件
+          include: resolve(_dirname, 'src '),
+          // 优先执行
+          // enforce: 'pre ',
+          //延后执行
+          // enforce: 'post', 
+          //单个loader用
+          loader: 'eslint-loader'
         },
 
         //{ test: /\.js$/, use: 'babe-loader ', exclude: /node_modules/ }
