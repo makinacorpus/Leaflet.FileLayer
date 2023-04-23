@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const svgToMiniDataURI = require('mini-svg-data-uri');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const AddSssetHtmlWebpackPlugin = require('add-asset-html-webpack-plugin');
 const webpack = require('webpack');
 module.exports = [
@@ -20,7 +21,7 @@ module.exports = [
     },
     plugins: [
       new CleanWebpackPlugin(),
-      new webpack.DllReferencePlugin({
+      /* new webpack.DllReferencePlugin({
         //告诉webpack哪些库不参与打包，同时使用时的名称也得变~
         manifest: path.join(__dirname, '../dll/manifest.json'),
       }),
@@ -31,15 +32,14 @@ module.exports = [
         publicPath: './vendor',
         // dll最终输出的目录
         outputPath: './vendor',
-      }),
+      }), */
       new HtmlWebpackPlugin({
         template: path.join(__dirname, '../src/index.html'),
-        //hash: true, //是否每次为文件中引入的静态资源如js,css等路径后面加上唯一的hash值
         inject: 'body', //将打包的javaScript打包到body底部
         filename: 'index.html',
         chunks: ['leafletFile', 'index'], //将打包好的js文件加入html-body-javaSript
         chunksSortMode: 'none',
-        //js: ["https://unpkg.com/react@17.0.1/umd/react.production.min.js"], //从外部导入js
+        minify: 'flash', //根据webpackr mode的值自动设置是否压缩html文件
       }),
       new CopyPlugin({
         patterns: [
@@ -55,7 +55,6 @@ module.exports = [
         filename: 'css/[name].css',
       }),
     ],
-
     mode: 'production', //development production none
     module: {
       rules: [
@@ -74,13 +73,6 @@ module.exports = [
         {
           test: /\.(scss)$/,
           use: ['style-loader', MiniCssExtractPlugin.loader],
-        },
-        {
-          test: /\.html$/, //打包html中
-          loader: 'html-loader',
-          options: {
-            esModule: false,
-          },
         },
         {
           test: /\.svg$/i,
@@ -113,19 +105,17 @@ module.exports = [
         },
         {
           test: /\.js$/,
-          //排除node_modules下的js文件
           exclude: /node_modules/,
-          //只检查src 下的js文件
           include: path.join(__dirname, '../src'),
-          // 优先执行
-          // enforce: 'pre ',
-          //延后执行
-          // enforce: 'post', 
-          //单个loader用
-          //loader: 'eslint-loader'
         },
+
         //{ test: /\.js$/, use: 'babe-loader ', exclude: /node_modules/ }
       ],
+    },
+    optimization: {
+      // 压缩CSS文件与js文件
+      // minimizer: [`...`, new CssMinimizerPlugin()],
+      minimizer: [new CssMinimizerPlugin()],
     },
   },
 ];

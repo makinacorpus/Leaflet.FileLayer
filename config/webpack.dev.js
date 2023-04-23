@@ -20,7 +20,7 @@ module.exports = [
     },
     plugins: [
       new CleanWebpackPlugin(),
-      new webpack.DllReferencePlugin({
+      /* new webpack.DllReferencePlugin({
         //告诉webpack哪些库不参与打包，同时使用时的名称也得变~
         manifest: path.join(__dirname, '../dll/manifest.json'),
       }),
@@ -31,7 +31,7 @@ module.exports = [
         publicPath: './vendor',
         // dll最终输出的目录
         outputPath: './vendor',
-      }),
+      }), */
       new HtmlWebpackPlugin({
         template: path.join(__dirname, '../src/index.html'),
         inject: 'body', //将打包的javaScript打包到body底部
@@ -76,13 +76,6 @@ module.exports = [
           use: ['style-loader', MiniCssExtractPlugin.loader],
         },
         {
-          test: /\.html$/, //打包html中
-          loader: 'html-loader',
-          options: {
-            esModule: false,
-          },
-        },
-        {
           test: /\.svg$/i,
           type: 'asset/inline',
           generator: {
@@ -113,16 +106,11 @@ module.exports = [
         },
         {
           test: /\.js$/,
-          //排除node_modules下的js文件
           exclude: /node_modules/,
           //只检查src 下的js文件
-          include: resolve(_dirname, 'src '),
-          // 优先执行
-          // enforce: 'pre ',
-          //延后执行
-          // enforce: 'post', 
+          include: path.join(__dirname, '../src'),
           //单个loader用
-          loader: 'eslint-loader'
+          //loader: 'eslint-loader'
         },
 
         //{ test: /\.js$/, use: 'babe-loader ', exclude: /node_modules/ }

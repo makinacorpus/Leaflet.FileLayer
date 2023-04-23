@@ -13,9 +13,9 @@
     "build": "webpack  --config ./config/webpack.prod.js",
     "dll": "webpack  --config ./config/webpack.dll.config.js",
     "browser": "browser-sync start --server --files **/*.js",
-    "none": "webpack  --config ./config/webpack.config.js",
-    "esfilelayer": " npx eslint ./src/leaflet.filelayer.js",
-    "esindex": " npx eslint ./src/index.js"
+    "none": "webpack  --config ./config/webpack.none.js",
+    "esf": " npx eslint ./src/leaflet.filelayer.js",
+    "esi": " npx eslint ./src/index.js"
   },
   "repository": {
     "type": "git",
@@ -43,6 +43,7 @@
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.3",
+    "css-minimizer-webpack-plugin": "^5.0.0",
     "eslint": "^8.38.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.8.0",

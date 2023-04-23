@@ -20,7 +20,7 @@ module.exports = [
     },
     plugins: [
       new CleanWebpackPlugin(),
-      new webpack.DllReferencePlugin({
+      /* new webpack.DllReferencePlugin({
         context: process.cwd(),
         //告诉webpack哪些库不参与打包，同时使用时的名称也得变~
         manifest: require (path.join(__dirname, '../dll/manifest.json')),
@@ -33,15 +33,14 @@ module.exports = [
         publicPath: './vendor',
         // dll最终输出的目录
         outputPath: './vendor',
-      }),
+      }), */
       new HtmlWebpackPlugin({
         template: path.join(__dirname, '../src/index.html'),
-        //hash: true, //是否每次为文件中引入的静态资源如js,css等路径后面加上唯一的hash值
+        hash: true, //是否每次为文件中引入的静态资源如js,css等路径后面加上唯一的hash值
         inject: 'body', //将打包的javaScript打包到body底部
         filename: 'index.html',
         chunks: ['leafletFile', 'index'], //将打包好的js文件加入html-body-javaSript
         chunksSortMode: 'none',
-        //js: ["https://unpkg.com/react@17.0.1/umd/react.production.min.js"], //从外部导入js
       }),
       new CopyPlugin({
         patterns: [
@@ -76,13 +75,6 @@ module.exports = [
         {
           test: /\.(scss)$/,
           use: ['style-loader', MiniCssExtractPlugin.loader],
-        },
-        {
-          test: /\.html$/, //打包html中
-          loader: 'html-loader',
-          options: {
-            esModule: false,
-          },
         },
         {
           test: /\.svg$/i,

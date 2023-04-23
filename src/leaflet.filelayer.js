@@ -6,8 +6,8 @@
  * https://github.com/mapbox/togeojson
  */
 
-import { togeojson } from 'togeojson';
-//const toGeoJSON = require('togeojson');
+// import { togeojson } from 'togeojson';
+// const toGeoJSON = require('togeojson');
 var FileLoader = L.Layer.extend({
   options: {
     layer: L.geoJson,
@@ -15,7 +15,7 @@ var FileLoader = L.Layer.extend({
     fileSizeLimit: 1024,
   },
 
-  initialize: function (map, options) {
+  initialize: function initialize(map, options) {
     this._map = map;
     L.Util.setOptions(this, options);
 
@@ -27,7 +27,7 @@ var FileLoader = L.Layer.extend({
     };
   },
 
-  load: function (file, ext) {
+  load: function load(file, ext) {
     var parser;
     var reader;
 
@@ -73,7 +73,7 @@ var FileLoader = L.Layer.extend({
     return reader;
   },
 
-  loadMultiple: function (files, ext) {
+  loadMultiple: function loadMultiple(files, ext) {
     var readers = [];
     if (files[0]) {
       files = Array.prototype.slice.apply(files);
@@ -86,7 +86,7 @@ var FileLoader = L.Layer.extend({
     return readers;
   },
 
-  loadData: function (data, name, ext) {
+  loadData: function loadData(data, name, ext) {
     var parser;
     var layer;
 
@@ -120,7 +120,7 @@ var FileLoader = L.Layer.extend({
     }
   },
 
-  _isParameterMissing: function (v, vname) {
+  _isParameterMissing: function _isParameterMissing(v, vname) {
     if (typeof v === 'undefined') {
       this.fire('data:error', {
         error: new Error(`Missing parameter:${vname}`),
@@ -130,7 +130,7 @@ var FileLoader = L.Layer.extend({
     return false;
   },
 
-  _getParser: function (name, ext) {
+  _getParser: function _getParser(name, ext) {
     var parser;
     ext = ext || name.split('.').pop();
     parser = this._parsers[ext];
@@ -146,7 +146,7 @@ var FileLoader = L.Layer.extend({
     };
   },
 
-  _isFileSizeOk: function (size) {
+  _isFileSizeOk: function _isFileSizeOk(size) {
     var fileSize = (size / 1024).toFixed(4);
     if (fileSize > this.options.fileSizeLimit) {
       this.fire('data:error', {
@@ -195,7 +195,7 @@ var FileLayerLoad = L.Control.extend({
     fileSizeLimit: 1024,
   },
   browserFileLoad: undefined,
-  initialize: function (options, browserFileLoad) {
+  initialize: function initialize(options, browserFileLoad) {
     L.Util.setOptions(this, options);
     this.loader = null;
     if (browserFileLoad) {
@@ -204,7 +204,7 @@ var FileLayerLoad = L.Control.extend({
     }
   },
 
-  onAdd: function (map) {
+  onAdd: function onAdd(map) {
     this.loader = L.FileLayer.fileLoader(map, this.options);
     this.loader.on(
       'data:loaded',
@@ -225,7 +225,7 @@ var FileLayerLoad = L.Control.extend({
     return this._createIcon();
   },
 
-  _createIcon: function () {
+  _createIcon: function _createIcon() {
     var thisLoader = this.loader;
     // Create a button, and bind click on hidden file input
     var fileInput;
@@ -271,23 +271,23 @@ var FileLayerLoad = L.Control.extend({
     return container;
   },
 
-  _initDragAndDrop: function (map) {
+  _initDragAndDrop: function _initDragAndDrop(map) {
     var callbackName;
     var thisLoader = this.loader;
     var dropbox = map._container;
 
     var callbacks = {
-      dragenter: function () {
+      dragenter: function dragenter() {
         map.scrollWheelZoom.disable();
       },
-      dragleave: function () {
+      dragleave: function dragleave() {
         map.scrollWheelZoom.enable();
       },
-      dragover: function (e) {
+      dragover: function dragover(e) {
         e.stopPropagation();
         e.preventDefault();
       },
-      drop: function (e) {
+      drop: function drop(e) {
         e.stopPropagation();
         e.preventDefault();
 
@@ -301,7 +301,7 @@ var FileLayerLoad = L.Control.extend({
       }
     }
   },
-  _appendControlStyles: function (container) {
+  _appendControlStyles: function _appendControlStyles(container) {
     var fileControlStyleSheet = document.createElement('style');
     fileControlStyleSheet.setAttribute('type', 'text/css');
     fileControlStyleSheet.id = 'browser-file-css';

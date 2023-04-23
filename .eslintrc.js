@@ -31,7 +31,6 @@ module.exports = {
     'no-useless-concat': 0, // 禁止不必要的文字或模板文字串联
     'object-shorthand': 0, //禁止要求对象字面量简写语法。命令行中的 --fix 选项可以自动修复一些该规则报告的问题
     'global-require': 0, //此规则要求所有调用require()都位于模块的顶层，类似于 ES6 import和export语句，这也只能在顶层发生。
-    //indent: [2, 4, { SwitchCase: 1, VariableDeclarator: 1, outerIIFEBody: 1 }],
     'spaced-comment': [2, 'always', { exceptions: ['/-'], markers: ['/'] }],
     requireAnonymousFunctions: 0,
   },
