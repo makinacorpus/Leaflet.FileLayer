@@ -21,6 +21,14 @@ module.exports = [
     },
     plugins: [
       new CleanWebpackPlugin(),
+      new HtmlWebpackPlugin({
+        template: path.join(__dirname, '../src/index.html'),
+        inject: 'body', //将打包的javaScript打包到body底部
+        filename: 'index.html',
+        chunks: ['leafletFile', 'index'], //将打包好的js文件加入html-body-javaSript
+        chunksSortMode: 'none',
+        minify: 'flash', //根据webpackr mode的值自动设置是否压缩html文件
+      }),
       /* new webpack.DllReferencePlugin({
         //告诉webpack哪些库不参与打包，同时使用时的名称也得变~
         manifest: path.join(__dirname, '../dll/manifest.json'),
@@ -33,14 +41,7 @@ module.exports = [
         // dll最终输出的目录
         outputPath: './vendor',
       }), */
-      new HtmlWebpackPlugin({
-        template: path.join(__dirname, '../src/index.html'),
-        inject: 'body', //将打包的javaScript打包到body底部
-        filename: 'index.html',
-        chunks: ['leafletFile', 'index'], //将打包好的js文件加入html-body-javaSript
-        chunksSortMode: 'none',
-        minify: 'flash', //根据webpackr mode的值自动设置是否压缩html文件
-      }),
+
       new CopyPlugin({
         patterns: [
           {
@@ -60,15 +61,11 @@ module.exports = [
       rules: [
         {
           test: /\.css$/,
-          use: [MiniCssExtractPlugin.loader, 'css-loader'],
-        },
-        {
-          test: / \.css$/,
           use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
         },
         {
           test: /\.less$/,
-          use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader'],
+          use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'less-loader'],
         },
         {
           test: /\.(scss)$/,

@@ -14,12 +14,20 @@ module.exports = [
       index: path.join(__dirname, '../src/index.js'),
     },
     output: {
-      path: path.join(__dirname, '../dist'), //输出文件路径
+      path: path.join(__dirname, '../doc'), //输出文件路径
       filename: '[name].js', //输入出文件的名称
       assetModuleFilename: 'assets/images/[hash:8][ext][query]', //assetModuleFilename仅适用于asset和asset/resource模块类型。
     },
     plugins: [
       new CleanWebpackPlugin(),
+      new HtmlWebpackPlugin({
+        template: path.join(__dirname, '../src/index.html'),
+        hash: true, //是否每次为文件中引入的静态资源如js,css等路径后面加上唯一的hash值
+        inject: 'body', //将打包的javaScript打包到body底部
+        filename: 'index.html',
+        chunks: ['leafletFile', 'index'], //将打包好的js文件加入html-body-javaSript
+        chunksSortMode: 'none',
+      }),
       /* new webpack.DllReferencePlugin({
         context: process.cwd(),
         //告诉webpack哪些库不参与打包，同时使用时的名称也得变~
@@ -34,14 +42,7 @@ module.exports = [
         // dll最终输出的目录
         outputPath: './vendor',
       }), */
-      new HtmlWebpackPlugin({
-        template: path.join(__dirname, '../src/index.html'),
-        hash: true, //是否每次为文件中引入的静态资源如js,css等路径后面加上唯一的hash值
-        inject: 'body', //将打包的javaScript打包到body底部
-        filename: 'index.html',
-        chunks: ['leafletFile', 'index'], //将打包好的js文件加入html-body-javaSript
-        chunksSortMode: 'none',
-      }),
+
       new CopyPlugin({
         patterns: [
           {
@@ -56,21 +57,26 @@ module.exports = [
         filename: 'css/[name].css',
       }),
     ],
-    
+
     mode: 'none', //development production none
     module: {
       rules: [
         {
           test: /\.css$/,
-          use: [MiniCssExtractPlugin.loader, 'css-loader'],
-        },
-        {
-          test: / \.css$/,
-          use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
+          use: [
+            MiniCssExtractPlugin.loader,
+            {
+              loader: 'css-loader',
+              options: {
+                importLoaders: 1,
+              },
+            },
+            'postcss-loader',
+          ],
         },
         {
           test: /\.less$/,
-          use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader'],
+          use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'less-loader'],
         },
         {
           test: /\.(scss)$/,
@@ -91,7 +97,7 @@ module.exports = [
           type: 'asset',
           parser: {
             dataUrlCondition: {
-              maxSize: 1 * 1024, // 4kb
+              maxSize: 4 * 1024, // 4kb
             },
           },
           generator: {

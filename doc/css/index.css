@@ -1,5 +1,6 @@
 html {
-  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
   font-family: "Helvetica", arial, sans-serif;
 }
 html, body {
@@ -8,27 +9,48 @@ html, body {
   overflow: hidden;
 }
 * {
-  box-sizing: inherit;
+  -moz-box-sizing: inherit;
+       box-sizing: inherit;
 }
 body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+          flex-direction: column;
 }
 header, footer {
   padding: 0.5rem 1rem;
   background: #20273c;
   color: white;
-  flex: none;
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+     -moz-box-flex: 0;
+          flex: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: flex;
   z-index: 2;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+          justify-content: space-between;
 }
 header a, footer a {
   color: white;
 }
 main {
   z-index: 1;
-  flex: 1 1 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 100%;
+     -moz-box-flex: 1;
+          flex: 1 1 100%;
   position: relative;
   overflow: hidden;
 }
@@ -39,7 +61,10 @@ header > * {
   vertical-align: middle;
 }
 footer {
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+     -moz-box-pack: end;
+          justify-content: flex-end;
 }
 h1 {
   margin: 0;
@@ -64,6 +89,7 @@ h2 {
   vertical-align: middle;
   font-weight: 700;
   margin: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   padding: 1.4rem;
   text-align: right;
@@ -76,6 +102,7 @@ h2 {
 }
 .menu a:first-child:hover,
 .menu a:first-child:focus {
+  -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 @media screen and (min-width: 1024px) {
@@ -94,13 +121,22 @@ h2 {
   display: none;
 }
 .menu-toggle.close .bar:nth-child(1) {
-  transform: translateY(7px) rotateZ(45deg);
+  -webkit-transform: translateY(7px) rotateZ(45deg);
+     -moz-transform: translateY(7px) rotateZ(45deg);
+       -o-transform: translateY(7px) rotateZ(45deg);
+          transform: translateY(7px) rotateZ(45deg);
 }
 .menu-toggle.close .bar:nth-child(2) {
-  transform: translateX(300px);
+  -webkit-transform: translateX(300px);
+     -moz-transform: translateX(300px);
+       -o-transform: translateX(300px);
+          transform: translateX(300px);
 }
 .menu-toggle.close .bar:nth-child(3) {
-  transform: translateY(-7px) rotateZ(-45deg);
+  -webkit-transform: translateY(-7px) rotateZ(-45deg);
+     -moz-transform: translateY(-7px) rotateZ(-45deg);
+       -o-transform: translateY(-7px) rotateZ(-45deg);
+          transform: translateY(-7px) rotateZ(-45deg);
 }
 .bar {
   display: block;
@@ -109,7 +145,12 @@ h2 {
   margin: 5px 0;
   background: white;
   border-radius: 2px;
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+  transition: -webkit-transform 0.2s ease-out;
+  -o-transition: -o-transform 0.2s ease-out;
+  -moz-transition: transform 0.2s ease-out, -moz-transform 0.2s ease-out;
   transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out, -moz-transform 0.2s ease-out, -o-transform 0.2s ease-out;
 }
 @media screen and (max-width: 1024px) {
   .menu {
@@ -121,11 +162,22 @@ h2 {
     right: 0;
     padding: 4.5rem 0 0.5rem;
     background: #20273c;
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+       -moz-transform: translateX(0);
+         -o-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transition: -webkit-transform 0.2s ease-out;
+    transition: -webkit-transform 0.2s ease-out;
+    -o-transition: -o-transform 0.2s ease-out;
+    -moz-transition: transform 0.2s ease-out, -moz-transform 0.2s ease-out;
     transition: transform 0.2s ease-out;
+    transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out, -moz-transform 0.2s ease-out, -o-transform 0.2s ease-out;
   }
   .menu.closed {
-    transform: translateX(300px);
+    -webkit-transform: translateX(300px);
+       -moz-transform: translateX(300px);
+         -o-transform: translateX(300px);
+            transform: translateX(300px);
   }
   .menu a, .menu .dropdown {
     display: block;
@@ -176,3 +228,4 @@ h2 {
   border-right: 1rem solid transparent;
   border-bottom: 1rem solid rgba(32, 39, 60, 0.7);
 }
+
