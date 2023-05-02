@@ -6,11 +6,10 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const svgToMiniDataURI = require('mini-svg-data-uri');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const AddSssetHtmlWebpackPlugin = require('add-asset-html-webpack-plugin');
-const webpack = require('webpack');
 module.exports = [
   {
     entry: {
+      //leaflet:['leaflet'],
       leafletFile: path.join(__dirname, '../src/leaflet.filelayer.js'),
       index: path.join(__dirname, '../src/index.js'),
     },
@@ -25,23 +24,10 @@ module.exports = [
         template: path.join(__dirname, '../src/index.html'),
         inject: 'body', //将打包的javaScript打包到body底部
         filename: 'index.html',
-        chunks: ['leafletFile', 'index'], //将打包好的js文件加入html-body-javaSript
+        chunks: ['leaflet', 'leafletFile', 'index'], //将打包好的js文件加入html-body-javaSript
         chunksSortMode: 'none',
         minify: 'flash', //根据webpackr mode的值自动设置是否压缩html文件
       }),
-      /* new webpack.DllReferencePlugin({
-        //告诉webpack哪些库不参与打包，同时使用时的名称也得变~
-        manifest: path.join(__dirname, '../dll/manifest.json'),
-      }),
-      new AddSssetHtmlWebpackPlugin({
-        //Html自动引入第三方js插件此处引入的是webpack.dll.config.js中打包的文件
-        filepath: path.join(__dirname, '../dll/togeojson.js '),
-        // dll 引用路径
-        publicPath: './vendor',
-        // dll最终输出的目录
-        outputPath: './vendor',
-      }), */
-
       new CopyPlugin({
         patterns: [
           {
@@ -111,8 +97,8 @@ module.exports = [
     },
     optimization: {
       // 压缩CSS文件与js文件
-      // minimizer: [`...`, new CssMinimizerPlugin()],
-      minimizer: [new CssMinimizerPlugin()],
+      minimizer: [`...`, new CssMinimizerPlugin()],    
+      //minimizer: [new CssMinimizerPlugin()],    
     },
   },
 ];

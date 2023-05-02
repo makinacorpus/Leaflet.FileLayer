@@ -5,8 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const svgToMiniDataURI = require('mini-svg-data-uri');
-const AddSssetHtmlWebpackPlugin = require('add-asset-html-webpack-plugin');
-const webpack = require('webpack');
+
 module.exports = [
   {
     entry: {
@@ -27,19 +26,6 @@ module.exports = [
         chunks: ['leafletFile', 'index'], //将打包好的js文件加入html-body-javaSript
         chunksSortMode: 'none',
       }),
-      /* new webpack.DllReferencePlugin({
-        //告诉webpack哪些库不参与打包，同时使用时的名称也得变~
-        manifest: path.join(__dirname, '../dll/manifest.json'),
-      }),
-      new AddSssetHtmlWebpackPlugin({
-        //Html自动引入第三方js插件此处引入的是webpack.dll.config.js中打包的文件
-        filepath: path.join(__dirname, '../dll/togeojson.js '),
-        // dll 引用路径
-        publicPath: './vendor',
-        // dll最终输出的目录
-        outputPath: './vendor',
-      }), */
-
       new CopyPlugin({
         patterns: [
           {

@@ -5,10 +5,9 @@
  * Requires Mapbox's togeojson.js to be in global scope
  * https://github.com/mapbox/togeojson
  */
-
-// import { togeojson } from 'togeojson';
-// const toGeoJSON = require('togeojson');
-var FileLoader = L.Layer.extend({
+//import L from 'leaflet';
+//import toGeoJSON from 'togeojson';
+const FileLoader = L.Layer.extend({
   options: {
     layer: L.geoJson,
     layerOptions: {},
@@ -23,14 +22,12 @@ var FileLoader = L.Layer.extend({
       geojson: this._loadGeoJSON,
       json: this._loadGeoJSON,
       gpx: this._convertToGeoJSON,
-      togeojson: this._convertToGeoJSON,
+      kml: this._convertToGeoJSON,
     };
   },
 
   load: function load(file, ext) {
-    var parser;
-    var reader;
-
+    var parser, reader;
     // Check file is defined
     if (this._isParameterMissing(file, 'file')) {
       return false;
@@ -74,7 +71,7 @@ var FileLoader = L.Layer.extend({
   },
 
   loadMultiple: function loadMultiple(files, ext) {
-    var readers = [];
+    let readers = [];
     if (files[0]) {
       files = Array.prototype.slice.apply(files);
       while (files.length > 0) {
@@ -89,7 +86,6 @@ var FileLoader = L.Layer.extend({
   loadData: function loadData(data, name, ext) {
     var parser;
     var layer;
-
     // Check required parameters
     if (this._isParameterMissing(data, 'data') || this._isParameterMissing(name, 'name')) {
       return;
@@ -105,7 +101,6 @@ var FileLoader = L.Layer.extend({
     if (!parser) {
       return;
     }
-
     // Process data
     try {
       this.fire('data:loading', { filename: name, format: parser.ext });
@@ -175,17 +170,16 @@ var FileLoader = L.Layer.extend({
   },
 
   _convertToGeoJSON: function _convertToGeoJSON(content, format) {
-    var geojson;
     // Format is either 'gpx' or 'togeojson'
     if (typeof content === 'string') {
       content = new window.DOMParser().parseFromString(content, 'text/xml');
     }
-    geojson = togeojson[format](content);
+    const geojson = toGeoJSON[format](content);
     return this._loadGeoJSON(geojson);
   },
 });
 
-var FileLayerLoad = L.Control.extend({
+const FileLayerLoad = L.Control.extend({
   options: {
     title: 'Load local file (GPX, KML, GeoJSON)',
     position: 'topleft',
@@ -194,7 +188,11 @@ var FileLayerLoad = L.Control.extend({
     addToMap: true,
     fileSizeLimit: 1024,
   },
-  browserFileLoad: undefined,
+  initialize: function (options) {
+    L.Util.setOptions(this, options);
+    this.loader = null;
+  },
+  /* browserFileLoad: undefined,
   initialize: function initialize(options, browserFileLoad) {
     L.Util.setOptions(this, options);
     this.loader = null;
@@ -202,7 +200,7 @@ var FileLayerLoad = L.Control.extend({
       this.browserFileLoad = browserFileLoad;
       L.setOptions(this.browserFileLoad, options);
     }
-  },
+  }, */
 
   onAdd: function onAdd(map) {
     this.loader = L.FileLayer.fileLoader(map, this.options);
@@ -224,16 +222,16 @@ var FileLayerLoad = L.Control.extend({
     // Initialize map control
     return this._createIcon();
   },
-
+  //新增ICON
   _createIcon: function _createIcon() {
-    var thisLoader = this.loader;
+    const thisLoader = this.loader;
     // Create a button, and bind click on hidden file input
-    var fileInput;
-    var zoomName = 'leaflet-control-filelayer leaflet-control-zoom';
-    var barName = 'leaflet-bar';
-    var partName = `${barName}-part` + '';
-    var container = L.DomUtil.create('div', `${zoomName}  ${barName}`);
-    var link = L.DomUtil.create('a', `${zoomName} -in ${partName}`, container);
+    let fileInput;
+    const zoomName = 'leaflet-control-filelayer leaflet-control-zoom';
+    const barName = 'leaflet-bar';
+    const partName = `${barName}-part` + '';
+    const container = L.DomUtil.create('div', `${zoomName}  ${barName}`);
+    const link = L.DomUtil.create('a', `${zoomName} -in ${partName}`, container);
     if (this.options.title) {
       link.title = this.options.title;
     }
@@ -247,7 +245,7 @@ var FileLayerLoad = L.Control.extend({
     fileInput.type = 'file';
     fileInput.multiple = 'multiple';
     if (!this.options.formats) {
-      fileInput.accept = '.gpx,.togeojson,.json,.geojson';
+      fileInput.accept = '.gpx,.kml,.json,.geojson';
     } else {
       fileInput.accept = this.options.formats.join(',');
     }
@@ -301,6 +299,7 @@ var FileLayerLoad = L.Control.extend({
       }
     }
   },
+  //更改原_initContainer
   _appendControlStyles: function _appendControlStyles(container) {
     var fileControlStyleSheet = document.createElement('style');
     fileControlStyleSheet.setAttribute('type', 'text/css');

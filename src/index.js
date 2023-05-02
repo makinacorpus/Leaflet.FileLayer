@@ -1,5 +1,6 @@
-import '../src/css/style.css';
 
+import '../src/css/style.css';
+//import { FileLoader, FileLayerLoad } from './your-module.js';
 var map = L.map('map').setView([51.505, 1], 6);
 L.tileLayer('//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 19,

@@ -7,9 +7,6 @@ var __webpack_exports__ = {};
  * Requires Mapbox's togeojson.js to be in global scope
  * https://github.com/mapbox/togeojson
  */
-
-// import { togeojson } from 'togeojson';
-// const toGeoJSON = require('togeojson');
 var FileLoader = L.Layer.extend({
   options: {
     layer: L.geoJson,

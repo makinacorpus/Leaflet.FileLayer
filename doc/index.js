@@ -57,6 +57,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _src_css_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 
 
+
 var map = L.map('map').setView([51.505, 1], 6);
 L.tileLayer('//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 19,
