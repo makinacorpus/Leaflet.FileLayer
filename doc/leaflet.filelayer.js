@@ -1,5 +1,95 @@
 /******/ (function() { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ([
+/* 0 */,
+/* 1 */
+/***/ (function(module) {
+
+module.exports = L;
+
+/***/ }),
+/* 2 */
+/***/ (function(module) {
+
+module.exports = toGeoJSON;
+
+/***/ })
+/******/ 	]);
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	!function() {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = function(module) {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				function() { return module['default']; } :
+/******/ 				function() { return module; };
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	!function() {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = function(exports, definition) {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	!function() {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = function(exports) {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/************************************************************************/
 var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+!function() {
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var togeojson__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+/* harmony import */ var togeojson__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(togeojson__WEBPACK_IMPORTED_MODULE_1__);
 /*
  * Load files *locally* (GeoJSON, KML, GPX) into the map
  * using the HTML5 File API.
@@ -7,29 +97,29 @@ var __webpack_exports__ = {};
  * Requires Mapbox's togeojson.js to be in global scope
  * https://github.com/mapbox/togeojson
  */
-var FileLoader = L.Layer.extend({
+
+
+const FileLoader = leaflet__WEBPACK_IMPORTED_MODULE_0___default().Layer.extend({
   options: {
-    layer: L.geoJson,
+    layer: (leaflet__WEBPACK_IMPORTED_MODULE_0___default().geoJson),
     layerOptions: {},
     fileSizeLimit: 1024,
   },
 
   initialize: function initialize(map, options) {
     this._map = map;
-    L.Util.setOptions(this, options);
+    leaflet__WEBPACK_IMPORTED_MODULE_0___default().Util.setOptions(this, options);
 
     this._parsers = {
       geojson: this._loadGeoJSON,
       json: this._loadGeoJSON,
       gpx: this._convertToGeoJSON,
-      togeojson: this._convertToGeoJSON,
+      kml: this._convertToGeoJSON,
     };
   },
 
   load: function load(file, ext) {
-    var parser;
-    var reader;
-
+    var parser, reader;
     // Check file is defined
     if (this._isParameterMissing(file, 'file')) {
       return false;
@@ -48,7 +138,7 @@ var FileLoader = L.Layer.extend({
 
     // Read selected file using HTML5 File API
     reader = new FileReader();
-    reader.onload = L.Util.bind(function (e) {
+    reader.onload = leaflet__WEBPACK_IMPORTED_MODULE_0___default().Util.bind(function (e) {
       var layer;
       try {
         this.fire('data:loading', { filename: file.name, format: parser.ext });
@@ -73,7 +163,7 @@ var FileLoader = L.Layer.extend({
   },
 
   loadMultiple: function loadMultiple(files, ext) {
-    var readers = [];
+    let readers = [];
     if (files[0]) {
       files = Array.prototype.slice.apply(files);
       while (files.length > 0) {
@@ -88,7 +178,6 @@ var FileLoader = L.Layer.extend({
   loadData: function loadData(data, name, ext) {
     var parser;
     var layer;
-
     // Check required parameters
     if (this._isParameterMissing(data, 'data') || this._isParameterMissing(name, 'name')) {
       return;
@@ -104,7 +193,6 @@ var FileLoader = L.Layer.extend({
     if (!parser) {
       return;
     }
-
     // Process data
     try {
       this.fire('data:loading', { filename: name, format: parser.ext });
@@ -174,17 +262,25 @@ var FileLoader = L.Layer.extend({
   },
 
   _convertToGeoJSON: function _convertToGeoJSON(content, format) {
-    var geojson;
     // Format is either 'gpx' or 'togeojson'
     if (typeof content === 'string') {
       content = new window.DOMParser().parseFromString(content, 'text/xml');
     }
-    geojson = togeojson[format](content);
+    /*  let toGeoJSON;
+    if (toGeoJSON === undefined) {
+      if (typeof window !== 'undefined') {
+        toGeoJSON = require('togeojson');
+      } else {
+        toGeoJSON = require('togeojson');
+      }
+    } */
+
+    const geojson = (togeojson__WEBPACK_IMPORTED_MODULE_1___default())[format](content);
     return this._loadGeoJSON(geojson);
   },
 });
 
-var FileLayerLoad = L.Control.extend({
+const FileLayerLoad = leaflet__WEBPACK_IMPORTED_MODULE_0___default().Control.extend({
   options: {
     title: 'Load local file (GPX, KML, GeoJSON)',
     position: 'topleft',
@@ -193,7 +289,11 @@ var FileLayerLoad = L.Control.extend({
     addToMap: true,
     fileSizeLimit: 1024,
   },
-  browserFileLoad: undefined,
+  initialize: function (options) {
+    leaflet__WEBPACK_IMPORTED_MODULE_0___default().Util.setOptions(this, options);
+    this.loader = null;
+  },
+  /* browserFileLoad: undefined,
   initialize: function initialize(options, browserFileLoad) {
     L.Util.setOptions(this, options);
     this.loader = null;
@@ -201,10 +301,10 @@ var FileLayerLoad = L.Control.extend({
       this.browserFileLoad = browserFileLoad;
       L.setOptions(this.browserFileLoad, options);
     }
-  },
+  }, */
 
   onAdd: function onAdd(map) {
-    this.loader = L.FileLayer.fileLoader(map, this.options);
+    this.loader = leaflet__WEBPACK_IMPORTED_MODULE_0___default().FileLayer.fileLoader(map, this.options);
     this.loader.on(
       'data:loaded',
       function (e) {
@@ -223,16 +323,16 @@ var FileLayerLoad = L.Control.extend({
     // Initialize map control
     return this._createIcon();
   },
-
+  //新增ICON
   _createIcon: function _createIcon() {
-    var thisLoader = this.loader;
+    const thisLoader = this.loader;
     // Create a button, and bind click on hidden file input
-    var fileInput;
-    var zoomName = 'leaflet-control-filelayer leaflet-control-zoom';
-    var barName = 'leaflet-bar';
-    var partName = `${barName}-part` + '';
-    var container = L.DomUtil.create('div', `${zoomName}  ${barName}`);
-    var link = L.DomUtil.create('a', `${zoomName} -in ${partName}`, container);
+    let fileInput;
+    const zoomName = 'leaflet-control-filelayer leaflet-control-zoom';
+    const barName = 'leaflet-bar';
+    const partName = `${barName}-part` + '';
+    const container = leaflet__WEBPACK_IMPORTED_MODULE_0___default().DomUtil.create('div', `${zoomName}  ${barName}`);
+    const link = leaflet__WEBPACK_IMPORTED_MODULE_0___default().DomUtil.create('a', `${zoomName} -in ${partName}`, container);
     if (this.options.title) {
       link.title = this.options.title;
     }
@@ -242,11 +342,11 @@ var FileLayerLoad = L.Control.extend({
     }
     link.href = '#';
     // Create an invisible file input
-    fileInput = L.DomUtil.create('input', 'hidden', container);
+    fileInput = leaflet__WEBPACK_IMPORTED_MODULE_0___default().DomUtil.create('input', 'hidden', container);
     fileInput.type = 'file';
     fileInput.multiple = 'multiple';
     if (!this.options.formats) {
-      fileInput.accept = '.gpx,.togeojson,.json,.geojson';
+      fileInput.accept = '.gpx,.kml,.json,.geojson';
     } else {
       fileInput.accept = this.options.formats.join(',');
     }
@@ -262,8 +362,8 @@ var FileLayerLoad = L.Control.extend({
       false
     );
 
-    L.DomEvent.disableClickPropagation(container);
-    L.DomEvent.on(link, 'click', function (e) {
+    leaflet__WEBPACK_IMPORTED_MODULE_0___default().DomEvent.disableClickPropagation(container);
+    leaflet__WEBPACK_IMPORTED_MODULE_0___default().DomEvent.on(link, 'click', function (e) {
       fileInput.click();
       e.preventDefault();
     });
@@ -300,6 +400,7 @@ var FileLayerLoad = L.Control.extend({
       }
     }
   },
+  //更改原_initContainer
   _appendControlStyles: function _appendControlStyles(container) {
     var fileControlStyleSheet = document.createElement('style');
     fileControlStyleSheet.setAttribute('type', 'text/css');
@@ -311,16 +412,17 @@ var FileLayerLoad = L.Control.extend({
   },
 });
 
-L.FileLayer = {};
-L.FileLayer.FileLoader = FileLoader;
-L.FileLayer.fileLoader = function (map, options) {
-  return new L.FileLayer.FileLoader(map, options);
+(leaflet__WEBPACK_IMPORTED_MODULE_0___default().FileLayer) = {};
+(leaflet__WEBPACK_IMPORTED_MODULE_0___default().FileLayer.FileLoader) = FileLoader;
+(leaflet__WEBPACK_IMPORTED_MODULE_0___default().FileLayer.fileLoader) = function (map, options) {
+  return new (leaflet__WEBPACK_IMPORTED_MODULE_0___default().FileLayer.FileLoader)(map, options);
 };
 
-L.Control.FileLayerLoad = FileLayerLoad;
-L.Control.fileLayerLoad = function (options) {
-  return new L.Control.FileLayerLoad(options);
+(leaflet__WEBPACK_IMPORTED_MODULE_0___default().Control.FileLayerLoad) = FileLayerLoad;
+(leaflet__WEBPACK_IMPORTED_MODULE_0___default().Control.fileLayerLoad) = function (options) {
+  return new (leaflet__WEBPACK_IMPORTED_MODULE_0___default().Control.FileLayerLoad)(options);
 };
 
+}();
 /******/ })()
 ;

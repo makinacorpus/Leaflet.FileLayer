@@ -14,8 +14,17 @@ module.exports = [
     },
     output: {
       path: path.join(__dirname, '../dist'), //输出文件路径
-      filename: '[name].js', //输入出文件的名称
+      filename: (pathData) => {
+        if (pathData.chunk.name === 'leafletFile') {
+          return 'leaflet.filelayer.js';
+        }
+        return '[name].js';
+      },
       assetModuleFilename: 'assets/images/[hash:8][ext][query]', //assetModuleFilename仅适用于asset和asset/resource模块类型。
+    },
+    externals: {//打包时排除以下两项
+      leaflet: 'L',
+      togeojson: 'toGeoJSON'
     },
     plugins: [
       new CleanWebpackPlugin(),

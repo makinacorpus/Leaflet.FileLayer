@@ -5,8 +5,8 @@
  * Requires Mapbox's togeojson.js to be in global scope
  * https://github.com/mapbox/togeojson
  */
-//import L from 'leaflet';
-//import toGeoJSON from 'togeojson';
+import L from 'leaflet';
+import toGeoJSON from 'togeojson';
 const FileLoader = L.Layer.extend({
   options: {
     layer: L.geoJson,
@@ -174,6 +174,15 @@ const FileLoader = L.Layer.extend({
     if (typeof content === 'string') {
       content = new window.DOMParser().parseFromString(content, 'text/xml');
     }
+    /*  let toGeoJSON;
+    if (toGeoJSON === undefined) {
+      if (typeof window !== 'undefined') {
+        toGeoJSON = require('togeojson');
+      } else {
+        toGeoJSON = require('togeojson');
+      }
+    } */
+
     const geojson = toGeoJSON[format](content);
     return this._loadGeoJSON(geojson);
   },
