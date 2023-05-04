@@ -1,3 +1,6 @@
+
+//npx dts-gen -m togeojson
+///npx dts-gen -i leaflet.filelayer.js 
 declare module 'togeojson' {
   function toGeoJSON(gpx: Document): GeoJSON.FeatureCollection;
   function toGeoJSON(kml: Document): GeoJSON.FeatureCollection;

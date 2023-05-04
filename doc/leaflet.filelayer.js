@@ -86,6 +86,12 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 !function() {
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Control": function() { return /* binding */ Control; },
+/* harmony export */   "FileLayer": function() { return /* binding */ FileLayer; },
+/* harmony export */   "FileLayerLoad": function() { return /* binding */ FileLayerLoad; },
+/* harmony export */   "FileLoader": function() { return /* binding */ FileLoader; }
+/* harmony export */ });
 /* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var togeojson__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
@@ -412,17 +418,35 @@ const FileLayerLoad = leaflet__WEBPACK_IMPORTED_MODULE_0___default().Control.ext
   },
 });
 
-(leaflet__WEBPACK_IMPORTED_MODULE_0___default().FileLayer) = {};
-(leaflet__WEBPACK_IMPORTED_MODULE_0___default().FileLayer.FileLoader) = FileLoader;
-(leaflet__WEBPACK_IMPORTED_MODULE_0___default().FileLayer.fileLoader) = function (map, options) {
-  return new (leaflet__WEBPACK_IMPORTED_MODULE_0___default().FileLayer.FileLoader)(map, options);
+const FileLayer = {
+  FileLoader: FileLoader,
+  fileLoader: function (map, options) {
+    return new FileLoader(map, options);
+  }
 };
 
+const Control = {
+  fileLayerLoad: function (options) {
+    return new FileLayerLoad(options);
+  }
+};
+
+// 给 L.FileLayer 对象添加属性
+(leaflet__WEBPACK_IMPORTED_MODULE_0___default().FileLayer) = FileLayer;
 (leaflet__WEBPACK_IMPORTED_MODULE_0___default().Control.FileLayerLoad) = FileLayerLoad;
-(leaflet__WEBPACK_IMPORTED_MODULE_0___default().Control.fileLayerLoad) = function (options) {
-  return new (leaflet__WEBPACK_IMPORTED_MODULE_0___default().Control.FileLayerLoad)(options);
+(leaflet__WEBPACK_IMPORTED_MODULE_0___default().Control.fileLayerLoad) = Control.fileLayerLoad;
+
+/* L.FileLayer = {};
+L.FileLayer.FileLoader = FileLoader;
+L.FileLayer.fileLoader = function (map, options) {
+  return new L.FileLayer.FileLoader(map, options);
 };
 
+L.Control.FileLayerLoad = FileLayerLoad;
+L.Control.fileLayerLoad = function (options) {
+  return new L.Control.FileLayerLoad(options);
+};
+ */
 }();
 /******/ })()
 ;

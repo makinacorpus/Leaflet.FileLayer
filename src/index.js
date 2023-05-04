@@ -1,6 +1,7 @@
 
 import '../src/css/style.css';
-//import { FileLoader, FileLayerLoad } from './your-module.js';
+import { FileLoader, Control } from '../src/leaflet.filelayer';
+//import { FileLoader, FileLayerLoad } from 'leaflet.filelayer';
 var map = L.map('map').setView([51.505, 1], 6);
 L.tileLayer('//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 19,
@@ -26,7 +27,8 @@ var style = {
 };
 
 //L.Control.FileLayerLoad.LABEL = '<img class="icon" src="./assets/images/folder.svg" alt="file icon"/>';
-var control = L.Control.fileLayerLoad({
+//var control = L.Control.fileLayerLoad({
+var control = Control.fileLayerLoad({
   fitBounds: true,
   layerOptions: {
     style: style,

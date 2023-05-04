@@ -7,7 +7,7 @@
  */
 import L from 'leaflet';
 import toGeoJSON from 'togeojson';
-const FileLoader = L.Layer.extend({
+export const FileLoader = L.Layer.extend({
   options: {
     layer: L.geoJson,
     layerOptions: {},
@@ -188,7 +188,7 @@ const FileLoader = L.Layer.extend({
   },
 });
 
-const FileLayerLoad = L.Control.extend({
+export const FileLayerLoad = L.Control.extend({
   options: {
     title: 'Load local file (GPX, KML, GeoJSON)',
     position: 'topleft',
@@ -320,13 +320,20 @@ const FileLayerLoad = L.Control.extend({
   },
 });
 
-L.FileLayer = {};
-L.FileLayer.FileLoader = FileLoader;
-L.FileLayer.fileLoader = function (map, options) {
-  return new L.FileLayer.FileLoader(map, options);
+export const FileLayer = {
+  FileLoader: FileLoader,
+  fileLoader: function (map, options) {
+    return new FileLoader(map, options);
+  },
 };
 
-L.Control.FileLayerLoad = FileLayerLoad;
-L.Control.fileLayerLoad = function (options) {
-  return new L.Control.FileLayerLoad(options);
+export const Control = {
+  fileLayerLoad: function (options) {
+    return new FileLayerLoad(options);
+  },
 };
+
+// 给 L.FileLayer 对象添加属性
+L.FileLayer = FileLayer;
+L.Control.FileLayerLoad = FileLayerLoad;
+L.Control.fileLayerLoad = Control.fileLayerLoad;
