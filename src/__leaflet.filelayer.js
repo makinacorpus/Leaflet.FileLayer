@@ -7,6 +7,8 @@
  */
 import L from 'leaflet';
 import toGeoJSON from 'togeojson';
+
+
 export const FileLoader = L.Layer.extend({
   options: {
     layer: L.geoJson,
