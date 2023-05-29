@@ -330,6 +330,7 @@ export const FileLayer = {
 };
 
 export const Control = {
+  FileLayerLoad:FileLayerLoad,
   fileLayerLoad: function (options) {
     return new FileLayerLoad(options);
   },
@@ -337,5 +338,5 @@ export const Control = {
 
 // 给 L.FileLayer 对象添加属性
 L.FileLayer = FileLayer;
-L.Control.FileLayerLoad = FileLayerLoad;
+L.Control.FileLayerLoad = Control.FileLayerLoad;
 L.Control.fileLayerLoad = Control.fileLayerLoad;

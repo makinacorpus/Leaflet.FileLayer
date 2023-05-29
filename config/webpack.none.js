@@ -8,11 +8,13 @@ const svgToMiniDataURI = require('mini-svg-data-uri');
 module.exports = [
   {
     entry: {
-      leafletFile: path.join(__dirname, '../src/leaflet.filelayer.js'),
-      index: path.join(__dirname, '../src/index.js'),
+      //leafletFile: path.join(__dirname, '../src/leaflet.filelayer.js'),
+      //index: path.join(__dirname, '../src/index.js'),
+      leafletFile: path.join(__dirname, '../src/index.js'),
     },
     output: {
-      path: path.join(__dirname, '../doc'), //输出文件路径
+      path: path.join(__dirname, '../none'), //输出文件路径
+      //filename: '[name].js',
       filename: (pathData) => {
         if (pathData.chunk.name === 'leafletFile') {
           return 'leaflet.filelayer.js';
@@ -21,18 +23,22 @@ module.exports = [
       },
       assetModuleFilename: 'assets/images/[hash:8][ext][query]', //assetModuleFilename仅适用于asset和asset/resource模块类型。
     },
-    externals: {//打包时排除以下两项
+
+    externals: {
+      //打包时排除以下两项
       leaflet: 'L',
-      togeojson: 'toGeoJSON'
+      togeojson: 'toGeoJSON',
+      //'./leaflet.filelayer': 'filelayer', // 将leaflet.filelayer.js标记为外部依赖
     },
     plugins: [
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
         template: path.join(__dirname, '../src/index.html'),
-        hash: true, //是否每次为文件中引入的静态资源如js,css等路径后面加上唯一的hash值
+        hash: false, //是否每次为文件中引入的静态资源如js,css等路径后面加上唯一的hash值
         inject: 'body', //将打包的javaScript打包到body底部
         filename: 'index.html',
-        chunks: ['leafletFile', 'index'], //将打包好的js文件加入html-body-javaSript
+        //chunks: ['leafletFile', 'index'], //将打包好的js文件加入html-body-javaSript
+        chunks: ['leafletFile'], //将打包好的js文件加入html-body-javaSript
         chunksSortMode: 'none',
       }),
 
@@ -105,7 +111,7 @@ module.exports = [
           },
         },
 
-        //{ test: /\.js$/, use: 'babe-loader ', exclude: /node_modules/ }
+        { test: /\.js$/, exclude: /node_modules/, use: 'babel-loader' },
       ],
     },
   },

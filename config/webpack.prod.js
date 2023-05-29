@@ -10,8 +10,9 @@ module.exports = [
   {
     entry: {
       //leaflet:['leaflet'],
-      leafletFile: path.join(__dirname, '../src/leaflet.filelayer.js'),
-      index: path.join(__dirname, '../src/index.js'),
+      // leafletFile: path.join(__dirname, '../src/leaflet.filelayer.js'),
+      // index: path.join(__dirname, '../src/index.js'),
+      leafletFile: path.join(__dirname, '../src/index.js'),
     },
     output: {
       path: path.join(__dirname, '../dist'), //输出文件路径
@@ -25,7 +26,8 @@ module.exports = [
     },
     externals: {//打包时排除以下两项
       leaflet: 'L',
-      togeojson: 'toGeoJSON'
+      togeojson: 'toGeoJSON',
+     
     },
     plugins: [
       new CleanWebpackPlugin(),
@@ -33,7 +35,8 @@ module.exports = [
         template: path.join(__dirname, '../src/index.html'),
         inject: 'body', //将打包的javaScript打包到body底部
         filename: 'index.html',
-        chunks: ['leaflet', 'leafletFile', 'index'], //将打包好的js文件加入html-body-javaSript
+        //chunks: ['leaflet', 'leafletFile', 'index'], //将打包好的js文件加入html-body-javaSript
+        chunks: ['leafletFile'], //将打包好的js文件加入html-body-javaSript
         chunksSortMode: 'none',
         minify: 'flash', //根据webpackr mode的值自动设置是否压缩html文件
       }),
@@ -107,8 +110,8 @@ module.exports = [
     },
     optimization: {
       // 压缩CSS文件与js文件
-      minimizer: [`...`, new CssMinimizerPlugin()],
-      //minimizer: [new CssMinimizerPlugin()],
+      //minimizer: [`...`, new CssMinimizerPlugin()],
+      minimizer: [new CssMinimizerPlugin()],
     },
   },
 ];
