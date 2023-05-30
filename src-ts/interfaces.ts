@@ -14,7 +14,7 @@ interface ControlOptions extends L.ControlOptions {
   layerOptions?: any;
   addToMap?: boolean;
   fileSizeLimit?: number;
-  formats?: string[];
+  formats: string[];
 }
 interface fileLoader extends L.Layer {
   options: LayerOptions;

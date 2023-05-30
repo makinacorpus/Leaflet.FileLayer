@@ -1,14 +1,6 @@
 import L from 'leaflet';
 import * as toGeoJSON from 'togeojson';
-import { Geometry } from 'geojson';
 import { fileLoader, LayerOptions, Parsers } from './interfaces';
-/* type Parsers = {
-  geojson: (content: string | GeoJSON.GeoJsonObject) => void;
-  json: (content: string | GeoJSON.GeoJsonObject) => void;
-  gpx: (content: string | GeoJSON.GeoJsonObject, format: keyof typeof toGeoJSON) => L.Layer;
-  kml: (content: string | GeoJSON.GeoJsonObject, format: keyof typeof toGeoJSON) => L.Layer;
-}; */
-
 class FileLoader extends L.Layer implements fileLoader {
   options: LayerOptions = {
     layer: L.geoJSON,
@@ -21,12 +13,6 @@ class FileLoader extends L.Layer implements fileLoader {
     super(options);
     this._map = map;
     L.Util.setOptions(this, options);
-    /* this._parsers = {
-      geojson: this._loadGeoJSON,
-      json: this._loadGeoJSON,
-      gpx: this._convertToGeoJSON,
-      kml: this._convertToGeoJSON,
-    }; */
     this._parsers = {
       geojson: this._loadGeoJSON.bind(this),
       json: this._loadGeoJSON.bind(this),
@@ -51,7 +37,7 @@ class FileLoader extends L.Layer implements fileLoader {
     return '';
   }
 
-  load(file: File, ext?: string):FileReader|boolean {
+  load(file: File, ext?: string): FileReader | boolean {
     // Check file is defined
     if (this._isParameterMissing(file, 'file')) {
       return false;
@@ -83,25 +69,24 @@ class FileLoader extends L.Layer implements fileLoader {
     // Testing trick: tests don't pass a real file,
     // but an object with file.testing set to true.
     // This object cannot be read by reader, just skip it.
-     if (typeof file === 'object' && (file as any).testing) {
+    if (typeof file === 'object' && (file as any).testing) {
       return reader;
     } else {
       reader.readAsText(file);
     }
     // We return this to ease testing
     return reader;
-    
   }
 
   loadMultiple(files: File[] | FileList, ext?: string): FileReader[] {
     let readers: FileReader[] = [];
     if (files[0]) {
-      //转换为真正的数组。
+      //Convert to a real array。
       files = Array.prototype.slice.apply(files) as File[];
       while (files.length > 0) {
-        //移除数组的第一个元素并返回该元素的值。
+        //Removes the first element of the array and returns its value
         const file = files.shift();
-        if (file) {       
+        if (file) {
           readers.push(this.load(file, ext) as FileReader);
         }
       }
@@ -120,7 +105,6 @@ class FileLoader extends L.Layer implements fileLoader {
     if (!this._isFileSizeOk(data.length)) {
       return;
     }
-
     // Get parser for this data type
     const parser = this._getParser(name, ext);
     if (!parser) {
@@ -151,13 +135,12 @@ class FileLoader extends L.Layer implements fileLoader {
   }
 
   _getParser(name: string, ext?: string): { processor: Function; ext: string } | undefined {
-    ext = ext || (name.split('.').pop() as string); //使用断言否则会返回undefined
+    ext = ext || (name.split('.').pop() as string);
     const parser = this._parsers[ext];
     if (!parser) {
       this.fire('data:error', {
         error: new Error(`Unsupported file type (${ext})`),
       });
-      //throw new Error(`Unsupported file type (${ext})`);
       return undefined;
     }
     return {
@@ -167,7 +150,8 @@ class FileLoader extends L.Layer implements fileLoader {
   }
 
   _isFileSizeOk(size: number) {
-    let fileSize = parseFloat((size / 1024).toFixed(4)); // 将字符串转换为浮点数
+    //Converts a string to a floating point number
+    let fileSize = parseFloat((size / 1024).toFixed(4));
     if (fileSize > this.options.fileSizeLimit) {
       this.fire('data:error', {
         error: new Error(`File size exceeds limit (${fileSize} > ${this.options.fileSizeLimit} 'kb)`),
@@ -177,7 +161,6 @@ class FileLoader extends L.Layer implements fileLoader {
     return true;
   }
   _loadGeoJSON(content: string | GeoJSON.GeoJsonObject | GeoJSON.GeoJsonObject[]): L.Layer {
-    //_loadGeoJSON(content: any) {
     if (typeof content === 'string') {
       content = JSON.parse(content) as GeoJSON.GeoJsonObject;
     }
@@ -192,7 +175,6 @@ class FileLoader extends L.Layer implements fileLoader {
     }
     return layer;
   }
-  //_convertToGeoJSON(content: any, format: keyof typeof toGeoJSON) {
   _convertToGeoJSON(content: string | Document, format: 'gpx' | 'kml'): L.Layer {
     // Format is either 'gpx' or 'togeojson'
     if (typeof content === 'string') {

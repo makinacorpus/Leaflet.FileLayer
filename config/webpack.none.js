@@ -14,7 +14,7 @@ module.exports = [
     },
     output: {
       path: path.join(__dirname, '../none'), //输出文件路径
-      //filename: '[name].js',
+      //filename: '[name][hash:8].js',
       filename: (pathData) => {
         if (pathData.chunk.name === 'leafletFile') {
           return 'leaflet.filelayer.js';

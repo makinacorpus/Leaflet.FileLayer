@@ -11,8 +11,8 @@ class FileLayerLoad extends L.Control implements fileLayerLoad {
     fileSizeLimit: 1024,
     formats: ['gpx', 'kml', 'json', 'geojson'],
   };
-  //loader: Loader | null = null;
-  private loader?: FileLoader|null; // 将属性声明为可选属性
+ 
+  private loader?: FileLoader|null; 
   constructor(options: Partial<ControlOptions>) {
     super(options);
     L.Util.setOptions(this, options);
@@ -46,7 +46,7 @@ class FileLayerLoad extends L.Control implements fileLayerLoad {
     // Return the control icon element
     return controlIcon;
   }
-  //新增ICON
+  //Add ICON
   _createIcon() {
     const thisLoader = this.loader;
     // Create a button, and bind click on hidden file input
@@ -101,7 +101,9 @@ class FileLayerLoad extends L.Control implements fileLayerLoad {
   _initDragAndDrop(map: L.Map) {
     let callbackName;
     let thisLoader = this.loader;
-    let dropbox = map.getContainer(); // 使用 getContainer() 替代 _container
+    let ext:string[] = this.options.formats
+    //Use getContainer() instead of the old _container method
+    let dropbox = map.getContainer(); 
     let callbacks: {
       [key: string]: (() => void) | ((e: any) => void);
     } = {
@@ -120,7 +122,9 @@ class FileLayerLoad extends L.Control implements fileLayerLoad {
         e.preventDefault();
         if (thisLoader) {
           const files = e.dataTransfer.files;
-          const ext = '.gpx,.kml,.json,.geojson'; // 设置默认的 ext 值
+          //Set the default ext value
+          //const ext = '.gpx,.kml,.json,.geojson'; 
+          //const ext = this.options.formats 
           for (let i = 0; i < files.length; i++) {
             const file = files[i];
             const fileName = file.name;

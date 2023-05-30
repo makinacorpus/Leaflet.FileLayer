@@ -3,7 +3,7 @@ import { FileLayerLoad, Control } from './filelayerload';
 import { FileLoader, FileLayer } from './fileloader'
 //import './filelayerload';
 //import './fileloader';
-import { fileLoader, LayerOptions, ControlOptions, fileLayerLoad } from './interfaces'
+//import { fileLoader, LayerOptions, ControlOptions, fileLayerLoad } from './interfaces'
 //import './interfaces'
 // @ts-ignore
 L.FileLayer = {};

@@ -6,17 +6,16 @@
   "directories": {
     "doc": "docs",
     "test": "test",
-    "src":"src",
-    "src-ts":"src-ts"
+    "src": "src",
+    "src-ts": "src-ts"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --config ./config/webpack.dev.js --open",
     "build": "webpack  --config ./config/webpack.prod.js",
-    "dll": "webpack  --config ./config/webpack.dll.config.js",
     "browser": "browser-sync start --server --files **/*.js",
     "none": "webpack  --config ./config/webpack.none.js",
-    "f": "webpack  --config ./config/webpack.leafletFile.js",
+    "f": "webpack  --config ./config/webpack.src_ts.js",
     "esf": " npx eslint ./src/leaflet.filelayer.js",
     "esi": " npx eslint ./src/index.js"
   },

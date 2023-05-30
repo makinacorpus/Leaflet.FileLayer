@@ -83,7 +83,7 @@ __webpack_require__.r(__webpack_exports__);
           // Return the control icon element
           return controlIcon;
         }
-        //新增ICON
+        //Add ICON
         _createIcon() {
           const thisLoader = this.loader;
           // Create a button, and bind click on hidden file input
@@ -131,7 +131,9 @@ __webpack_require__.r(__webpack_exports__);
         _initDragAndDrop(map) {
           let callbackName;
           let thisLoader = this.loader;
-          let dropbox = map.getContainer(); // 使用 getContainer() 替代 _container
+          let ext = this.options.formats;
+          //Use getContainer() instead of the old _container method
+          let dropbox = map.getContainer();
           let callbacks = {
             dragenter: function dragenter() {
               map.scrollWheelZoom.disable();
@@ -148,7 +150,9 @@ __webpack_require__.r(__webpack_exports__);
               e.preventDefault();
               if (thisLoader) {
                 const files = e.dataTransfer.files;
-                const ext = '.gpx,.kml,.json,.geojson'; // 设置默认的 ext 值
+                //Set the default ext value
+                //const ext = '.gpx,.kml,.json,.geojson'; 
+                //const ext = this.options.formats 
                 for (let i = 0; i < files.length; i++) {
                   const file = files[i];
                   const fileName = file.name;
@@ -198,10 +202,10 @@ __webpack_require__.r(__webpack_exports__);
       !*** ./src-ts/fileloader.ts ***!
       \******************************/
     /***/
-    function (__unused_webpack_module, __webpack_exports__, __nested_webpack_require_7963__) {
-      __nested_webpack_require_7963__.r(__webpack_exports__);
+    function (__unused_webpack_module, __webpack_exports__, __nested_webpack_require_8124__) {
+      __nested_webpack_require_8124__.r(__webpack_exports__);
       /* harmony export */
-      __nested_webpack_require_7963__.d(__webpack_exports__, {
+      __nested_webpack_require_8124__.d(__webpack_exports__, {
         /* harmony export */"FileLayer": function () {
           return (/* binding */FileLayer
           );
@@ -213,20 +217,13 @@ __webpack_require__.r(__webpack_exports__);
         /* harmony export */
       });
       /* harmony import */
-      var leaflet__WEBPACK_IMPORTED_MODULE_0__ = __nested_webpack_require_7963__( /*! leaflet */"leaflet");
+      var leaflet__WEBPACK_IMPORTED_MODULE_0__ = __nested_webpack_require_8124__( /*! leaflet */"leaflet");
       /* harmony import */
-      var leaflet__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__nested_webpack_require_7963__.n(leaflet__WEBPACK_IMPORTED_MODULE_0__);
+      var leaflet__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__nested_webpack_require_8124__.n(leaflet__WEBPACK_IMPORTED_MODULE_0__);
       /* harmony import */
-      var togeojson__WEBPACK_IMPORTED_MODULE_1__ = __nested_webpack_require_7963__( /*! togeojson */"togeojson");
+      var togeojson__WEBPACK_IMPORTED_MODULE_1__ = __nested_webpack_require_8124__( /*! togeojson */"togeojson");
       /* harmony import */
-      var togeojson__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__nested_webpack_require_7963__.n(togeojson__WEBPACK_IMPORTED_MODULE_1__);
-
-      /* type Parsers = {
-        geojson: (content: string | GeoJSON.GeoJsonObject) => void;
-        json: (content: string | GeoJSON.GeoJsonObject) => void;
-        gpx: (content: string | GeoJSON.GeoJsonObject, format: keyof typeof toGeoJSON) => L.Layer;
-        kml: (content: string | GeoJSON.GeoJsonObject, format: keyof typeof toGeoJSON) => L.Layer;
-      }; */
+      var togeojson__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__nested_webpack_require_8124__.n(togeojson__WEBPACK_IMPORTED_MODULE_1__);
       class FileLoader extends leaflet__WEBPACK_IMPORTED_MODULE_0___default().Layer {
         constructor(map, options) {
           super(options);
@@ -238,12 +235,6 @@ __webpack_require__.r(__webpack_exports__);
           };
           this._map = map;
           leaflet__WEBPACK_IMPORTED_MODULE_0___default().Util.setOptions(this, options);
-          /* this._parsers = {
-            geojson: this._loadGeoJSON,
-            json: this._loadGeoJSON,
-            gpx: this._convertToGeoJSON,
-            kml: this._convertToGeoJSON,
-          }; */
           this._parsers = {
             geojson: this._loadGeoJSON.bind(this),
             json: this._loadGeoJSON.bind(this),
@@ -306,19 +297,16 @@ __webpack_require__.r(__webpack_exports__);
           } else {
             reader.readAsText(file);
           }
-          /* if (!file.testing) {
-            reader.readAsText(file);
-          } */
           // We return this to ease testing
           return reader;
         }
         loadMultiple(files, ext) {
           let readers = [];
           if (files[0]) {
-            //转换为真正的数组。
+            //Convert to a real array。
             files = Array.prototype.slice.apply(files);
             while (files.length > 0) {
-              //移除数组的第一个元素并返回该元素的值。
+              //Removes the first element of the array and returns its value
               const file = files.shift();
               if (file) {
                 readers.push(this.load(file, ext));
@@ -371,13 +359,12 @@ __webpack_require__.r(__webpack_exports__);
           return false;
         }
         _getParser(name, ext) {
-          ext = ext || name.split('.').pop(); //使用断言否则会返回undefined
+          ext = ext || name.split('.').pop();
           const parser = this._parsers[ext];
           if (!parser) {
             this.fire('data:error', {
               error: new Error(`Unsupported file type (${ext})`)
             });
-            //throw new Error(`Unsupported file type (${ext})`);
             return undefined;
           }
           return {
@@ -386,7 +373,8 @@ __webpack_require__.r(__webpack_exports__);
           };
         }
         _isFileSizeOk(size) {
-          let fileSize = parseFloat((size / 1024).toFixed(4)); // 将字符串转换为浮点数
+          //Converts a string to a floating point number
+          let fileSize = parseFloat((size / 1024).toFixed(4));
           if (fileSize > this.options.fileSizeLimit) {
             this.fire('data:error', {
               error: new Error(`File size exceeds limit (${fileSize} > ${this.options.fileSizeLimit} 'kb)`)
@@ -396,7 +384,6 @@ __webpack_require__.r(__webpack_exports__);
           return true;
         }
         _loadGeoJSON(content) {
-          //_loadGeoJSON(content: any) {
           if (typeof content === 'string') {
             content = JSON.parse(content);
           }
@@ -409,7 +396,6 @@ __webpack_require__.r(__webpack_exports__);
           }
           return layer;
         }
-        //_convertToGeoJSON(content: any, format: keyof typeof toGeoJSON) {
         _convertToGeoJSON(content, format) {
           // Format is either 'gpx' or 'togeojson'
           if (typeof content === 'string') {
@@ -460,7 +446,7 @@ __webpack_require__.r(__webpack_exports__);
   /******/
   /******/ // The require function
   /******/
-  function __nested_webpack_require_16884__(moduleId) {
+  function __nested_webpack_require_16279__(moduleId) {
     /******/ // Check if module is in cache
     /******/var cachedModule = __webpack_module_cache__[moduleId];
     /******/
@@ -479,7 +465,7 @@ __webpack_require__.r(__webpack_exports__);
     /******/
     /******/ // Execute the module function
     /******/
-    __webpack_modules__[moduleId](module, module.exports, __nested_webpack_require_16884__);
+    __webpack_modules__[moduleId](module, module.exports, __nested_webpack_require_16279__);
     /******/
     /******/ // Return the exports of the module
     /******/
@@ -492,14 +478,14 @@ __webpack_require__.r(__webpack_exports__);
   /******/
   !function () {
     /******/ // getDefaultExport function for compatibility with non-harmony modules
-    /******/__nested_webpack_require_16884__.n = function (module) {
+    /******/__nested_webpack_require_16279__.n = function (module) {
       /******/var getter = module && module.__esModule ? /******/function () {
         return module['default'];
       } : /******/function () {
         return module;
       };
       /******/
-      __nested_webpack_require_16884__.d(getter, {
+      __nested_webpack_require_16279__.d(getter, {
         a: getter
       });
       /******/
@@ -513,9 +499,9 @@ __webpack_require__.r(__webpack_exports__);
   /******/
   !function () {
     /******/ // define getter functions for harmony exports
-    /******/__nested_webpack_require_16884__.d = function (exports, definition) {
+    /******/__nested_webpack_require_16279__.d = function (exports, definition) {
       /******/for (var key in definition) {
-        /******/if (__nested_webpack_require_16884__.o(definition, key) && !__nested_webpack_require_16884__.o(exports, key)) {
+        /******/if (__nested_webpack_require_16279__.o(definition, key) && !__nested_webpack_require_16279__.o(exports, key)) {
           /******/Object.defineProperty(exports, key, {
             enumerable: true,
             get: definition[key]
@@ -532,7 +518,7 @@ __webpack_require__.r(__webpack_exports__);
   /******/ /* webpack/runtime/hasOwnProperty shorthand */
   /******/
   !function () {
-    /******/__nested_webpack_require_16884__.o = function (obj, prop) {
+    /******/__nested_webpack_require_16279__.o = function (obj, prop) {
       return Object.prototype.hasOwnProperty.call(obj, prop);
     };
     /******/
@@ -542,7 +528,7 @@ __webpack_require__.r(__webpack_exports__);
   /******/
   !function () {
     /******/ // define __esModule on exports
-    /******/__nested_webpack_require_16884__.r = function (exports) {
+    /******/__nested_webpack_require_16279__.r = function (exports) {
       /******/if (typeof Symbol !== 'undefined' && Symbol.toStringTag) {
         /******/Object.defineProperty(exports, Symbol.toStringTag, {
           value: 'Module'
@@ -565,16 +551,19 @@ __webpack_require__.r(__webpack_exports__);
     /*!*************************!*\
       !*** ./src-ts/index.ts ***!
       \*************************/
-    __nested_webpack_require_16884__.r(__webpack_exports__);
+    __nested_webpack_require_16279__.r(__webpack_exports__);
     /* harmony import */
-    var leaflet__WEBPACK_IMPORTED_MODULE_0__ = __nested_webpack_require_16884__( /*! leaflet */"leaflet");
+    var leaflet__WEBPACK_IMPORTED_MODULE_0__ = __nested_webpack_require_16279__( /*! leaflet */"leaflet");
     /* harmony import */
-    var leaflet__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__nested_webpack_require_16884__.n(leaflet__WEBPACK_IMPORTED_MODULE_0__);
+    var leaflet__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__nested_webpack_require_16279__.n(leaflet__WEBPACK_IMPORTED_MODULE_0__);
     /* harmony import */
-    var _filelayerload__WEBPACK_IMPORTED_MODULE_1__ = __nested_webpack_require_16884__( /*! ./filelayerload */"./src-ts/filelayerload.ts");
+    var _filelayerload__WEBPACK_IMPORTED_MODULE_1__ = __nested_webpack_require_16279__( /*! ./filelayerload */"./src-ts/filelayerload.ts");
     /* harmony import */
-    var _fileloader__WEBPACK_IMPORTED_MODULE_2__ = __nested_webpack_require_16884__( /*! ./fileloader */"./src-ts/fileloader.ts");
+    var _fileloader__WEBPACK_IMPORTED_MODULE_2__ = __nested_webpack_require_16279__( /*! ./fileloader */"./src-ts/fileloader.ts");
 
+    //import './filelayerload';
+    //import './fileloader';
+    //import { fileLoader, LayerOptions, ControlOptions, fileLayerLoad } from './interfaces'
     //import './interfaces'
     // @ts-ignore
     leaflet__WEBPACK_IMPORTED_MODULE_0___default().FileLayer = {};

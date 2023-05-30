@@ -11,7 +11,7 @@ module.exports = [
     output: {
       path: path.join(__dirname, '../src-ts/js'),
       filename: 'leaflet.filelayer.js',
-      //module: true // Enable ES2015 modules
+      
     },
     plugins: [
       new CleanWebpackPlugin(),
