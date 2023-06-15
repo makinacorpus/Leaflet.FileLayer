@@ -1,35 +1,41 @@
 {
   "name": "leaflet.filelayer",
-  "version": "2.0.0",
-  "description": "Leaflet.FileLayer\r =================",
-  "main": "index.js",
+  "version": "1.2.0.",
+  "description": "Loads local files (GeoJSON, GPX, KML) into the map using the HTML5 FileReader API",
+  "main": "src/leaflet.filelayer.js",
   "directories": {
     "doc": "docs",
     "test": "test",
     "src": "src",
-    "src-ts": "src-ts"
+    "ts": "ts"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha-phantomjs -p ./node_modules/.bin/phantomjs test/index.html",
     "dev": "webpack-dev-server --config ./config/webpack.dev.js --open",
-    "build": "webpack  --config ./config/webpack.prod.js",
+    "prod": "webpack  --config ./config/webpack.prod.js",
     "browser": "browser-sync start --server --files **/*.js",
     "none": "webpack  --config ./config/webpack.none.js",
-    "f": "webpack  --config ./config/webpack.src_ts.js",
-    "esf": " npx eslint ./src/leaflet.filelayer.js",
-    "esi": " npx eslint ./src/index.js"
+    "compile_ts": "webpack  --config ./config/webpack-ts-build.js"
+    
+  },
+  "peerDependencies": {
+    "leaflet": ">= 0.7.7 < 2",
+    "togeojson": "^0.16.0"
+  },
+  "keywords": [
+    "Leaflet",
+    "GIS",
+    "HTML5"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/makinacorpus/Leaflet.FileLayer/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jackchenzlp/Leaflet.FileLayer.git"
+    "url": "git://github.com/makinacorpus/Leaflet.FileLayer.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jackchenzlp/Leaflet.FileLayer/issues"
-  },
-  "homepage": "https://github.com/jackchenzlp/Leaflet.FileLayer#readme",
   "devDependencies": {
     "@babel/core": "^7.21.8",
     "@babel/plugin-proposal-class-properties": "^7.18.6",
@@ -38,6 +44,7 @@
     "@babel/preset-typescript": "^7.21.5",
     "@babel/runtime": "^7.21.0",
     "@types/leaflet": "^1.9.3",
+    "@types/requirejs": "^2.1.34",
     "autoprefixer": "^10.4.14",
     "babel-loader": "^9.1.2",
     "browser-sync": "^2.29.1",
@@ -47,17 +54,10 @@
     "core-js": "^3.30.2",
     "css-loader": "^6.7.3",
     "css-minimizer-webpack-plugin": "^5.0.0",
-    "eslint": "^8.38.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-webpack-plugin": "^4.0.0",
+    "dts-bundle-webpack": "^1.0.2",
     "happen": "^0.3.2",
     "html-webpack-plugin": "^5.5.0",
     "jsdom": "^21.1.1",
-    "less": "^4.1.3",
-    "less-loader": "^11.1.0",
     "live-server": "^1.2.2",
     "mini-css-extract-plugin": "^2.7.5",
     "mini-svg-data-uri": "^1.4.4",
@@ -69,12 +69,9 @@
     "postcss-loader": "^7.1.0",
     "postcss-preset-env": "^8.3.2",
     "prettier": "2.8.7",
-    "requirejs": "^2.3.6",
-    "sass-loader": "^13.2.2",
     "sinon": "^15.0.4",
     "style-loader": "^3.3.2",
     "svg-sprite-loader": "^6.0.11",
-    "terser-webpack-plugin": "^5.3.7",
     "ts-loader": "^9.4.2",
     "typescript": "^5.0.4",
     "webpack": "^5.77.0",
@@ -82,9 +79,8 @@
     "webpack-dev-server": "^4.13.1"
   },
   "dependencies": {
-    "@mapbox/togeojson": "^0.16.0",
-    "@types/node": "^20.1.1",
-    "leaflet": "^1.9.3",
+    "@types/node": "^20.3.1",
+    "leaflet": ">= 0.7.7 < 2",
     "togeojson": "^0.16.0"
   },
   "browser": {

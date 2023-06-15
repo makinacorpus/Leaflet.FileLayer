@@ -11,24 +11,24 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 2 */
-/***/ (function() {
+/***/ (function(module, exports, __webpack_require__) {
 
-/******/(function () {
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/******/(function () {
   // webpackBootstrap
   /******/
   "use strict";
 
   /******/
   var __webpack_modules__ = {
-    /***/"./src-ts/filelayerload.ts":
-    /*!*********************************!*\
-      !*** ./src-ts/filelayerload.ts ***!
-      \*********************************/
+    /***/"./ts/filelayerload.ts":
+    /*!*****************************!*\
+      !*** ./ts/filelayerload.ts ***!
+      \*****************************/
     /***/
-    function (__unused_webpack_module, __webpack_exports__, __nested_webpack_require_350__) {
-      __nested_webpack_require_350__.r(__webpack_exports__);
+    function (__unused_webpack_module, __webpack_exports__, __nested_webpack_require_334__) {
+      __nested_webpack_require_334__.r(__webpack_exports__);
       /* harmony export */
-      __nested_webpack_require_350__.d(__webpack_exports__, {
+      __nested_webpack_require_334__.d(__webpack_exports__, {
         /* harmony export */"Control": function () {
           return (/* binding */Control
           );
@@ -40,11 +40,11 @@ __webpack_require__.r(__webpack_exports__);
         /* harmony export */
       });
       /* harmony import */
-      var leaflet__WEBPACK_IMPORTED_MODULE_0__ = __nested_webpack_require_350__( /*! leaflet */"leaflet");
+      var leaflet__WEBPACK_IMPORTED_MODULE_0__ = __nested_webpack_require_334__( /*! leaflet */"leaflet");
       /* harmony import */
-      var leaflet__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__nested_webpack_require_350__.n(leaflet__WEBPACK_IMPORTED_MODULE_0__);
+      var leaflet__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__nested_webpack_require_334__.n(leaflet__WEBPACK_IMPORTED_MODULE_0__);
       /* harmony import */
-      var _fileloader__WEBPACK_IMPORTED_MODULE_1__ = __nested_webpack_require_350__( /*! ./fileloader */"./src-ts/fileloader.ts");
+      var _fileloader__WEBPACK_IMPORTED_MODULE_1__ = __nested_webpack_require_334__( /*! ./fileloader */"./ts/fileloader.ts");
       class FileLayerLoad extends leaflet__WEBPACK_IMPORTED_MODULE_0___default().Control {
         constructor(options) {
           super(options);
@@ -197,15 +197,15 @@ __webpack_require__.r(__webpack_exports__);
       /***/
     },
 
-    /***/"./src-ts/fileloader.ts":
-    /*!******************************!*\
-      !*** ./src-ts/fileloader.ts ***!
-      \******************************/
+    /***/"./ts/fileloader.ts":
+    /*!**************************!*\
+      !*** ./ts/fileloader.ts ***!
+      \**************************/
     /***/
-    function (__unused_webpack_module, __webpack_exports__, __nested_webpack_require_8124__) {
-      __nested_webpack_require_8124__.r(__webpack_exports__);
+    function (__unused_webpack_module, __webpack_exports__, __nested_webpack_require_8088__) {
+      __nested_webpack_require_8088__.r(__webpack_exports__);
       /* harmony export */
-      __nested_webpack_require_8124__.d(__webpack_exports__, {
+      __nested_webpack_require_8088__.d(__webpack_exports__, {
         /* harmony export */"FileLayer": function () {
           return (/* binding */FileLayer
           );
@@ -217,13 +217,13 @@ __webpack_require__.r(__webpack_exports__);
         /* harmony export */
       });
       /* harmony import */
-      var leaflet__WEBPACK_IMPORTED_MODULE_0__ = __nested_webpack_require_8124__( /*! leaflet */"leaflet");
+      var leaflet__WEBPACK_IMPORTED_MODULE_0__ = __nested_webpack_require_8088__( /*! leaflet */"leaflet");
       /* harmony import */
-      var leaflet__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__nested_webpack_require_8124__.n(leaflet__WEBPACK_IMPORTED_MODULE_0__);
+      var leaflet__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__nested_webpack_require_8088__.n(leaflet__WEBPACK_IMPORTED_MODULE_0__);
       /* harmony import */
-      var togeojson__WEBPACK_IMPORTED_MODULE_1__ = __nested_webpack_require_8124__( /*! togeojson */"togeojson");
+      var togeojson__WEBPACK_IMPORTED_MODULE_1__ = __nested_webpack_require_8088__( /*! togeojson */"togeojson");
       /* harmony import */
-      var togeojson__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__nested_webpack_require_8124__.n(togeojson__WEBPACK_IMPORTED_MODULE_1__);
+      var togeojson__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__nested_webpack_require_8088__.n(togeojson__WEBPACK_IMPORTED_MODULE_1__);
       class FileLoader extends leaflet__WEBPACK_IMPORTED_MODULE_0___default().Layer {
         constructor(map, options) {
           super(options);
@@ -415,6 +415,100 @@ __webpack_require__.r(__webpack_exports__);
       /***/
     },
 
+    /***/"./ts/index.ts":
+    /*!*********************!*\
+      !*** ./ts/index.ts ***!
+      \*********************/
+    /***/
+    function (module, __webpack_exports__, __nested_webpack_require_15768__) {
+      __nested_webpack_require_15768__.r(__webpack_exports__);
+      /* harmony export */
+      __nested_webpack_require_15768__.d(__webpack_exports__, {
+        /* harmony export */"Control": function () {
+          return (/* reexport safe */_filelayerload__WEBPACK_IMPORTED_MODULE_0__.Control
+          );
+        },
+        /* harmony export */"FileLayer": function () {
+          return (/* reexport safe */_fileloader__WEBPACK_IMPORTED_MODULE_1__.FileLayer
+          );
+        },
+        /* harmony export */"FileLayerLoad": function () {
+          return (/* reexport safe */_filelayerload__WEBPACK_IMPORTED_MODULE_0__.FileLayerLoad
+          );
+        },
+        /* harmony export */"FileLoader": function () {
+          return (/* reexport safe */_fileloader__WEBPACK_IMPORTED_MODULE_1__.FileLoader
+          );
+        }
+        /* harmony export */
+      });
+      /* harmony import */
+      var _filelayerload__WEBPACK_IMPORTED_MODULE_0__ = __nested_webpack_require_15768__( /*! ./filelayerload */"./ts/filelayerload.ts");
+      /* harmony import */
+      var _fileloader__WEBPACK_IMPORTED_MODULE_1__ = __nested_webpack_require_15768__( /*! ./fileloader */"./ts/fileloader.ts");
+      /* module decorator */
+      module = __nested_webpack_require_15768__.hmd(module);
+      (function (factory, window) {
+        // define an AMD module that relies on 'leaflet'
+        if ( true && __nested_webpack_require_15768__.amdO && window.toGeoJSON) {
+          !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(3)], __WEBPACK_AMD_DEFINE_RESULT__ = (function (L) {
+            factory(L, window.toGeoJSON);
+          }).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+        } else if ( true && module.exports) {
+          // require('LIBRARY') returns a factory that requires window to
+          // build a LIBRARY instance, we normalize how we use modules
+          // that require this pattern but the window provided is a noop
+          // if it's defined
+          module.exports = function (root, L, toGeoJSON) {
+            if (L === undefined) {
+              if (typeof window !== 'undefined') {
+                L = __nested_webpack_require_15768__( /*! leaflet */"leaflet");
+              } else {
+                L = __nested_webpack_require_15768__( /*! leaflet */"leaflet")(root);
+              }
+            }
+            if (toGeoJSON === undefined) {
+              if (typeof window !== 'undefined') {
+                toGeoJSON = __nested_webpack_require_15768__( /*! togeojson */"togeojson");
+              } else {
+                toGeoJSON = __nested_webpack_require_15768__( /*! togeojson */"togeojson")(root);
+              }
+            }
+            factory(L, toGeoJSON);
+            return L;
+          };
+        } else if (typeof window !== 'undefined' && window.L && window.toGeoJSON) {
+          factory(window.L, window.toGeoJSON);
+        }
+      })(function fileLoaderFactory(L, toGeoJSON) {
+        if (L && toGeoJSON) {
+          // @ts-ignore
+          L.FileLayer = {};
+          // @ts-ignore
+          L.FileLayer.FileLoader = _fileloader__WEBPACK_IMPORTED_MODULE_1__.FileLoader;
+          // @ts-ignore
+          L.FileLayer.fileLoader = _fileloader__WEBPACK_IMPORTED_MODULE_1__.FileLayer.fileLoader;
+          // @ts-ignore
+          L.Control.FileLayerLoad = _filelayerload__WEBPACK_IMPORTED_MODULE_0__.FileLayerLoad;
+          // @ts-ignore
+          L.Control.fileLayerLoad = _filelayerload__WEBPACK_IMPORTED_MODULE_0__.Control.fileLayerLoad;
+        }
+      }, window);
+      /* // @ts-ignore
+      L.FileLayer = {};
+      // @ts-ignore
+      L.FileLayer.FileLoader = FileLoader;
+      // @ts-ignore
+      L.FileLayer.fileLoader = FileLayer.fileLoader;
+      // @ts-ignore
+      L.Control.FileLayerLoad = FileLayerLoad;
+      // @ts-ignore
+      L.Control.fileLayerLoad = Control.fileLayerLoad; */
+
+      /***/
+    },
+
     /***/"leaflet":
     /*!********************!*\
       !*** external "L" ***!
@@ -446,7 +540,7 @@ __webpack_require__.r(__webpack_exports__);
   /******/
   /******/ // The require function
   /******/
-  function __nested_webpack_require_16279__(moduleId) {
+  function __nested_webpack_require_20084__(moduleId) {
     /******/ // Check if module is in cache
     /******/var cachedModule = __webpack_module_cache__[moduleId];
     /******/
@@ -457,15 +551,19 @@ __webpack_require__.r(__webpack_exports__);
     /******/ // Create a new module (and put it into the cache)
     /******/
     var module = __webpack_module_cache__[moduleId] = {
-      /******/ // no module.id needed
-      /******/ // no module.loaded needed
+      /******/id: moduleId,
+      /******/loaded: false,
       /******/exports: {}
       /******/
     };
     /******/
     /******/ // Execute the module function
     /******/
-    __webpack_modules__[moduleId](module, module.exports, __nested_webpack_require_16279__);
+    __webpack_modules__[moduleId](module, module.exports, __nested_webpack_require_20084__);
+    /******/
+    /******/ // Flag the module as loaded
+    /******/
+    module.loaded = true;
     /******/
     /******/ // Return the exports of the module
     /******/
@@ -474,18 +572,25 @@ __webpack_require__.r(__webpack_exports__);
   }
   /******/
   /************************************************************************/
+  /******/ /* webpack/runtime/amd options */
+  /******/
+  !function () {
+    /******/__nested_webpack_require_20084__.amdO = {};
+    /******/
+  }();
+  /******/
   /******/ /* webpack/runtime/compat get default export */
   /******/
   !function () {
     /******/ // getDefaultExport function for compatibility with non-harmony modules
-    /******/__nested_webpack_require_16279__.n = function (module) {
+    /******/__nested_webpack_require_20084__.n = function (module) {
       /******/var getter = module && module.__esModule ? /******/function () {
         return module['default'];
       } : /******/function () {
         return module;
       };
       /******/
-      __nested_webpack_require_16279__.d(getter, {
+      __nested_webpack_require_20084__.d(getter, {
         a: getter
       });
       /******/
@@ -499,9 +604,9 @@ __webpack_require__.r(__webpack_exports__);
   /******/
   !function () {
     /******/ // define getter functions for harmony exports
-    /******/__nested_webpack_require_16279__.d = function (exports, definition) {
+    /******/__nested_webpack_require_20084__.d = function (exports, definition) {
       /******/for (var key in definition) {
-        /******/if (__nested_webpack_require_16279__.o(definition, key) && !__nested_webpack_require_16279__.o(exports, key)) {
+        /******/if (__nested_webpack_require_20084__.o(definition, key) && !__nested_webpack_require_20084__.o(exports, key)) {
           /******/Object.defineProperty(exports, key, {
             enumerable: true,
             get: definition[key]
@@ -515,10 +620,33 @@ __webpack_require__.r(__webpack_exports__);
     /******/
   }();
   /******/
+  /******/ /* webpack/runtime/harmony module decorator */
+  /******/
+  !function () {
+    /******/__nested_webpack_require_20084__.hmd = function (module) {
+      /******/module = Object.create(module);
+      /******/
+      if (!module.children) module.children = [];
+      /******/
+      Object.defineProperty(module, 'exports', {
+        /******/enumerable: true,
+        /******/set: function () {
+          /******/throw new Error('ES Modules may not assign module.exports or exports.*, Use ESM export syntax, instead: ' + module.id);
+          /******/
+        }
+        /******/
+      });
+      /******/
+      return module;
+      /******/
+    };
+    /******/
+  }();
+  /******/
   /******/ /* webpack/runtime/hasOwnProperty shorthand */
   /******/
   !function () {
-    /******/__nested_webpack_require_16279__.o = function (obj, prop) {
+    /******/__nested_webpack_require_20084__.o = function (obj, prop) {
       return Object.prototype.hasOwnProperty.call(obj, prop);
     };
     /******/
@@ -528,7 +656,7 @@ __webpack_require__.r(__webpack_exports__);
   /******/
   !function () {
     /******/ // define __esModule on exports
-    /******/__nested_webpack_require_16279__.r = function (exports) {
+    /******/__nested_webpack_require_20084__.r = function (exports) {
       /******/if (typeof Symbol !== 'undefined' && Symbol.toStringTag) {
         /******/Object.defineProperty(exports, Symbol.toStringTag, {
           value: 'Module'
@@ -545,39 +673,22 @@ __webpack_require__.r(__webpack_exports__);
   }();
   /******/
   /************************************************************************/
-  var __webpack_exports__ = {};
-  // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
-  !function () {
-    /*!*************************!*\
-      !*** ./src-ts/index.ts ***!
-      \*************************/
-    __nested_webpack_require_16279__.r(__webpack_exports__);
-    /* harmony import */
-    var leaflet__WEBPACK_IMPORTED_MODULE_0__ = __nested_webpack_require_16279__( /*! leaflet */"leaflet");
-    /* harmony import */
-    var leaflet__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__nested_webpack_require_16279__.n(leaflet__WEBPACK_IMPORTED_MODULE_0__);
-    /* harmony import */
-    var _filelayerload__WEBPACK_IMPORTED_MODULE_1__ = __nested_webpack_require_16279__( /*! ./filelayerload */"./src-ts/filelayerload.ts");
-    /* harmony import */
-    var _fileloader__WEBPACK_IMPORTED_MODULE_2__ = __nested_webpack_require_16279__( /*! ./fileloader */"./src-ts/fileloader.ts");
-
-    //import './filelayerload';
-    //import './fileloader';
-    //import { fileLoader, LayerOptions, ControlOptions, fileLayerLoad } from './interfaces'
-    //import './interfaces'
-    // @ts-ignore
-    leaflet__WEBPACK_IMPORTED_MODULE_0___default().FileLayer = {};
-    // @ts-ignore
-    leaflet__WEBPACK_IMPORTED_MODULE_0___default().FileLayer.FileLoader = _fileloader__WEBPACK_IMPORTED_MODULE_2__.FileLoader;
-    // @ts-ignore
-    leaflet__WEBPACK_IMPORTED_MODULE_0___default().FileLayer.fileLoader = _fileloader__WEBPACK_IMPORTED_MODULE_2__.FileLayer.fileLoader;
-    // @ts-ignore
-    leaflet__WEBPACK_IMPORTED_MODULE_0___default().Control.FileLayerLoad = _filelayerload__WEBPACK_IMPORTED_MODULE_1__.FileLayerLoad;
-    // @ts-ignore
-    leaflet__WEBPACK_IMPORTED_MODULE_0___default().Control.fileLayerLoad = _filelayerload__WEBPACK_IMPORTED_MODULE_1__.Control.fileLayerLoad;
-  }();
+  /******/
+  /******/ // startup
+  /******/ // Load entry module and return exports
+  /******/ // This entry module is referenced by other modules so it can't be inlined
+  /******/
+  var __webpack_exports__ = __nested_webpack_require_20084__("./ts/index.ts");
+  /******/
   /******/
 })();
+
+/***/ }),
+/* 3 */
+/***/ (function(module) {
+
+"use strict";
+module.exports = L;
 
 /***/ })
 /******/ 	]);
@@ -653,31 +764,11 @@ var __webpack_exports__ = {};
 !function() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _src_css_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _leaflet_filelayer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
-/* harmony import */ var _leaflet_filelayer__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_leaflet_filelayer__WEBPACK_IMPORTED_MODULE_1__);
-
-//import L from 'leaflet';
-
-//import { filelayer } from './leaflet.filelayer';
+/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _src_leaflet_filelayer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+/* harmony import */ var _src_leaflet_filelayer__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_src_leaflet_filelayer__WEBPACK_IMPORTED_MODULE_1__);
 
 
-/* // @ts-ignore
-L.FileLayer = filelayer.FileLayer;
-// @ts-ignore
-//L.FileLayer.fileLoader =filelayer.FileLayer.fileLoader
-// @ts-ignore
-L.Control.FileLayerLoad = filelayer.Control.FileLayerLoad;
-// @ts-ignore
-L.Control.fileLayerLoad = filelayer.Control.fileLayerLoad; */
-
-/* L.FileLayer = {};
-L.FileLayer.FileLoader = filelayer.FileLoader;
-L.FileLayer.fileLoader = filelayer.FileLayer.fileLoader
-
-L.Control.FileLayerLoad = filelayer.FileLayerLoad;
-L.Control.fileLayerLoad = filelayer.Control.fileLayerLoad;
- */
 }();
 /******/ })()
 ;

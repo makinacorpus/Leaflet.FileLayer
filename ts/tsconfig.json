@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "types": ["node"],
+    "baseUrl": ".",
+    "paths": {
+      "togeojson": ["../types/togeojson.d.ts"]
+    },
+    "target": "es6",
+    //"module": "amd",
+    "module": "ES2015",
+    "rootDir": "../ts",
+    "declaration": true,
+    "outDir": "../dts",
+    "noEmitOnError": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true
+  },
+  "include": ["../ts/index.ts"],
+  "exclude": ["node_modules"]
+}

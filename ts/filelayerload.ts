@@ -1,6 +1,7 @@
 import L from 'leaflet';
 import { ControlOptions, fileLayerLoad } from './interfaces';
 import { FileLoader, FileLayer } from './fileloader';
+
 class FileLayerLoad extends L.Control implements fileLayerLoad {
   options: ControlOptions = {
     title: 'Load local file (GPX, KML, GeoJSON)',
@@ -171,3 +172,4 @@ const Control = {
 };
 
 export { FileLayerLoad, Control };
+

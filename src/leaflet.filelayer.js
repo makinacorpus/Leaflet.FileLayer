@@ -2,10 +2,10 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src-ts/filelayerload.ts":
-/*!*********************************!*\
-  !*** ./src-ts/filelayerload.ts ***!
-  \*********************************/
+/***/ "./ts/filelayerload.ts":
+/*!*****************************!*\
+  !*** ./ts/filelayerload.ts ***!
+  \*****************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
@@ -15,7 +15,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! leaflet */ "leaflet");
 /* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _fileloader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./fileloader */ "./src-ts/fileloader.ts");
+/* harmony import */ var _fileloader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./fileloader */ "./ts/fileloader.ts");
 
 
 class FileLayerLoad extends (leaflet__WEBPACK_IMPORTED_MODULE_0___default().Control) {
@@ -170,10 +170,10 @@ const Control = {
 
 /***/ }),
 
-/***/ "./src-ts/fileloader.ts":
-/*!******************************!*\
-  !*** ./src-ts/fileloader.ts ***!
-  \******************************/
+/***/ "./ts/fileloader.ts":
+/*!**************************!*\
+  !*** ./ts/fileloader.ts ***!
+  \**************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
@@ -378,6 +378,84 @@ const FileLayer = {
 
 /***/ }),
 
+/***/ "./ts/index.ts":
+/*!*********************!*\
+  !*** ./ts/index.ts ***!
+  \*********************/
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Control": function() { return /* reexport safe */ _filelayerload__WEBPACK_IMPORTED_MODULE_0__.Control; },
+/* harmony export */   "FileLayer": function() { return /* reexport safe */ _fileloader__WEBPACK_IMPORTED_MODULE_1__.FileLayer; },
+/* harmony export */   "FileLayerLoad": function() { return /* reexport safe */ _filelayerload__WEBPACK_IMPORTED_MODULE_0__.FileLayerLoad; },
+/* harmony export */   "FileLoader": function() { return /* reexport safe */ _fileloader__WEBPACK_IMPORTED_MODULE_1__.FileLoader; }
+/* harmony export */ });
+/* harmony import */ var _filelayerload__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./filelayerload */ "./ts/filelayerload.ts");
+/* harmony import */ var _fileloader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./fileloader */ "./ts/fileloader.ts");
+/* module decorator */ module = __webpack_require__.hmd(module);
+
+
+(function (factory, window) {
+  // define an AMD module that relies on 'leaflet'
+  if (typeof define === 'function' && __webpack_require__.amdO && window.toGeoJSON) {
+    define(['leaflet'], function (L) {
+      factory(L, window.toGeoJSON);
+    });
+  } else if ( true && module.exports) {
+    // require('LIBRARY') returns a factory that requires window to
+    // build a LIBRARY instance, we normalize how we use modules
+    // that require this pattern but the window provided is a noop
+    // if it's defined
+    module.exports = function (root, L, toGeoJSON) {
+      if (L === undefined) {
+        if (typeof window !== 'undefined') {
+          L = __webpack_require__(/*! leaflet */ "leaflet");
+        } else {
+          L = __webpack_require__(/*! leaflet */ "leaflet")(root);
+        }
+      }
+      if (toGeoJSON === undefined) {
+        if (typeof window !== 'undefined') {
+          toGeoJSON = __webpack_require__(/*! togeojson */ "togeojson");
+        } else {
+          toGeoJSON = __webpack_require__(/*! togeojson */ "togeojson")(root);
+        }
+      }
+      factory(L, toGeoJSON);
+      return L;
+    };
+  } else if (typeof window !== 'undefined' && window.L && window.toGeoJSON) {
+    factory(window.L, window.toGeoJSON);
+  }
+})(function fileLoaderFactory(L, toGeoJSON) {
+  if (L && toGeoJSON) {
+    // @ts-ignore
+    L.FileLayer = {};
+    // @ts-ignore
+    L.FileLayer.FileLoader = _fileloader__WEBPACK_IMPORTED_MODULE_1__.FileLoader;
+    // @ts-ignore
+    L.FileLayer.fileLoader = _fileloader__WEBPACK_IMPORTED_MODULE_1__.FileLayer.fileLoader;
+    // @ts-ignore
+    L.Control.FileLayerLoad = _filelayerload__WEBPACK_IMPORTED_MODULE_0__.FileLayerLoad;
+    // @ts-ignore
+    L.Control.fileLayerLoad = _filelayerload__WEBPACK_IMPORTED_MODULE_0__.Control.fileLayerLoad;
+  }
+}, window);
+/* // @ts-ignore
+L.FileLayer = {};
+// @ts-ignore
+L.FileLayer.FileLoader = FileLoader;
+// @ts-ignore
+L.FileLayer.fileLoader = FileLayer.fileLoader;
+// @ts-ignore
+L.Control.FileLayerLoad = FileLayerLoad;
+// @ts-ignore
+L.Control.fileLayerLoad = Control.fileLayerLoad; */
+
+
+/***/ }),
+
 /***/ "leaflet":
 /*!********************!*\
   !*** external "L" ***!
@@ -412,19 +490,27 @@ module.exports = toGeoJSON;
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
-/******/ 			// no module.loaded needed
+/******/ 			id: moduleId,
+/******/ 			loaded: false,
 /******/ 			exports: {}
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
 /******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
 /******/ 	
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+/******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/amd options */
+/******/ 	!function() {
+/******/ 		__webpack_require__.amdO = {};
+/******/ 	}();
+/******/ 	
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	!function() {
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
@@ -449,6 +535,21 @@ module.exports = toGeoJSON;
 /******/ 		};
 /******/ 	}();
 /******/ 	
+/******/ 	/* webpack/runtime/harmony module decorator */
+/******/ 	!function() {
+/******/ 		__webpack_require__.hmd = function(module) {
+/******/ 			module = Object.create(module);
+/******/ 			if (!module.children) module.children = [];
+/******/ 			Object.defineProperty(module, 'exports', {
+/******/ 				enumerable: true,
+/******/ 				set: function() {
+/******/ 					throw new Error('ES Modules may not assign module.exports or exports.*, Use ESM export syntax, instead: ' + module.id);
+/******/ 				}
+/******/ 			});
+/******/ 			return module;
+/******/ 		};
+/******/ 	}();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	!function() {
 /******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
@@ -466,34 +567,11 @@ module.exports = toGeoJSON;
 /******/ 	}();
 /******/ 	
 /************************************************************************/
-var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
-!function() {
-/*!*************************!*\
-  !*** ./src-ts/index.ts ***!
-  \*************************/
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! leaflet */ "leaflet");
-/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _filelayerload__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./filelayerload */ "./src-ts/filelayerload.ts");
-/* harmony import */ var _fileloader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./fileloader */ "./src-ts/fileloader.ts");
-
-
-
-//import './filelayerload';
-//import './fileloader';
-//import { fileLoader, LayerOptions, ControlOptions, fileLayerLoad } from './interfaces'
-//import './interfaces'
-// @ts-ignore
-(leaflet__WEBPACK_IMPORTED_MODULE_0___default().FileLayer) = {};
-// @ts-ignore
-(leaflet__WEBPACK_IMPORTED_MODULE_0___default().FileLayer.FileLoader) = _fileloader__WEBPACK_IMPORTED_MODULE_2__.FileLoader;
-// @ts-ignore
-(leaflet__WEBPACK_IMPORTED_MODULE_0___default().FileLayer.fileLoader) = _fileloader__WEBPACK_IMPORTED_MODULE_2__.FileLayer.fileLoader;
-// @ts-ignore
-(leaflet__WEBPACK_IMPORTED_MODULE_0___default().Control.FileLayerLoad) = _filelayerload__WEBPACK_IMPORTED_MODULE_1__.FileLayerLoad;
-// @ts-ignore
-(leaflet__WEBPACK_IMPORTED_MODULE_0___default().Control.fileLayerLoad) = _filelayerload__WEBPACK_IMPORTED_MODULE_1__.Control.fileLayerLoad;
-}();
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module is referenced by other modules so it can't be inlined
+/******/ 	var __webpack_exports__ = __webpack_require__("./ts/index.ts");
+/******/ 	
 /******/ })()
 ;

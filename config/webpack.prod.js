@@ -9,49 +9,49 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 module.exports = [
   {
     entry: {
-      //leaflet:['leaflet'],
-      // leafletFile: path.join(__dirname, '../src/leaflet.filelayer.js'),
-      // index: path.join(__dirname, '../src/index.js'),
-      leafletFile: path.join(__dirname, '../src/index.js'),
+      leafletFile: path.join(__dirname, '../doc/index.js'),
     },
     output: {
-      path: path.join(__dirname, '../dist'), //输出文件路径
+      path: path.join(__dirname, '../dist'),
       filename: (pathData) => {
         if (pathData.chunk.name === 'leafletFile') {
           return 'leaflet.filelayer.js';
         }
         return '[name].js';
       },
-      assetModuleFilename: 'assets/images/[hash:8][ext][query]', //assetModuleFilename仅适用于asset和asset/resource模块类型。
+      assetModuleFilename: 'assets/images/[hash:8][ext][query]',
     },
-    externals: {//打包时排除以下两项
+    externals: {
+      //Exclude the following two items when packing
       leaflet: 'L',
       togeojson: 'toGeoJSON',
-     
     },
     plugins: [
+      //Clear the contents of the none folder
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
-        template: path.join(__dirname, '../src/index.html'),
-        inject: 'body', //将打包的javaScript打包到body底部
+        template: path.join(__dirname, '../doc/index.html'),
+        //Whether to add a unique hash value to the path of static resources such as js,css, etc. introduced into the file each time
+        inject: 'body',
         filename: 'index.html',
-        //chunks: ['leaflet', 'leafletFile', 'index'], //将打包好的js文件加入html-body-javaSript
-        chunks: ['leafletFile'], //将打包好的js文件加入html-body-javaSript
+        //Add the packaged js file to html-body-javaSript
+        chunks: ['leafletFile'],
         chunksSortMode: 'none',
-        minify: 'flash', //根据webpackr mode的值自动设置是否压缩html文件
+        //Automatically set whether to compress html files based on the value of webpackr mode
+        minify: 'flash',
       }),
-      
+
       new CopyPlugin({
         patterns: [
           {
-            from: 'src/assets/images',
+            from: 'doc/assets/images',
             to: 'assets/images/',
             force: true,
           },
         ],
       }),
       new MiniCssExtractPlugin({
-        //将css打包成为一个单独文件
+        //Package your css into a single file
         filename: 'css/[name].css',
       }),
     ],
@@ -61,14 +61,6 @@ module.exports = [
         {
           test: /\.css$/,
           use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
-        },
-        {
-          test: /\.less$/,
-          use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'less-loader'],
-        },
-        {
-          test: /\.(scss)$/,
-          use: ['style-loader', MiniCssExtractPlugin.loader],
         },
         {
           test: /\.svg$/i,
@@ -99,19 +91,14 @@ module.exports = [
             filename: 'assets/font/[hash:8][ext][query]',
           },
         },
-        {
-          test: /\.js$/,
-          exclude: /node_modules/,
-          include: path.join(__dirname, '../src'),
-        },
-
-        //{ test: /\.js$/, use: 'babe-loader ', exclude: /node_modules/ }
+        { test: /\.js$/, exclude: /node_modules/, use: 'babel-loader' },
       ],
     },
     optimization: {
-      // 压缩CSS文件与js文件
-      //minimizer: [`...`, new CssMinimizerPlugin()],
-      minimizer: [new CssMinimizerPlugin()],
+      // Compress CSS files and js files
+      minimizer: [`...`, new CssMinimizerPlugin()],
+      //Compress only CSS files
+      //minimizer: [new CssMinimizerPlugin()],
     },
   },
 ];
