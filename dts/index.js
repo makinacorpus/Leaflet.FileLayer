@@ -50,14 +50,4 @@ import { FileLoader, FileLayer } from './fileloader';
         L.Control.fileLayerLoad = Control.fileLayerLoad;
     }
 }, window);
-/* // @ts-ignore
-L.FileLayer = {};
-// @ts-ignore
-L.FileLayer.FileLoader = FileLoader;
-// @ts-ignore
-L.FileLayer.fileLoader = FileLayer.fileLoader;
-// @ts-ignore
-L.Control.FileLayerLoad = FileLayerLoad;
-// @ts-ignore
-L.Control.fileLayerLoad = Control.fileLayerLoad; */
 export { FileLayerLoad, Control, FileLoader, FileLayer };

@@ -495,16 +495,6 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/******/(functio
           L.Control.fileLayerLoad = _filelayerload__WEBPACK_IMPORTED_MODULE_0__.Control.fileLayerLoad;
         }
       }, window);
-      /* // @ts-ignore
-      L.FileLayer = {};
-      // @ts-ignore
-      L.FileLayer.FileLoader = FileLoader;
-      // @ts-ignore
-      L.FileLayer.fileLoader = FileLayer.fileLoader;
-      // @ts-ignore
-      L.Control.FileLayerLoad = FileLayerLoad;
-      // @ts-ignore
-      L.Control.fileLayerLoad = Control.fileLayerLoad; */
 
       /***/
     },
@@ -540,7 +530,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/******/(functio
   /******/
   /******/ // The require function
   /******/
-  function __nested_webpack_require_20084__(moduleId) {
+  function __nested_webpack_require_19756__(moduleId) {
     /******/ // Check if module is in cache
     /******/var cachedModule = __webpack_module_cache__[moduleId];
     /******/
@@ -559,7 +549,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/******/(functio
     /******/
     /******/ // Execute the module function
     /******/
-    __webpack_modules__[moduleId](module, module.exports, __nested_webpack_require_20084__);
+    __webpack_modules__[moduleId](module, module.exports, __nested_webpack_require_19756__);
     /******/
     /******/ // Flag the module as loaded
     /******/
@@ -575,7 +565,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/******/(functio
   /******/ /* webpack/runtime/amd options */
   /******/
   !function () {
-    /******/__nested_webpack_require_20084__.amdO = {};
+    /******/__nested_webpack_require_19756__.amdO = {};
     /******/
   }();
   /******/
@@ -583,14 +573,14 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/******/(functio
   /******/
   !function () {
     /******/ // getDefaultExport function for compatibility with non-harmony modules
-    /******/__nested_webpack_require_20084__.n = function (module) {
+    /******/__nested_webpack_require_19756__.n = function (module) {
       /******/var getter = module && module.__esModule ? /******/function () {
         return module['default'];
       } : /******/function () {
         return module;
       };
       /******/
-      __nested_webpack_require_20084__.d(getter, {
+      __nested_webpack_require_19756__.d(getter, {
         a: getter
       });
       /******/
@@ -604,9 +594,9 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/******/(functio
   /******/
   !function () {
     /******/ // define getter functions for harmony exports
-    /******/__nested_webpack_require_20084__.d = function (exports, definition) {
+    /******/__nested_webpack_require_19756__.d = function (exports, definition) {
       /******/for (var key in definition) {
-        /******/if (__nested_webpack_require_20084__.o(definition, key) && !__nested_webpack_require_20084__.o(exports, key)) {
+        /******/if (__nested_webpack_require_19756__.o(definition, key) && !__nested_webpack_require_19756__.o(exports, key)) {
           /******/Object.defineProperty(exports, key, {
             enumerable: true,
             get: definition[key]
@@ -623,7 +613,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/******/(functio
   /******/ /* webpack/runtime/harmony module decorator */
   /******/
   !function () {
-    /******/__nested_webpack_require_20084__.hmd = function (module) {
+    /******/__nested_webpack_require_19756__.hmd = function (module) {
       /******/module = Object.create(module);
       /******/
       if (!module.children) module.children = [];
@@ -646,7 +636,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/******/(functio
   /******/ /* webpack/runtime/hasOwnProperty shorthand */
   /******/
   !function () {
-    /******/__nested_webpack_require_20084__.o = function (obj, prop) {
+    /******/__nested_webpack_require_19756__.o = function (obj, prop) {
       return Object.prototype.hasOwnProperty.call(obj, prop);
     };
     /******/
@@ -656,7 +646,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/******/(functio
   /******/
   !function () {
     /******/ // define __esModule on exports
-    /******/__nested_webpack_require_20084__.r = function (exports) {
+    /******/__nested_webpack_require_19756__.r = function (exports) {
       /******/if (typeof Symbol !== 'undefined' && Symbol.toStringTag) {
         /******/Object.defineProperty(exports, Symbol.toStringTag, {
           value: 'Module'
@@ -678,7 +668,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/******/(functio
   /******/ // Load entry module and return exports
   /******/ // This entry module is referenced by other modules so it can't be inlined
   /******/
-  var __webpack_exports__ = __nested_webpack_require_20084__("./ts/index.ts");
+  var __webpack_exports__ = __nested_webpack_require_19756__("./ts/index.ts");
   /******/
   /******/
 })();
