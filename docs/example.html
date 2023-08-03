@@ -1,20 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css">
-    <link rel="stylesheet" href="example.css">
+    <style>
+        html {
+            font-family: "Helvetica", arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .icon {
+            max-width: 70%;
+            max-height: 70%;
+            margin: 4px;
+        }
+
+        #map {
+            height: 50%;
+            width: 100%;
+        }
+
+        footer a {
+            color: white;
+
+        }
+
+        footer {
+            height: 20px;
+            padding: 0.5rem 1rem;
+            background: #20273c;
+            color: white;
+            flex: none;
+            display: flex;
+            z-index: 2;
+            justify-content: flex-end;
+            font-family: "Helvetica", arial, sans-serif;
+        }
+    </style>
 </head>
+
 <body>
-    <main>
-        <div id="map" style="width: 100%; height: 100%; display: block;"></div>
-    </main>
+    <div id="map" style="width: 100%; height: calc(100vh - 36px); display: block;"></div>
+    <footer>
+        <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a
+                href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a></div>
+    </footer>
 </body>
 <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
 <script src="https://unpkg.com/togeojson@0.16.0"></script>
 <script src="https://unpkg.com/leaflet-filelayer@1.2.0"></script>
 <script src="index.js"></script>
+
 </html>
