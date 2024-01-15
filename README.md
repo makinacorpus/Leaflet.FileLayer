@@ -1,6 +1,8 @@
 Leaflet.FileLayer
 =================
 
+
+
 Loads local files (GeoJSON, JSON, GPX, KML) into the map using the [HTML5 FileReader API](http://caniuse.com/filereader), **without server call** !
 
 * A simple map control
@@ -8,11 +10,20 @@ Loads local files (GeoJSON, JSON, GPX, KML) into the map using the [HTML5 FileRe
 * It is read locally (``FileReader``) and converted to GeoJSON
 * And loaded as a layer eventually!
 
-Check out the [demo](http://makinacorpus.github.io/Leaflet.FileLayer/) !
+<p  align="center">
+<a href="https://www.npmjs.com/package/leaflet-filelayer"><img alt="npm" src="https://img.shields.io/npm/dt/leaflet-filelayer"></a>
+<a href="https://www.npmjs.com/package/leaflet-filelayer"><img alt="npm" src="https://img.shields.io/npm/v/leaflet-filelayer?color=red">
+</a>
+</p>
+
+<div class="demo">
+<p align="center"> Check out the <a href="https://makinacorpus.github.io/Leaflet.FileLayer/">demo</a> ! </p>
+</div>
+
 
 For GPX and KML files, it currently depends on [Tom MacWright's togeojson.js](https://github.com/tmcw/togeojson).
 
-[![Build Status](https://travis-ci.org/makinacorpus/Leaflet.FileLayer.png?branch=master)](https://travis-ci.org/makinacorpus/Leaflet.FileLayer)
+
 
 Install
 -----
