@@ -17,7 +17,6 @@ Loads local files (GeoJSON, JSON, GPX, KML) into the map using the [HTML5 FileRe
 </p>
 
 <div class="demo">
- <p align="center"><img src="./screenshoot.png"></p>
 <p align="center"> Check out the <a href="https://makinacorpus.github.io/Leaflet.FileLayer/">demo</a> ! </p>
 </div>
 
