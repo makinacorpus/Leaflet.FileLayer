@@ -214,7 +214,15 @@
             var geojson;
             // Format is either 'gpx' or 'kml'
             if (typeof content === 'string') {
-                content = (new window.DOMParser()).parseFromString(content, 'text/xml');
+                var domparser = new DOMParser();
+                // get error NS for current browser
+                var parsererrorNS = domparser.parseFromString('INVALID', 'text/xml').getElementsByTagName("parsererror")[0].namespaceURI;
+                // parse input
+                content = domparser.parseFromString(content, 'text/xml');
+                // check if result is error NS
+                if(content.getElementsByTagNameNS(parsererrorNS, 'parsererror').length > 0) {
+                    throw new Error('Error parsing XML');
+                }
             }
             geojson = toGeoJSON[format](content);
             return this._loadGeoJSON(geojson);
