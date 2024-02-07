@@ -27,9 +27,9 @@
             }
             if (toGeoJSON === undefined) {
                 if (typeof window !== 'undefined') {
-                    toGeoJSON = require('togeojson');
+                    toGeoJSON = require('@mapbox/togeojson');
                 } else {
-                    toGeoJSON = require('togeojson')(root);
+                    toGeoJSON = require('@mapbox/togeojson')(root);
                 }
             }
             factory(L, toGeoJSON);
