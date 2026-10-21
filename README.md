@@ -72,6 +72,7 @@ Events:
     var control = L.Control.fileLayerLoad();
     control.loader.on('data:loaded', function (event) {
         // event.layer gives you access to the layers you just uploaded!
+        // event.data gives you the raw content of the file (or the data passed to loadData)
 
         // Add to map layer switcher
         layerswitcher.addOverlay(event.layer, event.filename);
