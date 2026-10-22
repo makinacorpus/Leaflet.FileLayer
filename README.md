@@ -91,6 +91,13 @@ Events:
 Changelog
 ---------
 
+### 1.3.0 ###
+
+* Return the parsed data in the `data:loaded` event as `event.data` (#24, thanks mabhub)
+* Accept file extensions in upper case (thanks eyal88)
+* Report XML parsing errors instead of "GeoJSON has no valid layers." (thanks opoto)
+* Stop click propagation on the whole control container (thanks TheoLechemia)
+
 ### 1.2.0 ###
 
 * Leaflet 1.2.0 compatibility
